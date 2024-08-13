@@ -2,32 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* * {
+  outline: lime dashed 1px;
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	@apply bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+section {
+	@apply w-full cell-padding primary-border border-b;
+}
+
+h1 {
+	@apply text-100 text-4xl font-bold mb-2;
+}
+
+p {
+	@apply text-200;
+}
+
+.text-100 {
+	@apply text-[#171717] dark:text-[#EDEDED];
+}
+
+.text-200 {
+	@apply text-[#666] dark:text-[#a1a1a1];
+}
+
+.primary-border {
+	@apply border-[#ebebeb] dark:border-[#1f1f1f];
+}
+
+.cell-padding {
+	@apply p-6 xl:p-12;
+}
+
+/* .links li {
+	@apply mb-4;
+} */
+
+.links li a {
+	@apply text-200 pr-3 py-2 text-sm inline-block w-full;
 }
