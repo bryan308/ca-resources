@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={geistsans.className}>
+			<body
+				className={`${geistsans.className} bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED]`}
+			>
 				<Providers>
 					<Header />
 					<div className='h-16 xl:hidden'></div>

@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  outline: lime dashed 1px;
-} */
-
-body {
-	@apply bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED];
-}
-
 section {
 	@apply w-full cell-padding primary-border border-b;
 }
@@ -31,16 +23,12 @@ p {
 }
 
 .primary-border {
-	@apply border-[#ebebeb] dark:border-[#1f1f1f];
+	@apply border-[#ebebeb] dark:border-[#2e2e2e];
 }
 
 .cell-padding {
 	@apply p-6 xl:p-12;
 }
-
-/* .links li {
-	@apply mb-4;
-} */
 
 .links li a {
 	@apply text-200 pr-3 py-2 text-sm inline-block w-full;
