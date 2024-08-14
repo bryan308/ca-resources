@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('../components/colors/color-scheme.css');
+
 section {
 	@apply w-full cell-padding primary-border border-b;
 }
@@ -32,4 +34,12 @@ p {
 
 .links li a {
 	@apply text-200 pr-3 py-2 text-sm inline-block w-full;
+}
+
+.truncate-description {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

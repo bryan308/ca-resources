@@ -1,46 +1,99 @@
+import { colorScheme } from '@/lib/colors';
+import { geistmono } from '@/lib/font';
+import { resources } from '@/lib/sources';
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Colors() {
 	return (
 		<>
 			<section>
 				<h1>Colors</h1>
 				<p className='text-xl text-200'>
-					Learn how to work with our color system. Right click to copy raw values.
+					Explore our recommended color scales and discover additional resources to enhance your
+					color knowledge.
 				</p>
 			</section>
 			<section>
-				<h3 className='text-xl text-100 font-bold mb-2'>Scalse</h3>
+				<h3 className='text-2xl text-100 font-bold mb-2'>Scales</h3>
 				<p>
-					There are 10 color scales in the system. P3 colors are used on supported browsers and
-					displays.
+					Here are the recommended color scales for CA Resources, sourced from the{' '}
+					<Link
+						href='https://vercel.com/geist/colors'
+						target='_blank'
+					>
+						Geist Design System.
+					</Link>
 				</p>
+				<div className='mt-10'>
+					{colorScheme.map((c, i: number) => {
+						return (
+							<div
+								key={i}
+								className='flex items-center gap-4 w-full'
+							>
+								<p className='text-100 w-24 text-sm font-semibold'>{c.colorName}</p>
+								<ul className='flex w-full gap-1 md:gap-2 mb-4'>
+									{Array.from({ length: 10 }).map((_, index) => (
+										<li
+											key={index}
+											className='w-full max-w-[68px]'
+										>
+											<span className='mb-2 w-full grow'>
+												<button
+													title='copy'
+													style={{ backgroundColor: `var(--cp-${c.var}-${index + 1}00)` }}
+													className={`border primary-border pointer-events-none flex aspect-square w-full grow cursor-pointer items-center justify-center rounded-lg md:pointer-events-auto md:h-10`}
+													type='button'
+												></button>
+											</span>
+											{/* <p className='text-xs text-100 font-medium'>{p.weight}</p>
+											<p className={`${geistmono.className} text-xs`}>{c.hex}</p> */}
+										</li>
+									))}
+								</ul>
+							</div>
+						);
+					})}
+				</div>
 			</section>
 			<section>
-				<h3 className='text-xl text-100 font-bold mb-2'>Backgrounds</h3>
+				<h3 className='text-2xl text-100 font-bold mb-2'>Inspiration and Tools</h3>
 				<p>
-					There are two background colors for pages and UI components. In most instances, you should
-					use Background 1—especially when color is being placed on top of the background.
-					Background 2 should be used sparingly when a subtle background differentiation is needed.
+					Check out these valuable websites to expand your understanding and application of color in
+					web development.
 				</p>
-				<div className='my-5'>
-					<div className='flex h-10 items-center gap-3 border-b primary-border'>
-						<div
-							className='border primary-border dark:bg-neutral-950 size-4 rounded-full'
-							// style='background:var(--ds-background-100)'
-						></div>
-						<p
-							className='text_wrapper__i87JK w-[120px]'
-							data-version='v1'
-							// style='--text-color:var(--ds-gray-1000);--text-size:0.875rem;--text-line-height:1.25rem;--text-letter-spacing:initial;--text-weight:500'
-						>
-							Background 1
-						</p>
-						<p className='text_wrapper__i87JK'>Default element background</p>
-					</div>
-					<div className='flex h-10 items-center gap-3 border-none'>
-						<div className='shadow-border-inset h-4 w-4 rounded-full'></div>
-						<p className='text_wrapper__i87JK w-[120px]'>Background 2</p>
-						<p className='text_wrapper__i87JK'>Secondary background</p>
-					</div>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
+					{resources
+						.filter((resource) => resource.category === 'colors')
+						.map((resource) => (
+							<div
+								key={resource.name}
+								className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border'
+							>
+								<div className='grid place-items-center min-w-14 size-14'>
+									<Image
+										src={resource.icon}
+										alt={resource.name}
+										width={56}
+										height={56}
+									/>
+								</div>
+								<div>
+									<Link
+										href={`${resource.url}?rel=ca-resources.vercel.app`}
+										className='text-blue-500 hover:underline font-semibold'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										{resource.name}
+									</Link>
+									<p className='text-gray-600 text-sm truncate-description'>
+										{resource.description}
+									</p>
+								</div>
+							</div>
+						))}
 				</div>
 			</section>
 		</>
