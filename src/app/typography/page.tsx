@@ -1,3 +1,4 @@
+import PageHeader from '@/components/shared/ui/page-header';
 import { typography } from '@/data/sources/typography';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,8 +7,8 @@ export default function Typography() {
 	return (
 		<>
 			<section>
-				<h1 className='text-100 text-4xl font-semibold mb-2'>Typography</h1>
-				<p className='text-xl text-200'>
+				<PageHeader>Typography</PageHeader>
+				<p className='text-xl'>
 					Learn how to work with our color system. Right click to copy raw values.
 				</p>
 			</section>
@@ -21,7 +22,7 @@ export default function Typography() {
 					{typography.map((typo) => (
 						<div
 							key={typo.name}
-							className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border'
+							className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border bg-foreground'
 						>
 							<div className='grid place-items-center min-w-14 size-14'>
 								<Image

@@ -33,7 +33,7 @@ function Header() {
 							<SheetTrigger>
 								<IconMenu2 />
 							</SheetTrigger>
-							<SheetContent side='bottom'>
+							<SheetContent side='left'>
 								<SheetDescription>
 									<div className='my-4'>
 										<h3 className='text-200 font-semibold text-md'>Overview</h3>

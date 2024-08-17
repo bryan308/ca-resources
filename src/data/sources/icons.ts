@@ -29,7 +29,7 @@ export const icons: Resource[] = [
 		icon: '',
 	},
 	{
-		name: 'tabler icons',
+		name: 'Tabler Icons',
 		url: 'https://tabler.io/icons',
 		description:
 			'Tabler Icons: 5467 free and open source SVG icons. Customizable size, color and stroke. Available for React, SolidJS, Vue, Figma and more for free!',
@@ -57,6 +57,18 @@ export const icons: Resource[] = [
 		icon: '/resources/icons/line-icons.png',
 	},
 	{
+		name: 'CSS ICON',
+		url: 'https://cssicon.space/',
+		description: 'Icon set made with pure css code, no dependencies, "grab and go" icons.',
+		icon: '',
+	},
+	{
+		name: 'Bootstrap Icons',
+		url: 'https://icons.getbootstrap.com/',
+		description: 'Official open source SVG icon library for Bootstrap.',
+		icon: '/resources/icons/bootstrap.svg',
+	},
+	{
 		name: 'Feather Icons',
 		url: 'https://feathericons.com/',
 		description:
@@ -70,4 +82,32 @@ export const icons: Resource[] = [
 	// 		'',
 	// 	icon: '',
 	// },
+];
+
+export const logos: Resource[] = [
+	{
+		name: 'Dev Icon',
+		url: 'https://devicon.dev',
+		description:
+			'Devicon aims to gather all logos representing development languages and tools in one font. 🚀',
+		icon: '/resources/icons/dev-icon.png',
+	},
+	{
+		name: 'Browser Logos',
+		url: 'https://github.com/alrra/browser-logos#readme',
+		description: 'High resolution of web browser logos.',
+		icon: '',
+	},
+	{
+		name: 'Simple Icons',
+		url: 'https://simpleicons.org',
+		description: '3161 Free SVG icons for popular brands',
+		icon: '/resources/icons/simpleicons.svg',
+	},
+	{
+		name: 'Vector Logo Zone',
+		url: 'https://www.vectorlogo.zone',
+		description: 'Gorgeous SVG logos, perfect for your README or credits page - Vector Logo Zone',
+		icon: '/resources/icons/vectorlogo.svg',
+	},
 ];

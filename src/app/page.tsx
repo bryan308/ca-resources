@@ -1,10 +1,15 @@
+import PageHeader from '@/components/shared/ui/page-header';
+
 export default function Home() {
 	return (
 		<>
 			<section>
-				<h1 className='text-100 text-4xl font-semibold mb-2'>Introduction</h1>
-				<p className='text-xl text-200'>
-					Learn how to work with our color system. Right click to copy raw values.
+				<PageHeader>Introduction</PageHeader>
+				<p className='text-xl text-100 mb-8'>Welcome to CA Resources!</p>
+				<p className='max-w-[75ch]'>
+					This site is your web development hub, catering to both novice and expert developers. It
+					offers a carefully selected collection of tools, guides, and resources designed to enhance
+					your development experience
 				</p>
 			</section>
 		</>

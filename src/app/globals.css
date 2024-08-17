@@ -4,16 +4,12 @@
 
 @import url('../components/colors/color-scheme.css');
 
+.bg-foreground {
+	@apply bg-white dark:bg-neutral-950;
+}
+
 section {
 	@apply w-full cell-padding primary-border border-b;
-}
-
-section:nth-last-child() {
-	@apply border-b-0;
-}
-
-h1 {
-	@apply text-100 text-4xl font-bold mb-2;
 }
 
 p {

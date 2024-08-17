@@ -22,7 +22,7 @@ export default function RootLayout({
 			>
 				<Providers>
 					<Header />
-					<div className='h-16 xl:hidden' />
+					<div className='h-16 md:hidden' />
 					<main className='flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr]'>
 						<Aside />
 						<div className='border border-t-0 border-l-0 primary-border h-full'>{children}</div>
