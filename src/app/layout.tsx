@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { geistsans } from '@/lib/font';
-import Providers from '@/components/shared/theme-provider';
-import Header from '@/components/shared/header';
-import Aside from '@/components/shared/aside';
+import Providers from '@/components/shared/ui/theme-provider';
+import Header from '@/components/shared/ui/header';
+import Aside from '@/components/shared/ui/aside';
 
 export const metadata: Metadata = {
 	title: 'CA Resources',

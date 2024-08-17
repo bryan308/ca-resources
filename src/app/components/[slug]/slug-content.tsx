@@ -2,7 +2,7 @@
 
 import { MDXRemote } from 'next-mdx-remote';
 import { MDXFrontMatter } from '@/lib/types';
-import { components } from '@/components/shared/MDX';
+import { components } from '@/components/shared/ui/MDX';
 // import '@/components/courses/styles/mdx.css';
 
 interface ILessonContentProp {

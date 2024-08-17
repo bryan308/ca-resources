@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Box from './icons/box';
 import { Input } from './input';
 import { IconMenu2 } from '@tabler/icons-react';
 import { ModeToggle } from './theme-switcher';
@@ -7,6 +6,7 @@ import { Sheet, SheetContent, SheetDescription, SheetTrigger } from './sheet';
 import { ArrowRight } from 'lucide-react';
 import { overview, resources } from '@/data/links';
 import { getAllPaths } from '@/lib/get-paths';
+import Box from '../icons/box';
 
 function Header() {
 	const componentPaths = getAllPaths();
