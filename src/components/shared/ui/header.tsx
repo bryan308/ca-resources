@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Box from '../ui/icons/box';
-import { Input } from '../ui/input';
+import Box from './icons/box';
+import { Input } from './input';
 import { IconMenu2 } from '@tabler/icons-react';
-import { ModeToggle } from '../ui/theme-switcher';
-import { Sheet, SheetContent, SheetDescription, SheetTrigger } from '../ui/sheet';
+import { ModeToggle } from './theme-switcher';
+import { Sheet, SheetContent, SheetDescription, SheetTrigger } from './sheet';
 import { ArrowRight } from 'lucide-react';
 import { overview, resources } from '@/data/links';
 import { getAllPaths } from '@/lib/get-paths';
