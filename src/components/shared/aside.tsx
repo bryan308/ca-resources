@@ -1,61 +1,53 @@
+import { overview, resources } from '@/data/links';
+import { getAllMdx } from '@/lib/mdx';
 import Link from 'next/link';
+import { MDXFrontMatter } from '@/lib/types';
+import { useMemo } from 'react';
+
+interface PathsProp {
+	paths: MDXFrontMatter[];
+}
 
 function Aside() {
+	const mdxFiles = useMemo(() => getAllMdx().map((post) => post['frontMatter']), []);
+
 	return (
 		<aside className='hidden xl:flex flex-col w-[16.25rem] border border-t-0 primary-border'>
 			<div className='sticky top-[4.25rem] pt-8 px-6'>
 				<div className='mb-4'>
+					<p className='text-100 text-sm font-medium'>Overview</p>
 					<ul className='links'>
-						<li>
-							<Link
-								href='/'
-								scroll={false}
-							>
-								Introduction
-							</Link>
-						</li>
+						{overview.map((o, i) => (
+							<li key={i}>
+								<Link
+									href={o.path}
+									scroll={false}
+								>
+									{o.text}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
 				<div className='mb-4'>
 					<p className='text-100 text-sm font-medium'>Resources</p>
 					<ul className='links'>
-						<li>
-							<Link
-								href='/colors'
-								scroll={false}
-							>
-								Colors
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/icons'
-								scroll={false}
-							>
-								Icons
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/typography'
-								scroll={false}
-							>
-								Typography
-							</Link>
-						</li>
+						{resources.map((r, i) => (
+							<li key={i}>
+								<Link
+									href={r.path}
+									scroll={false}
+								>
+									{r.text}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
 				<div className='mb-4'>
 					<p className='text-100 text-sm font-medium'>Components</p>
 					<ul className='links'>
-						<li>
-							<Link
-								href='/components/table'
-								scroll={false}
-							>
-								Table
-							</Link>
-						</li>
+						<ComponentPaths paths={mdxFiles} />
 					</ul>
 				</div>
 			</div>
@@ -64,3 +56,20 @@ function Aside() {
 }
 
 export default Aside;
+
+function ComponentPaths({ paths }: PathsProp) {
+	return (
+		<>
+			{paths.map((p, i) => (
+				<li key={i}>
+					<Link
+						href={`/components/${p.slug}`}
+						scroll={false}
+					>
+						{p.title}
+					</Link>
+				</li>
+			))}
+		</>
+	);
+}

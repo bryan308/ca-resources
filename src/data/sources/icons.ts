@@ -28,6 +28,13 @@ export const icons: Resource[] = [
 		description: 'Simple tool to find, customize and generate common SVG icons for your project',
 		icon: '',
 	},
+	{
+		name: 'tabler icons',
+		url: 'https://tabler.io/icons',
+		description:
+			'Tabler Icons: 5467 free and open source SVG icons. Customizable size, color and stroke. Available for React, SolidJS, Vue, Figma and more for free!',
+		icon: '/resources/icons/tabler.png',
+	},
 	// {
 	// 	name: '',
 	// 	url: '',

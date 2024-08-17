@@ -4,6 +4,11 @@
 
 @import url('../components/colors/color-scheme.css');
 
+:root {
+	--radius: 8px;
+	
+}
+
 section {
 	@apply w-full cell-padding primary-border border-b;
 }
