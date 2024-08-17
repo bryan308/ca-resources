@@ -23,7 +23,7 @@ export function ModeToggle() {
 							className='size-4'
 							height='16'
 							width='16'
-							stroke-linejoin='round'
+							strokeLinejoin='round'
 							viewBox='0 0 16 16'
 						>
 							<path
@@ -47,7 +47,7 @@ export function ModeToggle() {
 						<svg
 							className='size-4'
 							height='16'
-							stroke-linejoin='round'
+							strokeLinejoin='round'
 							viewBox='0 0 16 16'
 							width='16'
 						>
@@ -73,7 +73,7 @@ export function ModeToggle() {
 							className='size-4'
 							width='16'
 							height='16'
-							stroke-linejoin='round'
+							strokeLinejoin='round'
 							viewBox='0 0 16 16'
 						>
 							<path

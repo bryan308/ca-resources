@@ -7,7 +7,12 @@ function Aside() {
 				<div className='mb-4'>
 					<ul className='links'>
 						<li>
-							<Link href='/'>Introduction</Link>
+							<Link
+								href='/'
+								scroll={false}
+							>
+								Introduction
+							</Link>
 						</li>
 					</ul>
 				</div>
@@ -15,10 +20,28 @@ function Aside() {
 					<p className='text-100 text-sm font-medium'>Resources</p>
 					<ul className='links'>
 						<li>
-							<Link href='/colors'>Colors</Link>
+							<Link
+								href='/colors'
+								scroll={false}
+							>
+								Colors
+							</Link>
 						</li>
 						<li>
-							<Link href='/typography'>Typography</Link>
+							<Link
+								href='/icons'
+								scroll={false}
+							>
+								Icons
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/typography'
+								scroll={false}
+							>
+								Typography
+							</Link>
 						</li>
 					</ul>
 				</div>
@@ -26,7 +49,12 @@ function Aside() {
 					<p className='text-100 text-sm font-medium'>Components</p>
 					<ul className='links'>
 						<li>
-							<Link href='/components/table'>Table</Link>
+							<Link
+								href='/components/table'
+								scroll={false}
+							>
+								Table
+							</Link>
 						</li>
 					</ul>
 				</div>

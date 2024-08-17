@@ -7,3 +7,10 @@ export type MDXFrontMatter = {
 	lessonGroup: number;
 	group: string;
 };
+
+export interface Resource {
+	name: string;
+	url: string;
+	description: string;
+	icon: string;
+}

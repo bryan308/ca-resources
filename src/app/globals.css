@@ -33,7 +33,11 @@ p {
 }
 
 .links li a {
-	@apply text-200 pr-3 py-2 text-sm inline-block w-full;
+	@apply text-200 pr-2 my-1 text-sm inline-block w-full;
+}
+
+.links li a:hover {
+	text-decoration: underline;
 }
 
 .truncate-description {
