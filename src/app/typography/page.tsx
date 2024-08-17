@@ -1,4 +1,4 @@
-import { resources } from '@/lib/sources';
+import { typography } from '@/data/sources/typography';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,36 +18,32 @@ export default function Typography() {
 					web development.
 				</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
-					{resources
-						.filter((resource) => resource.category === 'typography')
-						.map((resource) => (
-							<div
-								key={resource.name}
-								className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border'
-							>
-								<div className='grid place-items-center min-w-14 size-14'>
-									<Image
-										src={resource.icon}
-										alt={resource.name}
-										width={56}
-										height={56}
-									/>
-								</div>
-								<div>
-									<Link
-										href={`${resource.url}?rel=ca-resources.vercel.app`}
-										className='text-blue-500 hover:underline font-semibold'
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										{resource.name}
-									</Link>
-									<p className='text-gray-600 text-sm truncate-description'>
-										{resource.description}
-									</p>
-								</div>
+					{typography.map((typo) => (
+						<div
+							key={typo.name}
+							className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border'
+						>
+							<div className='grid place-items-center min-w-14 size-14'>
+								<Image
+									src={typo.icon}
+									alt={typo.name}
+									width={56}
+									height={56}
+								/>
 							</div>
-						))}
+							<div>
+								<Link
+									href={`${typo.url}?rel=ca-resources.vercel.app`}
+									className='text-blue-500 hover:underline font-semibold'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									{typo.name}
+								</Link>
+								<p className='text-gray-600 text-sm truncate-description'>{typo.description}</p>
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 		</>
