@@ -2,6 +2,19 @@ import { Resource } from '@/lib/types';
 
 export const colors: Resource[] = [
 	{
+		name: 'Huemint',
+		url: 'https://huemint.com/',
+		description: 'Generate a unique 3-accent palette for your website.',
+		icon: '/resources/colors/huemint.svg',
+	},
+	{
+		name: 'AI Colors',
+		url: 'https://aicolors.co/',
+		description:
+			'Create cool and unique color palettes with our AI-powered color palette generator. Browse, edit, and visualize your palettes to find the perfect combination for your project.',
+		icon: '',
+	},
+	{
 		name: 'Happy Hues',
 		url: 'https://www.happyhues.co/',
 		description:

@@ -1,8 +1,6 @@
 import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
-import { icons, logos } from '@/data/sources/icons';
-import Image from 'next/image';
-import Link from 'next/link';
+import { icons, logos, svggenerators } from '@/data/sources/icons';
 import React from 'react';
 
 function IconsPage() {
@@ -30,6 +28,13 @@ function IconsPage() {
 				<p>Logos representing various brands, companies, and technologies are featured.</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
 					<Cards data={logos} />
+				</div>
+			</section>
+			<section>
+				<h3 className='text-2xl text-100 font-bold mb-2'>SVG Generators</h3>
+				<p>Discover powerful tools to create and customize SVGs effortlessly for your projects.</p>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
+					<Cards data={svggenerators} />
 				</div>
 			</section>
 		</>
