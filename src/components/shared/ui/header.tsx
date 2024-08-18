@@ -54,37 +54,41 @@ function Header() {
 									</div>
 									<div className='my-4'>
 										<h3 className='text-200 font-semibold text-md'>Resources</h3>
-										{resources.map((r, i) => (
-											<SheetTrigger
-												key={i}
-												asChild
-											>
-												<Link
-													href={r.path}
-													className='text-100 text-lg flex items-center gap-2 my-2'
+										{resources
+											.sort((a, b) => a.text.localeCompare(b.text))
+											.map((r, i) => (
+												<SheetTrigger
+													key={i}
+													asChild
 												>
-													<ArrowRight className='size-4' />
-													{r.text}
-												</Link>
-											</SheetTrigger>
-										))}
+													<Link
+														href={r.path}
+														className='text-100 text-lg flex items-center gap-2 my-2'
+													>
+														<ArrowRight className='size-4' />
+														{r.text}
+													</Link>
+												</SheetTrigger>
+											))}
 									</div>
 									<div className='my-4'>
 										<h3 className='text-200 font-semibold text-md'>Components</h3>
-										{componentPaths.map((p, i) => (
-											<SheetTrigger
-												key={i}
-												asChild
-											>
-												<Link
-													href={`/components/${p.slug}`}
-													className='text-100 text-lg flex items-center gap-2 my-2'
+										{componentPaths
+											.sort((a, b) => a.title.localeCompare(b.title))
+											.map((p, i) => (
+												<SheetTrigger
+													key={i}
+													asChild
 												>
-													<ArrowRight className='size-4' />
-													{p.title}
-												</Link>
-											</SheetTrigger>
-										))}
+													<Link
+														href={`/components/${p.slug}`}
+														className='text-100 text-lg flex items-center gap-2 my-2'
+													>
+														<ArrowRight className='size-4' />
+														{p.title}
+													</Link>
+												</SheetTrigger>
+											))}
 									</div>
 								</SheetDescription>
 							</SheetContent>

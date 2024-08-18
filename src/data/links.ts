@@ -15,12 +15,16 @@ export const resources = [
 		path: '/colors',
 	},
 	{
-		text: 'Icons',
-		path: '/icons',
-	},
-	{
 		text: 'Typography',
 		path: '/typography',
+	},
+	{
+		text: 'Inspirations',
+		path: '/inspirations',
+	},
+	{
+		text: 'Icons',
+		path: '/icons',
 	},
 ];
 

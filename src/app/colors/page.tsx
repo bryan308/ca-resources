@@ -13,13 +13,6 @@ export default function Colors() {
 					Explore our recommended color scales and discover additional resources to enhance your
 					color knowledge.
 				</p>
-			</section>
-			<section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>Inspiration and Tools</h3>
-				<p>
-					Check out these valuable websites to expand your understanding and application of color in
-					web development.
-				</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
 					<Cards data={colors} />
 				</div>

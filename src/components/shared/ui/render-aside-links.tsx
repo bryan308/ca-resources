@@ -15,23 +15,25 @@ function AsideLinks({ data }: IAsideLinks) {
 	const pathname = usePathname();
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-800/50' : 'text-200';
+		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-950' : 'text-200';
 
 	return (
 		<>
-			{data.map((d, i) => {
-				const isActive = pathname === d.path;
-				return (
-					<li key={i}>
-						<Link
-							href={d.path}
-							className={currentPath(isActive)}
-						>
-							{d.text}
-						</Link>
-					</li>
-				);
-			})}
+			{data
+				.sort((a, b) => a.text.localeCompare(b.text))
+				.map((d, i) => {
+					const isActive = pathname === d.path;
+					return (
+						<li key={i}>
+							<Link
+								href={d.path}
+								className={currentPath(isActive)}
+							>
+								{d.text}
+							</Link>
+						</li>
+					);
+				})}
 		</>
 	);
 }
