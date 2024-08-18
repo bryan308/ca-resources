@@ -12,19 +12,23 @@ export const overview = [
 export const resources = [
 	{
 		text: 'Colors',
-		path: '/colors',
+		path: '/resources/colors',
 	},
 	{
 		text: 'Typography',
-		path: '/typography',
+		path: '/resources/typography',
 	},
 	{
 		text: 'Inspirations',
-		path: '/inspirations',
+		path: '/resources/inspirations',
 	},
 	{
 		text: 'Icons',
-		path: '/icons',
+		path: '/resources/icons',
+	},
+	{
+		text: 'Stock Photos',
+		path: '/resources/stock-photos',
 	},
 ];
 
