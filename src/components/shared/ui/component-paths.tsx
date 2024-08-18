@@ -23,7 +23,7 @@ function ComponentPaths({ paths }: PathsProp) {
 				return (
 					<li key={i}>
 						<Link
-							href={p.slug}
+							href={`/components/${p.slug}`}
 							className={currentPath(isActive)}
 						>
 							{p.title}
