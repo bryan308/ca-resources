@@ -23,7 +23,7 @@ function Aside() {
 					</ul>
 				</div>
 				<div className='mb-4'>
-					<p className='text-100 text-sm font-medium pl-2'>Components</p>
+					<p className='text-100 text-sm font-medium pl-2'>Guides</p>
 					<ul className='links'>
 						<ComponentPaths paths={mdxFiles} />
 					</ul>

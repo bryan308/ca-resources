@@ -3,8 +3,8 @@ export type MDXFrontMatter = {
 	title: string;
 	extendedDesc?: string;
 	description?: string;
-	lessonNumber: number;
-	lessonGroup: number;
+	guideNumber: number;
+	guideGroup: number;
 	group: string;
 };
 

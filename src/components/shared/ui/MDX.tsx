@@ -1,8 +1,11 @@
 import Link from 'next/link';
-import { MDXLink, Section } from './elements';
+import { GuideImage, MDXLink, Section, Table, TableCellSpanning } from './elements';
 
 export const components = {
+	GuideImage,
 	Section,
 	MDXLink,
+	Table,
+	TableCellSpanning,
 	Link,
 };

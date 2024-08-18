@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('../components/colors/color-scheme.css');
+@import url('./code.css');
 
 .bg-foreground {
 	@apply bg-white dark:bg-neutral-950;
@@ -30,6 +31,14 @@ p {
 
 .cell-padding {
 	@apply p-6 xl:p-12;
+}
+
+ul.links {
+	@apply list-none;
+}
+
+ul.links li {
+	@apply mb-0;
 }
 
 .links li a {

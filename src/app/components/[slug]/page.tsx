@@ -4,18 +4,19 @@ import { notFound } from 'next/navigation';
 import rehypePrism from 'rehype-prism-plus';
 import { serialize } from 'next-mdx-remote/serialize';
 import Content from './slug-content';
+import './styles/slug.css';
 
 export async function generateMetadata({ params }: ListProp) {
 	const { slug } = params;
-	const postData = await fetchLessonData(slug);
+	const postData = await fetchGuideData(slug);
 
 	return {
 		title: `${postData.frontMatter.title}`,
-		description: postData.frontMatter.extendedDesc || 'Learn more about web development.',
+		description: postData.frontMatter.extendedDesc || '',
 		openGraph: {
-			title: `${postData.frontMatter.title} | WebWise`,
-			description: postData.frontMatter.description || 'Learn more about web development.',
-			images: [`https://webwisee.vercel.app/images/landing-page.jpg`],
+			title: `${postData.frontMatter.title}`,
+			description: postData.frontMatter.description || '',
+			images: [``],
 		},
 	};
 }
@@ -24,23 +25,23 @@ interface ListProp {
 	params: { slug: string };
 }
 
-async function fetchLessonData(slug: string) {
+async function fetchGuideData(slug: string) {
 	const mdxFiles = getAllMdx();
 
-	const sortedLessons = mdxFiles.sort((a, b) => {
-		if (a.frontMatter.lessonGroup === b.frontMatter.lessonGroup) {
-			return a.frontMatter.lessonNumber - b.frontMatter.lessonNumber;
+	const sortedGuides = mdxFiles.sort((a, b) => {
+		if (a.frontMatter.guideGroup === b.frontMatter.guideGroup) {
+			return a.frontMatter.guideNumber - b.frontMatter.guideNumber;
 		}
-		return a.frontMatter.lessonGroup - b.frontMatter.lessonGroup;
+		return a.frontMatter.guideGroup - b.frontMatter.guideGroup;
 	});
 
-	const lessonIndex = sortedLessons.findIndex((p) => p.frontMatter.slug === slug);
-	if (lessonIndex === -1) {
+	const guideIndex = sortedGuides.findIndex((p) => p.frontMatter.slug === slug);
+	if (guideIndex === -1) {
 		notFound();
 	}
 
-	const lesson = sortedLessons[lessonIndex];
-	const { frontMatter, content } = lesson;
+	const guide = sortedGuides[guideIndex];
+	const { frontMatter, content } = guide;
 
 	const mdxContent = await serialize(content, {
 		mdxOptions: {
@@ -50,14 +51,14 @@ async function fetchLessonData(slug: string) {
 		scope: frontMatter,
 	});
 
-	const next = sortedLessons[lessonIndex + 1]?.frontMatter || null;
+	const next = sortedGuides[guideIndex + 1]?.frontMatter || null;
 
 	return { frontMatter, mdxContent, next };
 }
 
-export default async function Lesson({ params }: ListProp) {
+export default async function Guide({ params }: ListProp) {
 	const { slug } = params;
-	const postData = await fetchLessonData(slug);
+	const postData = await fetchGuideData(slug);
 
 	return (
 		<>

@@ -4,11 +4,11 @@ import matter from 'gray-matter';
 import type { MDXFrontMatter } from '@/lib/types';
 
 const root = process.cwd();
-export const lessonsPath = path.join(root, 'components-page');
+export const guidesPath = path.join(root, 'guides');
 
 export const getMdx = (fileName: string) => {
 	try {
-		const fullPath = path.join(lessonsPath, fileName);
+		const fullPath = path.join(guidesPath, fileName);
 		const docSource = fs.readFileSync(fullPath, 'utf-8');
 		const { data, content } = matter(docSource);
 
@@ -27,7 +27,7 @@ export const getMdx = (fileName: string) => {
 
 export const getAllMdx = () => {
 	try {
-		const fileNames = fs.readdirSync(lessonsPath);
+		const fileNames = fs.readdirSync(guidesPath);
 		const items = fileNames.map((fileName) => getMdx(fileName)).filter(Boolean);
 		return items as { frontMatter: MDXFrontMatter; content: string }[];
 	} catch (error) {

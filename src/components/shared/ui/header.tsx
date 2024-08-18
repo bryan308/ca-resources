@@ -72,7 +72,7 @@ function Header() {
 											))}
 									</div>
 									<div className='my-4'>
-										<h3 className='text-200 font-semibold text-md'>Components</h3>
+										<h3 className='text-200 font-semibold text-md'>Guides</h3>
 										{componentPaths
 											.sort((a, b) => a.title.localeCompare(b.title))
 											.map((p, i) => (

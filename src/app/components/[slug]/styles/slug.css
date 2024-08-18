@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+	@apply text-neutral-900 dark:text-[#EDEDED] text-4xl font-bold mb-2;
+}
+
+h3 {
+	@apply text-neutral-900 dark:text-[#EDEDED] text-2xl font-bold mb-2;
+}
+
+/* th {
+	@apply border-b-2 rounded-lg border-[#ebebeb] dark:border-[#2e2e2e] px-4;
+} */
+
+td {
+	padding: 0.5rem 1rem;
+}
+
+ol {
+	list-style-position: inside;
+	list-style-type: decimal;
+}
+
+ul {
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+li {
+	@apply text-[#666] dark:text-[#a1a1a1] mb-2;
+}
+
+li::marker {
+	@apply text-neutral-900 dark:text-[#EDEDED];
+}
+
+code {
+	@apply text-neutral-900 dark:text-[#EDEDED] rounded-lg dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+}
+
+strong {
+	@apply font-medium text-neutral-900 dark:text-[#EDEDED];
+}
+
+.table1 {
+	@apply my-6 border border-collapse border-[#ebebeb] dark:border-[#2e2e2e];
+
+	thead {
+		tr {
+			th {
+				@apply px-4 border border-collapse border-[#ebebeb] dark:border-[#2e2e2e] text-neutral-900 dark:text-[#EDEDED];
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			@apply border border-collapse border-[#ebebeb] dark:border-[#2e2e2e];
+
+			td {
+				@apply border border-collapse px-1 py-px border-[#ebebeb] dark:border-[#2e2e2e];
+
+				&:nth-child(3) {
+					@apply text-right;
+				}
+			}
+		}
+	}
+}
+
+.table2 {
+	font-family: 'Times New Roman', Times, serif;
+	@apply my-6 border border-separate border-neutral-700 dark:border-[#2e2e2e];
+
+	thead {
+		tr {
+			th {
+				@apply px-4 border border-neutral-700 dark:border-[#2e2e2e] text-neutral-900 dark:text-[#EDEDED];
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			@apply border border-neutral-700 dark:border-[#2e2e2e];
+
+			td {
+				@apply border px-1 py-px border-neutral-700 dark:border-[#2e2e2e];
+			}
+		}
+	}
+}
+
+.table3 {
+	font-family: 'Times New Roman', Times, serif;
+	border: thin solid;
+	@apply my-6 border-separate border-neutral-700 dark:border-[#2e2e2e];
+
+	thead {
+		tr {
+			th {
+				border: thin solid;
+				@apply px-4 border-neutral-700 dark:border-[#2e2e2e] text-neutral-900 dark:text-[#EDEDED];
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			@apply border border-neutral-700 dark:border-[#2e2e2e];
+
+			td {
+				border: thin solid;
+				@apply px-1 py-px border-neutral-700 dark:border-[#2e2e2e];
+			}
+		}
+	}
+}
+
+.table4 {
+	font-family: 'Times New Roman', Times, serif;
+	@apply border my-6 border-collapse border-neutral-700 dark:border-[#2e2e2e];
+
+	thead {
+		tr {
+			th {
+				@apply border border-collapse px-4 border-neutral-700 dark:border-[#2e2e2e] text-neutral-900 dark:text-[#EDEDED];
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			@apply border border-neutral-700 dark:border-[#2e2e2e];
+
+			td {
+				@apply border border-collapse px-1 py-px border-neutral-700 dark:border-[#2e2e2e];
+			}
+		}
+	}
+}
+
+.table5 {
+	@apply my-6 border border-collapse border-black;
+
+	thead {
+		@apply bg-[#191970];
+		tr {
+			th {
+				@apply px-4 border border-collapse border-[#2e2e2e] text-[#EDEDED];
+			}
+		}
+	}
+
+	tbody {
+		@apply bg-[#add8e6];
+		tr {
+			@apply border border-collapse border-[#2e2e2e];
+
+			td {
+				@apply border border-collapse px-1 py-px border-[#2e2e2e] text-neutral-900;
+			}
+			td:nth-child(3) {
+				@apply text-right;
+			}
+		}
+	}
+}
