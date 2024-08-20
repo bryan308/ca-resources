@@ -3,6 +3,13 @@
 import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
 import { colors } from '@/data/sources/colors';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Colors',
+	description:
+		'Explore our recommended color scales and discover additional resources to enhance your color knowledge.',
+};
 
 export default function Colors() {
 	return (

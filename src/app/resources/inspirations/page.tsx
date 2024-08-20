@@ -2,6 +2,13 @@ import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
 import { inspirations } from '@/data/sources/insporations';
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Inspirations',
+	description:
+		'Explore a variety of inspiration sources to ignite your creativity and enhance your design work.',
+};
 
 function InspiPage() {
 	return (

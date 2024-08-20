@@ -1,7 +1,14 @@
 import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
 import { icons, logos, svggenerators } from '@/data/sources/icons';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+	title: 'Icons',
+	description:
+		'Discover a curated selection of icon libraries and resources to elevate your design projects.',
+};
 
 function IconsPage() {
 	return (

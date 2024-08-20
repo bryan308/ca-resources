@@ -2,6 +2,12 @@ import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
 import { stockPhotos } from '@/data/sources/stock-photos';
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Stock Photos',
+	description: 'High-Quality Stock Photos for enriching your projects and presentations.',
+};
 
 function StockPhotosPage() {
 	return (
