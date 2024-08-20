@@ -1,5 +1,7 @@
 ---
 title: Form
+description: An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+extendedDesc: HTML forms enable user interaction, collecting input for server processing in applications like logins, searches, and surveys. It's a client/server process.
 ---
 
 <section>
@@ -25,7 +27,6 @@ HTML forms are a fundamental part of web development, enabling user interaction 
 </section>
 <section>
 ### HTML Form attributes
-
 - The **action attribute** defines the action to be performed when the form is submitted.
 - The **method attribute** specifies the HTTP method to be used when submitting the form data.
 - The form-data can be sent as URL variables (with `method="get"`) or as HTTP post transaction (with `method="post"`).
@@ -83,7 +84,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 <section>
 ### Input types submit, reset and button
 - `<input type="submit">` defines a button for submitting form data to a form handler
-- `<input type="reset">` defines a reset button that will rest all form values to their default values
+- `<input type="reset">` defines a reset button that will reset all form values to their default values
 - `<input type="button">` defines a programmable button
 ```html
 <form>
@@ -141,7 +142,13 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
   <label for="price">Price range:</label> <br />
   <input type="range" id="price" name="price"> <br />
   <label for="cnum">Cellphone Number:</label> <br />
-  <input type="tel" id="cnum" name="cnum" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholedr="0910-123-4567"> <br />
+  <input 
+    type="tel" 
+    id="cnum" 
+    name="cnum" 
+    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" 
+    placeholder="0910-123-4567"
+  > <br />
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
 ```
@@ -153,7 +160,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - `<input type="file">` allows the user to choose a file from their device or computer's storage.
 ```html
 <form>
-  <label for="weadd">Webstei Address:</label> <br />
+  <label for="weadd">Website Address:</label> <br />
   <input type="url" id="weadd" name="weadd"> <br />
   <label for="tarrive">Arrival Time:</label> <br />
   <input type="time" id="tarrive" name="tarrive"> <br />
@@ -240,5 +247,5 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 </section>
 <section>
 ### Credits
-This webpage was created based on lessons provided by **ROSE ANNE G. COCHANCO** as part of Web Development subject.
+This webpage was created based on lessons provided by **Rose Anne G. Cochanco** as part of Web Development subject.
 </section>

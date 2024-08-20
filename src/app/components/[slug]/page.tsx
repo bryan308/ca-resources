@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: ListProp) {
 
 	return {
 		title: `${postData.frontMatter.title}`,
-		description: postData.frontMatter.extendedDesc || '',
+		description: postData.frontMatter.description || '',
 		openGraph: {
 			title: `${postData.frontMatter.title}`,
 			description: postData.frontMatter.description || '',

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Input } from './input';
 import { IconMenu2 } from '@tabler/icons-react';
 import { ModeToggle } from './theme-switcher';
 import { Sheet, SheetContent, SheetDescription, SheetTrigger } from './sheet';
@@ -23,11 +22,10 @@ function Header() {
 						<p className='text-100 font-base font-semibold'>CA Resources</p>
 					</Link>
 				</div>
-				<div className='flex items-center justify-between p-4 xl:grow'>
+				<div className='flex items-center justify-end p-4 xl:grow'>
 					<div className='hidden xl:block'>
-						<Input placeholder='Search' />
+						<ModeToggle />
 					</div>
-					<ModeToggle />
 					<div className='xl:hidden block'>
 						<Sheet>
 							<SheetTrigger>
@@ -90,6 +88,7 @@ function Header() {
 												</SheetTrigger>
 											))}
 									</div>
+									<ModeToggle />
 								</SheetDescription>
 							</SheetContent>
 						</Sheet>

@@ -10,11 +10,15 @@
 }
 
 section {
-	@apply w-full cell-padding primary-border border-b;
+	@apply w-full cell-padding primary-border border-b overflow-x-hidden;
 }
 
 p {
 	@apply text-200;
+}
+
+a.link {
+	@apply text-blue-500 hover:underline font-semibold active:text-red-500 visited:text-purple-500;
 }
 
 .text-100 {

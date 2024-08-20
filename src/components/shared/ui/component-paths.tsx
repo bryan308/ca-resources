@@ -13,24 +13,25 @@ function ComponentPaths({ paths }: PathsProp) {
 	const pathname = usePathname();
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-800/50' : 'text-200';
+		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-950' : 'text-200';
 
 	return (
 		<>
-			{paths.map((p, i) => {
-				const isActive = pathname === p.slug;
-
-				return (
-					<li key={i}>
-						<Link
-							href={`/components/${p.slug}`}
-							className={currentPath(isActive)}
-						>
-							{p.title}
-						</Link>
-					</li>
-				);
-			})}
+			{paths
+				.sort((a, b) => a.title.localeCompare(b.title))
+				.map((p, i) => {
+					const isActive = pathname === `/components/${p.slug}`;
+					return (
+						<li key={i}>
+							<Link
+								href={`/components/${p.slug}`}
+								className={currentPath(isActive)}
+							>
+								{p.title}
+							</Link>
+						</li>
+					);
+				})}
 		</>
 	);
 }

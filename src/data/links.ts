@@ -3,10 +3,6 @@ export const overview = [
 		text: 'Introduction',
 		path: '/',
 	},
-	{
-		text: 'About',
-		path: '/about',
-	},
 ];
 
 export const resources = [
