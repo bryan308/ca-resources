@@ -11,7 +11,7 @@ h3 {
 }
 
 h4 {
-	@apply text-neutral-900 dark:text-[#EDEDED] text-xl font-bold mb-2
+	@apply text-neutral-900 dark:text-[#EDEDED] text-xl font-bold mb-2;
 }
 
 ol {
@@ -139,28 +139,36 @@ strong {
 }
 
 .table5 {
-	@apply my-6 border border-collapse border-black;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
 
-	thead {
-		@apply bg-[#191970];
-		tr {
-			th {
-				@apply px-4 border border-collapse border-[#2e2e2e] text-[#EDEDED];
-			}
-		}
-	}
+.table5 thead {
+	background-color: #191970;
+	color: #ededed;
+}
 
-	tbody {
-		@apply bg-[#add8e6];
-		tr {
-			@apply border border-collapse border-[#2e2e2e];
+.table5 thead th {
+	padding: 0.5rem 1rem;
+	border: 1px solid black;
+}
 
-			td {
-				@apply border border-collapse px-1 py-px border-[#2e2e2e] text-neutral-900;
-			}
-			td:nth-child(3) {
-				@apply text-right;
-			}
-		}
-	}
+.table5 tbody {
+	background-color: #add8e6;
+}
+
+.table5 tbody tr {
+	border: 1px solid black;
+}
+
+.table5 tbody td {
+	border: 1px solid black;
+	padding: 0.25rem;
+	color: #111;
+}
+
+.table5 tbody td:nth-child(3) {
+	text-align: right;
 }
