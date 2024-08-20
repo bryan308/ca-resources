@@ -22,7 +22,7 @@ function Header() {
 						<p className='text-100 font-base font-semibold'>CA Resources</p>
 					</Link>
 				</div>
-				<div className='flex items-center justify-end p-4 xl:grow'>
+				<div className='flex items-center justify-end p-4 xl:grow xl:border-none border-l primary-border'>
 					<div className='hidden xl:block'>
 						<ModeToggle />
 					</div>
@@ -32,64 +32,66 @@ function Header() {
 								<IconMenu2 />
 							</SheetTrigger>
 							<SheetContent side='left'>
-								<SheetDescription>
-									<div className='my-4'>
-										<h3 className='text-200 font-semibold text-md'>Overview</h3>
-										{overview.map((o, i) => (
-											<SheetTrigger
-												key={i}
-												asChild
-											>
-												<Link
-													href={o.path}
-													className='text-100 text-lg flex items-center gap-2 my-2'
-												>
-													<ArrowRight className='size-4' />
-													{o.text}
-												</Link>
-											</SheetTrigger>
-										))}
-									</div>
-									<div className='my-4'>
-										<h3 className='text-200 font-semibold text-md'>Resources</h3>
-										{resources
-											.sort((a, b) => a.text.localeCompare(b.text))
-											.map((r, i) => (
+								<div className='h-full flex flex-col justify-between'>
+									<div>
+										<div className='my-4'>
+											<h3 className='text-200 font-semibold text-md'>Overview</h3>
+											{overview.map((o, i) => (
 												<SheetTrigger
 													key={i}
 													asChild
 												>
 													<Link
-														href={r.path}
+														href={o.path}
 														className='text-100 text-lg flex items-center gap-2 my-2'
 													>
 														<ArrowRight className='size-4' />
-														{r.text}
+														{o.text}
 													</Link>
 												</SheetTrigger>
 											))}
-									</div>
-									<div className='my-4'>
-										<h3 className='text-200 font-semibold text-md'>Guides</h3>
-										{componentPaths
-											.sort((a, b) => a.title.localeCompare(b.title))
-											.map((p, i) => (
-												<SheetTrigger
-													key={i}
-													asChild
-												>
-													<Link
-														href={`/components/${p.slug}`}
-														className='text-100 text-lg flex items-center gap-2 my-2'
+										</div>
+										<div className='my-4'>
+											<h3 className='text-200 font-semibold text-md'>Resources</h3>
+											{resources
+												.sort((a, b) => a.text.localeCompare(b.text))
+												.map((r, i) => (
+													<SheetTrigger
+														key={i}
+														asChild
 													>
-														<ArrowRight className='size-4' />
-														{p.title}
-													</Link>
-												</SheetTrigger>
-											))}
+														<Link
+															href={r.path}
+															className='text-100 text-lg flex items-center gap-2 my-2'
+														>
+															<ArrowRight className='size-4' />
+															{r.text}
+														</Link>
+													</SheetTrigger>
+												))}
+										</div>
+										<div className='my-4'>
+											<h3 className='text-200 font-semibold text-md'>Guides</h3>
+											{componentPaths
+												.sort((a, b) => a.title.localeCompare(b.title))
+												.map((p, i) => (
+													<SheetTrigger
+														key={i}
+														asChild
+													>
+														<Link
+															href={`/components/${p.slug}`}
+															className='text-100 text-lg flex items-center gap-2 my-2'
+														>
+															<ArrowRight className='size-4' />
+															{p.title}
+														</Link>
+													</SheetTrigger>
+												))}
+										</div>
 									</div>
 									<ModeToggle />
-								</SheetDescription>
+								</div>
 							</SheetContent>
 						</Sheet>
 					</div>
