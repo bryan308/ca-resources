@@ -128,12 +128,16 @@ const GuideImage = ({
 	src,
 	alt,
 	width,
+	maxWidth,
 	height,
+	className,
 }: {
 	src: string;
 	alt: string;
 	width: number;
+	maxWidth: number;
 	height: number;
+	className?: string;
 }) => {
 	return (
 		<ImageRender
@@ -141,7 +145,7 @@ const GuideImage = ({
 			alt={alt}
 			width={width}
 			height={height}
-			className='my-4 mx-auto w-full md:max-w-[80%]'
+			className={`my-4 mx-auto w-full md:max-w-[${maxWidth}%] ${className}`}
 		/>
 	);
 };
@@ -152,19 +156,19 @@ const TableCellSpanning = () => (
 		<thead>
 			<tr>
 				<th
-					className='border dark:border-[#2e2e2e] px-2'
+					className='border dark:border-[#2e2e2e] md:px-2'
 					colSpan={3}
 				>
 					Assignments
 				</th>
 				<th
-					className='border dark:border-[#2e2e2e] px-2'
+					className='border dark:border-[#2e2e2e] md:px-2'
 					colSpan={2}
 				>
 					Laboratory
 				</th>
 				<th
-					className='border dark:border-[#2e2e2e] px-2'
+					className='border dark:border-[#2e2e2e] md:px-2'
 					rowSpan={2}
 				>
 					Ability to Stay Awake

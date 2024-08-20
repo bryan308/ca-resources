@@ -10,6 +10,10 @@ h3 {
 	@apply text-neutral-900 dark:text-[#EDEDED] text-2xl font-bold mb-2;
 }
 
+h4 {
+	@apply text-neutral-900 dark:text-[#EDEDED] text-xl font-bold mb-2
+}
+
 /* th {
 	@apply border-b-2 rounded-lg border-[#ebebeb] dark:border-[#2e2e2e] px-4;
 } */
