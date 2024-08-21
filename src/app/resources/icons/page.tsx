@@ -21,7 +21,7 @@ function IconsPage() {
 				</p>
 			</section>
 			<section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>General</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>General</h2>
 				<p>
 					These are icons that you can find just about anywhere. They‘re used widely and frequently
 					for various purposes.
@@ -31,14 +31,14 @@ function IconsPage() {
 				</div>
 			</section>
 			<section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>Logos</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>Logos</h2>
 				<p>Logos representing various brands, companies, and technologies are featured.</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
 					<Cards data={logos} />
 				</div>
 			</section>
 			<section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>SVG Generators</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>SVG Generators</h2>
 				<p>Discover powerful tools to create and customize SVGs effortlessly for your projects.</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10'>
 					<Cards data={svggenerators} />

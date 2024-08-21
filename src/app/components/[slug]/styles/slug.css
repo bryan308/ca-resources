@@ -33,7 +33,7 @@ li::marker {
 }
 
 code {
-	@apply text-neutral-900 dark:text-[#EDEDED] rounded-lg dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+	@apply font-mono text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-lg dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
 }
 
 strong {

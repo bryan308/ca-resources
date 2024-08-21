@@ -30,7 +30,7 @@ export default function Colors() {
 
 {
 	/* <section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>Scales</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>Scales</h2>
 				<p>
 					Here are the recommended color scales for CA Resources, sourced from the{' '}
 					<Link

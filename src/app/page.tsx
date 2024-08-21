@@ -15,7 +15,7 @@ export default function Introduction() {
 				</p>
 			</section>
 			<section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>Inspired by</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>Inspired by</h2>
 				<p>
 					The design of CA Resources draws inspiration from the{' '}
 					<Link
@@ -42,7 +42,7 @@ export default function Introduction() {
 				</p>
 			</section>
 			{/* <section>
-				<h3 className='text-2xl text-100 font-bold mb-2'>Contribute</h3>
+				<h2 className='text-2xl text-100 font-bold mb-2'>Contribute</h2>
 				<p>
 					CA Resources is an open-source project. You can view the code, contribute, or suggest
 					improvements by visiting the{' '}

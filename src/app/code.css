@@ -4,7 +4,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply bg-neutral-950 w-full md:w-3/4 border-2 border-[#2e2e2e] text-white;
+	@apply bg-neutral-950 w-full md:w-3/4 border border-[#2e2e2e] text-white;
 	text-shadow: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 0.875rem;
