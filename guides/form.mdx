@@ -14,6 +14,10 @@ extendedDesc: HTML forms enable user interaction, collecting input for server pr
 - **b**. Construct a web page using `<form>` and `</form>` elements that integrates with backend services for data processing.
 - **c**. Develop an HTML form that incorporates multiple input types, each chosen to optimize data entry for specific user tasks.
 - **d**. Create an HTML form that uses a wide range of input attributes to provide advanced features.
+- **e**. Create and customize dropdown menus using the select and option elements to enhance user interactivity on web forms.
+- **f**. Implement and configure the textarea element and its attributes to enable multi-line text input in web forms.
+- **g**. Group and label related form controls using the fieldset and legend elements to improve form accessibility and organization.
+- **h**. Create and style various types of buttons using the button element, and understand their functions in form submission and user interaction.
 </section>
 <section>
 ### What is HTML Form?
@@ -45,10 +49,9 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - `<legend></legend>`
 - `<datalist></datalist>`
 - `<output></output>`
-
 </section>
 <section>
-### The `<label>` `</label>` Element
+### The label Element
 - The `<label></label>` element defines a label for several form elements.
 - The `<label></label>` element is useful for screenreader users.
 - The **for** attribute of the `<label>` tag should be equal to the **id** attribute of the `<input>` element to bind them together.
@@ -61,7 +64,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ```
 </section>
 <section>
-### The `<input>` Element
+### The input Element
 - The `<input>` element is the most important form element.
 - The `<input>` element can be displayed in several ways, depending on the type attribute.
 - The **type** attribute specifies the type of input element to display.
@@ -243,6 +246,81 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
   <br />
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
+```
+</section>
+<section>
+### The select and option elements
+- The `<select></select>` element defines a drop-down list.
+- The `<option></option>` element defines an option that can be selected.
+- Use the **selected** attribute to the `<option>` element to define a pre-selected option.
+```html
+<form>
+  <label for="civilstat">Civil Status:</label>
+  <select id="civilstat" name="civilstat">
+    <option value="single" selected>Single</option>
+    <option value="married">Married</option>
+    <option value="separated">Separated</option>
+    <option value="widowed">Widowed</option>
+  </select>
+</form>
+```
+</section>
+<section>
+### The datalist element
+- The `<datalist></datalist>` tag specifies a list of pre-defined options for an `<input>` element.
+- The `<datalist></datalist>` tag is used to provide an "autocomplete" feature for `<input>` elements. Users will see a drop-down list of pre-defined options as they input data.
+- The `<datalist>` element‘s **id** attribute must be equal to the `<input>` element‘s **list** attribute (this binds them together).
+```html
+<form>
+  <label>Web Browsers:</label>
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="edge">Edge</option>
+    <option value="internet explorer">Internet Explorer</option>
+    <option value="chrome">Chrome</option>
+  </datalist><br />
+</form>
+```
+</section>
+<section>
+### The textarea element
+- The `<textarea>` and `</textarea>` element defines a multi-line input field.
+- This element is often used in a form, to collect user inputs like comments or reviews.
+- The **rows** attribute specifies the visible number of lines in a text area.
+- The **cols** attribute specifies the visible width of a text area.
+```html
+<form>
+  <label for="msg">Message:</label> <br />
+  <textarea name="msg" id="msg" rows="10" cols="20">
+  </textarea>
+</form>
+```
+</section>
+<section>
+### The fieldset and legend element
+- The `<fieldset></fieldset>` element is used to group related data in a form.
+- The `<legend></legend>` elements defines a caption for `<fieldset>` element.
+```html
+<form>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname"> <br />
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname"> <br />
+    <input type="submit" name="btnsave" value="Save">
+  </fieldset>
+</form>
+```
+</section>
+<section>
+### The button element
+- The `<button></button>` element is used to create a clickable button.
+- The `<button></button>` element can be used to trigger custom JavaScript functions.
+```html
+<button type="submit">Submit</button>
+<button type="reset">Clear</button>
+<button type="button">Print</button>
 ```
 </section>
 <section>
