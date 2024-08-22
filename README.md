@@ -7,7 +7,3 @@ This website is designed to boost productivity not only in web development but a
 ## Inspired by
 
 The design of **CA Resources** draws inspiration from the [Vercel Geist Design System](https://vercel.com/geist/introduction), ensuring a clean, modern, and user-friendly experience.
-
-## Managed by
-
-**CA Resources** was created and is managed by [Cedric Angulo](https://cdrcangulo.vercel.app/).
