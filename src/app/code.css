@@ -4,11 +4,9 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply bg-neutral-950 w-full md:w-3/4 border border-[#2e2e2e] text-white;
+	@apply text-sm bg-neutral-950 w-full md:w-3/4 border border-[#2e2e2e] text-white max-h-56;
 	text-shadow: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 0.875rem;
-	line-height: 1.25rem;
 	letter-spacing: 0.2px;
 	white-space: pre;
 	word-spacing: normal;
@@ -56,20 +54,52 @@ pre[class*='language-'] {
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
-.highlight-line {
-	margin-left: -16px;
-	margin-right: -16px;
-	background-color: rgba(55, 65, 81, 0.5);
-	border-left: 4px solid rgb(59, 130, 246);
+pre {
+  overflow-x: auto;
 }
+
+/**
+ * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .code-highlight.
+ */
+.code-highlight {
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.code-line {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-left: 4px solid rgba(0, 0, 0, 0); /* Set placeholder for highlight accent border color to transparent */
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.highlight-line {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  background-color: #5151513c;
+  border-left: .25rem solid #ededed;
+}
+
 .line-number::before {
-	display: inline-block;
-	width: 1rem;
-	text-align: right;
-	margin-right: 16px;
-	margin-left: -8px;
-	color: rgb(156, 163, 175);
-	content: attr(line);
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 1rem;
+  margin-left: -1rem;
+  color: #ffffff88;
+  content: attr(line);
 }
 .token.doctype,
 .token.tag {

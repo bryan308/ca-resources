@@ -56,7 +56,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - The `<label></label>` element is useful for screenreader users.
 - The **for** attribute of the `<label>` tag should be equal to the **id** attribute of the `<input>` element to bind them together.
 <br />
-```html
+```HTML {2} showLineNumbers
 <form>
   <label for="sname">Student Name</label>
   <input type="text" id="sname" name="sname">
@@ -75,7 +75,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ### Input types text and password
 - `<input type="text">` defines a one-line text input field.
 - `<input type="password">` defines a password field. The characters in a password field are masked (shown as asterisks or circles).
-```html
+```HTML {3, 5} showLineNumbers
 <form>
   <label for="sname">Student Name</label> <br />
   <input type="text" id="sname" name="sname">
@@ -89,7 +89,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - `<input type="submit">` defines a button for submitting form data to a form handler
 - `<input type="reset">` defines a reset button that will reset all form values to their default values
 - `<input type="button">` defines a programmable button
-```html
+```HTML {6-8} showLineNumbers
 <form>
   <label for="sname">Student Name</label> <br />
   <input type="text" id="sname" name="sname">
@@ -105,7 +105,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ### Input types radio and checkbox
 - `<input type="radio">` defines a radio button. A radio button lets a user select only one of a limited number of choices.
 - `<input type="checkbox">` defines a checkbox. Checkboxes lets users select zero or more options of a limited number of choices.
-```html
+```HTML {3-4, 6-9} showLineNumbers
 <form>
   <label for="sex">Sex:</label> <br />
   <input type="radio" id="sex" name="sex" value="male"> Male <br />
@@ -121,9 +121,9 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 <section>
 ### Input types email, number and date
 - `<input type="email">` is used for input fields that should contain an email address.
-- `<input type="number">` defines a numeric input field.
 - `<input type="date">` is used for input fields that should contain a date.
-```HTML
+- `<input type="number">` defines a numeric input field.
+```HTML {3, 5, 7} showLineNumbers
 <form>
   <label for="eadd">Email Address:</label> <br />
   <input type="email" id="eadd" name="eadd"> <br />
@@ -140,7 +140,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ### Input types range, tel
 - `<input type="range">` defines a control for entering a number whose exact value is not important (slider control). Default range is 0 to 100.
 - `<input type="tel">` is used for input fields that should contain a telephone number.
-```html
+```HTML {3, 5-11} showLineNumbers
 <form>
   <label for="price">Price range:</label> <br />
   <input type="range" id="price" name="price"> <br />
@@ -161,7 +161,9 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - `<input type="url">` is used for input fields that should contain a URL address.
 - `<input type="time">` allows the user to select a time.
 - `<input type="file">` allows the user to choose a file from their device or computer's storage.
-```html
+> Adding the `multiple` attribute to `<input type="file">` allows users to select more than one file. <br /> <br />
+  **Example**: `<input type="file" multiple>`
+```HTML {3, 5, 7} showLineNumbers
 <form>
   <label for="weadd">Website Address:</label> <br />
   <input type="url" id="weadd" name="weadd"> <br />
@@ -181,7 +183,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - The **value** attribute specifies the initial value for an input field.
 - The **readonly** attribute specifies that the input field is read only (cannot be changed)
 - The **disabled** attribute specifies that the input field is disabled. A disabled input field is unusable and unclickable, and its value will not be sent when submitting a form.
-```HTML
+```HTML {3, 5} showLineNumbers
 <form>
   <label for="subject">Subject:</label> <br />
   <input type="text" id="subject" name="subject" value="IT-WST01" disabled> <br />
@@ -196,7 +198,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 #### size and maxlength
 - The **size** attribute specifies the size (in characters) for the input field.
 - The **maxlength** attribute specifies the maximum allowed length for the input field. With a maxlength attribute, the input field will not accept more than the allowed number of characters.
-```HTML
+```HTML {5, 7} showLineNumbers
 <form>
   <label for="fname">First Name:</label>
   <input type="text" id="fname" name="fname"> <br />
@@ -213,7 +215,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 #### min, max and step
 - The **min** and **max** attributes specify the minimum and maximum values for an `<input>` element.
 - The **step** attribute specifies the legal number of intervals for an `<input>` element.
-```html
+```HTML {3} showLineNumbers
 <form>
   <label for="quiz">Quiz Score:</label> <br />
   <input type="number" id="quiz" name="quiz" min="0" max="50" step="5"> <br />
@@ -227,7 +229,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - The **placeholder** attribute specifies a hint describing an input field's expected value. The hint is displayed in the field before the user enters a value.
 - The **required** attribute specifies that an input field must be filled out before submitting the form.
 - The **autofocus** attribute specifies that an input field should automatically get focus when the page loads.
-```html
+```HTML {2-3} showLineNumbers
 <form>
   <input type="text" name="uname" placeholder="Enter username" required autofocus> <br />
   <input type="password" name="pword" placeholder="Enter password" required> <br />
@@ -239,7 +241,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 #### pattern and title
 - The **pattern** attribute specifies a regular expression that the input element's value is checked against.
 - The **title** attribute is used to describe the pattern to the user.
-```html
+```HTML {3} showLineNumbers
 <form>
   <label for="zipcode">ZIP Code:</label> <br />
   <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{4}" title="4 digit zipcode">
@@ -253,7 +255,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - The `<select></select>` element defines a drop-down list.
 - The `<option></option>` element defines an option that can be selected.
 - Use the **selected** attribute to the `<option>` element to define a pre-selected option.
-```html
+```HTML {3-8} showLineNumbers
 <form>
   <label for="civilstat">Civil Status:</label>
   <select id="civilstat" name="civilstat">
@@ -270,7 +272,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - The `<datalist></datalist>` tag specifies a list of pre-defined options for an `<input>` element.
 - The `<datalist></datalist>` tag is used to provide an "autocomplete" feature for `<input>` elements. Users will see a drop-down list of pre-defined options as they input data.
 - The `<datalist>` element‘s **id** attribute must be equal to the `<input>` element‘s **list** attribute (this binds them together).
-```html
+```HTML {4,8} showLineNumbers
 <form>
   <label>Web Browsers:</label>
   <input list="browsers" name="browser">
@@ -288,11 +290,10 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 - This element is often used in a form, to collect user inputs like comments or reviews.
 - The **rows** attribute specifies the visible number of lines in a text area.
 - The **cols** attribute specifies the visible width of a text area.
-```html
+```HTML {3} showLineNumbers
 <form>
   <label for="msg">Message:</label> <br />
-  <textarea name="msg" id="msg" rows="10" cols="20">
-  </textarea>
+  <textarea name="msg" id="msg" rows="10" cols="20"></textarea>
 </form>
 ```
 </section>
@@ -300,7 +301,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ### The fieldset and legend element
 - The `<fieldset></fieldset>` element is used to group related data in a form.
 - The `<legend></legend>` elements defines a caption for `<fieldset>` element.
-```html
+```HTML {2-3, 9} showLineNumbers
 <form>
   <fieldset>
     <legend>Personal Information</legend>
@@ -317,7 +318,7 @@ The HTML `<form>` `</form>` element can contain one or more of the following for
 ### The button element
 - The `<button></button>` element is used to create a clickable button.
 - The `<button></button>` element can be used to trigger custom JavaScript functions.
-```html
+```HTML showLineNumbers
 <button type="submit">Submit</button>
 <button type="reset">Clear</button>
 <button type="button">Print</button>

@@ -43,15 +43,15 @@ description: HTML tables allow web developers to arrange data into rows and colu
 </section>
 <section>
 ### Formatting a Data Table
-- **_border-style_**: use to specify a table border
-- **_border-width_**: use to specify the border's width
-- **_border_**: a shorthand property that handles a set of border-related properties
-- **_padding_**: use to specify the space between the cell content and its border
-- **_border-collapse_**: use to collapse borders into just one border
+- **border-style**: use to specify a table border
+- **border-width**: use to specify the border's width
+- **border**: a shorthand property that handles a set of border-related properties
+- **padding**: use to specify the space between the cell content and its border
+- **border-collapse**: use to collapse borders into just one border
 </section>
 <section>
 ### Students List Web Page With Border Property
-```css
+``` CSS {2} showLineNumbers
 table, td, tr {
   border: thin solid;
 }
@@ -60,7 +60,7 @@ table, td, tr {
 </section>
 <section>
 ### Students List Web Page With Border-collapse Property
-```css
+``` CSS {2} showLineNumbers
 table, td, tr {
   border-collapse: collapse;
 }
@@ -69,12 +69,12 @@ table, td, tr {
 </section>
 <section>
 #### thead and tbody Elements
-- **_thead_**: used to group header content in an HTML table
-- **_tbody_**: used to group the body content in an HTML table.
+- **thead**: used to group header content in an HTML table
+- **tbody**: used to group the body content in an HTML table.
 </section>
 <section>
 ### Students List Web Page With Head and Tbody Elements
-```css
+``` CSS {1,5} showLineNumbers
 thead {
   background-color: midnightblue;
 }
@@ -84,40 +84,156 @@ tbody {
 }
 ```
 <Table example_id={5} />
+#### HTML
+```HTML showLineNumbers
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style type="text/css">
+      table {
+        margin: 1.5rem 0;
+        border-collapse: collapse;
+      }
+      
+      tr th {
+        padding: 0.5rem 1rem;
+      }
+
+      th, td {
+        padding: 0.5rem;
+        border: 1px solid black;
+      }
+
+      thead {
+        background-color: midnightblue;
+        color: #ededed;
+      }
+
+      tbody {
+        background-color: lightblue;
+      }
+
+      td:nth-child(3) {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student Number</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juan Dela Cruz</td>
+          <td>2021-21067</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Pedro Cruise</td>
+          <td>2021-21114</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Simon Ibarra</td>
+          <td>2021-21584</td>
+          <td>18</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+```
 </section>
 <section>
 ### Cell Spanning
-- **_colspan_** : defines the number of columns a table cell should span.
-- **_rowspan_** : specifies the number of rows a cell should span.
+- **colspan** : defines the number of columns a table cell should span.
+- **rowspan** : specifies the number of rows a cell should span.
 </section>
 <section>
 ### Students List Web Page With Border-collapse Property
-```html
+```HTML showLineNumbers
 <tr>
-  <th colspan="3"> Assignments </th>
-  <th colspan="2"> Laboratory </th>
-  <th rowspan="2"> Ability to Stay Awake </th>
+  <th colspan="3">Assignments</th>
+  <th colspan="2">Laboratory</th>
+  <th rowspan="2">Ability to Stay Awake</th>
 </tr>
 ```
 <TableCellSpanning />
+```HTML showLineNumbers
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style type="text/css">
+      table {
+        border: 1px solid black;
+        border-collapse: separate;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 0 0.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Assignments</th>
+          <th colspan="2">Laboratory</th>
+          <th rowspan="2">Ability to Stay Awake</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>1</th>
+          <th>2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10%</td>
+          <td>10%</td>
+          <td>10%</td>
+          <td>30%</td>
+          <td>36%</td>
+          <td>4%</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+```
 </section>
 <section>
 ### Table Size
-- The size of the table is define using **_width_** and **_height_** properties.
+- The size of the table is define using **width** and **height** properties.
 </section>
 <section>
 ### Table Alginment
-- The **_text-align_** property is used to set the horizontal alignment of the content in `<th>` and `<td>` elements.
-- The **_vertical-align_** property sets the vertical alignment of the content in `<th>` and `<td>`.
-- The value for **_vertical-align_** property can be **_top_**, **_bottom_**, or **_middle_**.
+- The **text-align** property is used to set the horizontal alignment of the content in `<th>` and `<td>` elements.
+- The **vertical-align** property sets the vertical alignment of the content in `<th>` and `<td>`.
+- The value for **vertical-align** property can be **top**, **bottom**, or **middle**.
 </section>
 <section>
 ### Horizontal Dividers
-- Use the **_border-bottom_** property to `<th>` and `<td>` for horizontal dividers.
+- Use the **border-bottom** property to `<th>` and `<td>` for horizontal dividers.
 </section>
 <section>
 ### Hoverable Table
-- Use the **_:hover_** selector on `<tr>` to highlight table rows on mouse over.
+- Use the **:hover** selector on `<tr>` to highlight table rows on mouse over.
 </section>
 <section>
 ### Credits
