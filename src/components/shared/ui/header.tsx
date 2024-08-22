@@ -26,7 +26,7 @@ function Header() {
 					<div className='hidden xl:block'>
 						<ModeToggle />
 					</div>
-					<div className='xl:hidden block'>
+					<div className='xl:hidden block size-6'>
 						<Sheet>
 							<SheetTrigger>
 								<IconMenu2 />

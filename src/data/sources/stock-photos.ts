@@ -2,6 +2,13 @@ import { Resource } from '@/lib/types';
 
 export const stockPhotos: Resource[] = [
 	{
+		name: 'Freepik',
+		url: 'https://www.freepik.com/',
+		description:
+			'Millions of free graphic resources. ✓ Photos ✓ AI images ✓ Vectors ✓ Icons ✓ Templates ✓ Videos. Find out about our real-time AI art generator.',
+		icon: '/resources/mockups/freepik.svg',
+	},
+	{
 		name: 'Pexels',
 		url: 'https://www.pexels.com/',
 		description:

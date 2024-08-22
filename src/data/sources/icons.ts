@@ -26,7 +26,7 @@ export const icons: Resource[] = [
 		name: 'ICONSVG',
 		url: 'https://iconsvg.xyz/',
 		description: 'Simple tool to find, customize and generate common SVG icons for your project',
-		icon: '',
+		icon: '/resources/icons/iconsvg.png',
 	},
 	{
 		name: 'Tabler Icons',

@@ -26,6 +26,10 @@ export const resources = [
 		text: 'Stock Photos',
 		path: '/resources/stock-photos',
 	},
+	{
+		text: 'Mockup Tools',
+		path: '/resources/mockup-tools',
+	},
 ];
 
 // export const guides = [
