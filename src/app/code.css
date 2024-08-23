@@ -4,7 +4,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply text-sm bg-neutral-950 w-full border border-[#2e2e2e] text-white max-h-56;
+	@apply text-sm bg-neutral-950 border border-[#2e2e2e] text-white max-h-56;
 	text-shadow: none;
 	font-family: var(--shareTechMono);
 	letter-spacing: 0.2px;

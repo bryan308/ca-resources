@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { IconMenu2 } from '@tabler/icons-react';
 import { ModeToggle } from './theme-switcher';
-import { Sheet, SheetContent, SheetDescription, SheetTrigger } from './sheet';
+import { Sheet, SheetContent, SheetTrigger } from './sheet';
 import { ArrowRight } from 'lucide-react';
 import { overview, resources } from '@/data/links';
 import { getAllPaths } from '@/lib/get-paths';
@@ -32,7 +32,7 @@ function Header() {
 								<IconMenu2 />
 							</SheetTrigger>
 							<SheetContent side='left'>
-								<div className='h-full flex flex-col justify-between'>
+								<div className='h-full flex flex-col justify-between overflow-y-auto mt-4'>
 									<div>
 										<div className='my-4'>
 											<h3 className='text-200 font-semibold text-md'>Overview</h3>
