@@ -9,7 +9,7 @@ interface IPagination {
 
 function Pagination({ next, previous }: IPagination) {
 	return (
-		<section>
+		<section className='xl:py-6 xl:px-12'>
 			<nav
 				aria-label='pagination'
 				role='navigation'
@@ -20,14 +20,12 @@ function Pagination({ next, previous }: IPagination) {
 				{previous && (
 					<Link
 						aria-label={`Go to previous guide: ${previous.title}`}
-						className='p-2 rounded-md flex items-center space-x-2 transition group'
+						className='p-2 rounded-md flex items-end'
 						href={`/guides/${previous.slug}`}
 					>
-						<ChevronLeftIcon className='group size-6 mb-px text-200 group-hover:text-100 transition-colors' />
-						<div className='group'>
-							<span className='text-sm text-200 group-hover:text-100 transition-colors'>
-								Previous
-							</span>
+						<ChevronLeftIcon className='size-4 mb-1 text-200' />
+						<div>
+							<span className='text-sm text-200'>Previous</span>
 							<p className='text-base text-100 font-semibold'>{previous.title}</p>
 						</div>
 					</Link>
@@ -35,14 +33,14 @@ function Pagination({ next, previous }: IPagination) {
 				{next && (
 					<Link
 						aria-label={`Go to next guide: ${next.title}`}
-						className='group p-2 rounded-md flex items-center space-x-2 transition'
+						className='p-2 rounded-md flex items-end'
 						href={`/guides/${next.slug}`}
 					>
 						<div>
-							<span className='text-sm text-200 group-hover:text-100 transition-colors'>Next</span>
+							<span className='text-sm text-200'>Next</span>
 							<p className='text-base text-100 font-semibold'>{next.title}</p>
 						</div>
-						<ChevronRightIcon className='size-6 mb-px text-200 group-hover:text-100 transition-colors' />
+						<ChevronRightIcon className='size-4 mb-1 text-200' />
 					</Link>
 				)}
 			</nav>
