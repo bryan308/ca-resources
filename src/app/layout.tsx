@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { geistsans } from '@/lib/font';
+import { geistsans, shareTechMono } from '@/lib/font';
 import Providers from '@/components/shared/ui/theme-provider';
 import Header from '@/components/shared/ui/header';
 import Aside from '@/components/shared/ui/aside';
@@ -22,7 +22,7 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<body
-				className={`${geistsans.className} bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED]`}
+				className={`${shareTechMono.variable} ${geistsans.className} bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED]`}
 			>
 				<Providers>
 					<Header />

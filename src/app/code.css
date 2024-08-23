@@ -4,9 +4,9 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply text-sm bg-neutral-950 w-full md:w-3/4 border border-[#2e2e2e] text-white max-h-56;
+	@apply text-sm bg-neutral-950 w-full border border-[#2e2e2e] text-white max-h-56;
 	text-shadow: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--shareTechMono);
 	letter-spacing: 0.2px;
 	white-space: pre;
 	word-spacing: normal;
@@ -39,6 +39,7 @@ pre {
 pre > code {
 	border: none;
 	background: none !important;
+	width: auto;
 }
 pre[class*='language-'] {
 	border-radius: 8px;
@@ -88,7 +89,7 @@ pre {
 .highlight-line {
   margin-left: -1rem;
   margin-right: -1rem;
-  background-color: #5151513c;
+  background-color: #1e5a693c;
   border-left: .25rem solid #ededed;
 }
 

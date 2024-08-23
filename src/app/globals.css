@@ -14,7 +14,7 @@ section {
 }
 
 p {
-	@apply text-200;
+	@apply text-200 leading-7;
 }
 
 a.link {

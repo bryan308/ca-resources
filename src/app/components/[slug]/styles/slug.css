@@ -33,11 +33,12 @@ li::marker {
 }
 
 code {
-	@apply font-mono text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-md dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+	@apply text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-md dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+	font-family: var(--shareTechMono);
 }
 
 blockquote {
-	@apply bg-white dark:bg-neutral-950 p-3 border-l-4 border-neutral-500 my-4;
+	@apply text-sm rounded-lg p-3 border border-[#ebebeb] dark:border-[#2e2e2e] my-6;
 }
 
 strong {
