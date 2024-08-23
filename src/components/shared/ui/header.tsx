@@ -32,7 +32,7 @@ function Header() {
 								<IconMenu2 />
 							</SheetTrigger>
 							<SheetContent side='left'>
-								<div className='h-full flex flex-col justify-between'>
+								<div className='h-full flex flex-col justify-between overflow-y-auto mt-4'>
 									<div>
 										<div className='my-4'>
 											<h3 className='text-200 font-semibold text-md'>Overview</h3>
