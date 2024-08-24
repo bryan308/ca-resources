@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+.table table {
+	@apply w-full bg-white dark:bg-neutral-950 border-collapse border border-[#ebebeb] dark:border-[#2e2e2e];
+}
+
+.table th {
+	@apply text-left font-bold text-base py-2 px-3 border-b-2 border-collapse border-[#ebebeb] dark:border-[#2e2e2e];
+}
+
+.table td:nth-child(1) {
+	width: 15ch;
+}
+
+.table td {
+	@apply text-[#666] dark:text-[#a1a1a1] py-2 px-3;
+}
+
+.table tr:nth-child(odd) {
+	@apply bg-[#FAFAFA] dark:bg-black;
+	/* @apply bg-neutral-300/25 dark:bg-black; */
+}
+
 h1 {
 	@apply text-neutral-900 dark:text-[#EDEDED] text-4xl font-bold mb-2;
 }
@@ -37,7 +58,7 @@ li::marker {
 }
 
 code {
-	@apply text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-md dark:bg-[#2a2828] bg-[#f7f7f7] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+	@apply text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-md dark:bg-[#2a2828] bg-[#f2f2f2] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
 	font-family: var(--shareTechMono);
 }
 
@@ -51,7 +72,7 @@ strong {
 
 /* TABLE1 */
 .table1 {
-	@apply my-6 border border-collapse border-neutral-950 dark:border-neutral-400;
+	@apply my-6 border border-collapse border-neutral-950 dark:border-neutral-400 bg-none;
 }
 
 .table1 thead tr th {
@@ -69,7 +90,7 @@ strong {
 /* TABLE 2 */
 .table2 {
 	font-family: 'Times New Roman', Times, serif;
-	@apply my-6 border border-separate border-neutral-950 dark:border-neutral-400;
+	@apply my-6 border border-separate border-neutral-950 dark:border-neutral-400 bg-none;
 }
 
 .table2 thead tr th,
@@ -93,7 +114,7 @@ strong {
 .table3 {
 	font-family: 'Times New Roman', Times, serif;
 	border: thin solid;
-	@apply my-6 border-separate border-neutral-950 dark:border-neutral-400;
+	@apply my-6 border-separate border-neutral-950 dark:border-neutral-400 bg-none;
 }
 
 .table3 thead tr th,
@@ -117,7 +138,7 @@ strong {
 /* TABLE 4 */
 .table4 {
 	font-family: 'Times New Roman', Times, serif;
-	@apply border my-6 border-collapse border-neutral-950 dark:border-neutral-400;
+	@apply border my-6 border-collapse border-neutral-950 dark:border-neutral-400 bg-none;
 }
 
 .table4 thead tr th,
@@ -174,7 +195,7 @@ strong {
 
 /* TABLE 6 */
 .table6 {
-	@apply font-serif border border-neutral-950 dark:border-neutral-400 border-separate my-6;
+	@apply font-serif border border-neutral-950 dark:border-neutral-400 border-separate my-6 bg-none;
 }
 
 .table6 thead tr th,

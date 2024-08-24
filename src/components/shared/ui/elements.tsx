@@ -5,7 +5,12 @@ interface ITableProps {
 	example_id?: number;
 }
 
-const Table: React.FC<ITableProps> = ({ example_id }) => {
+const SummaryTable = ({ children }: { children: React.ReactNode }) => {
+	return <div className='table w-full mt-6'>{children}</div>;
+};
+SummaryTable.DisplayName = 'SummaryTable';
+
+const TableExample: React.FC<ITableProps> = ({ example_id }) => {
 	const getStyle = () => {
 		const styles = ['table1', 'table2', 'table3', 'table4', 'table5'];
 		return styles[example_id! - 1] || '';
@@ -40,7 +45,7 @@ const Table: React.FC<ITableProps> = ({ example_id }) => {
 		</table>
 	);
 };
-Table.displayName = 'Table';
+TableExample.displayName = 'TableExample';
 
 interface GuideImageProps {
 	src: string;
@@ -100,4 +105,4 @@ const TableCellSpanning: React.FC = () => (
 );
 TableCellSpanning.displayName = 'TableCellSpanning';
 
-export { GuideImage, Table, TableCellSpanning };
+export { GuideImage, TableExample, SummaryTable, TableCellSpanning };

@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { GuideImage, Table, TableCellSpanning } from './elements';
+import { GuideImage, TableCellSpanning, TableExample, SummaryTable } from './elements';
 
 export const components = {
 	GuideImage,
-	Table,
+	TableExample,
+	SummaryTable,
 	TableCellSpanning,
 	Link,
 };
