@@ -45,7 +45,7 @@ function Header() {
 														href={o.path}
 														className='text-100 text-lg flex items-center gap-2 my-2'
 													>
-														<ArrowRight className='size-4' />
+														<ArrowRight className='size-4 text-200' />
 														{o.text}
 													</Link>
 												</SheetTrigger>
@@ -64,7 +64,7 @@ function Header() {
 															href={r.path}
 															className='text-100 text-lg flex items-center gap-2 my-2'
 														>
-															<ArrowRight className='size-4' />
+															<ArrowRight className='size-4 text-200' />
 															{r.text}
 														</Link>
 													</SheetTrigger>
@@ -80,10 +80,10 @@ function Header() {
 														asChild
 													>
 														<Link
-															href={`/components/${p.slug}`}
+															href={`/guides/${p.slug}`}
 															className='text-100 text-lg flex items-center gap-2 my-2'
 														>
-															<ArrowRight className='size-4' />
+															<ArrowRight className='size-4 text-200' />
 															{p.title}
 														</Link>
 													</SheetTrigger>

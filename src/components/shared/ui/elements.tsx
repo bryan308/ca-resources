@@ -1,108 +1,26 @@
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
 import React from 'react';
-import { cva } from 'class-variance-authority';
-import { lexend } from '@/lib/font';
 import ImageRender from './image-render';
-// import tableStyles from './table.module.scss';
-
-export interface ICourse {
-	fundamentals: ICourseMeta;
-	intermidiate: ICourseMeta;
-}
-
-export interface ICourseParam {
-	course: ICourseMeta;
-}
-
-interface ICourseMeta {
-	title: string;
-	description: string;
-	thumbnail: string;
-	link: string;
-	tags: TTags;
-}
-
-type TTags = {
-	text: string;
-}[];
-
-export interface IChildren {
-	children: React.ReactNode;
-}
-
-export interface ILink extends IChildren {
-	href: string;
-}
-
-const cardVariants = cva('relative bg-[#141414] border-l border-l-8 p-4 my-4 rounded-md', {
-	variants: {
-		variant: {
-			notes: 'border-yellow-500',
-			tips: 'border-blue-500',
-			warning: 'border-orange-500',
-		},
-	},
-	defaultVariants: {
-		variant: 'notes',
-	},
-});
-
-const CardHeader = ({ children }: { children?: React.ReactNode }) => {
-	return (
-		<h4 className={cn(lexend.className, 'text-xl font-semibold leading-normal ml-8 mb-4')}>
-			{children}
-		</h4>
-	);
-};
-CardHeader.displayName = 'CardHeader';
-
-const MDXLink = ({ href, children }: ILink) => (
-	<Link
-		href={href}
-		className='leading-none text-blue-500 text-base underline decoration-blue-500 underline-offset-4 decoration-2 visited:text-violet-500 transition-all hover:text-indigo-400 hover:decoration-[1.5px] focus:text-indigo-400 focus:decoration-[1.5px] active:text-red-500'
-		target='_blank'
-	>
-		{children}
-	</Link>
-);
-MDXLink.displayName = 'MDXLink';
-
-const Section = ({ children }: IChildren) => <section className='mt-4 mb-12'>{children}</section>;
-Section.displayName = 'Section';
 
 interface ITableProps {
 	example_id?: number;
 }
 
-const Table = ({ example_id }: ITableProps) => {
-	function getStyle() {
-		switch (example_id) {
-			case 1:
-				return 'table1';
-			case 2:
-				return 'table2';
-			case 3:
-				return 'table3';
-			case 4:
-				return 'table4';
-			case 5:
-				return 'table5';
-			default:
-				break;
-		}
-	}
+const Table: React.FC<ITableProps> = ({ example_id }) => {
+	const getStyle = () => {
+		const styles = ['table1', 'table2', 'table3', 'table4', 'table5'];
+		return styles[example_id! - 1] || '';
+	};
 
 	return (
-		<table className={`my-6 text-200 bg-foreground ${getStyle()}`}>
-			<thead className='text-100'>
+		<table className={`my-6 text-100 bg-foreground ${getStyle()}`}>
+			<thead>
 				<tr>
 					<th>Student Name</th>
 					<th>Student Number</th>
 					<th>Age</th>
 				</tr>
 			</thead>
-			<tbody className='text-200'>
+			<tbody>
 				<tr>
 					<td>Juan Dela Cruz</td>
 					<td>2021-21067</td>
@@ -122,77 +40,64 @@ const Table = ({ example_id }: ITableProps) => {
 		</table>
 	);
 };
-Table.displaName = 'Table';
+Table.displayName = 'Table';
 
-const GuideImage = ({
-	src,
-	alt,
-	width,
-	maxWidth,
-	height,
-	className,
-}: {
+interface GuideImageProps {
 	src: string;
 	alt: string;
 	width: number;
 	maxWidth: number;
 	height: number;
 	className?: string;
-}) => {
-	return (
-		<ImageRender
-			src={src}
-			alt={alt}
-			width={width}
-			height={height}
-			className={`my-4 mx-auto w-full md:max-w-[${maxWidth}%] ${className}`}
-		/>
-	);
-};
+}
+
+const GuideImage: React.FC<Partial<GuideImageProps>> = ({
+	src = '',
+	alt = 'Image',
+	width = 100,
+	maxWidth = 100,
+	height = 100,
+	className = '',
+}) => (
+	<ImageRender
+		src={src}
+		alt={alt}
+		width={width}
+		height={height}
+		className={`my-4 mx-auto w-full md:max-w-[${maxWidth}%] ${className}`}
+	/>
+);
+
 GuideImage.displayName = 'GuideImage';
 
-const TableCellSpanning = () => (
-	<table className='font-serif border dark:border-[#2e2e2e] border-separate my-6'>
+const TableCellSpanning: React.FC = () => (
+	<table className='table6'>
 		<thead>
 			<tr>
-				<th
-					className='border dark:border-[#2e2e2e] md:px-2'
-					colSpan={3}
-				>
-					Assignments
-				</th>
-				<th
-					className='border dark:border-[#2e2e2e] md:px-2'
-					colSpan={2}
-				>
-					Laboratory
-				</th>
-				<th
-					className='border dark:border-[#2e2e2e] md:px-2'
-					rowSpan={2}
-				>
-					Ability to Stay Awake
-				</th>
+				<th colSpan={3}>Assignments</th>
+				<th colSpan={2}>Laboratory</th>
+				<th rowSpan={2}>Ability to Stay Awake</th>
 			</tr>
 			<tr>
-				<th className='border dark:border-[#2e2e2e]'>1</th>
-				<th className='border dark:border-[#2e2e2e]'>2</th>
-				<th className='border dark:border-[#2e2e2e]'>3</th>
-				<th className='border dark:border-[#2e2e2e]'>1</th>
-				<th className='border dark:border-[#2e2e2e]'>2</th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>1</th>
+				<th>2</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td className='border dark:border-[#2e2e2e] text-center'>10%</td>
-				<td className='border dark:border-[#2e2e2e] text-center'>10%</td>
-				<td className='border dark:border-[#2e2e2e] text-center'>10%</td>
-				<td className='border dark:border-[#2e2e2e] text-center'>30%</td>
-				<td className='border dark:border-[#2e2e2e] text-center'>36%</td>
-				<td className='border dark:border-[#2e2e2e] text-center'>4%</td>
+				<td>10%</td>
+				<td>10%</td>
+				<td>10%</td>
+				<td>30%</td>
+				<td>36%</td>
+				<td>4%</td>
 			</tr>
 		</tbody>
 	</table>
 );
+TableCellSpanning.displayName = 'TableCellSpanning';
 
-export { GuideImage, Section, MDXLink, Table, TableCellSpanning };
+export { GuideImage, Table, TableCellSpanning };
