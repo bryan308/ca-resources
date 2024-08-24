@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ListProp) {
 		openGraph: {
 			title: postData.frontMatter.title,
 			description: postData.frontMatter.description,
-			url: `${meta.url}/${slug}`,
+			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
 					url: `${meta.url}${meta.banner}`,
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: ListProp) {
 			card: 'summary_large_image',
 			title: postData.frontMatter.title,
 			description: postData.frontMatter.description,
-			url: `${meta.url}/${slug}`,
+			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
 					url: `${meta.url}${meta.banner}`,
