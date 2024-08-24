@@ -17,7 +17,7 @@ export default function Introduction() {
 			<section>
 				<h2 className='text-2xl text-100 font-bold mb-2'>Inspired by</h2>
 				<p>
-					The design of CA Resources draws inspiration from the{' '}
+					The conceptualization of CA Resources is influenced by the{' '}
 					<Link
 						href='https://vercel.com/geist/introduction'
 						target='_blank'
@@ -25,7 +25,7 @@ export default function Introduction() {
 					>
 						Vercel Geist Design System
 					</Link>
-					, ensuring a clean, modern, and user-friendly experience.
+					.
 				</p>
 			</section>
 			<section>

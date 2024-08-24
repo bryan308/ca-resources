@@ -6,4 +6,4 @@ This website is designed to boost productivity not only in web development but a
 
 ## Inspired by
 
-The design of **CA Resources** draws inspiration from the [Vercel Geist Design System](https://vercel.com/geist/introduction), ensuring a clean, modern, and user-friendly experience.
+The conceptualization of **CA Resources** is influenced by the [Vercel Geist Design System](https://vercel.com/geist/introduction).
