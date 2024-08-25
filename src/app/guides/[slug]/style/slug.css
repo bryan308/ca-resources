@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .table table {
-	@apply w-full bg-white dark:bg-neutral-950 border-collapse border border-[#ebebeb] dark:border-[#2e2e2e];
+	@apply w-full bg-white dark:bg-neutral-900 border-collapse border border-[#ebebeb] dark:border-[#2e2e2e];
 }
 
 .table table thead th {
