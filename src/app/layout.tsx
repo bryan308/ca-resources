@@ -3,6 +3,7 @@ import { geistsans, shareTechMono } from '@/lib/font';
 
 import Header from '@/components/shared/ui/header';
 import Aside from '@/components/shared/ui/aside';
+import ScrollToTopButton from '@/components/shared/ui/scroll-to-top';
 
 import type { Metadata } from 'next';
 import Providers from '@/components/shared/ui/theme-provider';
@@ -64,7 +65,10 @@ export default function RootLayout({
 						role='main'
 					>
 						<Aside />
-						<div className='border border-t-0 border-l-0 primary-border h-full'>{children}</div>
+						<div className='relative border border-t-0 border-l-0 primary-border h-full'>
+							{children}
+							<ScrollToTopButton />
+						</div>
 					</main>
 				</Providers>
 			</body>

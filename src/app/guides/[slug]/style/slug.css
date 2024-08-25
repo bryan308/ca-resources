@@ -6,21 +6,20 @@
 	@apply w-full bg-white dark:bg-neutral-950 border-collapse border border-[#ebebeb] dark:border-[#2e2e2e];
 }
 
-.table th {
+.table table thead th {
 	@apply text-left font-bold text-base py-2 px-3 border-b-2 border-collapse border-[#ebebeb] dark:border-[#2e2e2e];
 }
 
-.table td:nth-child(1) {
+.table table tbody td:nth-child(1) {
 	width: 15ch;
 }
 
-.table td {
+.table table tbody td {
 	@apply text-[#666] dark:text-[#a1a1a1] py-2 px-3;
 }
 
-.table tr:nth-child(odd) {
+.table table tr:nth-child(odd) {
 	@apply bg-[#FAFAFA] dark:bg-black;
-	/* @apply bg-neutral-300/25 dark:bg-black; */
 }
 
 h1 {
