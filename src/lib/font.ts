@@ -1,8 +1,6 @@
 import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-import { Lexend } from 'next/font/google';
+import { Lexend, Share_Tech_Mono } from 'next/font/google';
 const geistsans = GeistSans;
-const geistmono = GeistMono;
 
 const lexend = Lexend({
 	subsets: ['latin'],
@@ -11,4 +9,10 @@ const lexend = Lexend({
 	adjustFontFallback: false,
 });
 
-export { geistsans, geistmono, lexend };
+const shareTechMono = Share_Tech_Mono({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--shareTechMono',
+});
+
+export { geistsans, lexend, shareTechMono };

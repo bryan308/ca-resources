@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 import { MDXFrontMatter } from '@/lib/types';
 
 interface PathsProp {
@@ -20,11 +19,11 @@ function ComponentPaths({ paths }: PathsProp) {
 			{paths
 				.sort((a, b) => a.title.localeCompare(b.title))
 				.map((p, i) => {
-					const isActive = pathname === `/components/${p.slug}`;
+					const isActive = pathname === `/guides/${p.slug}`;
 					return (
 						<li key={i}>
 							<Link
-								href={`/components/${p.slug}`}
+								href={`/guides/${p.slug}`}
 								className={currentPath(isActive)}
 							>
 								{p.title}

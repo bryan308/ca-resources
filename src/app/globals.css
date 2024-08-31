@@ -14,11 +14,11 @@ section {
 }
 
 p {
-	@apply text-200;
+	@apply text-200 leading-7;
 }
 
 a.link {
-	@apply text-blue-500 hover:underline font-semibold active:text-red-500 visited:text-purple-500;
+	@apply text-blue-700 dark:text-blue-500 active:text-red-700 active:dark:text-red-500 visited:text-purple-700 visited:dark:text-purple-500 hover:underline font-semibold;
 }
 
 .text-100 {

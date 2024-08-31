@@ -1,5 +1,3 @@
-// import { colorScheme } from '@/lib/colors';
-// import { geistmono } from '@/lib/font';
 import Cards from '@/components/shared/ui/cards';
 import PageHeader from '@/components/shared/ui/page-header';
 import { colors } from '@/data/sources/colors';

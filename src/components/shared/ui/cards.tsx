@@ -27,7 +27,7 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 					<div>
 						<Link
 							href={`${d.url}?rel=ca-resources.vercel.app`}
-							className='text-blue-500 hover:underline font-semibold active:text-red-500 visited:text-purple-500'
+							className='link'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
