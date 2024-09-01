@@ -8,7 +8,7 @@ import ScrollToTopButton from '@/components/shared/ui/scroll-to-top';
 import type { Metadata } from 'next';
 import Providers from '@/components/shared/ui/theme-provider';
 import NextTopLoader from 'nextjs-toploader';
-import { siteMetadata as meta, socials } from '@/data/siteConfig';
+import { siteMetadata as meta, socials } from '@/data/site-config';
 
 export const metadata: Metadata = {
 	title: meta.title,

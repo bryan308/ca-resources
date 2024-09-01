@@ -5,7 +5,7 @@ import rehypePrism from 'rehype-prism-plus';
 import { serialize } from 'next-mdx-remote/serialize';
 import Content from './slug-content';
 import './style/slug.css';
-import { siteMetadata as meta } from '@/data/siteConfig';
+import { siteMetadata as meta } from '@/data/site-config';
 
 export async function generateMetadata({ params }: ListProp) {
 	const { slug } = params;

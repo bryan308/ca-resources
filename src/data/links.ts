@@ -1,11 +1,11 @@
-export const overview = [
+const overview = [
 	{
 		text: 'Introduction',
 		path: '/',
 	},
 ];
 
-export const resources = [
+const resources = [
 	{
 		text: 'Colors',
 		path: '/resources/colors',
@@ -24,17 +24,12 @@ export const resources = [
 	},
 	{
 		text: 'Stock Photos',
-		path: '/resources/stock-photos',
+		path: '/resources/stockphotos',
 	},
 	{
 		text: 'Mockup Tools',
-		path: '/resources/mockup-tools',
+		path: '/resources/mockups',
 	},
 ];
 
-// export const guides = [
-// 	{
-// 		text: '',
-// 		path: '',
-// 	},
-// ];
+export { overview, resources };

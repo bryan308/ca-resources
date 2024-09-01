@@ -66,8 +66,8 @@ pre > code {
 
 .highlight-line {
 	margin: 0 -1rem;
-	background-color: #5733003c;
-	border-left: 0.25rem solid #ffb224;
+	background-color: #8e4ec627;
+	border-left: 0.25rem solid #8E4EC6;
 }
 
 .line-number::before {
