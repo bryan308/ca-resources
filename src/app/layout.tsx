@@ -61,7 +61,8 @@ export default function RootLayout({
 					<Header />
 					<div className='h-16 md:hidden' />
 					<main
-						className='flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr] min-h-[90dvh]'
+						className='flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr]'
+						style={{ minHeight: 'calc(100dvh - 4.375rem)' }}
 						role='main'
 					>
 						<Aside />
