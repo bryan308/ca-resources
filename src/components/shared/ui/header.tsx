@@ -11,18 +11,18 @@ function Header() {
 	const componentPaths = getAllPaths();
 
 	return (
-		<header className='bg-white dark:bg-neutral-950 z-100 fixed top-0 mx-auto w-full max-w-[76.25rem] md:sticky primary-border border-b xl:border-l xl:border-r z-50'>
+		<header className='bg-card z-100 fixed top-0 mx-auto w-full max-w-[76.25rem] md:sticky border-border-foreground border-b xl:border-l xl:border-r z-50'>
 			<div className='flex w-full max-w-[76.188rem] pl-[1.375rem]'>
-				<div className='primary-border flex grow items-center gap-4 border-r-0 xl:border-r py-4 pl-px xl:w-[14.8125rem] xl:grow-0'>
+				<div className='border-border-foreground flex grow items-center gap-4 border-r-0 xl:border-r py-4 pl-px xl:w-[14.8125rem] xl:grow-0'>
 					<Link
 						className='flex items-center gap-2 no-underline'
 						href='/'
 					>
 						<Box />
-						<p className='text-100 font-base font-semibold'>CA Resources</p>
+						<p className='text-primary font-base font-semibold'>CA Resources</p>
 					</Link>
 				</div>
-				<div className='flex items-center justify-end p-4 xl:grow xl:border-none border-l primary-border'>
+				<div className='flex items-center justify-end p-4 xl:grow xl:border-none border-l border-border-foreground'>
 					<div className='hidden xl:block'>
 						<ModeToggle />
 					</div>
@@ -35,7 +35,7 @@ function Header() {
 								<div className='h-full flex flex-col justify-between overflow-y-auto mt-4'>
 									<div>
 										<div className='my-4'>
-											<h3 className='text-200 font-semibold text-md'>Overview</h3>
+											<h3 className='text-secondary font-semibold text-md'>Overview</h3>
 											{overview.map((o, i) => (
 												<SheetTrigger
 													key={i}
@@ -43,16 +43,16 @@ function Header() {
 												>
 													<Link
 														href={o.path}
-														className='text-100 text-lg flex items-center gap-2 mb-2'
+														className='text-primary text-lg flex items-center gap-2 mb-2'
 													>
-														<ArrowRight className='size-4 text-200' />
+														<ArrowRight className='size-4 text-secondary' />
 														{o.text}
 													</Link>
 												</SheetTrigger>
 											))}
 										</div>
 										<div className='my-4'>
-											<h3 className='text-200 font-semibold text-md'>Resources</h3>
+											<h3 className='text-secondary font-semibold text-md'>Resources</h3>
 											{resources
 												.sort((a, b) => a.text.localeCompare(b.text))
 												.map((r, i) => (
@@ -62,16 +62,16 @@ function Header() {
 													>
 														<Link
 															href={r.path}
-															className='text-100 text-lg flex items-center gap-2 mb-2'
+															className='text-primary text-lg flex items-center gap-2 mb-2'
 														>
-															<ArrowRight className='size-4 text-200' />
+															<ArrowRight className='size-4 text-secondary' />
 															{r.text}
 														</Link>
 													</SheetTrigger>
 												))}
 										</div>
 										<div className='my-4'>
-											<h3 className='text-200 font-semibold text-md'>Guides</h3>
+											<h3 className='text-secondary font-semibold text-md'>Guides</h3>
 											{componentPaths
 												.sort((a, b) => a.title.localeCompare(b.title))
 												.map((p, i) => (
@@ -81,9 +81,9 @@ function Header() {
 													>
 														<Link
 															href={`/guides/${p.slug}`}
-															className='text-100 text-lg flex items-center gap-2 mb-2'
+															className='text-primary text-lg flex items-center gap-2 mb-2'
 														>
-															<ArrowRight className='size-4 text-200' />
+															<ArrowRight className='size-4 text-secondary' />
 															{p.title}
 														</Link>
 													</SheetTrigger>

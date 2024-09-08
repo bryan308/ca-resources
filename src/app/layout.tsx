@@ -51,7 +51,7 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<body
-				className={`${shareTechMono.variable} ${geistsans.className} bg-[#FAFAFA] dark:bg-black text-[#171717] dark:text-[#EDEDED]`}
+				className={`${shareTechMono.variable} ${geistsans.className}`}
 			>
 				<NextTopLoader
 					color='#8E4EC6'
@@ -66,7 +66,7 @@ export default function RootLayout({
 						role='main'
 					>
 						<Aside />
-						<div className='relative border border-t-0 border-l-0 primary-border h-full'>
+						<div className='relative border border-t-0 border-l-0 border-border-foreground h-full'>
 							{children}
 							<ScrollToTopButton />
 						</div>

@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
 			onClick={scrolltoTop}
 			className={`${
 				shown ? 'scale-100' : 'scale-0'
-			} w-12 h-12 transition-transform duration-200 flex fixed right-6 xl:right-12 xl:bottom-8 bottom-32 dark:bg-neutral-800 bg-neutral-400 rounded-full justify-center items-center`}
+			} w-12 h-12 transition-transform duration-200 flex fixed right-6 xl:right-12 xl:bottom-8 bottom-32 bg-card rounded-full justify-center items-center`}
 		>
 			<ChevronUpIcon className='size-6' />
 		</button>

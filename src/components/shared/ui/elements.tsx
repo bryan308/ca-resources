@@ -17,7 +17,7 @@ const TableExample: React.FC<ITableProps> = ({ example_id }) => {
 	};
 
 	return (
-		<table className={`my-6 text-100 bg-foreground ${getStyle()}`}>
+		<table className={`my-6 text-primary bg-foreground ${getStyle()}`}>
 			<thead>
 				<tr>
 					<th>Student Name</th>

@@ -13,7 +13,7 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 			{data.map((d) => (
 				<div
 					key={d.name}
-					className='flex items-center gap-4 py-4 px-6 rounded-md border primary-border bg-foreground hover:ring-4 ring-neutral-100 dark:ring-neutral-900'
+					className='flex items-center gap-4 py-4 px-6 rounded-md border border-border-foreground bg-card hover:ring-4 ring-neutral-100 dark:ring-neutral-950'
 					title={d.name}
 				>
 					<div className='grid place-items-center min-w-14 size-14'>
@@ -34,7 +34,7 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 						>
 							{d.name}
 						</Link>
-						<p className='text-gray-600 text-sm truncate-description'>{d.description}</p>
+						<p className='text-secondary text-sm truncate-description'>{d.description}</p>
 					</div>
 				</div>
 			))}

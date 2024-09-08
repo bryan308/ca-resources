@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import Cards from '@/components/shared/ui/cards';
+import Cards from '@/components/shared/ui/card';
 import PageHeader from '@/components/shared/ui/page-header';
 
 import { resourcesData, ResourceType } from '@/data/sources/resources';
@@ -38,13 +38,13 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 		<>
 			<section>
 				<PageHeader>{resourceData.header}</PageHeader>
-				<p className='text-xl text-200'>{resourceData.subheader}</p>
+				<p className='text-xl text-secondary'>{resourceData.subheader}</p>
 			</section>
 			{resourceData.sections.map((section, index) => (
 				<section key={index}>
 					{section.header && (
 						<>
-							<h2 className='text-2xl text-100 font-bold mb-2'>{section.header}</h2>
+							<h2 className='text-2xl text-primary font-bold mb-2'>{section.header}</h2>
 							<p>{section.subheader}</p>
 						</>
 					)}

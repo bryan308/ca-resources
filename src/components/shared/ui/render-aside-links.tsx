@@ -15,7 +15,7 @@ function AsideLinks({ data }: IAsideLinks) {
 	const pathname = usePathname();
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-950' : 'text-200';
+		isActive ? 'text-primary bg-neutral-200/30 dark:bg-neutral-950' : 'text-secondary';
 
 	return (
 		<>

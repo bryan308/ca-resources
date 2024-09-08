@@ -3,39 +3,40 @@
 @tailwind utilities;
 
 .table table {
-	@apply w-full bg-white dark:bg-neutral-900 border-collapse border border-[#ebebeb] dark:border-[#2e2e2e];
+	@apply w-full bg-foreground border-collapse border border-border-foreground;
 }
 
 .table table thead th {
-	@apply text-left font-bold text-base py-2 px-3 border-b-2 border-collapse border-[#ebebeb] dark:border-[#2e2e2e];
+	@apply text-primary text-left font-bold text-base py-2 px-3 border-b border-collapse border-border-foreground;
 }
 
 .table table tbody td:nth-child(1) {
 	width: 15ch;
 }
 
-.table table tbody td {
-	@apply text-[#666] dark:text-[#a1a1a1] py-2 px-3;
+.table table tbody td,
+.table table thead th {
+	@apply text-secondary p-3 border-border-foreground border-l;
 }
 
 .table table tr:nth-child(odd) {
-	@apply bg-[#FAFAFA] dark:bg-black;
+	@apply bg-background;
 }
 
 h1 {
-	@apply text-neutral-900 dark:text-[#EDEDED] text-4xl font-bold mb-2;
+	@apply text-primary text-4xl font-bold mb-2;
 }
 
 h2 {
-	@apply text-neutral-900 dark:text-[#EDEDED] text-3xl font-bold mb-2;
+	@apply text-primary text-3xl font-bold mb-2;
 }
 
 h3 {
-	@apply text-neutral-900 dark:text-[#EDEDED] text-2xl font-bold mb-2;
+	@apply text-primary text-2xl font-bold mb-2;
 }
 
 h4 {
-	@apply text-neutral-900 dark:text-[#EDEDED] text-xl font-bold mb-2;
+	@apply text-primary text-xl font-bold mb-2;
 }
 
 ol {
@@ -49,37 +50,37 @@ ul {
 }
 
 li {
-	@apply text-[#666] dark:text-[#a1a1a1] mb-2;
+	@apply text-secondary mb-2;
 }
 
 li::marker {
-	@apply text-neutral-900 dark:text-[#EDEDED];
+	@apply text-primary;
 }
 
 code {
-	@apply text-sm my-px text-neutral-900 dark:text-[#EDEDED] rounded-md dark:bg-[#2a2828] bg-[#f2f2f2] py-[.12em] px-[.25em] border border-[#ededed] dark:border-[#3e3c3c];
+	@apply text-sm my-px text-primary rounded-md bg-foreground py-[.12em] px-[.25em] border border-border-foreground;
 	font-family: var(--shareTechMono);
 }
 
 blockquote {
-	@apply text-sm rounded-lg p-3 border border-[#ebebeb] dark:border-[#2e2e2e] my-6;
+	@apply text-sm rounded-lg p-3 border border-border-foreground my-6;
 }
 
 strong {
-	@apply font-medium text-neutral-900 dark:text-[#EDEDED];
+	@apply font-medium text-primary;
 }
 
 /* TABLE1 */
 .table1 {
-	@apply my-6 border border-collapse border-neutral-950 dark:border-neutral-400 bg-none;
+	@apply my-6 border border-collapse border-border bg-none;
 }
 
 .table1 thead tr th {
-	@apply px-4 border border-collapse border-neutral-950 dark:border-neutral-400;
+	@apply px-4 border border-collapse border-border;
 }
 
 .table1 tbody tr td {
-	@apply border border-collapse px-1 py-px border-neutral-950 dark:border-neutral-400;
+	@apply text-secondary border border-collapse px-1 py-px border-border;
 }
 
 .table1 tbody tr td:nth-child(3) {
@@ -89,20 +90,20 @@ strong {
 /* TABLE 2 */
 .table2 {
 	font-family: 'Times New Roman', Times, serif;
-	@apply my-6 border border-separate border-neutral-950 dark:border-neutral-400 bg-none;
+	@apply my-6 border border-separate border-border bg-none;
 }
 
 .table2 thead tr th,
 .table2 tbody tr td {
-	@apply px-4 border border-neutral-950 dark:border-neutral-400;
+	@apply px-4 border border-border;
 }
 
 .table2 thead tr th {
-	@apply text-neutral-900 dark:text-[#EDEDED];
+	@apply text-primary;
 }
 
 .table2 tbody tr {
-	@apply border border-neutral-950 dark:border-neutral-400;
+	@apply border border-border;
 }
 
 .table2 tbody tr td {
@@ -113,21 +114,21 @@ strong {
 .table3 {
 	font-family: 'Times New Roman', Times, serif;
 	border: thin solid;
-	@apply my-6 border-separate border-neutral-950 dark:border-neutral-400 bg-none;
+	@apply my-6 border-separate border-border bg-none;
 }
 
 .table3 thead tr th,
 .table3 tbody tr td {
 	border: thin solid;
-	@apply border-neutral-950 dark:border-neutral-400;
+	@apply border-border;
 }
 
 .table3 tbody tr {
-	@apply border border-neutral-950 dark:border-neutral-400;
+	@apply border border-border;
 }
 
 .table3 thead tr th {
-	@apply px-4 text-neutral-900 dark:text-[#EDEDED];
+	@apply px-4 text-primary;
 }
 
 .table3 tbody tr td {
@@ -137,20 +138,20 @@ strong {
 /* TABLE 4 */
 .table4 {
 	font-family: 'Times New Roman', Times, serif;
-	@apply border my-6 border-collapse border-neutral-950 dark:border-neutral-400 bg-none;
+	@apply border my-6 border-collapse border-border bg-none;
 }
 
 .table4 thead tr th,
 .table4 tbody tr td {
-	@apply border border-collapse border-neutral-950 dark:border-neutral-400;
+	@apply border border-collapse border-border;
 }
 
 .table4 thead tr th {
-	@apply px-4 text-neutral-900 dark:text-[#EDEDED];
+	@apply px-4 text-primary;
 }
 
 .table4 tbody tr {
-	@apply border border-neutral-950 dark:border-neutral-400;
+	@apply border border-border;
 }
 
 .table4 tbody tr td {
@@ -194,12 +195,12 @@ strong {
 
 /* TABLE 6 */
 .table6 {
-	@apply font-serif border border-neutral-950 dark:border-neutral-400 border-separate my-6 bg-none;
+	@apply font-serif border border-border border-separate my-6 bg-none;
 }
 
 .table6 thead tr th,
 .table6 tbody tr td {
-	@apply border border-neutral-950 dark:border-neutral-400;
+	@apply border border-border;
 }
 
 .table6 thead tr th {
