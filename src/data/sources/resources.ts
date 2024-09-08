@@ -186,7 +186,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 						url: 'https://tabbied.com/',
 						description:
 							'Tabbied lets you easily create timeless and beautifully generated patterns or artwork to use for wall art, websites, print materials and more.',
-						icon: '/resources/icons/tabbied.png',
+						icon: '/resources/icons/tabbied.svg',
 					},
 				],
 			},
@@ -198,7 +198,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 			'Explore our recommended color scales and discover additional resources to enhance your color knowledge.',
 		sections: [
 			{
-				header: '',
+				header: 'Color Palettes',
 				subheader: '',
 				links: [
 					{
@@ -229,20 +229,6 @@ export const resourcesData: Record<string, ResourceCategory> = {
 						icon: '/resources/colors/colorsinspo.png',
 					},
 					{
-						name: 'UI Color',
-						url: 'https://uicolors.app',
-						description:
-							'Generate, edit, save and share Tailwind CSS color shades based on a given hexcode or HSL color.',
-						icon: '',
-					},
-					{
-						name: 'Geist',
-						url: 'https://vercel.com/geist/colors',
-						description:
-							'Vercel’s design system called Geist. Made for building consistent and delightful web experiences.',
-						icon: '/resources/colors/vercel-icon-dark.png',
-					},
-					{
 						name: 'Pigment',
 						url: 'https://pigment.shapefactory.co/',
 						description:
@@ -261,6 +247,53 @@ export const resourcesData: Record<string, ResourceCategory> = {
 						description:
 							'Discover the newest hand-picked color palettes of Color Hunt. Get color inspiration for your design and art projects.',
 						icon: '/resources/colors/color-hunt.png',
+					},
+				],
+			},
+			{
+				header: 'Color Systems',
+				subheader: '',
+				links: [
+					{
+						name: 'UI Color',
+						url: 'https://uicolors.app',
+						description:
+							'Generate, edit, save and share Tailwind CSS color shades based on a given hexcode or HSL color.',
+						icon: '/resources/colors/uicolor.png',
+					},
+					{
+						name: 'Geist',
+						url: 'https://vercel.com/geist/colors',
+						description:
+							'Vercel’s design system called Geist. Made for building consistent and delightful web experiences.',
+						icon: '/resources/colors/vercel-icon-dark.png',
+					},
+					{
+						name: 'Tailwindcss',
+						url: 'https://tailwindcss.com/docs/customizing-colors',
+						description: 'Customizing the default color palette for your project.',
+						icon: '/resources/colors/tailwindcss.svg',
+					},
+					{
+						name: 'Altassian',
+						url: 'https://atlassian.design/foundations/color-new',
+						description:
+							'Start designing and developing beautiful product experiences with Atlassian Design System UI foundations, components, and standards.',
+						icon: '/resources/colors/atlassian.svg',
+					},
+					{
+						name: 'Material UI',
+						url: 'https://mui.com/material-ui/customization/color/#color-palette',
+						description:
+							'Convey meaning through color. Out of the box you get access to all colors in the Material Design guidelines.',
+						icon: '/resources/colors/materialui.svg',
+					},
+					{
+						name: 'Bootstrap',
+						url: 'https://getbootstrap.com/docs/5.3/customize/color/#all-colors',
+						description:
+							'Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.',
+						icon: '/resources/colors/bootstrap.png',
 					},
 				],
 			},
@@ -506,6 +539,13 @@ export const resourcesData: Record<string, ResourceCategory> = {
 						description:
 							'Font Squirrel scours the internet for high quality, legitimately free fonts . Download thousands of completely legal, high quality, free fonts.',
 						icon: '/resources/typography/fontsquirrel.png',
+					},
+					{
+						name: 'Type Scale',
+						url: 'https://typescale.com/',
+						description:
+							'Typescale - Create stunning typography, generate CSS, and find inspiration.',
+						icon: '/resources/typography/typescale.svg',
 					},
 				],
 			},

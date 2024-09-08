@@ -48,7 +48,7 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 							<p>{section.subheader}</p>
 						</>
 					)}
-					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${section.header && 'mt-10'}`}>
+					<div className={`grid grid-cols-1 md:grid-cols-2 gap-2 ${section.header && 'mt-10'}`}>
 						<Cards data={section.links} />
 					</div>
 				</section>

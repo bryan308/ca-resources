@@ -13,7 +13,8 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 			{data.map((d) => (
 				<div
 					key={d.name}
-					className='flex items-center gap-4 py-4 px-6 rounded-lg border primary-border bg-foreground'
+					className='flex items-center gap-4 py-4 px-6 rounded-md border primary-border bg-foreground hover:ring-4 ring-neutral-100 dark:ring-neutral-900'
+					title={d.name}
 				>
 					<div className='grid place-items-center min-w-14 size-14'>
 						<ImageRender
