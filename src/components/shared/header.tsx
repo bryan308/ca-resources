@@ -4,8 +4,8 @@ import { IconMenu2 } from "@tabler/icons-react"
 import { getAllPaths } from "@/lib/get-paths"
 import { overview, resources } from "@/data/links"
 import Box from "./icons/box"
-import { ModeToggle } from "./theme-switcher"
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet"
+import ModeToggle from "./mode-toggle"
 
 function Header() {
 	const componentPaths = getAllPaths()
@@ -31,7 +31,10 @@ function Header() {
 							<SheetTrigger aria-label="Trigger sidebar menu">
 								<IconMenu2 />
 							</SheetTrigger>
-							<SheetContent side="left" className="border-border">
+							<SheetContent
+								side="left"
+								className="border-border"
+							>
 								<div className="h-full flex flex-col justify-between overflow-y-auto mt-4">
 									<div>
 										<div className="my-4">
