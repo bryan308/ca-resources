@@ -1,4 +1,4 @@
-import PageHeader from '@/components/shared/ui/page-header';
+import PageHeader from '@/components/shared/page-header';
 import Link from 'next/link';
 
 export default function Introduction() {
@@ -6,7 +6,7 @@ export default function Introduction() {
 		<>
 			<section>
 				<PageHeader>Introduction</PageHeader>
-				<p className='text-xl text-200 mb-8'>Welcome to CA Resources!</p>
+				<h4>Welcome to CA Resources!</h4>
 				<p>
 					This website is designed to boost productivity not only in web development but also in
 					various educational fields. CA Resources offers a comprehensive collection of curated
@@ -15,7 +15,7 @@ export default function Introduction() {
 				</p>
 			</section>
 			<section>
-				<h2 className='text-2xl text-100 font-bold mb-2'>Inspired by</h2>
+				<h2 className='text-2xl text-foreground font-bold mb-2'>Inspired by</h2>
 				<p>
 					The conceptualization of CA Resources is influenced by the{' '}
 					<Link
@@ -29,8 +29,8 @@ export default function Introduction() {
 				</p>
 			</section>
 			<section>
-				<p>
-					<strong className='text-100'>CA Resources</strong> was created and managed by{' '}
+				<p className="mt-0">
+					<strong className='text-foreground'>CA Resources</strong> was created and managed by{' '}
 					<Link
 						href='https://cdrcangulo.vercel.app/'
 						target='_blank'
@@ -42,7 +42,7 @@ export default function Introduction() {
 				</p>
 			</section>
 			{/* <section>
-				<h2 className='text-2xl text-100 font-bold mb-2'>Contribute</h2>
+				<h2 className='text-2xl text-foreground font-bold mb-2'>Contribute</h2>
 				<p>
 					CA Resources is an open-source project. You can view the code, contribute, or suggest
 					improvements by visiting the{' '}

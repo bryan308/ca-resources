@@ -2,8 +2,8 @@
 
 import { MDXRemote } from 'next-mdx-remote';
 import { MDXFrontMatter } from '@/lib/types';
-import { components } from '@/components/shared/ui/MDX';
-import Pagination from '@/components/shared/ui/pagination';
+import { components } from '@/components/shared/MDX';
+import Pagination from '@/components/shared/pagination';
 
 interface IGuideContentProp {
 	mdxContent: any;

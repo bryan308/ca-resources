@@ -8,13 +8,13 @@ export function ModeToggle() {
 
 	return (
 		<>
-			<div className='flex rounded-full border primary-border w-fit'>
+			<div className='flex rounded-full border border-border w-fit'>
 				{/* System */}
 				<div
 					onClick={() => setTheme('system')}
 					className={`border border-transparent flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
 						theme === 'system'
-							? 'text-100 primary-border'
+							? 'text-foreground border-border'
 							: 'text-neutral-500 dark:text-neutral-500'
 					}`}
 				>
@@ -36,7 +36,7 @@ export function ModeToggle() {
 				{/* Light */}
 				<div
 					className={`border border-transparent flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
-						theme === 'light' ? 'text-100 primary-border' : 'text-neutral-500 dark:text-neutral-500'
+						theme === 'light' ? 'text-foreground border-border' : 'text-neutral-500 dark:text-neutral-500'
 					}`}
 					onClick={() => setTheme('light')}
 				>
@@ -60,7 +60,7 @@ export function ModeToggle() {
 				<div
 					onClick={() => setTheme('dark')}
 					className={`border border-transparent flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
-						theme === 'dark' ? 'text-100 primary-border' : 'text-neutral-500 dark:text-neutral-500'
+						theme === 'dark' ? 'text-foreground border-border' : 'text-neutral-500 dark:text-neutral-500'
 					}`}
 				>
 					<span className='sr-only'>dark</span>

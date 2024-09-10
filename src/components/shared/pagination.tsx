@@ -23,10 +23,10 @@ function Pagination({ next, previous }: IPagination) {
 						className='p-2 rounded-md flex items-end'
 						href={`/guides/${previous.slug}`}
 					>
-						<ChevronLeftIcon className='size-4 mb-1 text-200' />
+						<ChevronLeftIcon className='size-4 mb-1 text-muted-foreground' />
 						<div>
-							<span className='text-sm text-200'>Previous</span>
-							<p className='text-base text-100 font-semibold'>{previous.title}</p>
+							<span className='text-sm text-muted-foreground'>Previous</span>
+							<div className='text-base text-foreground font-semibold'>{previous.title}</div>
 						</div>
 					</Link>
 				)}
@@ -37,10 +37,10 @@ function Pagination({ next, previous }: IPagination) {
 						href={`/guides/${next.slug}`}
 					>
 						<div>
-							<span className='text-sm text-200'>Next</span>
-							<p className='text-base text-100 font-semibold'>{next.title}</p>
+							<span className='text-sm text-muted-foreground'>Next</span>
+							<div className='text-base text-foreground font-semibold'>{next.title}</div>
 						</div>
-						<ChevronRightIcon className='size-4 mb-1 text-200' />
+						<ChevronRightIcon className='size-4 mb-1 text-muted-foreground' />
 					</Link>
 				)}
 			</nav>

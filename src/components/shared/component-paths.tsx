@@ -12,7 +12,7 @@ function ComponentPaths({ paths }: PathsProp) {
 	const pathname = usePathname();
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? 'text-100 bg-neutral-200/30 dark:bg-neutral-950' : 'text-200';
+		isActive ? 'text-foreground bg-neutral-200/30 dark:bg-neutral-950' : 'text-muted-foreground';
 
 	return (
 		<>

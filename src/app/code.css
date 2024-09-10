@@ -4,7 +4,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply text-sm bg-neutral-950 border border-[#2e2e2e] text-white max-h-56;
+	@apply text-sm bg-neutral-950 border border-border text-white max-h-56;
 	font-family: var(--shareTechMono);
 	letter-spacing: 0.2px;
 	white-space: pre;
@@ -66,8 +66,10 @@ pre > code {
 
 .highlight-line {
 	margin: 0 -1rem;
-	background-color: #8e4ec627;
-	border-left: 0.25rem solid #8E4EC6;
+	background-color: #62c07327;
+	border-left: 0.25rem solid #62c073;
+	/* background-color: #8e4ec627;
+	border-left: 0.25rem solid #8E4EC6; */
 }
 
 .line-number::before {
