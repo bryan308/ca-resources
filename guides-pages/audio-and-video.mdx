@@ -1,0 +1,126 @@
+---
+title: Audio and Video
+description: Integrating audio and video in HTML5 allows embedding media files directly into web pages for native playback.
+---
+
+<section>
+# Integrating Audio and Video
+</section>
+<section>
+## Learning Objectives <br />
+1. Using HTML5 `<video>` and `</video>` tag pairs within a web page.
+2. Adding video controls and Saving video files.
+3. Streaming versus downloaded video and supporting older browsers.
+4. Using HTML5 `<audio>` and `</audio>` tag pairs.
+5. Adding audio controls and Saving audio files.
+6. Making audio files work with older browsers.
+</section>
+<section>
+### HTML div Element
+- The `<div>` tag defines a division or a section in an HTML document.
+- The `<div>` tag is used as a container for HTML elements
+- which is then styled with CSS or manipulated with JavaScript.
+- The `<div>` tag is easily styled by using the class or id attribute.
+- Any sort of content can be put inside the `<div>` tag.
+- By default, browsers always place a line break before and after the `<div>` element.
+</section>
+<section>
+### HTML span Element
+- The `<span>` tag is an inline container used to mark up a part of a text, or a part of a document.
+- The `<span>` tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+- The `<span>` tag is much like the `<div>` element, but `<div>` is a block-level element and `<span>` is an inline element.
+</section>
+<section>
+### HTML div and span pairs
+```HTML
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIV Tag</title>
+  <style type="text/css">
+    div {
+      font-family: Verdana;
+      text-align: justify;
+    }
+    span {
+      font-style: italic;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>
+      The <span>div Tag</span> defines a division or a section in an HTML document. The div tag is used as a 
+      container in HTML elements - which is then styled with CSS or manipulated with JavaScript.
+    </p>
+    <p>
+      The div tag is easily styled by using the class or id attribute. Any sort of content can be put inside the div tag!
+    </p>
+    <p>Note: By default, browsers always place a line break before and after the div element.</p>
+  </div>
+</body>
+```
+</section>
+<section>
+### HTML Multimedia
+- Multimedia comes in many different formats. It can be almost anything you can hear or see, like images, music, sound, videos, records, films, animations, and more.
+- Web pages often contain multimedia elements of different types and formats.
+</section>
+<section>
+### HTML Video
+- The HTML `<video>` and `</video>` element is used to show a video on a web page.
+- The `<source>` and `</source>` element allows you to specify alternative video files 
+  from which the browser may choose. Using this element the browser will use the first recognized format.
+- The controls attribute adds video controls, like play, pause, and volume.
+</section>
+<section>
+### HTML Video tag pair
+```HTML {2, 3, 5} showLineNumbers
+<body>
+  <video style="width: 320px; height: 240px;" controls>
+    <source src="cocomelon.mp4" type="video/mp4">
+    Cocomelon Intro
+  </video>
+</body>
+```
+</section>
+<section>
+<SummaryTable>
+### Common HTML Video formats
+| **Format** | **File Extension** | **Description**                                                                                      |
+|------------|--------------------|------------------------------------------------------------------------------------------------------|
+| MPEG       | `.mpg`             | Developed by the Moving Pictures Expert Group. The first popular video format on the web.            |
+| OGG        | `.ogg`             | Theora Ogg. Developed by the Xiph.org Foundaion.                                                     |
+| WEBM       | `.webm`            | Developed by Mozilla, Opera, Adobe, and Google.                                                      |
+| MP4        | `.mp4`             | Commonly used in video cameras and TV hardware. Supported by all browsers and recommended by YouTube.|
+</SummaryTable>
+</section>
+<section>
+### Autoplay attribute
+- The **autoplay** attribute is used to specify that the video should start playing when a web page is loaded.
+```HTML {2} showLineNumbers
+<body>
+  <video style="width: 320px; height: 240px;" autoplay>
+    <source src="cocomelon.mp4" type="video/mp4">
+    Cocomelon Intro
+  </video>
+</body>
+```
+</section>
+<section>
+### Muted attribute
+- The **muted** attribute on a media element mutes the audio or video player. With the use of muted attributes, the video can be played, but without a sound.
+```HTML {2} showLineNumbers
+<body>
+  <video style="width: 320px; height: 240px;" autoplay muted>
+    <source src="cocomelon.mp4" type="video/mp4">
+    Cocomelon Intro
+  </video>
+</body>
+```
+</section>
+<section>
+### Poster attribute
+- The **poster** attribute specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead.
+</section>
