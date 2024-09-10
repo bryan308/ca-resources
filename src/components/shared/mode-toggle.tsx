@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
-export function ModeToggle() {
+export default function ModeToggle() {
 	const { setTheme, theme } = useTheme()
 
 	return (
