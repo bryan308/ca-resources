@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .table table {
-	@apply w-full bg-background border-collapse border border-border;
+	@apply w-full bg-background-foreground border-collapse border border-border;
 }
 
 .table table thead th {
-	@apply text-left font-bold text-base py-2 px-3 border-b-2 border-collapse border-border;
+	@apply text-left font-bold text-base py-2 px-3 border-b border-collapse border-border;
 }
 
 .table table tbody td:nth-child(1) {
@@ -16,11 +16,11 @@
 
 .table table tbody td,
 .table table thead th {
-	@apply p-3 border-border-foreground border-l text-muted-foreground py-2 px-3;
+	@apply p-3 border-border border-l text-muted-foreground py-2 px-3;
 }
 
 .table table tr {
-	@apply even:bg-muted/20;
+	@apply even:bg-[#FAFAFA] even:dark:bg-black;
 }
 
 h1 {
@@ -54,7 +54,7 @@ ul {
 }
 
 li {
-	@apply text-secondary mb-2;
+	@apply text-muted-foreground mb-2;
 }
 
 li::marker {

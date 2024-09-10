@@ -47,10 +47,10 @@ const ScrollToTopButton = () => {
 			className={cn(
 				shown ? "scale-100" : "scale-0",
 				"w-12 h-12 transition-transform duration-200 flex fixed right-6 xl:right-12 xl:bottom-8 bottom-32",
-				"bg-card border-2 border-border-foreground rounded-full justify-center items-center"
+				"bg-card border-2 border-border rounded-full justify-center items-center"
 			)}
 		>
-			<ChevronUpIcon className="size-6 text-secondary" />
+			<ChevronUpIcon className="size-6 text-muted-foreground" />
 		</button>
 	)
 }
