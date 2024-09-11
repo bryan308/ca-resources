@@ -1,5 +1,5 @@
-import PageHeader from '@/components/shared/page-header';
-import Link from 'next/link';
+import PageHeader from "@/components/shared/page-header"
+import Link from "next/link"
 
 export default function Introduction() {
 	return (
@@ -8,20 +8,18 @@ export default function Introduction() {
 				<PageHeader>Introduction</PageHeader>
 				<h4 className="text-muted-foreground">Welcome to CA Resources!</h4>
 				<p>
-					This website is designed to boost productivity not only in web development but also in
-					various educational fields. CA Resources offers a comprehensive collection of curated
-					resources, ranging from essential tools and guides to inspirational materials. Our goal is
-					to streamline your workflow and support your growth as a developer and learner.
+					It is a website designed to improve productivity, especially for web development, among
+					other fields in education. It provides the most valuable resources and guides.
 				</p>
 			</section>
 			<section>
-				<h2 className='text-2xl text-foreground font-bold mb-2'>Inspired by</h2>
+				<h2 className="text-2xl text-foreground font-bold mb-2">Inspired by</h2>
 				<p>
-					The conceptualization of CA Resources is influenced by the{' '}
+					The conceptualization of CA Resources is influenced by the{" "}
 					<Link
-						href='https://vercel.com/geist/introduction'
-						target='_blank'
-						className='link'
+						href="https://vercel.com/geist/introduction"
+						target="_blank"
+						className="link"
 					>
 						Vercel Geist Design System
 					</Link>
@@ -30,11 +28,11 @@ export default function Introduction() {
 			</section>
 			<section>
 				<p className="mt-0">
-					<strong className='text-foreground'>CA Resources</strong> was created and managed by{' '}
+					<strong className="text-foreground">CA Resources</strong> was created and managed by{" "}
 					<Link
-						href='https://cdrcangulo.vercel.app/'
-						target='_blank'
-						className='link'
+						href="https://cdrcangulo.vercel.app/"
+						target="_blank"
+						className="link"
 					>
 						Cedric Angulo
 					</Link>
@@ -57,5 +55,5 @@ export default function Introduction() {
 				</p>
 			</section> */}
 		</>
-	);
+	)
 }

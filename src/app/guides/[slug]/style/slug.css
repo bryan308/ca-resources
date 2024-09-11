@@ -4,24 +4,30 @@
 
 .data-table table,
 .table table {
-	@apply w-full bg-background-foreground border-collapse border border-border;
+	@apply w-full bg-background-foreground border-collapse;
 }
 
 .data-table table thead th,
 .table table thead th {
-	@apply text-left font-bold text-base py-2 px-3 border-b border-collapse border-border;
+	@apply text-left text-wrap lg:text-nowrap text-foreground text-xl font-semibold tracking-tight py-2 px-3 border-b border-collapse border-border;
+}
+
+.data-table table tbody td,
+.table table tbody td {
+	@apply text-muted-foreground text-sm lg:text-base;
 }
 
 .data-table table tbody td,
 .data-table table thead th,
 .table table tbody td,
 .table table thead th {
-	@apply p-3 border-border border-l text-muted-foreground py-2 px-3;
+	/* @apply p-3 border-border border-l py-2 px-3; */
+	@apply p-3 py-2 px-3;
 }
 
 .data-table table tr,
 .table table tr {
-	@apply even:bg-[#FAFAFA] even:dark:bg-black;
+	@apply border-b border-border even:bg-muted/50 hover:bg-muted/50;
 }
 
 .table table tbody td:nth-child(1) {
@@ -48,6 +54,10 @@ p {
 	@apply text-muted-foreground leading-7 [&:not(first-child)]:mt-6;
 }
 
+a.link {
+	@apply text-blue-700 dark:text-blue-500 active:text-red-700 active:dark:text-red-500 visited:text-purple-700 visited:dark:text-purple-500 hover:underline hover:underline-offset-4 font-medium;
+}
+
 ol {
 	list-style-position: inside;
 	list-style-type: decimal;
@@ -66,13 +76,21 @@ li::marker {
 	@apply text-primary;
 }
 
+ul li ul {
+	@apply pt-2 pl-6 lg:pl-8;
+}
+
 code {
-	@apply relative rounded-md bg-muted text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
+	@apply relative rounded-md bg-muted text-foreground px-[0.3rem] py-[0.2rem] my-px text-sm border border-border;
 	font-family: var(--shareTechMono);
 }
 
 blockquote {
 	@apply p-3 border-l-2 border-border my-6;
+}
+
+blockquote p {
+	@apply mt-0;
 }
 
 strong {
@@ -217,12 +235,10 @@ strong {
 /* TABLE 6 */
 .table6 {
 	@apply font-serif border border-border border-separate my-6 bg-none;
-	@apply font-serif border border-border border-separate my-6 bg-none;
 }
 
 .table6 thead tr th,
 .table6 tbody tr td {
-	@apply border border-border;
 	@apply border border-border;
 }
 

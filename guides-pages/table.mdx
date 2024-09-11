@@ -22,8 +22,8 @@ description: HTML tables allow web developers to arrange data into rows and colu
 - **Layout tables** are not limited to holding data - they are allowed to hold any type of content. Their purpose is to position that content with a row-column layout scheme.
 </section>
 <section>
-### Example Data Table
-<TableExample example_id={1} />
+### Example of Data Table
+<DataTableExample />
 </section>
 <section>
 ### Example Layout Tables
@@ -238,35 +238,38 @@ tbody {
 <section>
 ### Summary Table
 <SummaryTable>
-| **Element**      | **Definition**                                                                              |
+| Element          | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
 | `<table>`        | Defines the table element.                                                                  |
 | `<tr>`           | Defines a table row.                                                                        |
-| `<th>`           | Defines a table header cell, usually bold and centered by default.                          |
+| `<th>`           | Defines a table header cell. By default, table headers are bold and centered                |
 | `<td>`           | Defines a table data cell.                                                                  |
-| `<thead>`        | Groups the header content in a table.                                                       |
-| `<tbody>`        | Groups the body content in a table.                                                         |
+| `<thead>`        | Use to group header content in an HTML Table.                                               |
+| `<tbody>`        | Use to group the body content in an HTML Table.                                             |
 </SummaryTable>
 <SummaryTable>
-| **Attributes**   | **Definition**                                                                              |
+| Attributes       | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
-| `colspan`        | Specifies the number of columns a cell should span.                                         |
+| `colspan`        | Defines the number of columns a table cell should span.                                     |
 | `rowspan`        | Specifies the number of rows a cell should span.                                            |
 </SummaryTable>
 <SummaryTable>
-| **Styles**       | **Definition**                                                                              |
+| Styles           | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
-| `border-style`   | Sets the style of the table border (e.g., solid, dashed).                                   |
-| `border-width`   | Sets the width of the table border (e.g., thin, medium).                                    |
-| `border`         | Shorthand property for `border-style`, `border-width`, and `border-color`.                  |
-| `padding`        | Sets the space between the cell content and its border.                                     |
-| `border-collapse`| Collapses table borders into a single border.                                               |
-| `text-align`     | Sets the horizontal alignment of content in `<th>` and `<td>` elements.                     |
-| `vertical-align` | Sets the vertical alignment of content in `<th>` and `<td>` elements (top, middle, bottom). |
-| `:hover`         | Selector to apply styles to table rows (`<tr>`) on mouseover.                               |
+| `border-style`   | Use to specify the table border.                                                            |
+| `border-width`   | Use to specify the border’s width.                                                          |
+| `border`         | A shorthand property that handles a set of border-related properties.                       |
+| `padding`        | Use to specify the space between the cell content and its border.                           |
+| `border-collapse`| Use to collapse border into just one border.                                                |
+| `text-align`     | Use to set the horizontal alignment of the content `<th>` and `<td>` elements.              |
+| `vertical-align` | Sets the vertical alignment of content in `<th>` and `<td>` elements (top, bottom, middle). |
+| `border-bottom`  | Use to `<th>` and `<td>` for horizontal dividers.                                           |
+| `:hover`         | Use on `<tr>` to highlight table rows on mouse over.                                        |
 </SummaryTable>
 </section>
 <section>
 ### Credits
 This webpage was created based on lessons provided by **Rose Anne G. Cochanco** as part of Web Development subject.
+
+The table example is from <MDXLink href="https://ui.shadcn.com?rel=ca-resources.vercel.app" target="_blank">shadcn/ui</MDXLink>.
 </section>

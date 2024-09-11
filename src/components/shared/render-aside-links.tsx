@@ -16,7 +16,7 @@ function AsideLinks({ data }: IAsideLinks) {
 	const pathname = usePathname()
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? "text-foreground bg-muted/60" : "text-muted-foreground"
+		isActive ? "text-foreground bg-muted/50" : "text-muted-foreground"
 
 	return (
 		<>
@@ -30,7 +30,7 @@ function AsideLinks({ data }: IAsideLinks) {
 								href={d.path}
 								className={cn(
 									"inline-block p-2 my-px text-sm w-full rounded-lg",
-									"hover:bg-muted/60 hover:text-foreground focus:bg-muted/60 focus:text-foreground",
+									"hover:bg-muted/50 hover:text-foreground focus:bg-muted/50 focus:text-foreground",
 									currentPath(isActive)
 								)}
 							>
