@@ -7,7 +7,8 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 # Integrating Audio and Video
 </section>
 <section>
-## Learning Objectives <br />
+## Learning Objectives 
+<br />
 1. Using HTML5 `<video>` and `</video>` tag pairs within a web page.
 2. Adding video controls and Saving video files.
 3. Streaming versus downloaded video and supporting older browsers.
@@ -32,7 +33,7 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 </section>
 <section>
 ### HTML div and span pairs
-```HTML
+```HTML {17, 19, 31} showLineNumbers
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,13 +52,18 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 <body>
   <div>
     <p>
-      The <span>div Tag</span> defines a division or a section in an HTML document. The div tag is used as a 
-      container in HTML elements - which is then styled with CSS or manipulated with JavaScript.
+      The <span>div Tag</span> defines a division or a section in an HTML document. 
+      The div tag is used as a container in HTML elements - which is then styled 
+      with CSS or manipulated with JavaScript.
     </p>
     <p>
-      The div tag is easily styled by using the class or id attribute. Any sort of content can be put inside the div tag!
+      The div tag is easily styled by using the class or id attribute. Any sort of 
+      content can be put inside the div tag!
     </p>
-    <p>Note: By default, browsers always place a line break before and after the div element.</p>
+    <p>
+      Note: By default, browsers always place a line break before and after the div 
+      element.
+    </p>
   </div>
 </body>
 ```
@@ -86,15 +92,15 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 ```
 </section>
 <section>
-<SummaryTable>
 ### Common HTML Video formats
+<DataTable>
 | **Format** | **File Extension** | **Description**                                                                                      |
 |------------|--------------------|------------------------------------------------------------------------------------------------------|
 | MPEG       | `.mpg`             | Developed by the Moving Pictures Expert Group. The first popular video format on the web.            |
 | OGG        | `.ogg`             | Theora Ogg. Developed by the Xiph.org Foundaion.                                                     |
 | WEBM       | `.webm`            | Developed by Mozilla, Opera, Adobe, and Google.                                                      |
 | MP4        | `.mp4`             | Commonly used in video cameras and TV hardware. Supported by all browsers and recommended by YouTube.|
-</SummaryTable>
+</DataTable>
 </section>
 <section>
 ### Autoplay attribute
@@ -123,12 +129,12 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 <section>
 ### Poster attribute
 - The **poster** attribute specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead.
-```HTML
+```HTML {2} showLineNUmbers
 <body>
-<video style="width: 340px; height: 240px;" controls poster="media/cocomelon.jpg">
-  <source src="media/cocomelon.mp4" type="video/mp4">
-  <source src="media/cocomelon.ogg" type="video/ogg">
-</video>
+  <video style="width: 340px; height: 240px;" controls poster="media/cocomelon.jpg">
+    <source src="media/cocomelon.mp4" type="video/mp4">
+    <source src="media/cocomelon.ogg" type="video/ogg">
+  </video>
 </body>
 ```
 </section>
@@ -136,7 +142,7 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 ### HTML Audio tag pairs
 - The HTML `<audio>` and `</audio>` elements are used to play audio on a web page.
 - The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
-```HTML
+```HTML {2, 5} showLineNUmbers
 <body>
   <audio controls>
     <source src="pasilyo.mp3" type="audio/mp3">
@@ -147,8 +153,8 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 </section>
 <section>
 ### Loop attribute
--The **loop** attribute will make the audio file play over and over again.
-```HTML
+- The **loop** attribute will make the audio file play over and over again.
+```HTML {2} showLineNumbers
 <body>
   <audio controls autoplay loop>
     <source src="pasilyo.mp3" type="audio/mp3">
@@ -156,4 +162,15 @@ description: Integrating audio and video in HTML5 allows embedding media files d
   </audio>
 </body>
 ```
+</section>
+<section>
+### Common HTML Audio formats
+<DataTable>
+| **Format** | **File Extension** | **Description**                                                                                                                                                  |
+|------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| WAV        | `.wav`             | Developed by IBM and Microsoft. Plays well on Windows, Macintosh, and Linux operating systems.                                                                   |
+| OGG        | `.ogg`             | Developed by the Xiph.org Foundaion.                                                                                                                             |
+| MP3        | `.mp3`             | MP3 files are actually the sound part of MPEG files. MP3 is the most popular format for music players. Combines good compression (small files) with high quality.|
+| MP4        | `.mp4`             | MP4 is a video format, but can also be used for audio.                                                                                                           |
+</DataTable>
 </section>
