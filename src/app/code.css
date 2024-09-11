@@ -40,7 +40,7 @@ pre > code {
 }
 
 :not(pre) > code[class*='language-'] {
-	@apply text-white bg-[#0d0d1e] p-[0.2em_0.3em] rounded-lg;
+	@apply text-white bg-neutral-950 p-[0.2em_0.3em] rounded-lg;
 	box-decoration-break: clone;
 }
 
@@ -98,12 +98,14 @@ pre > code {
 .token.variable {
 	color: white;
 }
+.token.attr-name {
+	@apply text-[#ffffffbb];
+}
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string,
-.token.attr-name,
 .token.id,
 .token.class,
 .token.atrule,

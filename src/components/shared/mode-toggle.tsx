@@ -16,7 +16,7 @@ export default function ModeToggle() {
 					onClick={() => setTheme("system")}
 					className={`border flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
 						theme === "system"
-							? "text-foreground border-stone-600"
+							? "text-foreground border-border"
 							: "text-muted-foreground border-transparent"
 					}`}
 				>
@@ -39,7 +39,7 @@ export default function ModeToggle() {
 				<div
 					className={`border flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
 						theme === "light"
-							? "text-foreground border-stone-600"
+							? "text-foreground border-border"
 							: "text-muted-foreground border-transparent"
 					}`}
 					onClick={() => setTheme("light")}
@@ -52,7 +52,7 @@ export default function ModeToggle() {
 					onClick={() => setTheme("dark")}
 					className={`border flex items-center justify-center p-2 rounded-full cursor-pointer hover:text-neutral-700 dark:hover:text-neutral-300 ${
 						theme === "dark"
-							? "text-foreground border-stone-600"
+							? "text-foreground border-border"
 							: "text-muted-foreground border-transparent"
 					}`}
 				>

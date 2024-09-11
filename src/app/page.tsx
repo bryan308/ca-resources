@@ -6,7 +6,7 @@ export default function Introduction() {
 		<>
 			<section>
 				<PageHeader>Introduction</PageHeader>
-				<h4>Welcome to CA Resources!</h4>
+				<h4 className="text-muted-foreground">Welcome to CA Resources!</h4>
 				<p>
 					This website is designed to boost productivity not only in web development but also in
 					various educational fields. CA Resources offers a comprehensive collection of curated
