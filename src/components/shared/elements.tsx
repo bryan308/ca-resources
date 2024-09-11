@@ -92,6 +92,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 		fontFamily: "Times New Roman, serif",
 		color: "hsl(var(--foreground))",
 		marginBottom: 0,
+		padding: 0,
 	}
 
 	return (

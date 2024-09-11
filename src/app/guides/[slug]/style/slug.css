@@ -69,20 +69,15 @@ ol {
 }
 
 ul {
-	@apply my-3 ml-4 list-none p-0 
-	[&>li]:before:absolute 
-	[&>li]:before:-ml-3.5 
-	[&>li]:before:inline-block 
-	[&>li]:before:text-foreground 
-	[&>li]:before:content-['–'];
+	@apply my-3 ml-4 p-0 list-["–"];
 }
 
 li {
-	@apply text-foreground mb-2;
+	@apply text-foreground pl-2;
 }
 
 li::marker {
-	@apply text-foreground;
+	@apply text-foreground mr-4;
 }
 
 ul li ul {
