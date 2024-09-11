@@ -22,7 +22,7 @@ function ComponentPaths({ paths }: PathsProp) {
 				.map((p, i) => {
 					const isActive = pathname === `/guides/${p.slug}`
 					return (
-						<li key={i}>
+						<div key={i}>
 							<Link
 								href={`/guides/${p.slug}`}
 								className={cn(
@@ -33,7 +33,7 @@ function ComponentPaths({ paths }: PathsProp) {
 							>
 								{p.title}
 							</Link>
-						</li>
+						</div>
 					)
 				})}
 		</>

@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("../components/colors/color-scheme.css");
+/* @import url("../components/colors/color-scheme.css"); */
 @import url("./code.css");
-
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
 		--background-foreground: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -37,9 +36,9 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 0%;
 		--background-foreground: 0 0% 3.92%;
-    --foreground: 0 0% 98%;
+    --foreground: 0 0% 93%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
@@ -90,20 +89,16 @@
 	}
 
 	p {
-		@apply text-muted-foreground leading-7 [&:not(first-child)]:mt-6;
+		@apply text-foreground leading-7 [&:not(first-child)]:mt-6;
 	}
 }
 
 section {
-	@apply w-full cell-padding border-border border-b overflow-x-hidden;
+	@apply w-full p-6 xl:p-12 border-border border-b overflow-x-hidden;
 }
 
 a.link {
 	@apply text-blue-700 dark:text-blue-500 active:text-red-700 active:dark:text-red-500 visited:text-purple-700 visited:dark:text-purple-500 hover:underline hover:underline-offset-4 font-medium;
-}
-
-.cell-padding {
-	@apply p-6 xl:p-12;
 }
 
 ul.links {

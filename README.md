@@ -2,7 +2,7 @@
 
 Welcome to **CA Resources**!
 
-This website is designed to boost productivity not only in web development but also in various educational fields. **CA Resources** offers a comprehensive collection of curated resources, ranging from essential tools and guides to inspirational materials. Our goal is to streamline your workflow and support your growth as a developer and learner.
+It is a website designed to improve productivity, especially for web development, among other fields in education. It provides the most valuable resources and guides.
 
 ## Inspired by
 

@@ -2,6 +2,7 @@ import React from "react"
 import ImageRender from "./image-render"
 import Link from "next/link"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
+import { Separator } from "../ui/separator"
 
 interface ITableProps {
 	example_id?: number
@@ -61,12 +62,12 @@ const MDXLink = ({
 MDXLink.DisplayName = "MDXLink"
 
 const SummaryTable = ({ children }: { children: React.ReactNode }) => {
-	return <div className="table w-full mt-12">{children}</div>
+	return <div className="table w-full mt-4">{children}</div>
 }
 SummaryTable.DisplayName = "SummaryTable"
 
 const DataTable = ({ children }: { children: React.ReactNode }) => {
-	return <div className="data-table w-full mt-12">{children}</div>
+	return <div className="data-table w-full mt-4">{children}</div>
 }
 DataTable.DisplayName = "DataTable"
 
@@ -94,7 +95,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 	}
 
 	return (
-		<div className="border border-border p-4 rounded-lg bg-background-foreground">
+		<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
 			{listStyle === "type" ? (
 				<>
 					<h1 style={h1}>Phases of WDLC</h1>
@@ -116,17 +117,12 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 					<h3 style={h3}>To create a web page:</h3>
 					<ol style={ol}>
 						<li style={li}>
-							Open a Text Editor (Notepad) or Source
-							<br /> Code Editor (Sublime Text) program.
+							Open a Text Editor (Notepad) or Source Code Editor (Sublime Text) program.
 						</li>
-						<li style={li}>
-							Save the file as .html (File - save as
-							<br /> - select HTML)
-						</li>
+						<li style={li}>Save the file as .html (File - save as - select HTML)</li>
 						<li style={li}>Write your HTML code.</li>
 						<li style={li}>
-							Double-click on the saved file, and it
-							<br /> will be opened in your default browser.
+							Double-click on the saved file, and it will be opened in your default browser.
 						</li>
 					</ol>
 				</>
@@ -159,7 +155,7 @@ const UnorderedList: React.FC<IListProps> = ({ type }) => {
 
 	return (
 		<>
-			<div className="border border-border p-4 rounded-lg bg-background-foreground">
+			<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
 				<h1 style={h1}>Most Popular Web Browsers</h1>
 				<ul style={ul}>
 					<li style={li}>Mozilla Firefox</li>
@@ -181,7 +177,7 @@ const TableExample: React.FC<ITableProps> = ({ example_id }) => {
 	}
 
 	return (
-		<table className={`my-6 ${getStyle()}`}>
+		<table className={`mt-4 ${getStyle()}`}>
 			<thead>
 				<tr>
 					<th>Student Name</th>
@@ -269,11 +265,14 @@ const TableCellSpanning: React.FC = () => (
 )
 TableCellSpanning.displayName = "TableCellSpanning"
 
+const MDXSeparator: React.FC = () => <Separator className="my-6 lg:my-12" />
+
 export {
 	DataTable,
 	DataTableExample,
 	GuideImage,
 	MDXLink,
+	MDXSeparator,
 	SummaryTable,
 	OrderedList,
 	TableCellSpanning,

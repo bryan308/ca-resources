@@ -5,6 +5,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 
 <section>
 # Inserting Hyperlinks
+<p className="text-muted-foreground text-sm">5–6 MIN READ</p>
 </section>
 <section>
 ## Agenda
@@ -25,7 +26,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 </section>
 <section>
 ### Relative Hyperlinks
-```HTML
+```HTML showLineNumbers
 <body>
   <ul>
     <li><a href="lesson1.html">Lesson 1</a></li>
@@ -39,7 +40,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 </section>
 <section>
 ### Absolute Hyperlinks
-```HTML
+```HTML showLineNumbers
 <body>
   <a href="https://www.google.com/">Go to Google</a>
   <a href="https://www.facebook.com/">Go to Facebook</a>
@@ -54,11 +55,11 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   - An **Active link** is underlined and **red**
 </section>
 <section>
-#### target attribute
+#### Target attribute
 - The **target** attribute specifies where to open the link document.
   - `_blank` - opens the link document in a raw window or tab.
   - `_self` - opens the link in the same window/tab as it was clicked (default).
-```HTML
+```HTML showLineNumbers
 <body>
   <ul>
     <li><a href="lesson1.html" target="_blank">Lesson 1</a></li>
@@ -103,7 +104,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 - The **padding** element is used to create space around an element’s content, inside of any defined borders.
 </section>
 <section>
-#### padding property
+#### Padding property
 - The **padding** property is used to create space around an element’s content, inside of any defined borders.
 - The **padding** property is a shorthand property for the following individual padding properties:
     - **padding-top**
@@ -119,7 +120,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 ```
 </section>
 <section>
-#### overflow property
+#### Overflow property
 - The **overflow** property specifies what should happen if content overflows an element's box.
 - This property specifies whether to **clip** content or to add **scrollbars** when an element's content is too big to fit in a specified area.
 - The value for overflow property can be **visible**, **scroll**, **auto**, **hidden**, **clip**.
@@ -167,9 +168,9 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
-#### OUTPUT
-<br />
-<ul style={{listStyleType: "none", margin: 0, padding: 0, overflow: "hidden", backgroundColor: "#333333"}}>
+<MDXSeparator />
+#### Output
+<ul style={{listStyleType: "none", margin: "1rem 0 0 0", padding: 0, overflow: "hidden", backgroundColor: "#333333"}}>
   <li style={{display: "block", color: "white", textAlign: "center", padding: "16px", margin: 0, textDecoration: "none", float: "left"}}>
     <a href="#home" style={{color: "white", textDecoration: "none"}}>Home</a>
   </li>

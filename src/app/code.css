@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*="language-"],
+pre[class*="language-"] {
 	@apply text-sm bg-neutral-950 border border-border text-white max-h-56;
 	font-family: var(--shareTechMono);
 	letter-spacing: 0.2px;
@@ -17,8 +17,8 @@ pre[class*='language-'] {
 	hyphens: none;
 }
 
-pre[class*='language-']::selection,
-code[class*='language-']::selection {
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection {
 	color: inherit;
 	text-shadow: none;
 }
@@ -28,8 +28,8 @@ pre {
 	scrollbar-width: thin;
 }
 
-pre[class*='language-'] {
-	@apply rounded-lg p-4 my-8;
+pre[class*="language-"] {
+	@apply rounded-lg p-4 mt-4;
 	overflow: auto;
 }
 
@@ -39,7 +39,7 @@ pre > code {
 	width: auto;
 }
 
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class*="language-"] {
 	@apply text-white bg-neutral-950 p-[0.2em_0.3em] rounded-lg;
 	box-decoration-break: clone;
 }

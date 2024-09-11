@@ -5,6 +5,7 @@ description: HTML tables allow web developers to arrange data into rows and colu
 
 <section>
 # Creating Tables on a Website
+<p className="text-muted-foreground text-sm">7–8 MIN READ</p>
 </section>
 <section>
 ## Learning Objectives
@@ -52,20 +53,22 @@ description: HTML tables allow web developers to arrange data into rows and colu
 </section>
 <section>
 ### Students List Web Page With Border Property
-``` CSS {2} showLineNumbers
+```CSS {2} showLineNumbers
 table, td, tr {
   border: thin solid;
 }
 ```
+<MDXSeparator />
 <TableExample example_id={3} />
 </section>
 <section>
 ### Students List Web Page With Border-collapse Property
-``` CSS {2} showLineNumbers
+```CSS {2} showLineNumbers
 table, td, tr {
   border-collapse: collapse;
 }
 ```
+<MDXSeparator />
 <TableExample example_id={4} />
 </section>
 <section>
@@ -84,7 +87,8 @@ tbody {
   background-color: lightblue;
 }
 ```
-<TableExample example_id={5} />
+<MDXSeparator />
+### Complete Code
 ```HTML showLineNumbers
 <!DOCTYPE html>
 <html lang="en">
@@ -151,6 +155,9 @@ tbody {
   </body>
 </html>
 ```
+<MDXSeparator />
+### Output
+<TableExample example_id={5} />
 </section>
 <section>
 ### Cell Spanning
@@ -166,7 +173,8 @@ tbody {
   <th rowspan="2">Ability to Stay Awake</th>
 </tr>
 ```
-<TableCellSpanning />
+<MDXSeparator />
+#### Complete code
 ```HTML showLineNumbers
 <!DOCTYPE html>
 <html lang="en">
@@ -216,6 +224,9 @@ tbody {
   </body>
 </html>
 ```
+<MDXSeparator />
+#### Output
+<TableCellSpanning />
 </section>
 <section>
 ### Table Size
@@ -236,7 +247,7 @@ tbody {
 - Use the **:hover** selector on `<tr>` to highlight table rows on mouse over.
 </section>
 <section>
-### Summary Table
+## Summary Table
 <SummaryTable>
 | Element          | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
@@ -247,12 +258,16 @@ tbody {
 | `<thead>`        | Use to group header content in an HTML Table.                                               |
 | `<tbody>`        | Use to group the body content in an HTML Table.                                             |
 </SummaryTable>
+</section>
+<section>
 <SummaryTable>
 | Attributes       | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
 | `colspan`        | Defines the number of columns a table cell should span.                                     |
 | `rowspan`        | Specifies the number of rows a cell should span.                                            |
 </SummaryTable>
+</section>
+<section>
 <SummaryTable>
 | Styles           | Definition                                                                                  |
 |------------------|---------------------------------------------------------------------------------------------|
@@ -271,5 +286,5 @@ tbody {
 ### Credits
 This webpage was created based on lessons provided by **Rose Anne G. Cochanco** as part of Web Development subject.
 
-The table example is from <MDXLink href="https://ui.shadcn.com?rel=ca-resources.vercel.app" target="_blank">shadcn/ui</MDXLink>.
+The table example is sourced from <MDXLink href="https://ui.shadcn.com?rel=ca-resources.vercel.app" target="_blank">shadcn/ui</MDXLink>.
 </section>

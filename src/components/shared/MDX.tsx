@@ -8,6 +8,7 @@ import {
 	TableCellSpanning,
 	TableExample,
 	UnorderedList,
+	MDXSeparator,
 } from "./elements"
 import { LoginForm } from "@/components/login-form"
 
@@ -17,6 +18,7 @@ export const components = {
 	GuideImage,
 	LoginForm,
 	MDXLink,
+	MDXSeparator,
 	SummaryTable,
 	OrderedList,
 	TableCellSpanning,

@@ -25,7 +25,7 @@ function AsideLinks({ data }: IAsideLinks) {
 				.map((d, i) => {
 					const isActive = pathname === d.path
 					return (
-						<li key={i}>
+						<div key={i}>
 							<Link
 								href={d.path}
 								className={cn(
@@ -36,7 +36,7 @@ function AsideLinks({ data }: IAsideLinks) {
 							>
 								{d.text}
 							</Link>
-						</li>
+						</div>
 					)
 				})}
 		</>

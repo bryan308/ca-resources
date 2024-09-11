@@ -4,34 +4,39 @@
 
 .data-table table,
 .table table {
-	@apply w-full bg-background-foreground border-collapse;
+	@apply w-full border-separate border-spacing-0;
+}
+
+.data-table table thead,
+.table table thead {
+	@apply border-t border-b border-border;
+}
+
+.data-table table th,
+.table table th {
+	@apply first:rounded-tl-md first:rounded-bl-md first:border-l 
+	last:rounded-tr-md last:rounded-br-md last:border-r 
+	border-t border-b border-border bg-muted/60 align-top;
 }
 
 .data-table table thead th,
 .table table thead th {
-	@apply text-left text-wrap lg:text-nowrap text-foreground text-xl font-semibold tracking-tight py-2 px-3 border-b border-collapse border-border;
+	@apply text-left text-wrap lg:text-nowrap text-muted-foreground 
+	text-base font-normal tracking-tight p-3;
 }
 
 .data-table table tbody td,
 .table table tbody td {
-	@apply text-muted-foreground text-sm lg:text-base;
-}
-
-.data-table table tbody td,
-.data-table table thead th,
-.table table tbody td,
-.table table thead th {
-	/* @apply p-3 border-border border-l py-2 px-3; */
-	@apply p-3 py-2 px-3;
+	@apply text-foreground text-sm p-3 border-b border-border;
 }
 
 .data-table table tr,
 .table table tr {
-	@apply border-b border-border even:bg-muted/50 hover:bg-muted/50;
+	@apply even:bg-background-foreground hover:bg-background-foreground;
 }
 
 .table table tbody td:nth-child(1) {
-	width: 15ch;
+	width: 16ch;
 }
 
 h1 {
@@ -51,7 +56,7 @@ h4 {
 }
 
 p {
-	@apply text-muted-foreground leading-7 [&:not(first-child)]:mt-6;
+	@apply text-foreground leading-7 [&:not(first-child)]:mt-6;
 }
 
 a.link {
@@ -64,16 +69,20 @@ ol {
 }
 
 ul {
-	list-style-position: inside;
-	list-style-type: disc;
+	@apply my-3 ml-4 list-none p-0 
+	[&>li]:before:absolute 
+	[&>li]:before:-ml-3.5 
+	[&>li]:before:inline-block 
+	[&>li]:before:text-foreground 
+	[&>li]:before:content-['–'];
 }
 
 li {
-	@apply text-muted-foreground mb-2;
+	@apply text-foreground mb-2;
 }
 
 li::marker {
-	@apply text-primary;
+	@apply text-foreground;
 }
 
 ul li ul {
@@ -81,12 +90,12 @@ ul li ul {
 }
 
 code {
-	@apply relative rounded-md bg-muted text-foreground px-[0.3rem] py-[0.2rem] my-px text-sm border border-border;
+	@apply relative my-px rounded-md bg-background-foreground text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
 	font-family: var(--shareTechMono);
 }
 
 blockquote {
-	@apply p-3 border-l-2 border-border my-6;
+	@apply p-3 border-l-4 border-border my-6;
 }
 
 blockquote p {
@@ -94,12 +103,12 @@ blockquote p {
 }
 
 strong {
-	@apply font-medium text-primary;
+	@apply font-semibold text-primary;
 }
 
 /* TABLE1 */
 .table1 {
-	@apply bg-card my-6 border border-collapse border-border;
+	@apply bg-card mt-6 border border-collapse border-border;
 }
 
 .table1 tr {
@@ -107,7 +116,6 @@ strong {
 }
 
 .table1 thead tr th {
-	@apply px-4 border border-collapse border-border;
 	@apply px-4 border border-collapse border-border;
 }
 
@@ -122,12 +130,11 @@ strong {
 /* TABLE 2 */
 .table2 {
 	font-family: "Times New Roman", Times, serif;
-	@apply my-6 border border-separate border-border bg-none;
+	@apply mt-4 border border-separate border-border bg-none;
 }
 
 .table2 thead tr th,
 .table2 tbody tr td {
-	@apply px-4 border border-border;
 	@apply px-4 border border-border;
 }
 
@@ -136,7 +143,6 @@ strong {
 }
 
 .table2 tbody tr {
-	@apply border border-border;
 	@apply border border-border;
 }
 
@@ -148,19 +154,16 @@ strong {
 .table3 {
 	font-family: "Times New Roman", Times, serif;
 	border: thin solid;
-	@apply my-6 border-separate border-border bg-none;
-	@apply my-6 border-separate border-border bg-none;
+	@apply mt-4 border-separate border-border bg-none;
 }
 
 .table3 thead tr th,
 .table3 tbody tr td {
 	border: thin solid;
 	@apply border-border;
-	@apply border-border;
 }
 
 .table3 tbody tr {
-	@apply border border-border;
 	@apply border border-border;
 }
 
@@ -175,12 +178,11 @@ strong {
 /* TABLE 4 */
 .table4 {
 	font-family: "Times New Roman", Times, serif;
-	@apply border my-6 border-collapse border-border bg-none;
+	@apply border mt-4 border-collapse border-border bg-none;
 }
 
 .table4 thead tr th,
 .table4 tbody tr td {
-	@apply border border-collapse border-border;
 	@apply border border-collapse border-border;
 }
 
@@ -189,7 +191,6 @@ strong {
 }
 
 .table4 tbody tr {
-	@apply border border-border;
 	@apply border border-border;
 }
 
@@ -234,7 +235,7 @@ strong {
 
 /* TABLE 6 */
 .table6 {
-	@apply font-serif border border-border border-separate my-6 bg-none;
+	@apply font-serif border border-border border-separate mt-4 bg-none;
 }
 
 .table6 thead tr th,

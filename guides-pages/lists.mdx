@@ -1,10 +1,11 @@
 ---
-title: List
+title: Lists
 description: HTML Hyperlink is a word, phrase or image that a user can click on to jump to a new document or a new section within the current document.
 ---
 
 <section>
 # HTML Lists
+<p className="text-muted-foreground text-sm">9–12 MIN READ</p>
 </section>
 <section>
 ## Agenda
@@ -25,7 +26,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 - An **unordered list** contains a list of items that don’t need to be in a particular order.
 - The `<ul>` and `</ul>` tags are used to create unordered or bulleted lists.
 - Items in the lists are added by using the `<li>` and `</li>` tags
-```HTML showLineNumbers
+```HTML {8, 14} showLineNumbers
 <!DOCTYPE html>
 <html>
   <head>
@@ -48,7 +49,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 ### Ordered list tag pairs
 - An **ordered list** is useful for presenting a series of steps that the user should perform in order.
 - The `<ol>` and `</ol>` tags are used to create ordered lists or numbered lists.
-```HTML showLineNumbers
+```HTML {8, 16} showLineNumbers
 <!DOCTYPE html>
 <html>
   <head>
@@ -81,14 +82,14 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 #### list-style-type property
 - The **list-style-type** property is used to define the style of the list item marker.
 - The following values below explains how to change the marker for unordered list items.
-<br />
+<MDXSeparator />
 1. The **disc** value sets the list item marker to a bullet.
 2. The **circle** value sets the list item marker to a circle.
 3. The **square** value sets the list item marker to a square.
 4. The **none** value will not display markers on list items.
 </section>
 <section>
-#### disc value
+#### Disc value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -101,11 +102,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <UnorderedList type="disc" />
 </section>
 <section>
-#### circle value
+#### Circle value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -118,11 +120,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <UnorderedList type="circle" />
 </section>
 <section>
-#### square value
+#### Square value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -135,11 +138,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <UnorderedList type="square" />
 </section>
 <section>
-#### none value
+#### None value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -152,13 +156,14 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <UnorderedList type="none" />
 </section>
 <section>
 #### list-style-type property
 - The following values sets the marker for ordered list items.
-<br />
+<MDXSeparator />
 1. The **lower-alpha** value is used to set the marker of a list item in lowercase letters.
 2. The **upper-alpha** value is used to set the marker of a list item in lowercase letters.
 3. The **lower-roman** value is used to set the marker of a list item in lowercase roman numbers.
@@ -166,7 +171,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 
 </section>
 <section>
-#### lower-alpha value
+#### Lower alpha value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -181,11 +186,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList type="lower-alpha" listStyle="type" />
 </section>
 <section>
-#### upper-alpha value
+#### Upper alpha value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -200,11 +206,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList type="upper-alpha" listStyle="type" />
 </section>
 <section>
-#### lower-roman value
+#### Lower roman value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -219,11 +226,12 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList type="lower-roman" listStyle="type" />
 </section>
 <section>
-#### upper-roman value
+#### Upper roman value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -238,18 +246,20 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList type="upper-roman" listStyle="type" />
 </section>
 <section>
 #### list-style-image property
 - The **list-style-image** property used to specify an image as the list item marker in unordered lists.
-```HTML showLineNumbers
+```HTML {1} showLineNumbers
 <ul style=“list-style-image:url(‘image.jpg’)”>
   <li>item 1</li>
   <li>item 2</li>
 </ul>
 ```
+<MDXSeparator />
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -262,6 +272,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ul>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList listStyle="" image="/checkmarker.svg" />
 </section>
@@ -272,8 +283,8 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 - The **inside** value means that the bullet points will beinside the list item. The list item will be part of the text and push the text at the start.
 </section>
 <section>
-#### outside value
-```HTML showLineNumbers
+#### Outside value
+```HTML {3} showLineNumbers
 <body>
   <h3>To create a web page:</h3>
   <ol style="list-styl-position: outside;">
@@ -284,12 +295,13 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList position="outside" listStyle="position" />
 </section>
 <section>
-#### inside value
-```HTML showLineNumbers
+#### Inside value
+```HTML {3} showLineNumbers
 <body>
   <h3>To create a web page:</h3>
   <ol style="list-styl-position: inside;">
@@ -300,6 +312,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList position="inside" listStyle="position" />
 </section>
@@ -307,15 +320,15 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
 #### list-style Property
 - The **list-style** property is a shorthand property. It is use to set all the list properties in one declaration.
 - When using the shorthand property, the order of the property values are:
-<br />
+<MDXSeparator />
 1. list-style-type
 2. list-style-position
 3. list-style-image
 </section>
 <section>
-#### start attribute
+#### Start attribute
 - The **start** attribute of the `<ol></ol>` tag pair defines the start of the counting from specified number.
-```HTML showLineNumbers
+```HTML {3} showLineNumbers
 <body>
   <h3>To create a web page:</h3>
   <ol start="10">
@@ -326,6 +339,7 @@ description: HTML Hyperlink is a word, phrase or image that a user can click on 
   </ol>
 </body>
 ```
+<MDXSeparator />
 #### Output:
 <OrderedList listStyle="type" startt="10" />
 </section>
@@ -354,8 +368,9 @@ HTML also supports description lists.
   </dl>
 </body>
 ```
+<MDXSeparator />
 #### Output:
-<div className="border border-border p-4 rounded-lg bg-background-foreground">
+<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
   <h2 style={{ fontFamily: "Times New Roman, serif", margin: "1.188rem 0", fontSize: "1.75rem", border: "none" }}>Description List</h2>
   <dl style={{ margin: "1rem 0" }}>
     <dt style={{ fontFamily: "Times New Roman, serif" }}>Web Page</dt>
