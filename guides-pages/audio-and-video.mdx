@@ -123,4 +123,37 @@ description: Integrating audio and video in HTML5 allows embedding media files d
 <section>
 ### Poster attribute
 - The **poster** attribute specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead.
+```HTML
+<body>
+<video style="width: 340px; height: 240px;" controls poster="media/cocomelon.jpg">
+  <source src="media/cocomelon.mp4" type="video/mp4">
+  <source src="media/cocomelon.ogg" type="video/ogg">
+</video>
+</body>
+```
+</section>
+<section>
+### HTML Audio tag pairs
+- The HTML `<audio>` and `</audio>` elements are used to play audio on a web page.
+- The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
+```HTML
+<body>
+  <audio controls>
+    <source src="pasilyo.mp3" type="audio/mp3">
+    Pasilyo Intro
+  <audio>
+</body>
+```
+</section>
+<section>
+### Loop attribute
+-The **loop** attribute will make the audio file play over and over again.
+```HTML
+<body>
+  <audio controls autoplay loop>
+    <source src="pasilyo.mp3" type="audio/mp3">
+    Pasilyo by Sun Kissed
+  </audio>
+</body>
+```
 </section>
