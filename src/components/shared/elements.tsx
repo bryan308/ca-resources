@@ -3,10 +3,16 @@ import ImageRender from "./image-render"
 import Link from "next/link"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
 import { Separator } from "../ui/separator"
+import { orderedList, studentData, tblCellSpan } from "./interface/mdx-elements"
 
 interface ITableProps {
 	example_id?: number
 }
+
+const DataTable = ({ children }: { children: React.ReactNode }) => {
+	return <div className="data-table w-full mt-4">{children}</div>
+}
+DataTable.DisplayName = "DataTable"
 
 const DataTableExample = () => {
 	return (
@@ -40,174 +46,6 @@ const DataTableExample = () => {
 }
 DataTableExample.DisplayName = "DataTableExample"
 
-const MDXLink = ({
-	children,
-	href,
-	target,
-}: {
-	children: React.ReactNode
-	href: string
-	target: string
-}) => {
-	return (
-		<Link
-			className="link"
-			href={href}
-			target={target}
-		>
-			{children}
-		</Link>
-	)
-}
-MDXLink.DisplayName = "MDXLink"
-
-const SummaryTable = ({ children }: { children: React.ReactNode }) => {
-	return <div className="table w-full mt-4">{children}</div>
-}
-SummaryTable.DisplayName = "SummaryTable"
-
-const DataTable = ({ children }: { children: React.ReactNode }) => {
-	return <div className="data-table w-full mt-4">{children}</div>
-}
-DataTable.DisplayName = "DataTable"
-
-interface IListProps {
-	listStyle?: "type" | "position"
-	type?: "lower-alpha" | "decimal" | "disc" | "circle" | "square"
-	startt?: number // Ensure this is a number for the `start` attribute
-	position?: "inside" | "outside" // Constrain to valid listStylePosition values
-	image?: string
-}
-
-const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, image }) => {
-	const h1 = { fontFamily: "Times New Roman, serif", margin: "1.34rem 0", fontSize: "2.25rem" }
-	const h3 = { fontFamily: "Times New Roman, serif", margin: "1.34rem 0", fontSize: "1.5rem" }
-	const ol = {
-		listStyleType: type,
-		listStylePosition: position,
-		margin: "1rem 0",
-		paddingLeft: "2.5rem",
-	}
-	const li = {
-		fontFamily: "Times New Roman, serif",
-		color: "hsl(var(--foreground))",
-		marginBottom: 0,
-		padding: 0,
-	}
-
-	return (
-		<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
-			{listStyle === "type" ? (
-				<>
-					<h1 style={h1}>Phases of WDLC</h1>
-					<ol
-						style={ol}
-						start={startt}
-					>
-						<li style={li}>Planning</li>
-						<li style={li}>Analysis</li>
-						<li style={li}>Design</li>
-						<li style={li}>Development</li>
-						<li style={li}>Testing</li>
-						<li style={li}>Implementation</li>
-						<li style={li}>Maintenance</li>
-					</ol>
-				</>
-			) : listStyle === "position" ? (
-				<>
-					<h3 style={h3}>To create a web page:</h3>
-					<ol style={ol}>
-						<li style={li}>
-							Open a Text Editor (Notepad) or Source Code Editor (Sublime Text) program.
-						</li>
-						<li style={li}>Save the file as .html (File - save as - select HTML)</li>
-						<li style={li}>Write your HTML code.</li>
-						<li style={li}>
-							Double-click on the saved file, and it will be opened in your default browser.
-						</li>
-					</ol>
-				</>
-			) : (
-				<>
-					<h1 style={h1}>Most Popular Web Browsers</h1>
-					<ul style={{ listStyleImage: `URL(${image})`, margin: "1rem 0", paddingLeft: "2.5rem" }}>
-						<li style={li}>Mozilla Firefox</li>
-						<li style={li}>Google Chrome</li>
-						<li style={li}>Opera Browser</li>
-						<li style={li}>Microsoft Edge</li>
-						<li style={li}>Safari Browser</li>
-					</ul>
-				</>
-			)}
-		</div>
-	)
-}
-
-OrderedList.displayName = "OrderedList"
-
-const UnorderedList: React.FC<IListProps> = ({ type }) => {
-	const h1 = { fontFamily: "Times New Roman, serif", margin: "1.34rem 0", fontSize: "2.25rem" }
-	const ul = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
-	const li = {
-		fontFamily: "Times New Roman, serif",
-		color: "hsl(var(--foreground))",
-		marginBottom: 0,
-	}
-
-	return (
-		<>
-			<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
-				<h1 style={h1}>Most Popular Web Browsers</h1>
-				<ul style={ul}>
-					<li style={li}>Mozilla Firefox</li>
-					<li style={li}>Google Chrome</li>
-					<li style={li}>Opera Browser</li>
-					<li style={li}>Microsoft Edge</li>
-					<li style={li}>Safari Browser</li>
-				</ul>
-			</div>
-		</>
-	)
-}
-UnorderedList.displayName = "UnorderedList"
-
-const TableExample: React.FC<ITableProps> = ({ example_id }) => {
-	const getStyle = () => {
-		const styles = ["table1", "table2", "table3", "table4", "table5"]
-		return styles[example_id! - 1] || ""
-	}
-
-	return (
-		<table className={`mt-4 ${getStyle()}`}>
-			<thead>
-				<tr>
-					<th>Student Name</th>
-					<th>Student Number</th>
-					<th>Age</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Juan Dela Cruz</td>
-					<td>2021-21067</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>Pedro Cruise</td>
-					<td>2021-21114</td>
-					<td>19</td>
-				</tr>
-				<tr>
-					<td>Simon Ibarra</td>
-					<td>2021-21584</td>
-					<td>18</td>
-				</tr>
-			</tbody>
-		</table>
-	)
-}
-TableExample.displayName = "TableExample"
-
 interface GuideImageProps {
 	src: string
 	alt: string
@@ -236,30 +74,214 @@ const GuideImage: React.FC<Partial<GuideImageProps>> = ({
 
 GuideImage.displayName = "GuideImage"
 
+const MDXLink = ({
+	children,
+	href,
+	target,
+}: {
+	children: React.ReactNode
+	href: string
+	target: string
+}) => {
+	return (
+		<Link
+			className="link"
+			href={href}
+			target={target}
+		>
+			{children}
+		</Link>
+	)
+}
+MDXLink.DisplayName = "MDXLink"
+
+const SummaryTable = ({ children }: { children: React.ReactNode }) => {
+	return <div className="table w-full mt-4">{children}</div>
+}
+SummaryTable.DisplayName = "SummaryTable"
+
+interface IListProps {
+	listStyle?: "type" | "position"
+	type?: "lower-alpha" | "decimal" | "disc" | "circle" | "square"
+	startt?: number
+	position?: "inside" | "outside"
+	image?: string
+}
+
+const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, image }) => {
+	const font = "Times New Roman, serif"
+	const h1 = { fontFamily: font, margin: "1.34rem 0", fontSize: "2.25rem" }
+	const h3 = { fontFamily: font, margin: "1rem 0", fontSize: "1.5rem" }
+	const ol = {
+		listStyleType: type,
+		listStylePosition: position,
+		margin: "1rem 0",
+		paddingLeft: "2.5rem",
+	}
+	const li = {
+		fontFamily: font,
+		color: "hsl(var(--foreground))",
+		marginBottom: 0,
+		padding: 0,
+	}
+
+	return (
+		<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
+			{listStyle === "type" ? (
+				<>
+					<h1 style={h1}>Phases of WDLC</h1>
+					<ol
+						style={ol}
+						start={startt}
+					>
+						{orderedList.ol1.map((ol) => {
+							return (
+								<li
+									key={ol}
+									style={li}
+								>
+									{ol}
+								</li>
+							)
+						})}
+					</ol>
+				</>
+			) : listStyle === "position" ? (
+				<>
+					<h3 style={h3}>To create a web page:</h3>
+					<ol style={ol}>
+						{orderedList.ol2.map((ol) => {
+							return (
+								<li
+									key={ol}
+									style={li}
+								>
+									{ol}
+								</li>
+							)
+						})}
+					</ol>
+				</>
+			) : (
+				<>
+					<h1 style={h1}>Most Popular Web Browsers</h1>
+					<ul style={{ listStyleImage: `URL(${image})`, margin: "1rem 0", paddingLeft: "2.5rem" }}>
+						{orderedList.ol3.map((ol) => {
+							return (
+								<li
+									key={ol}
+									style={li}
+								>
+									{ol}
+								</li>
+							)
+						})}
+					</ul>
+				</>
+			)}
+		</div>
+	)
+}
+
+OrderedList.displayName = "OrderedList"
+
+const UnorderedList: React.FC<IListProps> = ({ type }) => {
+	const h1 = { fontFamily: "Times New Roman, serif", margin: "1.34rem 0", fontSize: "2.25rem" }
+	const ul = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
+	const li = {
+		fontFamily: "Times New Roman, serif",
+		color: "hsl(var(--foreground))",
+		marginBottom: 0,
+	}
+
+	return (
+		<>
+			<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
+				<h1 style={h1}>Most Popular Web Browsers</h1>
+				<ul style={ul}>
+					{orderedList.ol3.map((ol) => {
+						return (
+							<li
+								key={ol}
+								style={li}
+							>
+								{ol}
+							</li>
+						)
+					})}
+				</ul>
+			</div>
+		</>
+	)
+}
+UnorderedList.displayName = "UnorderedList"
+
+const TableExample: React.FC<ITableProps> = ({ example_id }) => {
+	const getStyle = () => {
+		const styles = ["table1", "table2", "table3", "table4", "table5"]
+		return styles[example_id! - 1] || ""
+	}
+
+	return (
+		<table className={`mt-4 ${getStyle()}`}>
+			<thead>
+				<tr>
+					<th>Student Name</th>
+					<th>Student Number</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				{studentData.map((student, index) => (
+					<tr key={index}>
+						<td>{student.name}</td>
+						<td>{student.id}</td>
+						<td>{student.age}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)
+}
+TableExample.displayName = "TableExample"
+
 const TableCellSpanning: React.FC = () => (
 	<table className="table6">
 		<thead>
 			<tr>
-				<th colSpan={3}>Assignments</th>
-				<th colSpan={2}>Laboratory</th>
-				<th rowSpan={2}>Ability to Stay Awake</th>
+				{tblCellSpan.th.th1.map((th) => {
+					return (
+						<>
+							{th.span === "col" ? (
+								<th
+									key={th.text}
+									colSpan={th.spanVal}
+								>
+									{th.text}
+								</th>
+							) : (
+								<th
+									key={th.text}
+									rowSpan={th.spanVal}
+								>
+									{th.text}
+								</th>
+							)}
+						</>
+					)
+				})}
 			</tr>
 			<tr>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>1</th>
-				<th>2</th>
+				{tblCellSpan.th.th2.map((th) => {
+					return <th key={th}>{th}</th>
+				})}
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>10%</td>
-				<td>10%</td>
-				<td>10%</td>
-				<td>30%</td>
-				<td>36%</td>
-				<td>4%</td>
+				{tblCellSpan.td.map((td) => {
+					return <td key={td}>{td}</td>
+				})}
 			</tr>
 		</tbody>
 	</table>

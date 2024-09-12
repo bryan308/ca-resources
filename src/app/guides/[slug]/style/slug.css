@@ -64,8 +64,7 @@ a.link {
 }
 
 ol {
-	list-style-position: inside;
-	list-style-type: decimal;
+	@apply list-outside list-decimal my-3 ml-4 p-0;
 }
 
 ul {

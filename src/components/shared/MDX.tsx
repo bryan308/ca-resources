@@ -10,7 +10,7 @@ import {
 	UnorderedList,
 	MDXSeparator,
 } from "./elements"
-import { LoginForm } from "@/components/login-form"
+import { LoginForm } from "@/components/shared/login-form"
 
 export const components = {
 	DataTable,
