@@ -1,0 +1,48 @@
+---
+title: Image
+description: Images can improve the design and the appearance of a web page.
+image: banner.jpg
+---
+
+<section>
+# Inserting Images
+</section>
+<section>
+## Agenda
+<br />
+1. HTML Images
+2. Image Attributes
+3. Types of Web Page Image
+4. Absolutel vs. Relative URL
+5. Image CSS Properties
+6. background Properties
+</section>
+<section>
+### HTML Images
+- In HTML, images are defined using `<img />` tag.
+- The `<img />` tag creates a holding space for the referenced image.
+- The `<img />` tag is empty, it contains attributes only, and does not have a closing tag.
+</section>
+<section>
+## HTML Image Attributes
+- The **src** attribute specifies the path (URL) to the image.
+- The **alt** attribute provides an alternate text for an image, if the user for some reason cannot view it.
+- The value of the alt attribute **should describe the image**.
+- It is important to take note of the file type of the image (`.jpg`, `.png`, `.gif`).
+<MDXSeparator />
+```HTML {2, 4, 6} showLineNumbers
+<body>
+  <img src="html.png" />
+
+  <img src="images/html.png" />
+
+  <img src="images/html.png" alt="HTML logo">
+</body>
+```
+</section>
+<section>
+## Types of Web Page Images
+- **Graphics Interchange Format** (`.gif`) use for images with few colors **(<256)** and allows transparent backgrounds. It uses compression techniques called LZW compression,to make it smaller to download on the Web.
+- **Portable Network Graphics** (`.png`) newest format for images that supports multiple colors and resolutions. The PNG format is patent-free.
+- **Joint Photographic Experts Group** (`.jpg`) is a graphic image saved using a lossy compression techniques that discards some data during compression process. JPEG file format supports images with many colors **(>256)**, such as photographs.
+</section>
