@@ -15,6 +15,10 @@ const resources = [
 		path: "/resources/typography",
 	},
 	{
+		text: "Web Development",
+		path: "/resources/learnwebdev",
+	},
+	{
 		text: "Inspirations",
 		path: "/resources/inspirations",
 	},
