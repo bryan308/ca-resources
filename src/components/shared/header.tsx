@@ -1,11 +1,12 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { IconMenu2 } from "@tabler/icons-react"
 import { getAllPaths } from "@/lib/get-paths"
 import { overview, resources } from "@/data/links"
 import Box from "./icons/box"
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
 import ModeToggle from "./mode-toggle"
+import { Separator } from "../ui/separator"
+import SheetLinks from "./sheet-links"
 
 function Header() {
 	const componentPaths = getAllPaths()
@@ -35,64 +36,39 @@ function Header() {
 								side="left"
 								className="border-border"
 							>
-								<div className="h-full flex flex-col justify-between overflow-y-auto mt-4">
-									<div>
-										<div className="my-4">
-											<h3>Overview</h3>
-											{overview.map((o, i) => (
-												<SheetTrigger
-													key={i}
-													asChild
-												>
-													<Link
-														href={o.path}
-														className="text-muted-foreground text-lg flex items-center gap-2 mb-2"
-													>
-														<ArrowRight className="size-4 text-muted-foreground" />
-														{o.text}
-													</Link>
-												</SheetTrigger>
-											))}
-										</div>
-										<div className="my-4">
-											<h3>Resources</h3>
-											{resources
-												.sort((a, b) => a.text.localeCompare(b.text))
-												.map((r, i) => (
-													<SheetTrigger
-														key={i}
-														asChild
-													>
-														<Link
-															href={r.path}
-															className="text-muted-foreground text-lg flex items-center gap-2 mb-2"
-														>
-															<ArrowRight className="size-4 text-muted-foreground" />
-															{r.text}
-														</Link>
-													</SheetTrigger>
-												))}
-										</div>
-										<div className="my-4">
-											<h3>Guides</h3>
-											{componentPaths
-												.sort((a, b) => a.title.localeCompare(b.title))
-												.map((p, i) => (
-													<SheetTrigger
-														key={i}
-														asChild
-													>
-														<Link
-															href={`/guides/${p.slug}`}
-															className="text-muted-foreground text-lg flex items-center gap-2 mb-2"
-														>
-															<ArrowRight className="size-4 text-muted-foreground" />
-															{p.title}
-														</Link>
-													</SheetTrigger>
-												))}
-										</div>
-									</div>
+								<SheetHeader>
+									<SheetTitle asChild>
+										<Link
+											className="flex items-center gap-2 no-underline font-semibold"
+											href="/"
+										>
+											<Box />
+											CA Resources
+										</Link>
+									</SheetTitle>
+								</SheetHeader>
+								<div
+									style={{ height: "80vh" }}
+									className="flex flex-col mt-6 overflow-y-auto"
+								>
+									<SheetLinks
+										header="Overview"
+										paths={overview}
+										isGuide={false}
+									/>
+									<Separator className="my-2" />
+									<SheetLinks
+										header="Resources"
+										paths={resources}
+										isGuide={false}
+									/>
+									<Separator className="my-2" />
+									<SheetLinks
+										header="Guides"
+										guidePaths={componentPaths}
+										isGuide={true}
+									/>
+									<Separator className="my-2" />
 									<ModeToggle />
 								</div>
 							</SheetContent>

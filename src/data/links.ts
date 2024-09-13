@@ -1,35 +1,35 @@
 const overview = [
 	{
-		text: 'Introduction',
-		path: '/',
+		text: "Introduction",
+		path: "/",
 	},
-];
+]
 
 const resources = [
 	{
-		text: 'Colors',
-		path: '/resources/colors',
+		text: "Colors",
+		path: "/resources/colors",
 	},
 	{
-		text: 'Typography',
-		path: '/resources/typography',
+		text: "Typography",
+		path: "/resources/typography",
 	},
 	{
-		text: 'Inspirations',
-		path: '/resources/inspirations',
+		text: "Inspirations",
+		path: "/resources/inspirations",
 	},
 	{
-		text: 'Icons',
-		path: '/resources/icons',
+		text: "Icons",
+		path: "/resources/icons",
 	},
 	{
-		text: 'Stock Photos',
-		path: '/resources/stockphotos',
+		text: "Stock Photos",
+		path: "/resources/stockphotos",
 	},
 	{
-		text: 'Mockup Tools',
-		path: '/resources/mockups',
+		text: "Mockup Tools",
+		path: "/resources/mockups",
 	},
-];
+]
 
-export { overview, resources };
+export { overview, resources }
