@@ -19,7 +19,7 @@ const ScrollToTopButton = () => {
 
 				hideTimeout.current = setTimeout(() => {
 					setShown(false)
-				}, 5000)
+				}, 3000)
 			} else {
 				setShown(false)
 			}

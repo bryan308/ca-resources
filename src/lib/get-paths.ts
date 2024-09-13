@@ -1,10 +1,10 @@
-import { getAllMdx } from '@/lib/mdx';
+import { getAllMdx } from "@/lib/mdx"
 
 export function getAllPaths(): { slug: string; title: string }[] {
-	const mdxFiles = getAllMdx();
+	const mdxFiles = getAllMdx()
 
 	return mdxFiles.map(({ frontMatter }) => ({
-		slug: frontMatter.slug,
 		title: frontMatter.title,
-	}));
+		slug: frontMatter.slug,
+	}))
 }
