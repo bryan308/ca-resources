@@ -12,13 +12,15 @@ interface Section {
 }
 
 interface ResourceCategory {
+	image?: string
 	header: string
 	subheader: string
 	sections: Section[]
 }
 
 export const resourcesData: Record<string, ResourceCategory> = {
-	learnwebdev: {
+	webdev: {
+		image: "web-dev.jpg",
 		header: "Web Development",
 		subheader: "Learn web edvelopment from the best resources available.",
 		sections: [
@@ -71,6 +73,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	icons: {
+		image: "icons.jpg",
 		header: "Icons",
 		subheader: "Explore a variety of icons for your projects.",
 		sections: [
@@ -245,6 +248,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	colors: {
+		image: "colors.jpg",
 		header: "Colors",
 		subheader:
 			"Explore our recommended color scales and discover additional resources to enhance your color knowledge.",
@@ -352,6 +356,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	inspirations: {
+		image: "inspirations.png",
 		header: "Inspirations",
 		subheader:
 			"Explore a variety of inspiration sources to ignite your creativity and enhance your design work.",
@@ -414,6 +419,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	mockups: {
+		image: "mockups-tools.png",
 		header: "Mockup Tools",
 		subheader:
 			"Explore powerful mockup tools to bring your design ideas to life with realistic visuals and prototypes.",
@@ -475,6 +481,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	stockphotos: {
+		image: "stock-photos.png",
 		header: "Stock Photos",
 		subheader: "High-Quality Stock Photos for enriching your projects and presentations.",
 		sections: [
@@ -529,6 +536,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
 		],
 	},
 	typography: {
+		image: "typography.png",
 		header: "Typography",
 		subheader:
 			"Explore top resources and tools to enhance your text styles and make your web projects better.",

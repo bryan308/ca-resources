@@ -128,7 +128,8 @@ image: images.jpg
 <BorderExample borderStyle="inset" text="An inset border. The effect depends on the border-color value"/>
 <BorderExample borderStyle="outset" text="An outset border. The effect depends on the border-color value"/>
 <BorderExample borderStyle="none" text="No border."/>
-<div style={{margin: "8px 0", border: "3px hsl(var(--foreground))", borderStyle: "dotted dashed solid double" }}>An outside border. The effect depends on the border-color value</div>
+<BorderExample borderStyle="hidden" text="A hidden border."/>
+<div style={{margin: "8px 0", border: "3px hsl(var(--foreground))", borderStyle: "dotted dashed solid double" }}>A mixed border.</div>
 </section>
 <section>
 ### border-width property
@@ -251,7 +252,7 @@ image: images.jpg
 <section>
 ### background-attachment property
 - The **background-attachment** property specifies whether the background image should **scroll** or be **fixed**.
-```HTML {4} showLineNumbers
+```HTML {3} showLineNumbers
 <body style="background-image: url(images/mickey.png); 
              background-repeat: no-repeat; 
              background-attachment: fixed;"
@@ -277,7 +278,7 @@ image: images.jpg
 ### background-size property
 - The CSS **background-size** property allows you to specify the size of background images.
 - The size can be specified in **lengths**, **percentages**, or by using one of the two keywords: **contain** or **cover**.
-```HTML {4} showLineNumbers
+```HTML {5} showLineNumbers
 <body style="background-image: url(images/mickey.png); 
              background-repeat: no-repeat; 
              background-attachment: fixed;
@@ -304,7 +305,7 @@ image: images.jpg
 </body>
 ```
 <MDXSeparator />
-```HTML {1} showLineNumbers
+```HTML {1-2} showLineNumbers
 <body style="background: #000000 url(images/mickey.png) no-repeat fixed top right; 
              background-size: 379px 391px;">
   <!-- contents here -->
@@ -327,7 +328,7 @@ image: images.jpg
 </section>
 <section>
 ### HTML Favicon
-```HTML {5} showLineNumbers
+```HTML {4} showLineNumbers
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

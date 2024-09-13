@@ -6,7 +6,7 @@ function RenderThumbnail() {
 		<div className="flex h-screen bg-white overflow-hidden">
 			<div className="pl-20 py-20 flex flex-col justify-between h-full w-[70%]">
 				<div>
-					<h1 className="text-9xl">Typography</h1>
+					<h1 className="text-9xl">Web Development</h1>
 					<h3 className="text-4xl">Resources</h3>
 				</div>
 				<h4>CA Resources</h4>
