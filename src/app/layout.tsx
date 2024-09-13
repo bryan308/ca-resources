@@ -1,6 +1,8 @@
 import "./globals.css"
 import { geistsans, shareTechMono } from "@/lib/font"
 
+import { Analytics } from "@vercel/analytics/react"
+
 import Header from "@/components/shared/header"
 import Aside from "@/components/shared/aside"
 import ScrollToTopButton from "@/components/shared/scroll-to-top"
@@ -69,6 +71,7 @@ export default function RootLayout({
 							<ScrollToTopButton />
 						</div>
 					</main>
+					<Analytics />
 				</Providers>
 			</body>
 		</html>
