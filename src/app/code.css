@@ -24,7 +24,7 @@ code[class*="language-"]::selection {
 }
 
 pre {
-	@apply overflow-x-auto;
+	@apply overflow-auto;
 	scrollbar-width: thin;
 }
 

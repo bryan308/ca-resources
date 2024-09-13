@@ -50,7 +50,7 @@ const ScrollToTopButton = () => {
 				"bg-muted border border-border rounded-full justify-center items-center"
 			)}
 		>
-			<ChevronUpIcon className="size-6 text-muted-foreground" />
+			<ChevronUpIcon className="size-6 text-foreground" />
 		</button>
 	)
 }
