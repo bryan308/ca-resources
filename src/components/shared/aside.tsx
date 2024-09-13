@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { getAllMdx } from "@/lib/mdx"
-import AsideLinks from "./render-aside-links"
+import AsideLinks from "./aside-links"
 import ComponentPaths from "./component-paths"
 import { overview, resources } from "@/data/links"
 import { ScrollArea } from "@radix-ui/react-scroll-area"

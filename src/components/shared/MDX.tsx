@@ -1,4 +1,5 @@
 import {
+	BorderExample,
 	DataTable,
 	DataTableExample,
 	GuideImage,
@@ -13,6 +14,7 @@ import {
 import { LoginForm } from "@/components/shared/login-form"
 
 export const components = {
+	BorderExample,
 	DataTable,
 	DataTableExample,
 	GuideImage,

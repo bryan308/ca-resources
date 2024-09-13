@@ -9,6 +9,31 @@ interface ITableProps {
 	example_id?: number
 }
 
+type BorderProps = {
+	borderWidth?: string
+	borderStyle?: string
+	borderColor?: string
+	text: string
+}
+
+const BorderExample: React.FC<BorderProps> = ({
+	borderWidth = "3px",
+	borderStyle = "solid",
+	borderColor = "hsl(var(--foreground))",
+	text,
+}) => {
+	const style: React.CSSProperties = {
+		margin: "8px 0",
+		borderWidth,
+		borderStyle,
+		borderColor,
+		border: `${borderWidth} ${borderStyle} ${borderColor}`,
+	}
+
+	return <div style={style}>{text}</div>
+}
+BorderExample.displayName = "BorderExample"
+
 const DataTable = ({ children }: { children: React.ReactNode }) => {
 	return <div className="data-table w-full mt-4">{children}</div>
 }
@@ -59,7 +84,7 @@ const GuideImage: React.FC<Partial<GuideImageProps>> = ({
 	src = "",
 	alt = "Image",
 	width = 100,
-	maxWidth = 100,
+	maxWidth,
 	height = 100,
 	className = "",
 }) => (
@@ -68,7 +93,7 @@ const GuideImage: React.FC<Partial<GuideImageProps>> = ({
 		alt={alt}
 		width={width}
 		height={height}
-		className={`my-4 mx-auto w-full md:max-w-[${maxWidth}%] ${className}`}
+		className={`my-4 mx-auto w-full md:max-w-[${maxWidth}] ${className}`}
 	/>
 )
 
@@ -110,15 +135,15 @@ interface IListProps {
 
 const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, image }) => {
 	const font = "Times New Roman, serif"
-	const h1 = { fontFamily: font, margin: "1.34rem 0", fontSize: "2.25rem" }
-	const h3 = { fontFamily: font, margin: "1rem 0", fontSize: "1.5rem" }
-	const ol = {
+	const h1: React.CSSProperties = { fontFamily: font, margin: "1.34rem 0", fontSize: "2.25rem" }
+	const h3: React.CSSProperties = { fontFamily: font, margin: "1rem 0", fontSize: "1.5rem" }
+	const ol: React.CSSProperties = {
 		listStyleType: type,
 		listStylePosition: position,
 		margin: "1rem 0",
 		paddingLeft: "2.5rem",
 	}
-	const li = {
+	const li: React.CSSProperties = {
 		fontFamily: font,
 		color: "hsl(var(--foreground))",
 		marginBottom: 0,
@@ -186,9 +211,13 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 OrderedList.displayName = "OrderedList"
 
 const UnorderedList: React.FC<IListProps> = ({ type }) => {
-	const h1 = { fontFamily: "Times New Roman, serif", margin: "1.34rem 0", fontSize: "2.25rem" }
-	const ul = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
-	const li = {
+	const h1: React.CSSProperties = {
+		fontFamily: "Times New Roman, serif",
+		margin: "1.34rem 0",
+		fontSize: "2.25rem",
+	}
+	const ul: React.CSSProperties = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
+	const li: React.CSSProperties = {
 		fontFamily: "Times New Roman, serif",
 		color: "hsl(var(--foreground))",
 		marginBottom: 0,
@@ -291,6 +320,7 @@ TableCellSpanning.displayName = "TableCellSpanning"
 const MDXSeparator: React.FC = () => <Separator className="my-6 lg:my-12" />
 
 export {
+	BorderExample,
 	DataTable,
 	DataTableExample,
 	GuideImage,

@@ -19,7 +19,7 @@ const ScrollToTopButton = () => {
 
 				hideTimeout.current = setTimeout(() => {
 					setShown(false)
-				}, 5000)
+				}, 3000)
 			} else {
 				setShown(false)
 			}
@@ -50,7 +50,7 @@ const ScrollToTopButton = () => {
 				"bg-muted border border-border rounded-full justify-center items-center"
 			)}
 		>
-			<ChevronUpIcon className="size-6 text-muted-foreground" />
+			<ChevronUpIcon className="size-6 text-foreground" />
 		</button>
 	)
 }

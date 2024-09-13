@@ -5,6 +5,7 @@ import Cards from "@/components/shared/cards"
 import PageHeader from "@/components/shared/page-header"
 
 import { resourcesData, ResourceType } from "@/data/sources/resources"
+import { siteMetadata as meta } from "@/data/site-config"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
 	const { id } = params
@@ -14,8 +15,19 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 	const resourceData = resourcesData[id as ResourceType]
 	return {
-		title: `${resourceData.header}`,
+		title: resourceData.header,
 		description: resourceData.subheader,
+		openGraph: {
+			title: resourceData.header,
+			description: resourceData.subheader,
+			url: `${meta.url}/${resourceData.image}`,
+			images: [
+				{
+					url: `${meta.url}/${resourceData.image}`,
+					alt: resourceData.header,
+				},
+			],
+		},
 	}
 }
 
