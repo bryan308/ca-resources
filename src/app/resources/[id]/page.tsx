@@ -15,16 +15,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 	const resourceData = resourcesData[id as ResourceType]
 	return {
-		title: resourceData.header,
-		description: resourceData.subheader,
+		title: resourceData.title,
+		description: resourceData.subtitle,
 		openGraph: {
-			title: resourceData.header,
-			description: resourceData.subheader,
-			url: `${meta.url}/${resourceData.image}`,
+			title: resourceData.title,
+			description: resourceData.subtitle,
+			url: `${meta.url}/${resourceData.thumbnail}`,
 			images: [
 				{
-					url: `${meta.url}/${resourceData.image}`,
-					alt: resourceData.header,
+					url: `${meta.url}/${resourceData.thumbnail}`,
+					alt: resourceData.title,
 				},
 			],
 		},
@@ -49,19 +49,19 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 	return (
 		<>
 			<section>
-				<PageHeader>{resourceData.header}</PageHeader>
-				<p className="text-xl">{resourceData.subheader}</p>
+				<PageHeader>{resourceData.title}</PageHeader>
+				<p className="text-xl">{resourceData.subtitle}</p>
 			</section>
-			{resourceData.sections.map((section, index) => (
+			{resourceData.contentSections.map((section, index) => (
 				<section key={index}>
-					{section.header && (
+					{section.title && (
 						<>
-							<h2>{section.header}</h2>
+							<h2>{section.title}</h2>
 							{/* <p>{section.subheader}</p> */}
 						</>
 					)}
-					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${section.header && "mt-10"}`}>
-						<Cards data={section.links} />
+					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${section.title && "mt-10"}`}>
+						<Cards data={section.resources} />
 					</div>
 				</section>
 			))}
