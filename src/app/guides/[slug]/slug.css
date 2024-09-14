@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.data-table table,
+.table table {
+	@apply w-full border-separate border-spacing-0;
+}
+
+.data-table table thead,
+.table table thead {
+	@apply border-t border-b border-border;
+}
+
+.data-table table th,
+.table table th {
+	@apply first:rounded-tl-md first:rounded-bl-md first:border-l 
+	last:rounded-tr-md last:rounded-br-md last:border-r 
+	border-t border-b border-border bg-muted/60 align-top;
+}
+
+.data-table table thead th,
+.table table thead th {
+	@apply text-left text-wrap lg:text-nowrap text-muted-foreground 
+	text-base font-normal tracking-tight p-3;
+}
+
+.data-table table tbody td,
+.table table tbody td {
+	@apply text-foreground text-sm p-3 border-b border-border;
+}
+
+.data-table table tr,
+.table table tr {
+	@apply even:bg-background-foreground hover:bg-background-foreground;
+}
+
+.table table tbody td:nth-child(1) {
+	width: 16ch;
+}
+
+h1 {
+	@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+}
+
+h2 {
+	@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+}
+
+h3 {
+	@apply scroll-m-20 text-2xl font-semibold tracking-tight;
+}
+
+h4 {
+	@apply scroll-m-20 text-xl font-semibold tracking-tight;
+}
+
+p {
+	@apply text-foreground leading-7 [&:not(first-child)]:mt-6;
+}
+
+a.link {
+	@apply text-blue-700 dark:text-blue-500 active:text-red-700 active:dark:text-red-500 visited:text-purple-700 visited:dark:text-purple-500 hover:underline hover:underline-offset-4 font-medium;
+}
+
+ol {
+	@apply list-outside list-decimal my-3 ml-4 p-0;
+}
+
+ul {
+	@apply my-3 ml-4 p-0 list-["–"];
+}
+
+li {
+	@apply text-foreground pl-2;
+}
+
+li::marker {
+	@apply text-foreground mr-4;
+}
+
+ul li ul {
+	@apply pt-2 pl-6 lg:pl-8;
+}
+
+code {
+	@apply relative my-px rounded-md bg-background-foreground text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
+	font-family: var(--shareTechMono);
+}
+
+blockquote {
+	@apply p-3 border-l-4 border-border my-6;
+}
+
+blockquote p {
+	@apply mt-0;
+}
+
+strong {
+	@apply font-semibold text-primary;
+}
+
+/* TABLE1 */
+.table1 {
+	@apply bg-card mt-6 border border-collapse border-border;
+}
+
+.table1 tr {
+	@apply even:bg-muted;
+}
+
+.table1 thead tr th {
+	@apply px-4 border border-collapse border-border;
+}
+
+.table1 tbody tr td {
+	@apply border border-collapse px-1 py-px border-border;
+}
+
+.table1 tbody tr td:nth-child(3) {
+	@apply text-right;
+}
+
+/* TABLE 2 */
+.table2 {
+	font-family: "Times New Roman", Times, serif;
+	@apply mt-4 border border-separate border-border bg-none;
+}
+
+.table2 thead tr th,
+.table2 tbody tr td {
+	@apply px-4 border border-border;
+}
+
+.table2 thead tr th {
+	@apply text-primary;
+}
+
+.table2 tbody tr {
+	@apply border border-border;
+}
+
+.table2 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 3 */
+.table3 {
+	font-family: "Times New Roman", Times, serif;
+	border: thin solid;
+	@apply mt-4 border-separate border-border bg-none;
+}
+
+.table3 thead tr th,
+.table3 tbody tr td {
+	border: thin solid;
+	@apply border-border;
+}
+
+.table3 tbody tr {
+	@apply border border-border;
+}
+
+.table3 thead tr th {
+	@apply px-4 text-primary;
+}
+
+.table3 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 4 */
+.table4 {
+	font-family: "Times New Roman", Times, serif;
+	@apply border mt-4 border-collapse border-border bg-none;
+}
+
+.table4 thead tr th,
+.table4 tbody tr td {
+	@apply border border-collapse border-border;
+}
+
+.table4 thead tr th {
+	@apply px-4 text-primary;
+}
+
+.table4 tbody tr {
+	@apply border border-border;
+}
+
+.table4 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 5 */
+.table5 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-collapse: collapse;
+}
+
+.table5,
+.table5 thead th,
+.table5 tbody td {
+	@apply border border-solid border-neutral-950;
+}
+
+.table5 thead {
+	background-color: #191970;
+	color: #ededed;
+}
+
+.table5 thead th {
+	padding: 0.5rem 1rem;
+}
+
+.table5 tbody {
+	background-color: #add8e6;
+}
+
+.table5 tbody td {
+	padding: 0.25rem;
+	color: #111;
+}
+
+.table5 tbody td:nth-child(3) {
+	text-align: right;
+}
+
+/* TABLE 6 */
+.table6 {
+	@apply font-serif border border-border border-separate mt-4 bg-none;
+}
+
+.table6 thead tr th,
+.table6 tbody tr td {
+	@apply border border-border;
+}
+
+.table6 thead tr th {
+	@apply md:px-2;
+}
+
+.table6 tbody tr td {
+	@apply text-center;
+}
