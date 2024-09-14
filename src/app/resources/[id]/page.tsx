@@ -5,7 +5,7 @@ import Cards from "@/components/shared/cards"
 import PageHeader from "@/components/shared/page-header"
 
 import { resourcesData, ResourceType } from "@/data/sources/resources"
-import { siteMetadata as meta } from "@/data/site-config"
+import { sitemap as meta } from "@/data/site-config"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
 	const { id } = params

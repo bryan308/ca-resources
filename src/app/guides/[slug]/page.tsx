@@ -5,7 +5,7 @@ import rehypePrism from "rehype-prism-plus"
 import { serialize } from "next-mdx-remote/serialize"
 import Content from "./slug-content"
 import "./style/slug.css"
-import { siteMetadata as meta } from "@/data/site-config"
+import { sitemap as meta } from "@/data/site-config"
 
 export async function generateMetadata({ params }: ListProp) {
 	const { slug } = params
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: ListProp) {
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.frontMatter.image}`,
+					url: `${meta.url}/${postData.frontMatter.thumbnail}`,
 					alt: postData.frontMatter.title,
 				},
 			],
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: ListProp) {
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.frontMatter.image}`,
+					url: `${meta.url}/${postData.frontMatter.thumbnail}`,
 					alt: postData.frontMatter.title,
 				},
 			],
