@@ -1,4 +1,4 @@
-export const sitemap = {
+export const siteMetadata = {
 	title: 'CA Resources',
 	description: 'Streamline your workflow with curated resources for web development and education.',
 	url: 'https://ca-resources.vercel.app',

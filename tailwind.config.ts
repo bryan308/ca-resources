@@ -1,26 +1,16 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+import type { Config } from "tailwindcss"
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config: Config = {
 	darkMode: ["class"],
 	content: [
-		"app/**/*.{ts,tsx}",
-		"components/**/*.{ts,tsx}",
-		"./src/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
-			},
 			colors: {
-				background: {
-					DEFAULT: "hsl(var(--background))",
-					foreground: "hsl(var(--background-foreground))",
-				},
+				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				card: {
 					DEFAULT: "hsl(var(--card))",
@@ -61,7 +51,13 @@ module.exports = {
 					"5": "hsl(var(--chart-5))",
 				},
 			},
+			borderRadius: {
+				lg: "var(--radius)",
+				md: "calc(var(--radius) - 2px)",
+				sm: "calc(var(--radius) - 4px)",
+			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
 }
+export default config

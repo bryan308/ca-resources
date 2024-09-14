@@ -3,10 +3,17 @@ export type MDXFrontMatter = {
 	title: string
 	extendedDesc?: string
 	description?: string
-	thumbnail: string
+	image: string
 	guideNumber: number
 	guideGroup: number
 	group: string
+}
+
+export interface Resource {
+	name: string
+	url: string
+	description: string
+	icon: string
 }
 
 export type Path = {
@@ -26,24 +33,3 @@ export type SheetLinksProps = {
 	paths?: Path[]
 	isGuide?: boolean
 }
-
-export interface Resources {
-	title: string
-	url: string
-	description: string
-	iconPath?: string
-}
-
-interface IContentSections {
-	title?: string
-	subtitle?: string
-	resources: Resources[]
-}
-
-export interface ResourceCategory {
-	thumbnail?: string
-	title: string
-	subtitle: string
-	contentSections: IContentSections[]
-}
-

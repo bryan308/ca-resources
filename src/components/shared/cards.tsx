@@ -1,10 +1,10 @@
-import { Resources } from "@/lib/types"
+import { Resource } from "@/lib/types"
 import Link from "next/link"
 import React from "react"
 import ImageRender from "./image-render"
 
 interface CardsProps {
-	data: Resources[]
+	data: Resource[]
 }
 
 const Cards: React.FC<CardsProps> = ({ data }) => {
@@ -12,25 +12,18 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 		<>
 			{data.map((d) => (
 				<div
-					key={d.title}
+					key={d.name}
 					className="bg-background-foreground flex items-center gap-4 py-4 px-6 rounded-md border border-border hover:ring-4 ring-ring/20"
-					title={d.title}
+					title={d.name}
 				>
 					<div className="grid place-items-center min-w-14 size-14">
-						<Link
-							href={`${d.url}?rel=ca-resources.vercel.app`}
-							className="link"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<ImageRender
-								src={d.iconPath || "/logo.png"}
-								alt={d.title}
-								width={56}
-								height={56}
-								className={d.iconPath ? "" : "grayscale"}
-							/>
-						</Link>
+						<ImageRender
+							src={d.icon || "/logo.png"}
+							alt={d.name}
+							width={56}
+							height={56}
+							className={d.icon ? "" : "grayscale"}
+						/>
 					</div>
 					<div>
 						<Link
@@ -39,11 +32,9 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							{d.title}
+							{d.name}
 						</Link>
-						<span className="text-muted-foreground text-sm truncate-description">
-							{d.description}
-						</span>
+						<span className="text-muted-foreground text-sm truncate-description">{d.description}</span>
 					</div>
 				</div>
 			))}

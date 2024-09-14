@@ -5,7 +5,7 @@ import Cards from "@/components/shared/cards"
 import PageHeader from "@/components/shared/page-header"
 
 import { resourcesData, ResourceType } from "@/data/sources/resources"
-import { sitemap as meta } from "@/data/site-config"
+import { siteMetadata as meta } from "@/data/site-config"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
 	const { id } = params
@@ -15,16 +15,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 	const resourceData = resourcesData[id as ResourceType]
 	return {
-		title: resourceData.title,
-		description: resourceData.subtitle,
+		title: resourceData.header,
+		description: resourceData.subheader,
 		openGraph: {
-			title: resourceData.title,
-			description: resourceData.subtitle,
-			url: `${meta.url}/${resourceData.thumbnail}`,
+			title: resourceData.header,
+			description: resourceData.subheader,
+			url: `${meta.url}/${resourceData.image}`,
 			images: [
 				{
-					url: `${meta.url}/${resourceData.thumbnail}`,
-					alt: resourceData.title,
+					url: `${meta.url}/${resourceData.image}`,
+					alt: resourceData.header,
 				},
 			],
 		},
@@ -49,19 +49,19 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 	return (
 		<>
 			<section>
-				<PageHeader>{resourceData.title}</PageHeader>
-				<p className="text-xl">{resourceData.subtitle}</p>
+				<PageHeader>{resourceData.header}</PageHeader>
+				<p className="text-xl">{resourceData.subheader}</p>
 			</section>
-			{resourceData.contentSections.map((section, index) => (
+			{resourceData.sections.map((section, index) => (
 				<section key={index}>
-					{section.title && (
+					{section.header && (
 						<>
-							<h2>{section.title}</h2>
+							<h2>{section.header}</h2>
 							{/* <p>{section.subheader}</p> */}
 						</>
 					)}
-					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${section.title && "mt-10"}`}>
-						<Cards data={section.resources} />
+					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${section.header && "mt-10"}`}>
+						<Cards data={section.links} />
 					</div>
 				</section>
 			))}

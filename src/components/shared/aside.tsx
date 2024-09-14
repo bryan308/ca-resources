@@ -11,8 +11,8 @@ function Aside() {
 	return (
 		<aside className="hidden xl:flex flex-col w-[16.25rem] border border-t-0 border-border">
 			<ScrollArea
-				style={{ position: "sticky", height: "calc(100dvh - 4rem)" }}
-				className="top-[4.25rem] pb-8 pl-4 pr-6 overflow-auto"
+				style={{ position: "sticky", height: "calc(100dvh - 4.25rem)" }}
+				className="top-[4.25rem] pt-8 pl-4 pr-6 overflow-auto"
 			>
 				<div className="mb-4">
 					<p className="text-foreground text-sm font-medium pl-2">Overview</p>

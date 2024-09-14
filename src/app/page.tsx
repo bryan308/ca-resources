@@ -1,9 +1,6 @@
 import PageHeader from "@/components/shared/page-header"
 import Link from "next/link"
 
-import { Separator } from "@/components/ui/separator"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
 export default function Introduction() {
 	return (
 		<>
@@ -43,31 +40,19 @@ export default function Introduction() {
 				</p>
 			</section>
 			{/* <section>
-				<h3>Contribute</h3>
+				<h2 className='text-2xl text-foreground font-bold mb-2'>Contribute</h2>
 				<p>
 					CA Resources is an open-source project. You can view the code, contribute, or suggest
-					improvements by visiting the{" "}
+					improvements by visiting the{' '}
 					<Link
-						href="https://github.com/bryan308/ca-resources"
-						target="_blank"
-						className="link"
+						href='https://github.com/bryan308/ca-resources'
+						target='_blank'
+						className='link'
 					>
 						Github Repository
 					</Link>
 					.
 				</p>
-				<Separator className="my-6" />
-				<h4>Contributors</h4>
-				<div className="flex gap-2 py-4">
-					<Avatar>
-						<AvatarImage src="/avatar-test.jpg" />
-						<AvatarFallback>CN</AvatarFallback>
-					</Avatar>
-					<Avatar>
-						<AvatarImage src="/avatar-test.jpg" />
-						<AvatarFallback>CN</AvatarFallback>
-					</Avatar>
-				</div>
 			</section> */}
 		</>
 	)
