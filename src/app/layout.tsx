@@ -1,16 +1,28 @@
 import "./globals.css"
-import { geistsans, shareTechMono } from "@/lib/font"
-
 import { Analytics } from "@vercel/analytics/react"
 
 import Header from "@/components/shared/header"
 import Aside from "@/components/shared/aside"
 import ScrollToTopButton from "@/components/shared/scroll-to-top"
+import NextTopLoader from "nextjs-toploader"
 
 import type { Metadata } from "next"
 import Providers from "@/components/shared/theme-provider"
-import NextTopLoader from "nextjs-toploader"
 import { siteMetadata as meta } from "@/data/site-config"
+import localFont from "next/font/local"
+import { cn } from "@/lib/utils"
+
+const mono = localFont({
+	src: "./fonts/GeistMonoVF.woff",
+	display: "swap",
+	variable: "--geist-mono",
+})
+
+const sans = localFont({
+	src: "./fonts/GeistVF.woff",
+	display: "swap",
+	variable: "--geist-sans",
+})
 
 export const metadata: Metadata = {
 	title: meta.title,
@@ -52,7 +64,7 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning
 		>
-			<body className={`${shareTechMono.variable} ${geistsans.className}`}>
+			<body className={cn(sans.variable, sans.className, mono.variable)}>
 				<NextTopLoader
 					color="hsl(var(--foreground))"
 					showSpinner={false}
@@ -62,7 +74,7 @@ export default function RootLayout({
 					<div className="h-16 md:hidden" />
 					<main
 						className="flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr]"
-						style={{ minHeight: "calc(100dvh - 4.375rem)" }}
+						style={{ minHeight: "calc(100dvh - 4.25rem)" }}
 						role="main"
 					>
 						<Aside />

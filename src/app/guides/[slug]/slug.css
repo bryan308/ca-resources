@@ -4,8 +4,8 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-sm bg-neutral-950 border border-border text-white max-h-56;
-	font-family: var(--shareTechMono);
+	@apply text-sm bg-neutral-950 border border-border text-white max-h-[35rem];
+	font-family: var(--geist-mono);
 	letter-spacing: 0.2px;
 	white-space: pre;
 	text-shadow: none;

@@ -1,11 +1,11 @@
 import { IconMenu2 } from "@tabler/icons-react"
 import Link from "next/link"
 import { overview, resources } from "@/data/links"
-import Box from "./icons/box"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
 import ModeToggle from "./mode-toggle"
 import { Separator } from "../ui/separator"
 import SheetLinks from "./sheet-links"
+import { Box } from "lucide-react"
 
 function Header() {
 	return (
@@ -16,7 +16,7 @@ function Header() {
 						className="flex items-center gap-2 no-underline font-semibold"
 						href="/"
 					>
-						<Box />
+						<Box className="size-4" />
 						CA Resources
 					</Link>
 				</div>
@@ -39,7 +39,7 @@ function Header() {
 											className="flex items-center gap-2 no-underline font-semibold"
 											href="/"
 										>
-											<Box />
+											<Box className="size-4" />
 											CA Resources
 										</Link>
 									</SheetTitle>
