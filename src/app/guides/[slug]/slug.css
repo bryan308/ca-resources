@@ -4,7 +4,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-sm bg-neutral-950 border border-border text-white w-full;
+	@apply text-sm bg-neutral-950 border border-border text-white;
 	font-family: var(--geist-mono);
 	letter-spacing: 0.2px;
 	white-space: pre;
