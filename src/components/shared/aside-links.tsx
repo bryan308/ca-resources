@@ -16,7 +16,7 @@ function AsideLinks({ data }: IAsideLinks) {
 	const pathname = usePathname()
 
 	const currentPath = (isActive: boolean): string =>
-		isActive ? "text-foreground bg-muted/50" : "text-muted-foreground"
+		isActive ? "text-foreground bg-muted/50 font-semibold" : "text-muted-foreground"
 
 	return (
 		<>

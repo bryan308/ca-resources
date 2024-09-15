@@ -4,7 +4,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-sm bg-neutral-950 border border-border text-white max-h-[35rem];
+	@apply text-sm bg-neutral-950 border border-border text-white w-full;
 	font-family: var(--geist-mono);
 	letter-spacing: 0.2px;
 	white-space: pre;
@@ -205,7 +205,7 @@ ul li ul {
 
 code {
 	@apply relative my-px rounded-md bg-background-foreground text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
-	font-family: var(--shareTechMono);
+	font-family: var(--geist-mono);
 }
 
 blockquote {

@@ -10,22 +10,22 @@ function Aside() {
 		<aside className="hidden xl:flex flex-col w-[16.25rem] border border-t-0 border-border">
 			<ScrollArea
 				style={{ position: "sticky", height: "calc(100dvh - 4.25rem)" }}
-				className="top-[4.25rem] pl-4 pr-6 overflow-auto"
+				className="top-[4.25rem] pt-4 pl-4 pr-6 overflow-auto"
 			>
-				<div className="mb-4">
-					<p className="text-foreground text-sm font-medium pl-2">Overview</p>
+				<div className="mb-6">
+					<h4 className="text-foreground text-base font-medium pl-2">Overview</h4>
 					<div className="links">
 						<AsideLinks data={overview} />
 					</div>
 				</div>
-				<div className="mb-4">
-					<p className="text-foreground text-sm font-medium pl-2">Resources</p>
+				<div className="mb-6">
+					<h4 className="text-foreground text-base font-medium pl-2">Resources</h4>
 					<div className="links">
 						<AsideLinks data={resources} />
 					</div>
 				</div>
-				<div className="mb-4">
-					<p className="text-foreground text-sm font-medium pl-2">Guides</p>
+				<div className="mb-6">
+					<h4 className="text-foreground text-base font-medium pl-2">Guides</h4>
 					<div className="links">
 						<GuidestPaths />
 					</div>

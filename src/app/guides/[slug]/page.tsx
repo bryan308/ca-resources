@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const nextPost = sortedPosts[currentPostIndex + 1] || null
 
 	return (
-		<div>
+		<>
 			<MDXContent
 				style={{ scroll: "smooth" }}
 				code={post.mdx}
@@ -81,6 +81,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
 				}
 				next={nextPost ? { title: nextPost.title, path: nextPost._meta.path } : null}
 			/>
-		</div>
+		</>
 	)
 }
