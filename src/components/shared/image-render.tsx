@@ -11,7 +11,7 @@ interface IImageRender {
 	className?: string
 }
 
-export default function ImageRender({ src, alt, width, height, className }: IImageRender) {
+export default function ImageRender({ src, alt, width, height, className, ...props }: IImageRender) {
 	const [isLoading, setisLoading] = useState(true)
 
 	const handleLoading = () => {
@@ -25,6 +25,7 @@ export default function ImageRender({ src, alt, width, height, className }: IIma
 
 	return (
 		<Image
+			{...props}
 			src={src}
 			alt={alt}
 			quality={100}

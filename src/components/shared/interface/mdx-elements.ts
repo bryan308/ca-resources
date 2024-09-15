@@ -1,3 +1,31 @@
+export interface ITableProps {
+	example_id?: number
+}
+
+export interface BorderProps {
+	borderWidth?: string
+	borderStyle?: string
+	borderColor?: string
+	text: string
+}
+
+export interface GuideImageProps {
+	src: string
+	alt: string
+	width: number
+	maxWidth: number
+	height: number
+	className?: string
+}
+
+export interface IListProps {
+	listStyle?: "type" | "position"
+	type?: "lower-alpha" | "decimal" | "disc" | "circle" | "square"
+	startt?: number
+	position?: "inside" | "outside"
+	image?: string
+}
+
 interface ITblCellSpannig {
 	th: {
 		th1: {

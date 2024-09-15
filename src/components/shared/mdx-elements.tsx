@@ -1,20 +1,19 @@
 import React from "react"
 import ImageRender from "./image-render"
 import Link from "next/link"
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
 import { Separator } from "../ui/separator"
-import { orderedList, studentData, tblCellSpan } from "./interface/mdx-elements"
 
-interface ITableProps {
-	example_id?: number
-}
-
-type BorderProps = {
-	borderWidth?: string
-	borderStyle?: string
-	borderColor?: string
-	text: string
-}
+import {
+	orderedList,
+	studentData,
+	tblCellSpan,
+	BorderProps,
+	GuideImageProps,
+	IListProps,
+	ITableProps,
+} from "./interface/mdx-elements"
 
 const BorderExample: React.FC<BorderProps> = ({
 	borderWidth = "3px",
@@ -71,15 +70,6 @@ const DataTableExample = () => {
 }
 DataTableExample.DisplayName = "DataTableExample"
 
-interface GuideImageProps {
-	src: string
-	alt: string
-	width: number
-	maxWidth: number
-	height: number
-	className?: string
-}
-
 const GuideImage: React.FC<Partial<GuideImageProps>> = ({
 	src = "",
 	alt = "Image",
@@ -87,8 +77,10 @@ const GuideImage: React.FC<Partial<GuideImageProps>> = ({
 	maxWidth,
 	height = 100,
 	className = "",
+	...props
 }) => (
 	<ImageRender
+		{...props}
 		src={src}
 		alt={alt}
 		width={width}
@@ -124,14 +116,6 @@ const SummaryTable = ({ children }: { children: React.ReactNode }) => {
 	return <div className="table w-full mt-4">{children}</div>
 }
 SummaryTable.DisplayName = "SummaryTable"
-
-interface IListProps {
-	listStyle?: "type" | "position"
-	type?: "lower-alpha" | "decimal" | "disc" | "circle" | "square"
-	startt?: number
-	position?: "inside" | "outside"
-	image?: string
-}
 
 const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, image }) => {
 	const font = "Times New Roman, serif"

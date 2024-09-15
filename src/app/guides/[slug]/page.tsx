@@ -1,38 +1,42 @@
-import { allPosts } from "contentlayer/generated"
-// import type { MDXComponents } from "mdx/types"
-import { useMDXComponent } from "next-contentlayer/hooks"
-// import Link from "next/link"
+import { allPosts } from "content-collections"
+import { MDXContent } from "@content-collections/mdx/react"
 import { notFound } from "next/navigation"
-import { components } from "@/components/shared/MDX"
-import "./slug.css"
+import { components } from "@/components/shared/mdx-components"
+import Pagination from "@/components/shared/pagination"
 
-// Define your custom MDX components.
-// const mdxComponents: MDXComponents = {
-// 	// Override the default <a> element to use the next/link component.
-// 	a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
-// 	// Add a custom component.
-// 	MyComponent: () => <div>Hello World!</div>,
-// }
+import "./slug.css"
 
 export const generateStaticParams = async () => {
 	const posts = allPosts
-	return posts.map((post) => ({ slug: post._raw.flattenedPath }))
+	return posts.map((post) => ({ slug: post._meta.path }))
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-	// Find the post for the current page.
-	const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
+	const sortedPosts = allPosts.sort((a, b) => {
+		return a._meta.fileName.localeCompare(b._meta.fileName)
+	})
 
-	// 404 if the post does not exist.
+	const currentPostIndex = sortedPosts.findIndex((post) => post._meta.path === params.slug)
+	const post = sortedPosts[currentPostIndex]
+
 	if (!post) notFound()
 
-	// Parse the MDX file via the useMDXComponent hook.
-	const MDXContent = useMDXComponent(post?.body.code)
+	const previousPost = sortedPosts[currentPostIndex - 1] || null
+	const nextPost = sortedPosts[currentPostIndex + 1] || null
 
 	return (
 		<div>
-			{/* Some code ... */}
-			<MDXContent components={components} /> {/* <= Include your custom MDX components here */}
+			<MDXContent
+				style={{ scroll: "smooth" }}
+				code={post.mdx}
+				components={components}
+			/>
+			<Pagination
+				previous={
+					previousPost ? { title: previousPost.title, path: previousPost._meta.path } : null
+				}
+				next={nextPost ? { title: nextPost.title, path: nextPost._meta.path } : null}
+			/>
 		</div>
 	)
 }

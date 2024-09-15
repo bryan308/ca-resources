@@ -4,7 +4,7 @@ import matter from "gray-matter"
 import type { MDXFrontMatter } from "@/lib/types"
 
 const root = process.cwd()
-export const guidesPath = path.join(root, "guides-pages")
+export const guidesPath = path.join(root, "/src/guides-pages")
 
 export const getMdx = (fileName: string) => {
 	try {

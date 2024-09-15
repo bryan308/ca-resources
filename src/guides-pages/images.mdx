@@ -10,7 +10,6 @@ thumbnail: images.jpg
 </section>
 <section>
 ## Agenda
-<br />
 1. HTML Images
 1. Image Attributes
 1. Types of Web Page Image
@@ -42,9 +41,9 @@ thumbnail: images.jpg
 <br />
 - **Graphics Interchange Format** (`.gif`) use for images with few colors (&lt;256) and allows transparent backgrounds. It uses compression techniques called LZW compression, to make it smaller to download on the Web.
 <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}>
-  <GuideImage src='/guides/images/giphy-1.gif' alt='GIF example 1' width={240} height={240} maxWidth="20%"/>
-  <GuideImage src='/guides/images/giphy-2.gif' alt='GIF example 2' width={480} height={480} maxWidth="20%"/>
-  <GuideImage src='/guides/images/giphy-3.gif' alt='GIF example 3' width={480} height={480} maxWidth="20%"/>
+  <GuideImage src='/guides/images/giphy-1.gif' alt='GIF example 1' unoptimized width={240} height={240} maxWidth="20%"/>
+  <GuideImage src='/guides/images/giphy-2.gif' alt='GIF example 2' unoptimized width={480} height={480} maxWidth="20%"/>
+  <GuideImage src='/guides/images/giphy-3.gif' alt='GIF example 3' unoptimized width={480} height={480} maxWidth="20%"/>
 </div>
 <MDXSeparator />
 - **Portable Network Graphics** (`.png`) newest format for images that supports multiple colors and resolutions. The PNG format is patent-free.
@@ -83,7 +82,7 @@ thumbnail: images.jpg
 <section>
 ## CSS Properties
 <br />
-### width and height property
+### The width and height property
 - We can use the **style** attribute to specify the **width** and **height** of an image.
 - Resizing is ideal for **large-sized images**.
 - Checking the actual size of the images is important when resizing to determine the new image size ratio.
@@ -99,7 +98,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### border property
+### The border property
 - The CSS border shorthand property allows users to specify the **width**, **style** and **color** of an element’s border.
   - **border-width**
   - **border-style** (required)
@@ -115,7 +114,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### broder-style property
+### The broder-style property
 - The **border-style** property specifies what kind of border to dispay.
 - The width can be set as a **dotted**, **dashed**, **solid**, **double**, **groove**, **ridge**, **inset**, **outset**, **none**, and **hidden**.
 <MDXSeparator />
@@ -132,7 +131,7 @@ thumbnail: images.jpg
 <div style={{margin: "8px 0", border: "3px hsl(var(--foreground))", borderStyle: "dotted dashed solid double" }}>A mixed border.</div>
 </section>
 <section>
-### border-width property
+### The border-width property
 - The **border-width** property specifies the width of the four borders.
 - The width can be set as a specific size (in **px**, **pt**, **cm**, **em**) or by using one of the three pre-defined values: **thin**, **medium**, or **thick**.
 <MDXSeparator />
@@ -157,7 +156,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### border-color property
+### The border-color property
 - The **border-color** property is used to set the color of the four borders.
 - The **border-color** property can have from one to four values.
   1. **top border**
@@ -186,7 +185,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### border-radius property
+### The border-radius property
 - The **border-radius** property is used to add rounded borders to an element.
 ```HTML {5} showLineNumbers
 <body>
@@ -199,7 +198,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### display and margin property
+### The display and margin property
 - The **display** property specifies if/how an element is displayed. Giving a value of **block** on the display property will let the element take the whole line on its own.
 - The **margin** property is used to create space around elements. Giving a value of **auto** to the margin property gives the element equal amounts of spaces on the left and right side making it appear in the center.
 ```HTML {5} showLineNumbers
@@ -213,7 +212,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### float property
+### The float property
 - The CSS **float** property specifies how an element should float.
 - The **float** property is used for positioning and formatting content e.g. let an image float left to the text in a container.
 - The **float** property can have **left**, **right**, **none**, or **inherit** value.
@@ -230,7 +229,7 @@ thumbnail: images.jpg
 <section>
 ## CSS background Properties
 <br />
-### background-image property
+### The background-image property
 - The **background-image** property specifies an image to use as the background of an element.
 - By default, the **image is repeated** so it covers the entire element.
 ```HTML {1} showLineNumbers
@@ -240,7 +239,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### background-repeat property
+### The background-repeat property
 - The **background-repeat** property repeats an image both horizontally and vertically.
 - The value can be horizontally repeated (repeat-x), vertically repeated (repeat-y), or no-repeat.
 ```HTML {1} showLineNumbers
@@ -262,7 +261,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### background-position property
+### The background-position property
 - The **background-position** property is used to specify the position of the background image.
 ```HTML {4} showLineNumbers
 <body style="background-image: url(images/mickey.png); 
@@ -275,7 +274,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### background-size property
+### The background-size property
 - The CSS **background-size** property allows you to specify the size of background images.
 - The size can be specified in **lengths**, **percentages**, or by using one of the two keywords: **contain** or **cover**.
 ```HTML {5} showLineNumbers
@@ -290,7 +289,7 @@ thumbnail: images.jpg
 ```
 </section>
 <section>
-### background property
+### The background property
 - The CSS **background** property sets all the background properties in one declaration.
 - When using the shorthand property the order of the property values is:
   - **background-color**
@@ -321,7 +320,7 @@ thumbnail: images.jpg
 - The `<link />` element is an empty element; it contains attributes to perform its function.
 </section>
 <section>
-### link attributes used to create a Favicon
+### The link attributes used to create a Favicon
 - The **rel** is required attribute that specifies the relationship between the current document and the linked document. (**icon**)
 - The **type** attribute specifies the media type of the linked document. (**image/icon**)
 - The **href** attribute specifies the location of the linked document.

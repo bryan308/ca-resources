@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 
 export function LoginForm() {
 	return (
-		<Card className="mx-auto xl:mx-0 max-w-sm rounded-lg">
+		<Card className="mx-auto xl:mx-0 max-w-sm mt-4 rounded-lg border-border">
 			<CardHeader>
 				<CardTitle className="text-2xl">Login</CardTitle>
 				<CardDescription>Enter your email below to login to your account</CardDescription>

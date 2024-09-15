@@ -9,8 +9,7 @@ thumbnail: audio-video-thumbnail.jpg
 <p className="text-muted-foreground text-sm">6–7 MIN READ</p>
 </section>
 <section>
-## Learning Objectives 
-<br />
+## Learning Objectives
 1. Using HTML5 `<video>` and `</video>` tag pairs within a web page.
 1. Adding video controls and Saving video files.
 1. Streaming versus downloaded video and supporting older browsers.
@@ -79,11 +78,11 @@ thumbnail: audio-video-thumbnail.jpg
 - The HTML `<video>` and `</video>` element is used to show a video on a web page.
 - The `<source>` and `</source>` element allows you to specify alternative video files 
   from which the browser may choose. Using this element the browser will use the first recognized format.
-- The controls attribute adds video controls, like play, pause, and volume.
+- The **controls** attribute adds video controls, like play, pause, and volume.
 </section>
 <section>
 ### HTML Video tag pair
-```HTML {2, 3, 5} showLineNumbers
+```HTML {2, 5} showLineNumbers
 <body>
   <video style="width: 320px; height: 240px;" controls>
     <source src="cocomelon.mp4" type="video/mp4">
@@ -95,12 +94,14 @@ thumbnail: audio-video-thumbnail.jpg
 <section>
 ### Common HTML Video formats
 <DataTable>
+
 |   Format   |   File Extension   |   Description                                                                                        |
 |------------|--------------------|------------------------------------------------------------------------------------------------------|
 | MPEG       | `.mpg`             | Developed by the Moving Pictures Expert Group. The first popular video format on the web.            |
 | OGG        | `.ogg`             | Theora Ogg. Developed by the Xiph.org Foundaion.                                                     |
 | WEBM       | `.webm`            | Developed by Mozilla, Opera, Adobe, and Google.                                                      |
 | MP4        | `.mp4`             | Commonly used in video cameras and TV hardware. Supported by all browsers and recommended by YouTube.|
+
 </DataTable>
 </section>
 <section>
@@ -143,6 +144,7 @@ thumbnail: audio-video-thumbnail.jpg
 ### HTML Audio tag pairs
 - The HTML `<audio>` and `</audio>` elements are used to play audio on a web page.
 - The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
+
 ```HTML {2, 5} showLineNUmbers
 <body>
   <audio controls>
@@ -151,6 +153,7 @@ thumbnail: audio-video-thumbnail.jpg
   <audio>
 </body>
 ```
+
 </section>
 <section>
 ### Loop attribute
@@ -167,35 +170,41 @@ thumbnail: audio-video-thumbnail.jpg
 <section>
 ### Common HTML Audio formats
 <DataTable>
+
 |   Format   |   File Extension   |   Description                                                                                                                                                    |
 |------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WAV        | `.wav`             | Developed by IBM and Microsoft. Plays well on Windows, Macintosh, and Linux operating systems.                                                                   |
 | OGG        | `.ogg`             | Developed by the Xiph.org Foundaion.                                                                                                                             |
 | MP3        | `.mp3`             | MP3 files are actually the sound part of MPEG files. MP3 is the most popular format for music players. Combines good compression (small files) with high quality.|
 | MP4        | `.mp4`             | MP4 is a video format, but can also be used for audio.                                                                                                           |
+
 </DataTable>
 </section>
 <section>
 ## Summary Table
 <SummaryTable>
-| Elements   | Definition                                                                                 |
-|------------|--------------------------------------------------------------------------------------------|
-| `<div>`    | Defines a block-level division or section in an HTML document.                             |
-| `<span>`   | Defines an inline section of text within an HTML document.                                 |
-| `<video>`  | element is used to show a video on a web page.                                             |
-| `<source>` | An element allows you to specify alternative video files from which the browser may choose.|
-| `<audio>`  | Use to play audio on a web page.                                                           |
+
+| Elements                          | Definition                                                                                 |
+|-----------------------------------|--------------------------------------------------------------------------------------------|
+| [`<div>`](#html-div-element)      | Defines a block-level division or section in an HTML document.                             |
+| [`<span>`](#html-span-element)    | Defines an inline section of text within an HTML document.                                 |
+| [`<video>`](#html-video)          | element is used to show a video on a web page.                                             |
+| [`<source>`](#html-video)         | An element allows you to specify alternative video files from which the browser may choose.|
+| [`<audio>`](#html-audio-tag-pairs)| Use to play audio on a web page.                                                           |
+
 </SummaryTable>
 </section>
 <section>
 <SummaryTable>
-| Attributes | Definition                                                                          |
-|------------|-------------------------------------------------------------------------------------|
-| `controls` | Adds video controls like play, pause, and volume.                                   |
-| `autoplay` | Use to specify that the video should start playing when a web page is loaded.       |
-| `muted`    | Mutes the audio or video by default.                                                |
-| `poster`   | Displays an image while the video is downloading or until the user hits play button.|
-| `loop`     | Will make the audio file play over and over again.                                  |
+
+| Attributes                       | Definition                                                                          |
+|----------------------------------|-------------------------------------------------------------------------------------|
+| [`controls`](#html-video)        | Adds video controls like play, pause, and volume.                                   |
+| [`autoplay`](#autoplay-attribute)| Use to specify that the video should start playing when a web page is loaded.       |
+| [`muted`](#muted-attribute)      | Mutes the audio or video by default.                                                |
+| [`poster`](#poster-attribute)    | Displays an image while the video is downloading or until the user hits play button.|
+| [`loop`](#loop-attribute)        | Will make the audio file play over and over again.                                  |
+
 </SummaryTable>
 </section>
 <section>
