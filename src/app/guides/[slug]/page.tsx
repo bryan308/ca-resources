@@ -1,10 +1,54 @@
+import "./slug.css"
+
 import { allPosts } from "content-collections"
 import { MDXContent } from "@content-collections/mdx/react"
 import { notFound } from "next/navigation"
 import { components } from "@/components/shared/mdx-components"
 import Pagination from "@/components/shared/pagination"
 
-import "./slug.css"
+import { siteMetadata as meta } from "@/data/site-config"
+
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+	const { slug } = params
+
+	const postData = allPosts.find((post) => post._meta.path === slug)
+
+	if (!postData) {
+		return {
+			title: "Post not found",
+			description: "This post does not exist.",
+		}
+	}
+
+	return {
+		title: postData.title,
+		description: postData.description,
+		openGraph: {
+			title: postData.title,
+			description: postData.description,
+			url: `${meta.url}/guides/${slug}`,
+			images: [
+				{
+					url: `${meta.url}/${postData.thumbnail}`,
+					alt: postData.title,
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: postData.title,
+			description: postData.description,
+			url: `${meta.url}/guides/${slug}`,
+			images: [
+				{
+					url: `${meta.url}/${postData.thumbnail}`,
+					alt: postData.title,
+				},
+			],
+		},
+	}
+}
 
 export const generateStaticParams = async () => {
 	const posts = allPosts

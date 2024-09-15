@@ -2,18 +2,11 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-// import { MDXFrontMatter } from "@/lib/types"
 import { cn } from "@/lib/utils"
 import { allPosts } from "content-collections"
 
-// interface PathsProp {
-// 	paths: MDXFrontMatter[]
-// }
-
 function GuidestPaths() {
 	const pathname = usePathname()
-
-	// const post = allPosts.find((post) => post?._meta.path)
 
 	const currentPath = (isActive: boolean): string =>
 		isActive ? "text-foreground bg-muted/50" : "text-muted-foreground"

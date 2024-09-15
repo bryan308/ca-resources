@@ -2,19 +2,17 @@
 
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
-
 import Link from "next/link"
 import { SheetTrigger } from "../ui/sheet"
 import { ArrowRight } from "lucide-react"
 import { GuidePath, Path, SheetLinksProps } from "@/lib/types"
+import { allPosts } from "content-collections"
 
-const SheetLinks: React.FC<SheetLinksProps> = ({
-	header,
-	paths = [],
-	guidePaths = [],
-	isGuide = false,
-}) => {
-	const links = isGuide ? guidePaths : paths
+const SheetLinks: React.FC<SheetLinksProps> = ({ header, paths = [], isGuide = false }) => {
+	const links = isGuide
+		? allPosts.map((post) => ({ slug: post._meta.path, title: post.title }))
+		: paths
+
 	const getHref = (item: GuidePath | Path) =>
 		isGuide ? `/guides/${(item as GuidePath).slug}` : (item as Path).path
 	const getTitle = (item: GuidePath | Path) =>
