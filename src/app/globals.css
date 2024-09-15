@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("../components/colors/color-scheme.css"); */
-@import url("./code.css");
-
 @layer base {
   :root {
     --background: 0 0% 98%;

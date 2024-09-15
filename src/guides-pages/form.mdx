@@ -1,8 +1,7 @@
 ---
 title: Form
 description: An HTML form is used to collect user input. The user input is most often sent to a server for processing.
-extendedDesc: HTML forms enable user interaction, collecting input for server processing in applications like logins, searches, and surveys. It's a client/server process.
-image: form-thumbnail.jpg
+thumbnail: form-thumbnail.jpg
 ---
 
 <section>
@@ -11,15 +10,14 @@ image: form-thumbnail.jpg
 </section>
 <section>
 ## Learning Objectives
-<br />
 1. Describe the importance of HTML forms in a web page.
-2. Construct a web page using `<form>` and `</form>` elements that integrates with backend services for data processing.
-3. Develop an HTML form that incorporates multiple input types, each chosen to optimize data entry for specific user tasks.
-4. Create an HTML form that uses a wide range of input attributes to provide advanced features.
-5. Create and customize dropdown menus using the select and option elements to enhance user interactivity on web forms.
-6. Implement and configure the textarea element and its attributes to enable multi-line text input in web forms.
-7. Group and label related form controls using the fieldset and legend elements to improve form accessibility and organization.
-8. Create and style various types of buttons using the button element, and understand their functions in form submission and user interaction.
+1. Construct a web page using `<form>` and `</form>` elements that integrates with backend services for data processing.
+1. Develop an HTML form that incorporates multiple input types, each chosen to optimize data entry for specific user tasks.
+1. Create an HTML form that uses a wide range of input attributes to provide advanced features.
+1. Create and customize dropdown menus using the select and option elements to enhance user interactivity on web forms.
+1. Implement and configure the textarea element and its attributes to enable multi-line text input in web forms.
+1. Group and label related form controls using the fieldset and legend elements to improve form accessibility and organization.
+1. Create and style various types of buttons using the button element, and understand their functions in form submission and user interaction.
 </section>
 <section>
 ### What is HTML Form?
@@ -27,8 +25,6 @@ HTML **forms** are a fundamental part of web development, enabling user interact
 </section>
 <section>
 ### HTML Form Example
-<br />
-<br />
 <LoginForm />
 </section>
 <section>
@@ -167,9 +163,9 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ### Input types url, time and file
 - `<input type="url">` is used for input fields that should contain a URL address.
 - `<input type="time">` allows the user to select a time.
-- `<input type="file">` allows the user to choose a file from their device or computer's storage.
-> Adding the `multiple` attribute to `<input type="file">` allows users to select more than one file. <br />
-  **Example**: `<input type="file" multiple>`
+- `<input type="file">` allows the user to choose a file from their device or computer’s storage.
+> Adding the `multiple` attribute to `<input type="file">` allows users to select more than one file. 
+> **Example**: `<input type="file" multiple>`
 ```HTML {3, 5, 7} showLineNumbers
 <form>
   <label for="weadd">Website Address:</label> <br />
@@ -185,8 +181,8 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input Attributes
-#### value, readonly and disabled
+## Input Attributes
+### value, readonly and disabled
 - The **value** attribute specifies the initial value for an input field.
 - The **readonly** attribute specifies that the input field is read only (cannot be changed)
 - The **disabled** attribute specifies that the input field is disabled. A disabled input field is unusable and unclickable, and its value will not be sent when submitting a form.
@@ -202,7 +198,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-#### The size and maxlength
+### The size and maxlength
 - The **size** attribute specifies the size (in characters) for the input field.
 - The **maxlength** attribute specifies the maximum allowed length for the input field. With a maxlength attribute, the input field will not accept more than the allowed number of characters.
 ```HTML {5, 7} showLineNumbers
@@ -219,7 +215,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-#### The min, max and step
+### The min, max and step
 - The **min** and **max** attributes specify the minimum and maximum values for an `<input>` element.
 - The **step** attribute specifies the legal number of intervals for an `<input>` element.
 ```HTML {3} showLineNumbers
@@ -232,8 +228,8 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-#### The placeholder, required and autofocus
-- The **placeholder** attribute specifies a hint describing an input field's expected value. The hint is displayed in the field before the user enters a value.
+### The placeholder, required and autofocus
+- The **placeholder** attribute specifies a hint describing an input field’s expected value. The hint is displayed in the field before the user enters a value.
 - The **required** attribute specifies that an input field must be filled out before submitting the form.
 - The **autofocus** attribute specifies that an input field should automatically get focus when the page loads.
 ```HTML {2-3} showLineNumbers
@@ -245,8 +241,8 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-#### The pattern and title
-- The **pattern** attribute specifies a regular expression that the input element's value is checked against.
+### The pattern and title
+- The **pattern** attribute specifies a regular expression that the input element’s value is checked against.
 - The **title** attribute is used to describe the pattern to the user.
 ```HTML {3} showLineNumbers
 <form>
@@ -334,67 +330,67 @@ The HTML `<form></form>` element can contain one or more of the following form e
 <section>
 ## Summary Table
 <SummaryTable>
-|   Elements          |   Definition                                                                          |
-|---------------------|---------------------------------------------------------------------------------------|
-| `<form>`            | Defines an HTML form for collecting user input.                                       |
-| `<label>`           | Defines a label for several form elements.                                            |
-| `<input>`           | The most important form element.                                                      |
-| `<select>`          | Defines a drop-down list.                                                             |
-| `<option>`          | Defines an option that can be selected.                                               |
-| `<datalist>`        | Specifies a list of pre-defined options for an `<input>` element.                     |
-| `<textarea>`        | Defines a multi-line text input field.                                                |
-| `<fieldset>`        | Use to group related data in a form.                                                  |
-| `<legend>`          | Defines a caption for `<fieldset>` element.                                           |
-| `<button>`          | Use to create a clickable button, can be used to trigger custom Javascript functions. |
+|   Elements                                      |   Definition                                                                          |
+|-------------------------------------------------|---------------------------------------------------------------------------------------|
+| [`<form>`](#the-form-element)                   | Defines an HTML form for collecting user input.                                       |
+| [`<label>`](#the-label-element)                 | Defines a label for several form elements.                                            |
+| [`<input>`](#the-input-element)                 | The most important form element.                                                      |
+| [`<select>`](#the-select-and-option-element)    | Defines a drop-down list.                                                             |
+| [`<option>`](#the-select-and-option-element)    | Defines an option that can be selected.                                               |
+| [`<datalist>`](#the-datalist-element)           | Specifies a list of pre-defined options for an `<input>` element.                     |
+| [`<textarea>`](#the-textarea-element)           | Defines a multi-line text input field.                                                |
+| [`<fieldset>`](#the-fieldset-and-legend-element)| Use to group related data in a form.                                                  |
+| [`<legend>`](#the-fieldset-and-legend-element)  | Defines a caption for `<fieldset>` element.                                           |
+| [`<button>`](#the-button-element)               | Use to create a clickable button, can be used to trigger custom Javascript functions. |
 </SummaryTable>
 </section>
 <section>
 <SummaryTable>
-|   Attributes        |   Definition                                                                                           |
-|---------------------|--------------------------------------------------------------------------------------------------------|
-| `action`            | Defines the action to be performeed when the form is submitted.                                        |
-| `method`            | Specifies the HTTP method used when submitting the form data. (`GET` or `POST`)                        |
-| `for`               | Use in label tag that should be equal to `id` attribute of the `<input>` element to bind them together.|
-| `type`              | Specifies the type of input element to display.                                                        |
-| `name`              | Use to reference elements in a JavaScript, or to reference for data after a form is submitted.         |
-| `multiple`          | Allows users to select more than one file.                                                             |
-| `value`             | Specifies the initial value for an input field.                                                        |
-| `readonly`          | Specifies that the input field is read-only (cannot be changed).                                       |
-| `disabled`          | Specifies that the input is disabled.                                                                  |
-| `size`              | Specifies the size (in characters) for the input field.                                                |
-| `maxlength`         | Specifies the maximum allowed length for the input field.                                              |
-| `min` and `max`     | Specify the minimum and maximum values for an `<input>` element.                                       |
-| `step`              | Specifies the legal number of intervals for an `<input>` element.                                      |
-| `placeholder`       | Specifies a hint describing an input field’s expected value.                                           |
-| `required`          | Specifies that an input field must be filled out before submitting the form.                           |
-| `autofocus`         | Specifes that an input field should automatically should focus when the page loads.                    |
-| `pattern`           | Specifies a regular expression that the input element’s value is checked against.                      |
-| `title`             | Use to describe the pattern to the user.                                                               |
-| `selected`          | Use to the `<option>` element to define a pre-selected option.                                         |
-| `list`              | Must be equal to the `id` attribute of `<datalist>` element.                                           |
-| `row`               | Specifies the visible number of lines in a text area.                                                  |
-| `cols`              | Specifies the visible width of a text area.                                                            |
+| Attributes                                                       |   Definition                                                                                           |
+|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [`action`](#html-form-attributes)                                | Defines the action to be performeed when the form is submitted.                                        |
+| [`method`](#html-form-attributes)                                | Specifies the HTTP method used when submitting the form data. (`GET` or `POST`)                        |
+| [`for`](#the-label-element)                                      | Use in label tag that should be equal to `id` attribute of the `<input>` element to bind them together.|
+| [`type`](#the-input-element)                                     | Specifies the type of input element to display.                                                        |
+| [`name`](#the-input-element)                                     | Use to reference elements in a JavaScript, or to reference for data after a form is submitted.         |
+| [`multiple`](#input-types-url-time-and-file)                     | Allows users to select more than one file.                                                             |
+| [`value`](#value-readonly-and-disabled)                          | Specifies the initial value for an input field.                                                        |
+| [`readonly`](#value-readonly-and-disabled)                       | Specifies that the input field is read-only (cannot be changed).                                       |
+| [`disabled`](#value-readonly-and-disabled)                       | Specifies that the input is disabled.                                                                  |
+| [`size`](#the-size-and-maxlength)                                | Specifies the size (in characters) for the input field.                                                |
+| [`maxlength`](#the-size-and-maxlength)                           | Specifies the maximum allowed length for the input field.                                              |
+| [`min`](#the-min-max-and-step) and [`max`](#the-min-max-and-step)| Specify the minimum and maximum values for an `<input>` element.                                       |
+| [`step`](#the-min-max-and-step)                                  | Specifies the legal number of intervals for an `<input>` element.                                      |
+| [`placeholder`](#the-placeholder-required-and-autofocus)         | Specifies a hint describing an input field’s expected value.                                           |
+| [`required`](#the-placeholder-required-and-autofocus)            | Specifies that an input field must be filled out before submitting the form.                           |
+| [`autofocus`](#the-placeholder-required-and-autofocus)           | Specifes that an input field should automatically should focus when the page loads.                    |
+| [`pattern`](#the-pattern-and-title)                              | Specifies a regular expression that the input element’s value is checked against.                      |
+| [`title`](#the-pattern-and-title)                                | Use to describe the pattern to the user.                                                               |
+| [`selected`](#the-select-option-elements)                        | Use to the `<option>` element to define a pre-selected option.                                         |
+| [`list`](#the-datalist-element)                                  | Must be equal to the `id` attribute of `<datalist>` element.                                           |
+| [`row`](#the-textarea-element)                                   | Specifies the visible number of lines in a text area.                                                  |
+| [`cols`](#the-textarea-element)                                  | Specifies the visible width of a text area.                                                            |
 </SummaryTable>
 </section>
 <section>
 <SummaryTable>
-|   Types             |   Definition                                                                                           |
-|---------------------|--------------------------------------------------------------------------------------------------------|
-| `text`              | Defines a one-line text input field.                                                                   |
-| `password`          | Defines a password field. The characters in password field are masked (shown as asterisk or circles).  |
-| `submit`            | Defines a button for submitting form data to a form handler.                                           |
-| `reset`             | Defines a reset button that will reset all form values to their default values.                        |
-| `button`            | Defines a programmable button.                                                                         |
-| `radio`             | Lets a user to select only one of a limited number of choices.                                         |
-| `checkbox`          | Lets users select zero or more options for a limited number of choices.                                |
-| `email`             | Use for input fields that should contain an email address.                                             |
-| `number`            | Defines a numeric input field.                                                                         |
-| `date`              | Use for input fields that should contain a date.                                                       |
-| `range`             | Defines a control for entering a number whose exact value is not important (slider control).           |
-| `tel`               | Use for input fields that should contain a telephone number.                                           |
-| `url`               | Use for input fields that should contain a URL address.                                                |
-| `time`              | Allows users to select time.                                                                           |
-| `file`              | Allows the user to choose a file from their device or computer’s storage.                              |
+|   Types                                         |   Definition                                                                                                                       |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| [`text`](#input-types-text-and-password)        | Defines a one-line text input field.                                                                   |
+| [`password`](#input-types-text-and-password)    | Defines a password field. The characters in password field are masked (shown as asterisk or circles).  |
+| [`submit`](#input-types-submit-reset-and-button)| Defines a button for submitting form data to a form handler.                                           |
+| [`reset`](#input-types-submit-reset-and-button) | Defines a reset button that will reset all form values to their default values.                        |
+| [`button`](#input-types-submit-reset-and-button)| Defines a programmable button.                                                                         |
+| [`radio`](#input-types-radio-and-checkbox)      | Lets a user to select only one of a limited number of choices.                                         |
+| [`checkbox`](#input-types-radio-and-checkbox)   | Lets users select zero or more options for a limited number of choices.                                |
+| [`email`](#input-types-email-number-and-date)   | Use for input fields that should contain an email address.                                             |
+| [`number`](#input-types-email-number-and-date)  | Defines a numeric input field.                                                                         |
+| [`date`](#input-types-email-number-and-date)    | Use for input fields that should contain a date.                                                       |
+| [`range`](#input-types-range-tel)               | Defines a control for entering a number whose exact value is not important (slider control).           |
+| [`tel`](#input-types-range-tel)                 | Use for input fields that should contain a telephone number.                                           |
+| [`url`](#input-types-url-time-and-file)         | Use for input fields that should contain a URL address.                                                |
+| [`time`](#input-types-url-time-and-file)        | Allows users to select time.                                                                           |
+| [`file`](#input-types-url-time-and-file)        | Allows the user to choose a file from their device or computer’s storage.                              |
 </SummaryTable>
 </section>
 <section>

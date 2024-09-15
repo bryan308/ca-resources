@@ -1,85 +1,86 @@
-import remarkGfm from "remark-gfm"
-import { getAllMdx } from "@/lib/mdx"
+import "./slug.css"
+
+import { allPosts } from "content-collections"
+import { MDXContent } from "@content-collections/mdx/react"
 import { notFound } from "next/navigation"
-import rehypePrism from "rehype-prism-plus"
-import { serialize } from "next-mdx-remote/serialize"
-import Content from "./slug-content"
-import "./style/slug.css"
+import { components } from "@/components/shared/mdx-components"
+import Pagination from "@/components/shared/pagination"
+
 import { siteMetadata as meta } from "@/data/site-config"
 
-export async function generateMetadata({ params }: ListProp) {
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
 	const { slug } = params
-	const postData = await fetchGuideData(slug)
+
+	const postData = allPosts.find((post) => post._meta.path === slug)
+
+	if (!postData) {
+		return {
+			title: "Post not found",
+			description: "This post does not exist.",
+		}
+	}
 
 	return {
-		title: postData.frontMatter.title,
-		description: postData.frontMatter.description,
+		title: postData.title,
+		description: postData.description,
 		openGraph: {
-			title: postData.frontMatter.title,
-			description: postData.frontMatter.description,
+			title: postData.title,
+			description: postData.description,
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.frontMatter.image}`,
-					alt: postData.frontMatter.title,
+					url: `${meta.url}/${postData.thumbnail}`,
+					alt: postData.title,
 				},
 			],
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: postData.frontMatter.title,
-			description: postData.frontMatter.description,
+			title: postData.title,
+			description: postData.description,
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.frontMatter.image}`,
-					alt: postData.frontMatter.title,
+					url: `${meta.url}/${postData.thumbnail}`,
+					alt: postData.title,
 				},
 			],
 		},
 	}
 }
 
-interface ListProp {
-	params: { slug: string }
+export const generateStaticParams = async () => {
+	const posts = allPosts
+	return posts.map((post) => ({ slug: post._meta.path }))
 }
 
-async function fetchGuideData(slug: string) {
-	const mdxFiles = getAllMdx()
-
-	const sortedGuides = mdxFiles.sort(
-		(a, b) => a.frontMatter.guideNumber - b.frontMatter.guideNumber
-	)
-
-	const guideIndex = sortedGuides.findIndex((p) => p.frontMatter.slug === slug)
-	if (guideIndex === -1) {
-		notFound()
-	}
-
-	const guide = sortedGuides[guideIndex]
-	const { frontMatter, content } = guide
-
-	const mdxContent = await serialize(content, {
-		mdxOptions: {
-			remarkPlugins: [remarkGfm],
-			rehypePlugins: [rehypePrism],
-		},
-		scope: frontMatter,
+export default async function Page({ params }: { params: { slug: string } }) {
+	const sortedPosts = allPosts.sort((a, b) => {
+		return a._meta.fileName.localeCompare(b._meta.fileName)
 	})
 
-	const previous = sortedGuides[guideIndex - 1]?.frontMatter || null
-	const next = sortedGuides[guideIndex + 1]?.frontMatter || null
+	const currentPostIndex = sortedPosts.findIndex((post) => post._meta.path === params.slug)
+	const post = sortedPosts[currentPostIndex]
 
-	return { frontMatter, mdxContent, previous, next }
-}
+	if (!post) notFound()
 
-export default async function Guide({ params }: ListProp) {
-	const { slug } = params
-	const postData = await fetchGuideData(slug)
+	const previousPost = sortedPosts[currentPostIndex - 1] || null
+	const nextPost = sortedPosts[currentPostIndex + 1] || null
 
 	return (
-		<>
-			<Content {...postData} />
-		</>
+		<div>
+			<MDXContent
+				style={{ scroll: "smooth" }}
+				code={post.mdx}
+				components={components}
+			/>
+			<Pagination
+				previous={
+					previousPost ? { title: previousPost.title, path: previousPost._meta.path } : null
+				}
+				next={nextPost ? { title: nextPost.title, path: nextPost._meta.path } : null}
+			/>
+		</div>
 	)
 }

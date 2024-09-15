@@ -10,7 +10,7 @@ import {
 	TableExample,
 	UnorderedList,
 	MDXSeparator,
-} from "./elements"
+} from "./mdx-elements"
 import { LoginForm } from "@/components/shared/login-form"
 
 export const components = {

@@ -1,6 +1,5 @@
-import Link from "next/link"
 import { IconMenu2 } from "@tabler/icons-react"
-import { getAllPaths } from "@/lib/get-paths"
+import Link from "next/link"
 import { overview, resources } from "@/data/links"
 import Box from "./icons/box"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
@@ -9,8 +8,6 @@ import { Separator } from "../ui/separator"
 import SheetLinks from "./sheet-links"
 
 function Header() {
-	const componentPaths = getAllPaths()
-
 	return (
 		<header className="bg-background-foreground z-100 fixed top-0 mx-auto w-full max-w-[76.25rem] md:sticky border-border border-b xl:border-l xl:border-r z-50">
 			<div className="flex w-full max-w-[76.188rem] pl-[1.375rem]">
@@ -65,7 +62,6 @@ function Header() {
 									<Separator className="my-2" />
 									<SheetLinks
 										header="Guides"
-										guidePaths={componentPaths}
 										isGuide={true}
 									/>
 									<Separator className="my-2" />

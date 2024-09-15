@@ -10,7 +10,7 @@ import ScrollToTopButton from "@/components/shared/scroll-to-top"
 import type { Metadata } from "next"
 import Providers from "@/components/shared/theme-provider"
 import NextTopLoader from "nextjs-toploader"
-import { siteMetadata as meta, socials } from "@/data/site-config"
+import { siteMetadata as meta } from "@/data/site-config"
 
 export const metadata: Metadata = {
 	title: meta.title,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 		site: meta.url,
 		card: "summary_large_image",
 		title: meta.title,
-		creator: socials.x.username,
+		creator: meta.socials.x.username,
 		description: meta.description,
 		images: [
 			{

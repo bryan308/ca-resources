@@ -1,7 +1,7 @@
 ---
 title: Lists
 description: HTML Hyperlink is a word, phrase or image that a user can click on to jump to a new document or a new section within the current document.
-image: lists-thumbnail.jpg
+thumbnail: lists-thumbnail.jpg
 ---
 
 <section>
@@ -10,13 +10,12 @@ image: lists-thumbnail.jpg
 </section>
 <section>
 ## Agenda
-<br />
 1. HTML Lists
-2. Unordered Lists
-3. Ordered Lists
-4. CSS Lists Properties
-5. start attribute
-6. Description Lists
+1. Unordered Lists
+1. Ordered Lists
+1. CSS Lists Properties
+1. start attribute
+1. Description Lists
 </section>
 <section>
 ### HTML Lists
@@ -80,7 +79,7 @@ image: lists-thumbnail.jpg
 - Add background colors to lists and list items.
 </section>
 <section>
-#### list-style-type property
+### list-style-type property
 - The **list-style-type** property is used to define the style of the list item marker.
 - The following values below explains how to change the marker for unordered list items.
 <MDXSeparator />
@@ -104,7 +103,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <UnorderedList type="disc" position="inside" />
 </section>
 <section>
@@ -122,7 +121,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <UnorderedList type="circle" position="inside" />
 </section>
 <section>
@@ -140,7 +139,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <UnorderedList type="square" position="inside" />
 </section>
 <section>
@@ -158,11 +157,11 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <UnorderedList type="none" />
 </section>
 <section>
-#### list-style-type property
+### list-style-type property
 - The following values sets the marker for ordered list items.
 <MDXSeparator />
 1. The **lower-alpha** value is used to set the marker of a list item in lowercase letters.
@@ -188,7 +187,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList type="lower-alpha" listStyle="type" position="inside" />
 </section>
 <section>
@@ -208,11 +207,11 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList type="upper-alpha" listStyle="type" position="inside" />
 </section>
 <section>
-#### Lower roman value
+### Lower roman value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -228,7 +227,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList type="lower-roman" listStyle="type" position="inside" />
 </section>
 <section>
@@ -248,11 +247,11 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList type="upper-roman" listStyle="type" position="inside" />
 </section>
 <section>
-#### list-style-image property
+### list-style-image property
 - The **list-style-image** property used to specify an image as the list item marker in unordered lists.
 ```HTML {1} showLineNumbers
 <ul style=“list-style-image:url(‘image.jpg’)”>
@@ -274,11 +273,11 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList listStyle="" image="/checkmarker.svg" />
 </section>
 <section>
-#### list-style-position property
+### list-style-position property
 - The **list-style-position** property specifies the position of the list item marker in unordered lists.
 - The **outside** value means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically.
 - The **inside** value means that the bullet points will beinside the list item. The list item will be part of the text and push the text at the start.
@@ -297,7 +296,7 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList position="outside" listStyle="position" />
 </section>
 <section>
@@ -314,11 +313,11 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <OrderedList position="inside" listStyle="position" />
 </section>
 <section>
-#### list-style Property
+### list-style property
 - The **list-style** property is a shorthand property. It is use to set all the list properties in one declaration.
 - When using the shorthand property, the order of the property values are:
 <MDXSeparator />
@@ -327,7 +326,7 @@ image: lists-thumbnail.jpg
 3. list-style-image
 </section>
 <section>
-#### Start attribute
+### Start attribute
 - The **start** attribute of the `<ol></ol>` tag pair defines the start of the counting from specified number.
 ```HTML {3} showLineNumbers
 <body>
@@ -341,8 +340,8 @@ image: lists-thumbnail.jpg
 </body>
 ```
 <MDXSeparator />
-#### Output:
-<OrderedList listStyle="position" startt="10" />
+#### Output
+<OrderedList listStyle="position" position="inside" startt="10" />
 </section>
 <section>
 ## Description List
@@ -370,7 +369,7 @@ HTML also supports description lists.
 </body>
 ```
 <MDXSeparator />
-#### Output:
+#### Output
 <div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
   <h2 style={{ fontFamily: "Times New Roman, serif", margin: "1.188rem 0", fontSize: "1.75rem", border: "none" }}>Description List</h2>
   <dl style={{ margin: "1rem 0" }}>

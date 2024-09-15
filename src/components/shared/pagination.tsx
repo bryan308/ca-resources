@@ -1,10 +1,9 @@
-import { MDXFrontMatter } from "@/lib/types"
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 
 interface IPagination {
-	previous: MDXFrontMatter | null
-	next: MDXFrontMatter | null
+	previous: { title: string; path: string } | null
+	next: { title: string; path: string } | null
 }
 
 function Pagination({ next, previous }: IPagination) {
@@ -21,7 +20,7 @@ function Pagination({ next, previous }: IPagination) {
 					<Link
 						aria-label={`Go to previous guide: ${previous.title}`}
 						className="p-2 rounded-md flex items-end"
-						href={`/guides/${previous.slug}`}
+						href={`/guides/${previous.path}`}
 					>
 						<ChevronLeftIcon className="size-4 mb-1 text-muted-foreground" />
 						<div className="group">
@@ -36,7 +35,7 @@ function Pagination({ next, previous }: IPagination) {
 					<Link
 						aria-label={`Go to next guide: ${next.title}`}
 						className="p-2 rounded-md flex items-end"
-						href={`/guides/${next.slug}`}
+						href={`/guides/${next.path}`}
 					>
 						<div className="group">
 							<span className="text-sm text-muted-foreground group-hover:text-foreground">

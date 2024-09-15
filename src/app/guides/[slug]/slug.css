@@ -2,6 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+code[class*="language-"],
+pre[class*="language-"] {
+	@apply text-sm bg-neutral-950 border border-border text-white max-h-56;
+	font-family: var(--shareTechMono);
+	letter-spacing: 0.2px;
+	white-space: pre;
+	text-shadow: none;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	text-align: left;
+	tab-size: 4;
+	hyphens: none;
+}
+
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection {
+	color: inherit;
+	text-shadow: none;
+}
+
+pre {
+	@apply overflow-auto;
+	scrollbar-width: thin;
+}
+
+pre[class*="language-"] {
+	@apply rounded-lg p-4 mt-4;
+	overflow: auto;
+}
+
+pre > code {
+	border: none;
+	background: none !important;
+	width: auto;
+}
+
+:not(pre) > code[class*="language-"] {
+	@apply text-white bg-neutral-950 p-[0.2em_0.3em] rounded-lg;
+	box-decoration-break: clone;
+}
+
+.code-highlight {
+	float: left;
+	min-width: 100%;
+}
+
+.code-line {
+	display: block;
+	padding: 0 16px;
+	margin: 0 -16px;
+	border-left: 4px solid transparent;
+}
+
+.code-line.inserted {
+	background-color: rgba(16, 185, 129, 0.2);
+}
+
+.code-line.deleted {
+	background-color: rgba(239, 68, 68, 0.2);
+}
+
+.highlight-line {
+	margin: 0 -1rem;
+	background-color: #62c07327;
+	border-left: 0.25rem solid #62c073;
+	/* background-color: #8e4ec627;
+	border-left: 0.25rem solid #8E4EC6; */
+}
+
+.line-number::before {
+	display: inline-block;
+	width: 1rem;
+	text-align: right;
+	margin: 0 1rem 0 -1rem;
+	color: #ffffff88;
+	content: attr(line);
+}
+
+.token.doctype,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.selector,
+.token.builtin,
+.token.inserted,
+.token.string,
+.token.char,
+.token.regex,
+.token.important,
+.token.variable {
+	color: white;
+}
+.token.attr-name {
+	@apply text-[#ffffffbb];
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.id,
+.token.class,
+.token.atrule,
+.token.keyword,
+.token.function,
+.token.class-name,
+.token.comment,
+.token.prolog,
+.token.cdata,
+.token.punctuation,
+.token.punctuation.attr-equals,
+.token.property,
+.token.attr-value {
+	@apply text-[#ffffff88];
+}
+
 .data-table table,
 .table table {
 	@apply w-full border-separate border-spacing-0;
