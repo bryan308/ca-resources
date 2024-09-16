@@ -1,8 +1,8 @@
 export interface Resource {
-	name: string
+	title: string
 	url: string
 	description: string
-	icon: string
+	iconPath: string
 }
 
 export type Path = {

@@ -19,6 +19,7 @@ export default function Introduction() {
 					<Link
 						href="https://vercel.com/geist/introduction"
 						target="_blank"
+						rel="noopener noreferrer"
 						className="link"
 					>
 						Vercel Geist Design System
@@ -30,6 +31,7 @@ export default function Introduction() {
 					<Link
 						href="https://cdrcangulo.vercel.app/"
 						target="_blank"
+						rel="noopener noreferrer"
 						className="link"
 					>
 						Cedric Angulo
