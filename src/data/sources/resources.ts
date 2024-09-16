@@ -2,7 +2,6 @@ import { Resource } from "@/lib/types"
 
 interface IResourcesList {
 	title: string
-	subtitle?: string
 	links: Resource[]
 }
 
