@@ -8,21 +8,28 @@ import PageHeader from "@/components/shared/page-header"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
 	const { id } = params
-	if (!Object.keys(resourcesData).includes(id)) {
-		return { title: "Not Found", description: "Resource not found." }
+
+	if (!resourcesData[id as keyof typeof resourcesData]) {
+		return {
+			title: "Not Found",
+			description: "Resource not found.",
+		}
 	}
 
-	const resourceData = resourcesData[id as ResourceType]
+	const resourceData = resourcesData[id as keyof typeof resourcesData]
+
+	const imageUrl = meta.url ? `${meta.url}/${resourceData.thumbnail}` : resourceData.thumbnail
+
 	return {
 		title: resourceData.title,
 		description: resourceData.subtitle,
 		openGraph: {
 			title: resourceData.title,
 			description: resourceData.subtitle,
-			url: `${meta.url}/${resourceData.thumbnail}`,
+			url: imageUrl,
 			images: [
 				{
-					url: `${meta.url}/${resourceData.thumbnail}`,
+					url: imageUrl,
 					alt: resourceData.title,
 				},
 			],
