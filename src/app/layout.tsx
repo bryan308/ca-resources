@@ -73,12 +73,11 @@ export default function RootLayout({
 					<Header />
 					<div className="h-16 md:hidden" />
 					<main
-						className="flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr]"
-						style={{ minHeight: "calc(100dvh - 4.25rem)" }}
+						className="flex max-w-[76.25rem] flex-col xl:mx-auto xl:mt-0 xl:grid xl:grid-cols-[16.25rem_1fr] min-h-[calc(100dvh-3.5rem)] xl:min-h-[calc(100dvh-4.2rem)]"
 						role="main"
 					>
 						<Aside />
-						<div className="relative border border-t-0 border-l-0 border-border h-full">
+						<div className="relative border border-t-0 border-l-0 border-border min-h-[calc(100dvh-3.5rem)] xl:min-h-[calc(100dvh-4.2rem)]">
 							{children}
 							<ScrollToTopButton />
 						</div>
