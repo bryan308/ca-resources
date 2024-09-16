@@ -91,7 +91,7 @@
 }
 
 section {
-	@apply w-full p-6 xl:p-12 border-border border-b overflow-x-hidden;
+	@apply w-full px-6 pb-12 xl:p-12 border-border border-b overflow-x-hidden;
 }
 
 a.link {
