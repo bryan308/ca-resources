@@ -8,7 +8,7 @@ interface IPagination {
 
 function Pagination({ next, previous }: IPagination) {
 	return (
-		<section className="xl:py-6 xl:px-12">
+		<div className="p-6 xl:p-12"> 
 			<nav
 				aria-label="pagination"
 				role="navigation"
@@ -47,7 +47,7 @@ function Pagination({ next, previous }: IPagination) {
 					</Link>
 				)}
 			</nav>
-		</section>
+		</div>
 	)
 }
 
