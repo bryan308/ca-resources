@@ -8,7 +8,6 @@ import Pagination from "@/components/shared/pagination"
 
 import { siteMetadata as meta } from "@/data/site-config"
 
-
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 	const { slug } = params
 
