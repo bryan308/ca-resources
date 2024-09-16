@@ -25,9 +25,7 @@ export default function Introduction() {
 					</Link>
 					.
 				</p>
-			</section>
-			<section>
-				<p className="mt-0">
+				<p>
 					<strong className="text-foreground">CA Resources</strong> was created and managed by{" "}
 					<Link
 						href="https://cdrcangulo.vercel.app/"
