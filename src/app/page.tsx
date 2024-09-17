@@ -9,26 +9,12 @@ interface Contributor {
 	avatar_url: string
 }
 
-export async function getStaticProps() {
+export default async function Introduction() {
 	const response = await fetch("https://ca-resources.vercel.app/api/contributors", {
-		cache: "no-cache",
+		next: { revalidate: 60 },
 	})
-
 	const contributors: Contributor[] = await response.json()
 
-	return {
-		props: {
-			contributors,
-		},
-		revalidate: 3600,
-	}
-}
-
-interface IntroductionProps {
-	contributors: Contributor[]
-}
-
-export default function Introduction({ contributors }: IntroductionProps) {
 	return (
 		<>
 			<section>
