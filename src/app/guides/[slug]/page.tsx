@@ -1,7 +1,7 @@
 import "./slug.css"
 
-import { allPosts } from "content-collections"
-import { MDXContent } from "@content-collections/mdx/react"
+import { allGuides } from "contentlayer/generated"
+import { useMDXComponent } from "next-contentlayer2/hooks"
 import { notFound } from "next/navigation"
 import { components } from "@/components/shared/mdx-components"
 import Pagination from "@/components/shared/pagination"
@@ -11,38 +11,38 @@ import { siteMetadata as meta } from "@/data/site-config"
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 	const { slug } = params
 
-	const postData = allPosts.find((post) => post._meta.path === slug)
+	const guideData = allGuides.find((guide) => guide._raw.sourceFileName === slug)
 
-	if (!postData) {
+	if (!guideData) {
 		return {
-			title: "Post not found",
-			description: "This post does not exist.",
+			title: "Guide not found",
+			description: "This guide does not exist.",
 		}
 	}
 
 	return {
-		title: postData.title,
-		description: postData.description,
+		title: guideData.title,
+		description: guideData.description,
 		openGraph: {
-			title: postData.title,
-			description: postData.description,
+			title: guideData.title,
+			description: guideData.description,
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.thumbnail}`,
-					alt: postData.title,
+					url: `${meta.url}/${guideData.thumbnail}`,
+					alt: guideData.title,
 				},
 			],
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: postData.title,
-			description: postData.description,
+			title: guideData.title,
+			description: guideData.description,
 			url: `${meta.url}/guides/${slug}`,
 			images: [
 				{
-					url: `${meta.url}/${postData.thumbnail}`,
-					alt: postData.title,
+					url: `${meta.url}/${guideData.thumbnail}`,
+					alt: guideData.title,
 				},
 			],
 		},
@@ -50,35 +50,36 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export const generateStaticParams = async () => {
-	const posts = allPosts
-	return posts.map((post) => ({ slug: post._meta.path }))
+	const posts = allGuides
+	return posts.map((guide) => ({ slug: guide._raw.flattenedPath }))
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-	const sortedPosts = allPosts.sort((a, b) => {
-		return a._meta.fileName.localeCompare(b._meta.fileName)
-	})
+	const sortedPosts = allGuides.sort((a, b) =>
+		a._raw.sourceFileName.localeCompare(b._raw.sourceFileName)
+	)
+	const postIndex = sortedPosts.findIndex((guide) => guide._raw.flattenedPath === params.slug)
 
-	const currentPostIndex = sortedPosts.findIndex((post) => post._meta.path === params.slug)
-	const post = sortedPosts[currentPostIndex]
+	const guide = sortedPosts[postIndex]
 
-	if (!post) notFound()
+	const MDXContent = useMDXComponent(guide?.body?.code || "")
 
-	const previousPost = sortedPosts[currentPostIndex - 1] || null
-	const nextPost = sortedPosts[currentPostIndex + 1] || null
+	if (!guide) return notFound()
+
+	const prev = sortedPosts[postIndex - 1] || null
+	const next = sortedPosts[postIndex + 1] || null
 
 	return (
 		<>
-			<MDXContent
-				style={{ scroll: "smooth" }}
-				code={post.mdx}
-				components={components}
-			/>
+			{MDXContent && (
+				<MDXContent
+					code={guide.body.code}
+					components={components}
+				/>
+			)}
 			<Pagination
-				previous={
-					previousPost ? { title: previousPost.title, path: previousPost._meta.path } : null
-				}
-				next={nextPost ? { title: nextPost.title, path: nextPost._meta.path } : null}
+				previous={prev ? { title: prev.title, path: prev._raw.flattenedPath } : null}
+				next={next ? { title: next.title, path: next._raw.flattenedPath } : null}
 			/>
 		</>
 	)

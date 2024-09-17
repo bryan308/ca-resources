@@ -1,4 +1,4 @@
-import { withContentCollections } from "@content-collections/next"
+import { withContentlayer } from "next-contentlayer2"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -16,4 +16,4 @@ const nextConfig = {
 	},
 }
 
-export default withContentCollections(nextConfig)
+export default withContentlayer(nextConfig)

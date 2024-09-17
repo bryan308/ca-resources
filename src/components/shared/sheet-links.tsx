@@ -6,21 +6,24 @@ import Link from "next/link"
 import { SheetTrigger } from "../ui/sheet"
 import { ArrowRight, Minus } from "lucide-react"
 import { GuidePath, Path, SheetLinksProps } from "@/lib/types"
-import { allPosts } from "content-collections"
+import { allGuides } from "contentlayer/generated"
 
 const SheetLinks: React.FC<SheetLinksProps> = ({ header, paths = [], isGuide = false }) => {
+	// * links: The links to display in the sheet.
 	const links = isGuide
-		? allPosts.map((post) => ({ slug: post._meta.path, title: post.title }))
+		? allGuides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.title }))
 		: paths
-
+	// * getHref: A function to get the href of the link.
 	const getHref = (item: GuidePath | Path) =>
 		isGuide ? `/guides/${(item as GuidePath).slug}` : (item as Path).path
 
+	// * getTitle: A function to get the title of the link.
 	const getTitle = (item: GuidePath | Path) =>
 		isGuide ? (item as GuidePath).title : (item as Path).text
 
 	const pathname = usePathname()
 
+	// * currentPath: A function to determine if the current path matches the link.
 	const currentPath = (isActive: boolean): string =>
 		isActive ? "font-semibold text-foreground" : "text-muted-foreground hover:text-foreground"
 
