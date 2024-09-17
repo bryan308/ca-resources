@@ -10,9 +10,9 @@ interface Contributor {
 }
 
 export default async function Introduction() {
-	const response = await fetch("https://ca-resources.vercel.app/api/contributors", {
-		next: { revalidate: 60 },
-	})
+	
+	const response = await fetch("/api/contributors")
+	
 	const contributors: Contributor[] = await response.json()
 
 	return (
