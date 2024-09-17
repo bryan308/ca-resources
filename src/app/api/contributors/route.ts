@@ -1,4 +1,4 @@
-// src/app/api/contributors/route.ts
+// * src/app/api/contributors/route.ts
 import { Octokit } from "@octokit/core"
 
 export async function GET() {
@@ -19,6 +19,7 @@ export async function GET() {
 			headers: { "Content-Type": "application/json" },
 		})
 	} catch (error) {
+		console.error("Error fetching contributors:", error)
 		return new Response("Error fetching contributors", { status: 500 })
 	}
 }
