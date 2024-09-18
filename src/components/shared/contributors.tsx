@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { cn } from "@/lib/utils"
 
 interface Contributor {
 	id: number
@@ -20,11 +21,11 @@ async function fetchContributors(): Promise<Contributor[]> {
 	return response.json()
 }
 
-export default async function Contributors() {
+export default async function Contributors({ className }: { className?: string }) {
 	const contributors = await fetchContributors()
 
 	return (
-		<div className="flex flex-wrap gap-2">
+		<div className={cn(className, "flex flex-wrap gap-2")}>
 			{contributors.map((contributor: Contributor) => (
 				<div key={contributor.id}>
 					{contributor.login !== "bryan308" && (

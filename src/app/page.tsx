@@ -42,7 +42,19 @@ export default function Introduction() {
 			</section>
 			<section>
 				<h2 className="text-2xl text-foreground font-bold mb-2">Contributors</h2>
-				<Contributors />
+				<Contributors className="mb-4" />
+				<p>
+					Interested in Contributing? Checkout our{" "}
+					<Link
+						href="https://github.com/bryan308/ca-resources/tree/main/.github/CONTRIBUTORS.md"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="link"
+					>
+						contribution guide
+					</Link>
+					.
+				</p>
 			</section>
 		</>
 	)

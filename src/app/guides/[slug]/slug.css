@@ -203,10 +203,6 @@ ul li ul {
 	@apply pt-2 pl-6 lg:pl-8;
 }
 
-td a {
-	@apply inline-flex;
-}
-
 code {
 	@apply inline relative my-px rounded-md bg-background-foreground text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
 	font-family: var(--geist-mono);
