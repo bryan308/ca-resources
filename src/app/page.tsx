@@ -46,7 +46,7 @@ export default function Introduction() {
 				<p>
 					Interested in Contributing? Checkout our{" "}
 					<Link
-						href="https://github.com/bryan308/ca-resources/tree/main/.github/CONTRIBUTORS.md"
+						href="https://github.com/bryan308/ca-resources/tree/main/.github/CONTRIBUTION.md"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="link"
