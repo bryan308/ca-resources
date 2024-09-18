@@ -1,46 +1,8 @@
-"use client"
-
-import { useEffect, useState } from "react"
-
-import PageHeader from "@/components/shared/page-header"
 import Link from "next/link"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Skeleton } from "@/components/ui/skeleton"
-
-interface Contributor {
-	id: number
-	login: string
-	html_url: string
-	avatar_url: string
-}
+import PageHeader from "@/components/shared/page-header"
+import Contributors from "@/components/shared/contributors"
 
 export default function Introduction() {
-	/**
-	 * TODO: Fetch contributors in server-side
-	 * ! Currently returns html not json :<
-	 * const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/contributors`)
-	 * const contributors: Contributor[] = await response.json()
-	 */
-
-	const [contributors, setContributors] = useState<Contributor[]>([])
-	const [loading, setLoading] = useState(true)
-
-	useEffect(() => {
-		const fetchContributors = async () => {
-			try {
-				const response = await fetch("/api/contributors")
-				const data = await response.json()
-				setContributors(data)
-			} catch (error) {
-				console.error("Error fetching contributors:", error)
-			} finally {
-				setLoading(false)
-			}
-		}
-
-		fetchContributors()
-	}, [])
-
 	return (
 		<>
 			<section>
@@ -80,43 +42,7 @@ export default function Introduction() {
 			</section>
 			<section>
 				<h2 className="text-2xl text-foreground font-bold mb-2">Contributors</h2>
-				<div className="flex flex-wrap gap-2">
-					{loading ? (
-						<>
-							{Array(2)
-								.fill(null)
-								.map((_, index) => (
-									<Skeleton
-										key={index}
-										className="size-10 rounded-full"
-									/>
-								))}
-						</>
-					) : (
-						<>
-							{contributors.length === 0 && <p>No contributors found.</p>}
-							{contributors.map((contributor: Contributor) => (
-								<div key={contributor.id}>
-									{contributor.login !== "bryan308" && (
-										<Avatar>
-											<Link
-												href={contributor.html_url}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<AvatarImage
-													src={contributor.avatar_url}
-													alt={contributor.login}
-												/>
-												<AvatarFallback>{contributor.login}</AvatarFallback>
-											</Link>
-										</Avatar>
-									)}
-								</div>
-							))}
-						</>
-					)}
-				</div>
+				<Contributors />
 			</section>
 		</>
 	)
