@@ -11,7 +11,7 @@ import { siteMetadata as meta } from "@/data/site-config"
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 	const { slug } = params
 
-	const guideData = allGuides.find((guide) => guide._raw.sourceFileName === slug)
+	const guideData = allGuides.find((guide) => guide._raw.flattenedPath === slug)
 
 	if (!guideData) {
 		return {
@@ -56,7 +56,7 @@ export const generateStaticParams = async () => {
 
 export default async function Page({ params }: { params: { slug: string } }) {
 	const sortedPosts = allGuides.sort((a, b) =>
-		a._raw.sourceFileName.localeCompare(b._raw.sourceFileName)
+		a._raw.flattenedPath.localeCompare(b._raw.flattenedPath)
 	)
 	const postIndex = sortedPosts.findIndex((guide) => guide._raw.flattenedPath === params.slug)
 

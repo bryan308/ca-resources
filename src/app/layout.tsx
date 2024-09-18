@@ -25,8 +25,23 @@ const sans = localFont({
 })
 
 export const metadata: Metadata = {
-	title: meta.title,
+	title: {
+		default: meta.title,
+		template: `%s – ${meta.title}`,
+	},
 	description: meta.description,
+	keywords: [
+		"Resources",
+		"HTML element Guides",
+		"Helpful websites",
+		"Colors",
+		"Icons",
+		"inspirations",
+		"Mockup Tools",
+		"Stock Photos",
+		"Typography",
+		"Web Development",
+	],
 	openGraph: {
 		type: "website",
 		url: meta.url,

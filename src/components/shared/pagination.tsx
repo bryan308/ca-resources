@@ -19,10 +19,10 @@ function Pagination({ next, previous }: IPagination) {
 				{previous && (
 					<Link
 						aria-label={`Go to previous guide: ${previous.title}`}
-						className="p-2 rounded-md flex items-end"
+						className="p-2 rounded-md flex items-end group"
 						href={`/guides/${previous.path}`}
 					>
-						<ChevronLeftIcon className="size-4 mb-1 text-muted-foreground" />
+						<ChevronLeftIcon className="size-4 mb-1 text-muted-foreground group-hover:text-foreground" />
 						<div className="group">
 							<span className="text-sm text-muted-foreground group-hover:text-foreground">
 								Previous
@@ -34,7 +34,7 @@ function Pagination({ next, previous }: IPagination) {
 				{next && (
 					<Link
 						aria-label={`Go to next guide: ${next.title}`}
-						className="p-2 rounded-md flex items-end"
+						className="p-2 rounded-md flex items-end group"
 						href={`/guides/${next.path}`}
 					>
 						<div className="group">
@@ -43,7 +43,7 @@ function Pagination({ next, previous }: IPagination) {
 							</span>
 							<div className="text-base text-foreground font-semibold">{next.title}</div>
 						</div>
-						<ChevronRightIcon className="size-4 mb-1 text-muted-foreground" />
+						<ChevronRightIcon className="size-4 mb-1 text-muted-foreground group-hover:text-foreground" />
 					</Link>
 				)}
 			</nav>
