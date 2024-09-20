@@ -58,16 +58,23 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const sortedPosts = allGuides.sort((a, b) =>
 		a._raw.flattenedPath.localeCompare(b._raw.flattenedPath)
 	)
-	const postIndex = sortedPosts.findIndex((guide) => guide._raw.flattenedPath === params.slug)
 
+	// Fetch the post based on the current slug
+	const postIndex = sortedPosts.findIndex((guide) => guide._raw.flattenedPath === params.slug)
 	const guide = sortedPosts[postIndex]
+
+	// Filter guides based on the category from the slug
+	const currentCategory = guide.category // Assuming the slug matches category (html/javascript)
+	const guidesInCategory = allGuides.filter((g) => g.category === currentCategory)
 
 	const MDXContent = useMDXComponent(guide?.body?.code || "")
 
 	if (!guide) return notFound()
 
-	const prev = sortedPosts[postIndex - 1] || null
-	const next = sortedPosts[postIndex + 1] || null
+	// For pagination, we need to look at the guides in the same category
+	const guideIndex = guidesInCategory.findIndex((g) => g._raw.flattenedPath === params.slug)
+	const prev = guidesInCategory[guideIndex - 1] || null
+	const next = guidesInCategory[guideIndex + 1] || null
 
 	return (
 		<>

@@ -4,7 +4,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-sm bg-neutral-950 border border-border text-white;
+	@apply text-sm bg-neutral-950 border border-border text-white max-w-[51.85rem];
 	font-family: var(--geist-mono);
 	letter-spacing: 0.2px;
 	white-space: pre;
@@ -94,10 +94,12 @@ pre > code {
 .token.string,
 .token.char,
 .token.regex,
+.token.function,
 .token.important,
 .token.variable {
 	color: white;
 }
+.token.property-access,
 .token.attr-name {
 	@apply text-[#ffffffbb];
 }
@@ -110,7 +112,6 @@ pre > code {
 .token.class,
 .token.atrule,
 .token.keyword,
-.token.function,
 .token.class-name,
 .token.comment,
 .token.prolog,
@@ -200,7 +201,7 @@ li::marker {
 }
 
 ul li ul {
-	@apply pt-2 pl-6 lg:pl-8;
+	@apply pt-2 pl-6 lg:pl-8 list-["-"];
 }
 
 code {

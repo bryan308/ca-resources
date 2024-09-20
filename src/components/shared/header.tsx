@@ -53,18 +53,25 @@ function Header() {
 										paths={overview}
 										isGuide={false}
 									/>
-									<Separator className="my-2" />
+									<Separator className="mb-2 mt-8" />
 									<SheetLinks
 										header="Resources"
 										paths={resources}
 										isGuide={false}
 									/>
-									<Separator className="my-2" />
+									<Separator className="mb-2 mt-8" />
 									<SheetLinks
-										header="Guides"
+										header="HTML Guides"
 										isGuide={true}
+										category="html"
 									/>
-									<Separator className="my-2" />
+									<Separator className="mb-2 mt-8" />
+									<SheetLinks
+										header="JavaScript Guides"
+										isGuide={true}
+										category="javascript"
+									/>
+									<Separator className="mb-2 mt-8" />
 									<ModeToggle />
 								</div>
 							</SheetContent>

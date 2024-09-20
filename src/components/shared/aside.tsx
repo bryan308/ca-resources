@@ -25,9 +25,15 @@ function Aside() {
 					</div>
 				</div>
 				<div className="mb-6">
-					<h4 className="text-foreground text-base font-medium pl-2">Guides</h4>
+					<h4 className="text-foreground text-base font-medium pl-2">HTML Guides</h4>
 					<div className="links">
-						<GuidestPaths />
+						<GuidestPaths category="html" />
+					</div>
+				</div>
+				<div className="mb-6">
+					<h4 className="text-foreground text-base font-medium pl-2">JavaScript Guides</h4>
+					<div className="links">
+						<GuidestPaths category="javascript" />
 					</div>
 				</div>
 			</ScrollArea>

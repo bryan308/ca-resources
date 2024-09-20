@@ -8,11 +8,19 @@ import { ArrowRight, Minus } from "lucide-react"
 import { GuidePath, Path, SheetLinksProps } from "@/lib/types"
 import { allGuides } from "contentlayer/generated"
 
-const SheetLinks: React.FC<SheetLinksProps> = ({ header, paths = [], isGuide = false }) => {
-	// * links: The links to display in the sheet.
+const SheetLinks: React.FC<SheetLinksProps & { category?: string }> = ({
+	header,
+	paths = [],
+	isGuide = false,
+	category, // New prop for filtering by category
+}) => {
+	// * Filter guides by category if the category prop is provided
+	const guides = category ? allGuides.filter((guide) => guide?.category?.trim() === category) : allGuides 
+
 	const links = isGuide
-		? allGuides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.title }))
+		? guides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.title }))
 		: paths
+
 	// * getHref: A function to get the href of the link.
 	const getHref = (item: GuidePath | Path) =>
 		isGuide ? `/guides/${(item as GuidePath).slug}` : (item as Path).path

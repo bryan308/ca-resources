@@ -8,7 +8,7 @@ interface IPagination {
 
 function Pagination({ next, previous }: IPagination) {
 	return (
-		<div className="p-6 xl:p-12">
+		<div className={`${(next || previous) && "p-6 xl:p-12"}`}>
 			<nav
 				aria-label="pagination"
 				role="navigation"

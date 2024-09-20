@@ -5,16 +5,17 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { allGuides } from "contentlayer/generated"
 
-function GuidestPaths() {
+function GuidestPaths({ category }: { category: string }) {
 	const pathname = usePathname()
 
 	// * currentPath: A function to determine if the current path matches the link.
 	const currentPath = (isActive: boolean): string =>
-		isActive ? "text-foreground bg-muted/50 font-semibold" : "text-muted-foreground"
+		isActive ? "text-foreground bg-muted/50" : "text-muted-foreground"
 
 	return (
 		<>
 			{allGuides
+				.filter((g) => g?.category && g.category.trim() === category.trim()) // Ensure g?.category is defined
 				.sort((a, b) => a.title.localeCompare(b.title))
 				.map((p, i: number) => {
 					const isActive = pathname === `/guides/${p._raw.flattenedPath}`

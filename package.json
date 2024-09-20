@@ -1,6 +1,6 @@
 {
   "name": "ca-resources",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -24,6 +24,7 @@
     "clsx": "^2.1.1",
     "contentlayer2": "^0.5.1",
     "geist": "^1.3.1",
+    "hast-util-from-html-isomorphic": "^2.0.0",
     "lucide-react": "^0.441.0",
     "next": "^14.2.6",
     "next-contentlayer2": "^0.5.1",
