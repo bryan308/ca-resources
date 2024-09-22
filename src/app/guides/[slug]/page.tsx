@@ -7,6 +7,7 @@ import { components } from "@/components/shared/mdx-components"
 import Pagination from "@/components/shared/pagination"
 
 import { siteMetadata as meta } from "@/data/site-config"
+import PageHeader from "@/components/shared/page-header"
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 	const { slug } = params
@@ -78,6 +79,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
 	return (
 		<>
+			<section>
+				<PageHeader>{guide.modTitle}</PageHeader>
+				<p className="text-muted-foreground text-sm">{guide.readingTime}</p>
+			</section>
 			{MDXContent && (
 				<MDXContent
 					code={guide.body.code}

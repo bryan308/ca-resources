@@ -142,7 +142,7 @@ pre > code {
 
 .data-table table thead th,
 .table table thead th {
-	@apply text-left text-wrap lg:text-nowrap text-muted-foreground 
+	@apply text-left text-wrap lg:text-nowrap text-foreground 
 	text-base font-normal tracking-tight p-3;
 }
 
@@ -205,8 +205,7 @@ ul li ul {
 }
 
 code {
-	@apply inline relative my-px rounded-md bg-background-foreground text-foreground px-[0.3rem] py-[0.2rem] text-sm border border-border;
-	font-family: var(--geist-mono);
+	@apply inline-block relative my-px rounded-md bg-muted font-[var(--geist-mono)] text-foreground px-[0.3rem] py-[0.1rem] text-sm leading-5 border border-border;
 }
 
 blockquote {

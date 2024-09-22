@@ -1,3 +1,4 @@
+import { Button } from "../ui/button"
 import {
 	BorderExample,
 	DataTable,
@@ -14,6 +15,7 @@ import {
 import { LoginForm } from "@/components/shared/login-form"
 
 export const components = {
+	Button,
 	BorderExample,
 	DataTable,
 	DataTableExample,

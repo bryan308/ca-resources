@@ -9,6 +9,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				times: ['"Times New Roman"', "serif"],
+			},
 			colors: {
 				background: {
 					DEFAULT: "hsl(var(--background))",

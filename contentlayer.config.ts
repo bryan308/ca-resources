@@ -26,9 +26,11 @@ export const Guide = defineDocumentType(() => ({
 	contentType: "mdx",
 	fields: {
 		title: { type: "string", required: true },
+		modTitle: { type: "string", required: true }, 
 		description: { type: "string", required: true },
 		thumbnail: { type: "string", required: true },
-		category: { type: "string", required: false },
+		category: { type: "string", required: true },
+		readingTime: { type: "string", required: true },
 	},
 	computedFields: {
 		url: { type: "string", resolve: (guides) => `/guides/${guides._raw.flattenedPath}` },

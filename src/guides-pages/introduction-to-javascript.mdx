@@ -1,22 +1,20 @@
 ---
 title: Introduction to JavaScript
+modTitle: Introduction to JavaScript
 description: JavaScript, invented by Brendan Eich in 1995, is a scripting language that enables users to create dynamic features on web pages. It allows users to store variables, manipulate text, and run code in response to events. Though often confused with Java, JavaScript is entirely different in both concept and design. It became an ECMA standard in 1997, with ECMAScript as the official language name, governed by the ECMA-262 specification.
 thumbnail: banner.png
 category: javascript
+readingTime: 8–11 MIN READ
 ---
 
 <section>
-# Introduction to JavaScript
-<p className="text-muted-foreground text-sm">8–11 MIN READ</p>
-</section>
-<section>
 ## Agenda
-1. Introduction to JavaScript
+1. Introduction to JavaScript.
 1. What JavaScript can do?
 1. Where to insert JavaScript?
-1. General rules in writing JavaScript
-1. Displaying output using JavaScript
-1. JavaScript comments
+1. General rules in writing JavaScript.
+1. Displaying output using JavaScript.
+1. JavaScript comments.
 </section>
 <section>
 ### JavaScript
@@ -32,9 +30,9 @@ category: javascript
 <section>
 ### Why Study JavaScript
 - JavaScript is one of the 3 languages all web developers must learn:
-  - **HTML** to define the content of web pages
-  - **CSS** to specify the layout of web pages
-  - **JavaScript** to program the behavior of web pages
+  - **HTML** to define the content of web pages.
+  - **CSS** to specify the layout of web pages.
+  - **JavaScript** to program the behavior of web pages.
 </section>
 <section>
 ## What JavaScript do?
@@ -78,7 +76,7 @@ category: javascript
 </section>
 <section>
 ### JavaScript can change HTML styles (CSS)
-```HTML {12} showLineNumber
+```HTML {12} showLineNumbers
 <body>
   <h1>What Can JavaScript Do?</h1>
   <p>JavaScript can change the style of HTML element.</p>
@@ -143,7 +141,7 @@ category: javascript
 ### JavaScript can be external from the HTML file
 - JavaScript can also be placed in external files just like external CSS.
 - External scripts are practical when the same code is used in many different web pages.
-- JavaScript files have the file extension of .js
+- JavaScript files have the file extension of .js.
 - To use an external script, put the name of the script file in the **src (source)** attribute of a `<script>` tag.
 - Users can place an external script reference in `<head>` or `<body>`. The script will behave as if it was located exactly where the `<script>` tag is located.
 > Note: External JavaScript cannot contain `<script>` tags.
@@ -175,16 +173,16 @@ function myFunction() {
 <section>
 ### Advantages of using external JavaScript
 - Placing scripts in external files offer some advantages like:
-  - It separates HTML tags and JavaScript code
-  - It makes HTML and JavaScript easier to read and maintain
+  - It separates HTML tags and JavaScript code.
+  - It makes HTML and JavaScript easier to read and maintain.
   - Cached JavaScript files can speed up page loads.
 </section>
 <section>
 ### External References
 - An external references can be referenced in 3 different ways.
-  - With a full URL (website link)
-  - With a file path (/js/javascript.js)
-  - With ant path (javascript.js)
+  - With a full URL (website link).
+  - With a file path (/js/javascript.js).
+  - With ant path (javascript.js).
 </section>
 <section>
 ## General Rules in Writing JavaScript
@@ -206,7 +204,7 @@ function myFunction() {
   let person = "Max";
   ```
   <MDXSeparator />
-- A good practice is to put spaces around operators `(= + - * /)` 
+- A good practice is to put spaces around operators `(= + - * /)`.
   ```JS
   let x = y + z;
   ```
@@ -216,7 +214,7 @@ function myFunction() {
   window.alert("My age is " + 12);
   ```
   <MDXSeparator />
-- We can insert HTML codes in JavaScript outputs
+- We can insert HTML codes in JavaScript outputs.
   ```JS
   document.write("<h1>Hello</h1>");
   ```
@@ -232,9 +230,9 @@ function myFunction() {
 <section>
 ## Displaying output using JavaScript
 - JavaScript can display data using different ways.
-  - Writing into an HTML element, using `innerHTML`
-  - Writing into an HTML output, using `document.write()`
-  - Writing into an alert box, using `window.alert()`
+  - Writing into an HTML element, using `innerHTML`.
+  - Writing into an HTML output, using `document.write()`.
+  - Writing into an alert box, using `window.alert()`.
 </section>
 <section>
 ### Using innerHTML
@@ -276,7 +274,7 @@ function myFunction() {
 </section>
 <section>
 ### Using window.alert
-- Using `window.alert()` activates an alert box that will display the user data on the web page
+- Using `window.alert()` activates an alert box that will display the user data on the web page.
 ```HTML {7} showLineNumbers
 <!DOCTYPE html>
 <html>
