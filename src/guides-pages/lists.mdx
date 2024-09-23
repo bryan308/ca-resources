@@ -24,7 +24,7 @@ readingTime: 9–12 MIN READ
 ### Unordered list tag pairs
 - An **unordered list** contains a list of items that don’t need to be in a particular order.
 - The `<ul>` and `</ul>` tags are used to create unordered or bulleted lists.
-- Items in the lists are added by using the `<li>` and `</li>` tags
+- Items in the lists are added by using the `<li>` and `</li>` tags.
 ```HTML {8, 14} showLineNumbers
 <!DOCTYPE html>
 <html>
@@ -78,16 +78,16 @@ readingTime: 9–12 MIN READ
 - Add background colors to lists and list items.
 </section>
 <section>
-### list-style-type property
+### `list-style-type` property
 - The **list-style-type** property is used to define the style of the list item marker.
 - The following values below explains how to change the marker for unordered list items.
   1. The **disc** value sets the list item marker to a bullet.
-  1. The **circle** value sets the list item marker to a circle.
-  1. The **square** value sets the list item marker to a square.
-  1. The **none** value will not display markers on list items.
+  2. The **circle** value sets the list item marker to a circle.
+  3. The **square** value sets the list item marker to a square.
+  4. The **none** value will not display markers on list items.
 </section>
 <section>
-#### Disc value
+#### `disc` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -105,7 +105,7 @@ readingTime: 9–12 MIN READ
 <UnorderedList type="disc" position="inside" />
 </section>
 <section>
-#### Circle value
+#### `circle` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -123,7 +123,7 @@ readingTime: 9–12 MIN READ
 <UnorderedList type="circle" position="inside" />
 </section>
 <section>
-#### Square value
+#### `square` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -141,7 +141,7 @@ readingTime: 9–12 MIN READ
 <UnorderedList type="square" position="inside" />
 </section>
 <section>
-#### None value
+#### `none` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Most Popular Web Browsers</h1>
@@ -159,16 +159,16 @@ readingTime: 9–12 MIN READ
 <UnorderedList type="none" />
 </section>
 <section>
-### list-style-type property
+### `list-style-type` property
 - The following values sets the marker for ordered list items.
   1. The **lower-alpha** value is used to set the marker of a list item in lowercase letters.
-  1. The **upper-alpha** value is used to set the marker of a list item in lowercase letters.
+  1. The **upper-alpha** value is used to set the marker of a list item in uppercase letters.
   1. The **lower-roman** value is used to set the marker of a list item in lowercase roman numbers.
-  1. The **upper-roman** value is used to set the marker of a list item in lowercase roman numbers.
+  1. The **upper-roman** value is used to set the marker of a list item in uppercase roman numbers.
 
 </section>
 <section>
-#### Lower alpha value
+#### `lower-alpha` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -188,7 +188,7 @@ readingTime: 9–12 MIN READ
 <OrderedList type="lower-alpha" listStyle="type" position="inside" />
 </section>
 <section>
-#### Upper alpha value
+#### `upper-alpha` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -208,7 +208,7 @@ readingTime: 9–12 MIN READ
 <OrderedList type="upper-alpha" listStyle="type" position="inside" />
 </section>
 <section>
-### Lower roman value
+#### `lower-roman` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -228,7 +228,7 @@ readingTime: 9–12 MIN READ
 <OrderedList type="lower-roman" listStyle="type" position="inside" />
 </section>
 <section>
-#### Upper roman value
+#### `upper-roman` value
 ```HTML {3} showLineNumbers
 <body>
   <h1>Phases of WDLC</h1>
@@ -248,7 +248,7 @@ readingTime: 9–12 MIN READ
 <OrderedList type="upper-roman" listStyle="type" position="inside" />
 </section>
 <section>
-### list-style-image property
+### `list-style-image` property
 - The **list-style-image** property used to specify an image as the list item marker in unordered lists.
 ```HTML {1} showLineNumbers
 <ul style=“list-style-image:url(‘image.jpg’)”>
@@ -274,13 +274,13 @@ readingTime: 9–12 MIN READ
 <OrderedList listStyle="" image="/guides/lists/checkmarker.png" />
 </section>
 <section>
-### list-style-position property
+### `list-style-position` property
 - The **list-style-position** property specifies the position of the list item marker in unordered lists.
 - The **outside** value means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically.
 - The **inside** value means that the bullet points will beinside the list item. The list item will be part of the text and push the text at the start.
 </section>
 <section>
-#### Outside value
+#### `outside` value
 ```HTML {3} showLineNumbers
 <body>
   <h3>To create a web page:</h3>
@@ -297,7 +297,7 @@ readingTime: 9–12 MIN READ
 <OrderedList position="outside" listStyle="position" />
 </section>
 <section>
-#### Inside value
+#### `inside` value
 ```HTML {3} showLineNumbers
 <body>
   <h3>To create a web page:</h3>
@@ -314,15 +314,15 @@ readingTime: 9–12 MIN READ
 <OrderedList position="inside" listStyle="position" />
 </section>
 <section>
-### list-style property
+### `list-style` property
 - The **list-style** property is a shorthand property. It is use to set all the list properties in one declaration.
 - When using the shorthand property, the order of the property values are:
-  1. list-style-type
-  1. list-style-position
-  1. list-style-image
+  1. **list-style-type**
+  1. **list-style-position**
+  1. **list-style-image**
 </section>
 <section>
-### Start attribute
+### `start` attribute
 - The **start** attribute of the `<ol></ol>` tag pair defines the start of the counting from specified number.
 ```HTML {3} showLineNumbers
 <body>
@@ -337,7 +337,7 @@ readingTime: 9–12 MIN READ
 ```
 <MDXSeparator />
 #### Output
-<OrderedList listStyle="position" position="inside" startt="10" />
+<OrderedList listStyle="position" position="inside" startVal="10" />
 </section>
 <section>
 ## Description List

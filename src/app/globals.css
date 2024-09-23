@@ -106,7 +106,7 @@ ul.links li {
 	@apply mb-0;
 }
 
-.truncate-description {
+.truncate-text {
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;

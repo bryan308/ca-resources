@@ -21,7 +21,7 @@ export interface GuideImageProps {
 export interface IListProps {
 	listStyle?: "type" | "position"
 	type?: "lower-alpha" | "decimal" | "disc" | "circle" | "square"
-	startt?: number
+	startVal?: number
 	position?: "inside" | "outside"
 	image?: string
 }

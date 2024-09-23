@@ -117,7 +117,7 @@ const SummaryTable = ({ children }: { children: React.ReactNode }) => {
 }
 SummaryTable.DisplayName = "SummaryTable"
 
-const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, image }) => {
+const OrderedList: React.FC<IListProps> = ({ listStyle, type, startVal, position, image }) => {
 	const font = "Times New Roman, serif"
 	const h1: React.CSSProperties = { fontFamily: font, margin: "1.34rem 0", fontSize: "2.25rem" }
 	const h3: React.CSSProperties = { fontFamily: font, margin: "1rem 0", fontSize: "1.5rem" }
@@ -141,7 +141,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 					<h1 style={h1}>Phases of WDLC</h1>
 					<ol
 						style={ol}
-						start={startt}
+						start={startVal}
 					>
 						{orderedList.ol1.map((ol) => {
 							return (
@@ -158,7 +158,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startt, position, 
 			) : listStyle === "position" ? (
 				<>
 					<h3 style={h3}>To create a web page:</h3>
-					<ol style={ol} start={startt}>
+					<ol style={ol} start={startVal}>
 						{orderedList.ol2.map((ol) => {
 							return (
 								<li

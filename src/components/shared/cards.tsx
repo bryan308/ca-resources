@@ -35,7 +35,7 @@ const Cards: React.FC<ICardsProps> = ({ data }) => {
 						>
 							{d.title}
 						</Link>
-						<span className="text-muted-foreground text-sm truncate-description">
+						<span className="text-muted-foreground text-sm truncate-text">
 							{d.description}
 						</span>
 					</div>

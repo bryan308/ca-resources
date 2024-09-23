@@ -65,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const guide = sortedPosts[postIndex]
 
 	// Filter guides based on the category from the slug
-	const currentCategory = guide.category // Assuming the slug matches category (html/javascript)
+	const currentCategory = guide.category // Assuming the slug matches category (html/js)
 	const guidesInCategory = allGuides.filter((g) => g.category === currentCategory)
 
 	const MDXContent = useMDXComponent(guide?.body?.code || "")

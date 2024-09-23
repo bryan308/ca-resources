@@ -33,7 +33,7 @@ function Aside() {
 				<div className="mb-6">
 					<h4 className="text-foreground text-base font-medium pl-2">JavaScript Guides</h4>
 					<div className="links">
-						<GuidestPaths category="javascript" />
+						<GuidestPaths category="js" />
 					</div>
 				</div>
 			</ScrollArea>

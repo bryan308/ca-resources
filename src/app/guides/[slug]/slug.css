@@ -160,6 +160,13 @@ pre > code {
 	width: 16ch;
 }
 
+h1 code,
+h2 code,
+h3 code,
+h4 code {
+	font-size: inherit;
+}
+
 h1 {
 	@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
 }

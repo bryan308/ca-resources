@@ -69,7 +69,7 @@ function Header() {
 									<SheetLinks
 										header="JavaScript Guides"
 										isGuide={true}
-										category="javascript"
+										category="js"
 									/>
 									<Separator className="mb-2 mt-8" />
 									<ModeToggle />

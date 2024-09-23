@@ -1,20 +1,20 @@
 ---
-title: Introduction
+title: Intro to JavaScript
 modTitle: Introduction to JavaScript
 description: JavaScript, invented by Brendan Eich in 1995, is a scripting language that enables users to create dynamic features on web pages. It allows users to store variables, manipulate text, and run code in response to events. Though often confused with Java, JavaScript is entirely different in both concept and design. It became an ECMA standard in 1997, with ECMAScript as the official language name, governed by the ECMA-262 specification.
 thumbnail: banner.png
-category: javascript
-readingTime: 8–11 MIN READ
+category: js
+readingTime: 9–12 MIN READ
 ---
 
 <section>
 ## Agenda
 1. Introduction to JavaScript.
-1. What JavaScript can do?
-1. Where to insert JavaScript?
-1. General rules in writing JavaScript.
-1. Displaying output using JavaScript.
-1. JavaScript comments.
+2. What JavaScript can do?
+3. Where to insert JavaScript?
+4. General rules in writing JavaScript.
+5. Displaying output using JavaScript.
+6. JavaScript comments.
 </section>
 <section>
 ### JavaScript
@@ -24,7 +24,7 @@ readingTime: 8–11 MIN READ
   - Perform operations on pieces of text.
   - Run codes in response to certain events occurring on a web page.
 - **JavaScript** and **Java** are completely different languages, both in concept and design.
-- JavaScript was invented by **Brendan** **Eich** in 1995 and became an **ECMA** (European Computer Manufacturers Association) standard in 1997.
+- JavaScript was invented by **Brendan Eich** in **1995** and became an **ECMA** (European Computer Manufacturers Association) standard in **1997**.
 - **ECMA-262** is the official name of the standard and **ECMAScript** is the official name of the language.
 </section>
 <section>
@@ -38,7 +38,7 @@ readingTime: 8–11 MIN READ
 ## What JavaScript do?
 ### JavaScript can change the HTML content
 - One of many **JavaScript** HTML methods is `getElementById()`.
-- This example uses the method to **"find"** an HTML element (with `id="demo"`) and changes the element content (**innerHTML**) to **"Hello JavaScript"**:
+- This example uses the method to "**find**" an HTML element (with `id="demo"`) and changes the element content (**innerHTML**) to "**Hello JavaScript**":
 ```HTML {6} showLineNumbers
 <body>
   <h1>What Can JavaScript Do?</h1>
@@ -141,8 +141,8 @@ readingTime: 8–11 MIN READ
 ### JavaScript can be external from the HTML file
 - JavaScript can also be placed in external files just like external CSS.
 - External scripts are practical when the same code is used in many different web pages.
-- JavaScript files have the file extension of .js.
-- To use an external script, put the name of the script file in the **src (source)** attribute of a `<script>` tag.
+- JavaScript files have the file extension of `.js`.
+- To use an external script, put the name of the script file in the **src** (source) attribute of a `<script>` tag.
 - Users can place an external script reference in `<head>` or `<body>`. The script will behave as if it was located exactly where the `<script>` tag is located.
 > Note: External JavaScript cannot contain `<script>` tags.
 > The use of `<script>` tag will be inside the html file.
@@ -180,9 +180,9 @@ function myFunction() {
 <section>
 ### External References
 - An external references can be referenced in 3 different ways.
-  - With a full URL (website link).
-  - With a file path (/js/javascript.js).
-  - With ant path (javascript.js).
+  - With a full URL **website link**.
+  - With a file path `/js/javascript.js`.
+  - With any path `javascript.js`.
 </section>
 <section>
 ## General Rules in Writing JavaScript
@@ -209,7 +209,7 @@ function myFunction() {
   let x = y + z;
   ```
   <MDXSeparator />
-- We can use the + symbol for concatenation.
+- We can use the `+` symbol for concatenation.
   ```JS
   window.alert("My age is " + 12);
   ```
@@ -229,17 +229,17 @@ function myFunction() {
 </section>
 <section>
 ## Displaying output using JavaScript
-- JavaScript can display data using different ways.
+- JavaScript can display data using different ways. 
   - Writing into an HTML element, using `innerHTML`.
   - Writing into an HTML output, using `document.write()`.
   - Writing into an alert box, using `window.alert()`.
 </section>
 <section>
 ### Using innerHTML
-- To access an HTML element, JavaScript can use the `document.getElementByID(id)` method.
+- To access an HTML element, JavaScript can use the `document.getElementById(id)` method.
 - The **id** attribute defines the HTML element where the method will be implemented.
 - The **innerHTML** property defines the HTML content that is visible within the page.
-- Changing the innerHTML property of an HTML element is the most common way to display data in HTML using JavaScript.
+- Changing the **innerHTML** property of an HTML element is the most common way to display data in HTML using JavaScript.
 
 ```HTML {8} showLineNumbers
 <!DOCTYPE html>
@@ -249,16 +249,16 @@ function myFunction() {
     <p>My First Paragraph.</p>
     <p id="demo"></p>
     <script>
-      document.getElementByID("demo").innerHTML = "My Second Paragraph";
+      document.getElementById("demo").innerHTML = "My Second Paragraph";
     </script>
   </body>
 </html>
 ```
 </section>
 <section>
-### Using document.write
+### Using `document.write`
 - Another way to display output on the HTML page is to use the `document.write()` method.
-- Document.write is only recommended for testing purposes. When deployed for actual use, using the document.write() after an HTML document is loaded, will delete all existing HTML.
+- Document.write is only recommended for testing purposes. When deployed for actual use, using the `document.write()` after an HTML document is loaded, will delete all existing HTML.
 ```HTML {7} showLineNumbers
 <!DOCTYPE html>
 <html>
@@ -273,7 +273,7 @@ function myFunction() {
 ```
 </section>
 <section>
-### Using window.alert
+### Using `window.alert`
 - Using `window.alert()` activates an alert box that will display the user data on the web page.
 ```HTML {7} showLineNumbers
 <!DOCTYPE html>
@@ -292,9 +292,8 @@ function myFunction() {
 ## JavaScript comments
 - JavaScript comments can be used to explain JavaScript code, and to make it more readable.
 - JavaScript comments can be used to prevent code execution, when testing alternative code.
-- We can use single line and multi-line comments in JavaScript.
-- Single line comments are the most often used method of placing comments, multi-line or block comments are used when documenting the project.
-
+- We can use **single line** and **multi-line** comments in JavaScript.
+- **Single line** comments are the most often used method of placing comments, **multi-line** or **block** comments are used when documenting the project.
 </section>
 <section>
 #### Single Line Comment
@@ -306,9 +305,9 @@ function myFunction() {
     <p id="myP"></p>
     <script>
       // Change content of heading:
-      document.getElementByID("myH") = "JavaScript Comments";
+      document.getElementById("myH") = "JavaScript Comments";
       // Change content of paragraph:
-      document.getElementByID("myP") = "My First Paragraph";
+      document.getElementById("myP") = "My First Paragraph";
     </script>
   </body>
 </html>
@@ -328,12 +327,29 @@ function myFunction() {
         the heading with id = "myH"
         and the paragraph with id = "mayP"
       */
-      document.getElementByID("myH") = "JavaScript Comments";
-      document.getElementByID("myP") = "My First Paragraph";
+      document.getElementById("myH") = "JavaScript Comments";
+      document.getElementById("myP") = "My First Paragraph";
     </script>
   </body>
 </html>
 ```
+</section>
+<section>
+## Summary Table
+<SummaryTable>
+| Terms                                                                        |   Definition                                                                          |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [`JavaScript`](#javascript)                                                  | A scripting language that allows users to implement complex features on the web pages.|
+| [`ECMA-262`](#javascript)                                                    | The official name of the **standard**.                                                |
+| [`ECMAScript`](#javascript)                                                  | The official name of the **language**.                                                |
+| [`<script></script>`](#javascript-can-be-placed-in-the-head-and-body-section)| An HTML tag to embed or reference JavaScript within a web page.                       |
+| [`.js`](#javascript-can-be-external-from-the-html-file)                      | The assigned file extension for JavaScript file.                                      |
+| [`id`](#using-innerhtml)                                                     | The attribute that defines the HTML element where the method will be implemented.     |
+| [`innerHTML`](#using-innerhtml)                                              | The property that defines the HTML content that is visible within the page.           |
+| [`document.getElementById`](#using-innerhtml)                                | One of the JavaScript method to acces the HTML element.                               |
+| [`document.write()`](#using-documentwrite)                                   | Another way to display output on the HTML page is to use this method.                 |
+| [`window.alert()`](#using-windowalert)                                       | Activates an alert box that will dispay the user data on the web page.                |
+</SummaryTable>
 </section>
 <section>
 ### Credits

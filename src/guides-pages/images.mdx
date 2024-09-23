@@ -89,18 +89,26 @@ readingTime: 9–11 MIN READ
 - Resizing is ideal for **large-sized images**.
 - Checking the actual size of the images is important when resizing to determine the new image size ratio.
 - The width and height attributes always define the width and height of the image in **pixels**.
-```HTML {5} showLineNumbers
+```HTML {5, 12-13} showLineNumbers
 <body>
   <img 
     src="images/sunflower.jpg" 
     alt="Sunflower"
     style="width: 300px; height: 200px;"
   />
+
+  <!-- or you can use the attributes width and height -->
+  <img 
+    src="images/sunflower.jpg" 
+    alt="Sunflower"
+    width="300"
+    height="200"
+  />
 </body>
 ```
 </section>
 <section>
-### The border property
+### The `border` property
 - The CSS border shorthand property allows users to specify the **width**, **style** and **color** of an element’s border.
   - **border-width**
   - **border-style** (required)
@@ -116,7 +124,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The broder-style property
+### The `broder-style` property
 - The **border-style** property specifies what kind of border to dispay.
 - The width can be set as a **dotted**, **dashed**, **solid**, **double**, **groove**, **ridge**, **inset**, **outset**, **none**, and **hidden**.
 <MDXSeparator />
@@ -133,7 +141,7 @@ readingTime: 9–11 MIN READ
 <div style={{margin: "8px 0", border: "3px hsl(var(--foreground))", borderStyle: "dotted dashed solid double" }}>A mixed border.</div>
 </section>
 <section>
-### The border-width property
+### The `border-width` property
 - The **border-width** property specifies the width of the four borders.
 - The width can be set as a specific size (in **px**, **pt**, **cm**, **em**) or by using one of the three pre-defined values: **thin**, **medium**, or **thick**.
 <MDXSeparator />
@@ -158,7 +166,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The border-color property
+### The `border-color` property
 - The **border-color** property is used to set the color of the four borders.
 - The **border-color** property can have from one to four values.
   1. **top border**
@@ -187,7 +195,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The border-radius property
+### The `border-radius` property
 - The **border-radius** property is used to add rounded borders to an element.
 ```HTML {5} showLineNumbers
 <body>
@@ -229,7 +237,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-## CSS background Properties
+## CSS background properties
 <br />
 ### The background-image property
 - The **background-image** property specifies an image to use as the background of an element.
@@ -241,7 +249,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The background-repeat property
+### The `background-repeat` property
 - The **background-repeat** property repeats an image both horizontally and vertically.
 - The value can be horizontally repeated (repeat-x), vertically repeated (repeat-y), or no-repeat.
 ```HTML {1} showLineNumbers
@@ -251,7 +259,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### background-attachment property
+### The `background-attachment` property
 - The **background-attachment** property specifies whether the background image should **scroll** or be **fixed**.
 ```HTML {3} showLineNumbers
 <body style="background-image: url(images/mickey.png); 
@@ -263,7 +271,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The background-position property
+### The `background-position` property
 - The **background-position** property is used to specify the position of the background image.
 ```HTML {4} showLineNumbers
 <body style="background-image: url(images/mickey.png); 
@@ -276,7 +284,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The background-size property
+### The `background-size` property
 - The CSS **background-size** property allows you to specify the size of background images.
 - The size can be specified in **lengths**, **percentages**, or by using one of the two keywords: **contain** or **cover**.
 ```HTML {5} showLineNumbers
@@ -291,7 +299,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The background property
+### The `background` property
 - The CSS **background** property sets all the background properties in one declaration.
 - When using the shorthand property the order of the property values is:
   - **background-color**
@@ -341,14 +349,14 @@ readingTime: 9–11 MIN READ
 <section>
 ## Summary Table
 <SummaryTable>
-| Attributes                                                                         |   Definition                                                                                                                                   |
-|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`src`](#html-image-attributes)                                                    | Specifies the path (URL) to the image.                                                                                                         |
-| [`alt`](#html-image-attributes)                                                    | Provides an alternate text for an image, if the user for some reason cannot view it. The value of the alt attribute should describe the image. |
-| [`width`](#the-width-height-property) and [`height`](#the-width-height-property)   | Always define the width and height of the image in pixels.                                                                                     |
-| [`rel`](#html-favicon)                                                             | Required attribute that specifies the relationship between the current document and the linked document. (**icon**)                            |
-| [`type`](#html-favicon)                                                            | Specifies the media type of the linked document. (**image/icon**)                                                                              |
-| [`href`](#html-favicon)                                                            | Specifies the location of the linked document.                                                                                                 |
+| Attributes                                                                                 | Definition                                                                                                                                     |
+|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`src`](#html-image-attributes)                                                            | Specifies the path (URL) to the image.                                                                                                         |
+| [`alt`](#html-image-attributes)                                                            | Provides an alternate text for an image, if the user for some reason cannot view it. The value of the alt attribute should describe the image. |
+| [`width`](#the-width-and-height-property) and [`height`](#the-width-and-height-property)   | Always define the width and height of the image in pixels.                                                                                     |
+| [`rel`](#html-favicon)                                                                     | Required attribute that specifies the relationship between the current document and the linked document. (**icon**)                            |
+| [`type`](#html-favicon)                                                                    | Specifies the media type of the linked document. (**image/icon**)                                                                              |
+| [`href`](#html-favicon)                                                                    | Specifies the location of the linked document.                                                                                                 |
 </SummaryTable>
 </section>
 <section>

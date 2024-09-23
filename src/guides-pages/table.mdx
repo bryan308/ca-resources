@@ -61,7 +61,7 @@ table, td, tr {
 <TableExample example_id={3} />
 </section>
 <section>
-### Students List Web Page With Border-collapse Property
+### Students List Web Page With `border-collapse` Property
 ```CSS {2} showLineNumbers
 table, td, tr {
   border-collapse: collapse;
@@ -71,12 +71,12 @@ table, td, tr {
 <TableExample example_id={4} />
 </section>
 <section>
-### The thead and tbody Elements
+### The `thead` and `tbody` Elements
 - **thead**: used to group header content in an HTML table
 - **tbody**: used to group the body content in an HTML table.
 </section>
 <section>
-### Students List Web Page With Head and Tbody Elements
+### Students List Web Page With `thead` and `tbody` Elements
 ``` CSS {1,5} showLineNumbers
 thead {
   background-color: midnightblue;
@@ -164,7 +164,7 @@ tbody {
 - **rowspan** : specifies the number of rows a cell should span.
 </section>
 <section>
-### Students List Web Page With Border-collapse Property
+### Students List Web Page With `border-collapse` Property
 ```HTML showLineNumbers
 <tr>
   <th colspan="3">Assignments</th>
@@ -232,7 +232,7 @@ tbody {
 - The size of the table is define using **width** and **height** properties.
 </section>
 <section>
-### Table Alginment
+### Table Alignment
 - The **text-align** property is used to set the horizontal alignment of the content in `<th>` and `<td>` elements.
 - The **vertical-align** property sets the vertical alignment of the content in `<th>` and `<td>`.
 - The value for **vertical-align** property can be **top**, **bottom**, or **middle**.
@@ -244,18 +244,25 @@ tbody {
 <section>
 ### Hoverable Table
 - Use the **:hover** selector on `<tr>` to highlight table rows on mouse over.
+<MDXSeparator />
+#### Example
+```CSS
+tbody tr:hover {
+  background-color: lightblue;
+}
+```
 </section>
 <section>
 ## Summary Table
 <SummaryTable>
-| Element                               | Definition                                                                                  |
+| Elements                              | Definition                                                                                  |
 |---------------------------------------|---------------------------------------------------------------------------------------------|
 | [`<table>`](#table-elements)          | Defines the table element.                                                                  |
 | [`<tr>`](#table-elements)             | Defines a table row.                                                                        |
 | [`<th>`](#table-elements)             | Defines a table header cell. By default, table headers are bold and centered                |
 | [`<td>`](#table-elements)             | Defines a table data cell.                                                                  |
-| [`<thead>`](#the-thead-and-tbody-elements)| Use to group header content in an HTML Table.                                               |
-| [`<tbody>`](#the-thead-and-tbody-elements)| Use to group the body content in an HTML Table.                                             |
+| [`<thead>`](#the-thead-and-tbody-elements)| Use to group header content in an HTML Table.                                           |
+| [`<tbody>`](#the-thead-and-tbody-elements)| Use to group the body content in an HTML Table.                                         |
 </SummaryTable>
 </section>
 <section>
