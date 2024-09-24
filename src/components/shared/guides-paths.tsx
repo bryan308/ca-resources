@@ -15,8 +15,8 @@ function GuidestPaths({ category }: { category: string }) {
 	return (
 		<>
 			{allGuides
-				.filter((g) => g?.category && g.category.trim() === category.trim()) // Ensure g?.category is defined
-				.sort((a, b) => a.title.localeCompare(b.title))
+				.filter((g) => g?.category && g.category.trim() === category.trim())
+				// .sort((a, b) => a.modTitle.localeCompare(b.modTitle))
 				.map((p, i: number) => {
 					const isActive = pathname === `/guides/${p._raw.flattenedPath}`
 					return (
@@ -29,7 +29,7 @@ function GuidestPaths({ category }: { category: string }) {
 									currentPath(isActive)
 								)}
 							>
-								{p.title}
+								{p.modTitle}
 							</Link>
 						</div>
 					)

@@ -1,10 +1,10 @@
 ---
-title: Table
-modTitle: Creating Tables on a Website
+title: Creating Tables on a Website
+modTitle: Table
 description: HTML tables allow web developers to arrange data into rows and columns.
 thumbnail: table.jpg
 category: html
-readingTime: 7–8 MIN READ
+readingTime: 7–8 MINS READ
 ---
 
 <section>
@@ -14,7 +14,7 @@ readingTime: 7–8 MIN READ
 1. Create a borderless table for a horizontal navigation bar with text links.
 1. Design tables using partition elements like `<thead></thead>` and `<tbody></tbody>`.
 1. Create tables in a web page that span cells using rowspan and colspan attributes.
-1. Improve the appearance of table using additional CSS propertie.
+1. Improve the appearance of table using additional CSS properties.
 </section>
 <section>
 ### Data Tables vs Layout Tables
@@ -44,20 +44,21 @@ readingTime: 7–8 MIN READ
 </section>
 <section>
 ### Formatting a Data Table
-- **border-style**: use to specify a table border
-- **border-width**: use to specify the border’s width
-- **border**: a shorthand property that handles a set of border-related properties
-- **padding**: use to specify the space between the cell content and its border
-- **border-collapse**: use to collapse borders into just one border
+- `border-style`: use to specify a table border.
+- `border-width`: use to specify the border’s width.
+- `border`: a shorthand property that handles a set of border-related properties.
+- `padding`: use to specify the space between the cell content and its border.
+- `border-collapse`: use to collapse borders into just one border.
 </section>
 <section>
-### Students List Web Page With Border Property
+### Students List Web Page With `border` Property
 ```CSS {2} showLineNumbers
 table, td, tr {
   border: thin solid;
 }
 ```
 <MDXSeparator />
+#### Output
 <TableExample example_id={3} />
 </section>
 <section>
@@ -68,6 +69,7 @@ table, td, tr {
 }
 ```
 <MDXSeparator />
+#### Output
 <TableExample example_id={4} />
 </section>
 <section>
@@ -160,8 +162,8 @@ tbody {
 </section>
 <section>
 ### Cell Spanning
-- **colspan** : defines the number of columns a table cell should span.
-- **rowspan** : specifies the number of rows a cell should span.
+- `colspan`: defines the number of columns a table cell should span.
+- `rowspan`: specifies the number of rows a cell should span.
 </section>
 <section>
 ### Students List Web Page With `border-collapse` Property
@@ -233,17 +235,17 @@ tbody {
 </section>
 <section>
 ### Table Alignment
-- The **text-align** property is used to set the horizontal alignment of the content in `<th>` and `<td>` elements.
-- The **vertical-align** property sets the vertical alignment of the content in `<th>` and `<td>`.
-- The value for **vertical-align** property can be **top**, **bottom**, or **middle**.
+- The `text-align` property is used to set the horizontal alignment of the content in `<th>` and `<td>` elements.
+- The `vertical-align` property sets the vertical alignment of the content in `<th>` and `<td>`.
+- The value for `vertical-align` property can be **top**, **bottom**, or **middle**.
 </section>
 <section>
 ### Horizontal Dividers
-- Use the **border-bottom** property to `<th>` and `<td>` for horizontal dividers.
+- Use the `border-bottom` property to `<th>` and `<td>` for horizontal dividers.
 </section>
 <section>
 ### Hoverable Table
-- Use the **:hover** selector on `<tr>` to highlight table rows on mouse over.
+- Use the `:hover` selector on `<tr>` to highlight table rows on mouse over.
 <MDXSeparator />
 #### Example
 ```CSS
@@ -255,14 +257,22 @@ tbody tr:hover {
 <section>
 ## Summary Table
 <SummaryTable>
-| Elements                              | Definition                                                                                  |
-|---------------------------------------|---------------------------------------------------------------------------------------------|
-| [`<table>`](#table-elements)          | Defines the table element.                                                                  |
-| [`<tr>`](#table-elements)             | Defines a table row.                                                                        |
-| [`<th>`](#table-elements)             | Defines a table header cell. By default, table headers are bold and centered                |
-| [`<td>`](#table-elements)             | Defines a table data cell.                                                                  |
-| [`<thead>`](#the-thead-and-tbody-elements)| Use to group header content in an HTML Table.                                           |
-| [`<tbody>`](#the-thead-and-tbody-elements)| Use to group the body content in an HTML Table.                                         |
+| Terms                                           | Definition                                                                                                                                                 |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`Data Tables`](#data-tables-vs-layout-tables)  | Very often holds numbers, but they can hold text and other types of content as well.                                                                       |
+| [`Layout Tables`](#data-tables-vs-layout-tables)| Are not limited to holding data - they are allowed to hold any type of content. Their purpose is to position that content with a row-column layout scheme. |
+</SummaryTable>
+</section>
+<section>
+<SummaryTable>
+| Elements                                  | Definition                                                                                  |
+|-------------------------------------------|---------------------------------------------------------------------------------------------|
+| [`<table>`](#table-elements)              | Defines the table element.                                                                  |
+| [`<tr>`](#table-elements)                 | Defines a table row.                                                                        |
+| [`<th>`](#table-elements)                 | Defines a table header cell. By default, table headers are bold and centered                |
+| [`<td>`](#table-elements)                 | Defines a table data cell.                                                                  |
+| [`<thead>`](#the-thead-and-tbody-elements)| Use to group header content in an HTML Table.                                               |
+| [`<tbody>`](#the-thead-and-tbody-elements)| Use to group the body content in an HTML Table.                                             |
 </SummaryTable>
 </section>
 <section>
@@ -275,7 +285,7 @@ tbody tr:hover {
 </section>
 <section>
 <SummaryTable>
-| Styles                                       | Definition                                                                                  |
+| Style Properties                             | Definition                                                                                  |
 |----------------------------------------------|---------------------------------------------------------------------------------------------|
 | [`border-style`](#formatting-a-data-table)   | Use to specify the table border.                                                            |
 | [`border-width`](#formatting-a-data-table)   | Use to specify the border’s width.                                                          |

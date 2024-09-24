@@ -1,10 +1,10 @@
 ---
-title: Intro to JavaScript
-modTitle: Introduction to JavaScript
+title: Introduction to JavaScript
+modTitle: Intro to JavaScript
 description: JavaScript, invented by Brendan Eich in 1995, is a scripting language that enables users to create dynamic features on web pages. It allows users to store variables, manipulate text, and run code in response to events. Though often confused with Java, JavaScript is entirely different in both concept and design. It became an ECMA standard in 1997, with ECMAScript as the official language name, governed by the ECMA-262 specification.
-thumbnail: banner.png
+thumbnail: introduction-to-javascript.jpg
 category: js
-readingTime: 9–12 MIN READ
+readingTime: 9–12 MINS READ
 ---
 
 <section>
@@ -222,8 +222,8 @@ function myFunction() {
 - JavaScript code can be grouped together in blocks by placing them inside curly brackets.
   ```JS
   function myFunction() {
-    document.getElementById("demo1").innerTHML = "Hello everyone!";
-    document.getElementById("demo2").innerTHML = "How are you?";
+    document.getElementById("demo1").innerHTML = "Hello everyone!";
+    document.getElementById("demo2").innerHTML = "How are you?";
   }
   ```
 </section>
@@ -282,7 +282,7 @@ function myFunction() {
     <h2>Using innerHTML</h2>
     <p>My First Paragraph.</p>
     <script>
-      document.alert("This is an alert box!");
+      window.alert("This is an alert box!");
     </script>
   </body>
 </html>
@@ -325,10 +325,10 @@ function myFunction() {
       /*
         The code below will change 
         the heading with id = "myH"
-        and the paragraph with id = "mayP"
+        and the paragraph with id = "myP"
       */
-      document.getElementById("myH") = "JavaScript Comments";
-      document.getElementById("myP") = "My First Paragraph";
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      document.getElementById("myP").innerHTML = "My First Paragraph";
     </script>
   </body>
 </html>

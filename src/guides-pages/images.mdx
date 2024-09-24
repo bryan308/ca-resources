@@ -1,10 +1,10 @@
 ---
-title: Images
-modTitle: Inserting Images
+title: Inserting Images
+modTitle: Images
 description: Images can improve the design and the appearance of a web page.
 thumbnail: images.jpg
 category: html
-readingTime: 9–11 MIN READ
+readingTime: 9–11 MINS READ
 ---
 
 <section>
@@ -12,7 +12,7 @@ readingTime: 9–11 MIN READ
 1. HTML Images
 1. Image Attributes
 1. Types of Web Page Image
-1. Absolutel vs. Relative URL
+1. Absolute vs. Relative URL
 1. Image CSS Properties
 1. background Properties
 </section>
@@ -37,7 +37,6 @@ readingTime: 9–11 MIN READ
 </section>
 <section>
 ## Types of Web Page Images
-<br />
 - **Graphics Interchange Format** (`.gif`) use for images with few colors (&lt;256) and allows transparent backgrounds. It uses compression techniques called LZW compression, to make it smaller to download on the Web.
 <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}>
   <GuideImage src='/guides/images/giphy-1.gif' alt='GIF example 1' unoptimized width={240} height={240} maxWidth="20%"/>
@@ -60,7 +59,6 @@ readingTime: 9–11 MIN READ
 </section>
 <section> 
 ## Absolute and Relative Image URL
-<br />
 - **ABSOLUTE URL** is a uniform resource locator (web address) that begins with **http://** and then specifies a website, possibly a folder and a then a filename.
 - **RELATIVE URL** is a uniform resource locator that is relative to the current HTML page location. The relative URL will specify the image location (rather that the complete site).
 <MDXSeparator />
@@ -83,8 +81,7 @@ readingTime: 9–11 MIN READ
 </section>
 <section>
 ## CSS Properties
-<br />
-### The width and height property
+### The `width` and `height` property
 - We can use the **style** attribute to specify the **width** and **height** of an image.
 - Resizing is ideal for **large-sized images**.
 - Checking the actual size of the images is important when resizing to determine the new image size ratio.
@@ -208,7 +205,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The display and margin property
+### The `display` and `margin` property
 - The **display** property specifies if/how an element is displayed. Giving a value of **block** on the display property will let the element take the whole line on its own.
 - The **margin** property is used to create space around elements. Giving a value of **auto** to the margin property gives the element equal amounts of spaces on the left and right side making it appear in the center.
 ```HTML {5} showLineNumbers
@@ -222,7 +219,7 @@ readingTime: 9–11 MIN READ
 ```
 </section>
 <section>
-### The float property
+### The `float` property
 - The CSS **float** property specifies how an element should float.
 - The **float** property is used for positioning and formatting content e.g. let an image float left to the text in a container.
 - The **float** property can have **left**, **right**, **none**, or **inherit** value.
@@ -238,8 +235,7 @@ readingTime: 9–11 MIN READ
 </section>
 <section>
 ## CSS background properties
-<br />
-### The background-image property
+### The `background-image` property
 - The **background-image** property specifies an image to use as the background of an element.
 - By default, the **image is repeated** so it covers the entire element.
 ```HTML {1} showLineNumbers
@@ -323,7 +319,6 @@ readingTime: 9–11 MIN READ
 </section>
 <section>
 ## HTML Favicon
-<br />
 - A **favicon** is a small image displayed next to the page title in the browser tab.
 - To add a favicon to your website, use the `<link />` element within the head section of your HTML document.
 - The `<link />` tag defines the relationship between the current document and an external resource.

@@ -1,10 +1,10 @@
 ---
-title: Form
-modTitle: HTML Form
+title: HTML Form
+modTitle: Form
 description: An HTML form is used to collect user input. The user input is most often sent to a server for processing.
 thumbnail: form.jpg
 category: html
-readingTime: 15–19 MIN READ
+readingTime: 15–19 MINS READ
 ---
 
 <section>
@@ -36,12 +36,12 @@ HTML **forms** are a fundamental part of web development, enabling user interact
 ### HTML Form attributes
 - The **action attribute** defines the action to be performed when the form is submitted.
 - The **method attribute** specifies the HTTP method to be used when submitting the form data.
-- The form-data can be sent as URL variables (with `method="get"`) or as HTTP post transaction (with `method="post"`).
+- The form-data can be sent as URL variables (with `method="get"`) or as HTTP POST transaction (with `method="post"`).
 </section>
 <section>
 ### HTML Form Elements
 The HTML `<form></form>` element can contain one or more of the following form elements.
-<br />
+<MDXSeparator />
 - `<input>`
 - `<label></label>`
 - `<select></select>`
@@ -58,7 +58,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - The `<label></label>` element defines a label for several form elements.
 - The `<label></label>` element is useful for screenreader users.
 - The **for** attribute of the `<label>` tag should be equal to the **id** attribute of the `<input>` element to bind them together.
-<br />
+<MDXSeparator />
 ```HTML {2} showLineNumbers
 <form>
   <label for="sname">Student Name</label>
@@ -74,7 +74,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - The **name** attribute is use to reference elements in a JavaScript, or to reference for data after a form is submitted.
 </section>
 <section>
-### Input types text and password
+### Input types `text` and `password`
 - `<input type="text">` defines a one-line text input field.
 - `<input type="password">` defines a password field. The characters in a password field are masked (shown as asterisks or circles).
 ```HTML {3, 5} showLineNumbers
@@ -87,7 +87,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input types submit, reset and button
+### Input types `submit`, `reset` and `button`
 - `<input type="submit">` defines a button for submitting form data to a form handler
 - `<input type="reset">` defines a reset button that will reset all form values to their default values
 - `<input type="button">` defines a programmable button
@@ -104,7 +104,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input types radio and checkbox
+### Input types `radio` and `checkbox`
 - `<input type="radio">` defines a radio button. A radio button lets a user select only one of a limited number of choices.
 - `<input type="checkbox">` defines a checkbox. Checkboxes lets users select zero or more options of a limited number of choices.
 ```HTML {3-4, 6-9} showLineNumbers
@@ -121,7 +121,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input types email, number and date
+### Input types `email`, `number` and `date`
 - `<input type="email">` is used for input fields that should contain an email address.
 - `<input type="date">` is used for input fields that should contain a date.
 - `<input type="number">` defines a numeric input field.
@@ -139,7 +139,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input types range, tel
+### Input types `range` and `tel`
 - `<input type="range">` defines a control for entering a number whose exact value is not important (slider control). Default range is 0 to 100.
 - `<input type="tel">` is used for input fields that should contain a telephone number.
 ```HTML {3, 5-11} showLineNumbers
@@ -159,11 +159,12 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### Input types url, time and file
+### Input types `url`, `time` and `file`
 - `<input type="url">` is used for input fields that should contain a URL address.
 - `<input type="time">` allows the user to select a time.
 - `<input type="file">` allows the user to choose a file from their device or computer’s storage.
-> Adding the `multiple` attribute to `<input type="file">` allows users to select more than one file. 
+> Adding the `multiple` attribute to `<input type="file">` allows users to select more than one file from their device or computer's storage. 
+>
 > **Example**: `<input type="file" multiple>`
 ```HTML {3, 5, 7} showLineNumbers
 <form>
@@ -181,7 +182,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 </section>
 <section>
 ## Input Attributes
-### value, readonly and disabled
+### `value`, `readonly` and `disabled`
 - The **value** attribute specifies the initial value for an input field.
 - The **readonly** attribute specifies that the input field is read only (cannot be changed)
 - The **disabled** attribute specifies that the input field is disabled. A disabled input field is unusable and unclickable, and its value will not be sent when submitting a form.
@@ -197,7 +198,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The size and maxlength
+### The `size` and `maxlength`
 - The **size** attribute specifies the size (in characters) for the input field.
 - The **maxlength** attribute specifies the maximum allowed length for the input field. With a maxlength attribute, the input field will not accept more than the allowed number of characters.
 ```HTML {5, 7} showLineNumbers
@@ -214,7 +215,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The min, max and step
+### The `min`, `max` and `step`
 - The **min** and **max** attributes specify the minimum and maximum values for an `<input>` element.
 - The **step** attribute specifies the legal number of intervals for an `<input>` element.
 ```HTML {3} showLineNumbers
@@ -227,7 +228,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The placeholder, required and autofocus
+### The `placeholder`, `required` and `autofocus`
 - The **placeholder** attribute specifies a hint describing an input field’s expected value. The hint is displayed in the field before the user enters a value.
 - The **required** attribute specifies that an input field must be filled out before submitting the form.
 - The **autofocus** attribute specifies that an input field should automatically get focus when the page loads.
@@ -240,7 +241,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The pattern and title
+### The `pattern` and `title`
 - The **pattern** attribute specifies a regular expression that the input element’s value is checked against.
 - The **title** attribute is used to describe the pattern to the user.
 ```HTML {3} showLineNumbers
@@ -253,7 +254,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The select and option elements
+### The `select` and `option` elements
 - The `<select></select>` element defines a drop-down list.
 - The `<option></option>` element defines an option that can be selected.
 - Use the **selected** attribute to the `<option>` element to define a pre-selected option.
@@ -270,7 +271,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The datalist element
+### The `datalist` element
 - The `<datalist></datalist>` tag specifies a list of pre-defined options for an `<input>` element.
 - The `<datalist></datalist>` tag is used to provide an "autocomplete" feature for `<input>` elements. Users will see a drop-down list of pre-defined options as they input data.
 - The `<datalist>` element‘s **id** attribute must be equal to the `<input>` element‘s **list** attribute (this binds them together).
@@ -287,7 +288,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The textarea element
+### The `textarea` element
 - The `<textarea>` and `</textarea>` element defines a multi-line input field.
 - This element is often used in a form, to collect user inputs like comments or reviews.
 - The **rows** attribute specifies the visible number of lines in a text area.
@@ -300,7 +301,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The fieldset and legend element
+### The `fieldset` and `legend` element
 - The `<fieldset></fieldset>` element is used to group related data in a form.
 - The `<legend></legend>` elements defines a caption for `<fieldset>` element.
 ```HTML {2-3, 9} showLineNumbers
@@ -317,7 +318,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The button element
+### The `button` element
 - The `<button></button>` element is used to create a clickable button.
 - The `<button></button>` element can be used to trigger custom JavaScript functions.
 ```HTML showLineNumbers
@@ -347,7 +348,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 <SummaryTable>
 | Attributes                                                       |   Definition                                                                                           |
 |------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [`action`](#html-form-attributes)                                | Defines the action to be performeed when the form is submitted.                                        |
+| [`action`](#html-form-attributes)                                | Defines the action to be performed when the form is submitted.                                         |
 | [`method`](#html-form-attributes)                                | Specifies the HTTP method used when submitting the form data. (`GET` or `POST`)                        |
 | [`for`](#the-label-element)                                      | Use in label tag that should be equal to `id` attribute of the `<input>` element to bind them together.|
 | [`type`](#the-input-element)                                     | Specifies the type of input element to display.                                                        |
@@ -362,7 +363,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 | [`step`](#the-min-max-and-step)                                  | Specifies the legal number of intervals for an `<input>` element.                                      |
 | [`placeholder`](#the-placeholder-required-and-autofocus)         | Specifies a hint describing an input field’s expected value.                                           |
 | [`required`](#the-placeholder-required-and-autofocus)            | Specifies that an input field must be filled out before submitting the form.                           |
-| [`autofocus`](#the-placeholder-required-and-autofocus)           | Specifes that an input field should automatically should focus when the page loads.                    |
+| [`autofocus`](#the-placeholder-required-and-autofocus)           | Specifies that an input field should automatically should focus when the page loads.                   |
 | [`pattern`](#the-pattern-and-title)                              | Specifies a regular expression that the input element’s value is checked against.                      |
 | [`title`](#the-pattern-and-title)                                | Use to describe the pattern to the user.                                                               |
 | [`selected`](#the-select-option-elements)                        | Use to the `<option>` element to define a pre-selected option.                                         |
@@ -373,8 +374,8 @@ The HTML `<form></form>` element can contain one or more of the following form e
 </section>
 <section>
 <SummaryTable>
-| Types                                           |   Definition                                                                                                                       |
-|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Types                                           |   Definition                                                                                           |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [`text`](#input-types-text-and-password)        | Defines a one-line text input field.                                                                   |
 | [`password`](#input-types-text-and-password)    | Defines a password field. The characters in password field are masked (shown as asterisk or circles).  |
 | [`submit`](#input-types-submit-reset-and-button)| Defines a button for submitting form data to a form handler.                                           |

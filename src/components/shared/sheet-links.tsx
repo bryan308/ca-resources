@@ -18,7 +18,7 @@ const SheetLinks: React.FC<SheetLinksProps & { category?: string }> = ({
 	const guides = category ? allGuides.filter((guide) => guide?.category?.trim() === category) : allGuides 
 
 	const links = isGuide
-		? guides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.title }))
+		? guides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.modTitle }))
 		: paths
 
 	// * getHref: A function to get the href of the link.
@@ -40,7 +40,7 @@ const SheetLinks: React.FC<SheetLinksProps & { category?: string }> = ({
 			<h4 className="mb-2 text-lg">{header}</h4>
 			{links.length > 0
 				? links
-						.sort((a, b) => getTitle(a).localeCompare(getTitle(b)))
+						// .sort((a, b) => getTitle(a).localeCompare(getTitle(b)))
 						.map((item, i) => {
 							const isActive = pathname === getHref(item)
 

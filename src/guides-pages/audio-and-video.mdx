@@ -1,10 +1,10 @@
 ---
-title: Audio and Video
-modTitle: Integrating Audio and Video
+title: Integrating Audio and Video
+modTitle: Audio and Video
 description: Integrating audio and video in HTML5 allows embedding media files directly into web pages for native playback.
 thumbnail: audio-and-video.jpg
 category: html
-readingTime: 6–7 MIN READ
+readingTime: 6–7 MINS READ
 ---
 
 <section>
@@ -17,7 +17,7 @@ readingTime: 6–7 MIN READ
 1. Making audio files work with older browsers.
 </section>
 <section>
-### HTML div Element
+### HTML `<div></div>` Element
 - The `<div>` tag defines a division or a section in an HTML document.
 - The `<div>` tag is used as a container for HTML elements which is then styled with CSS or manipulated with JavaScript.
 - The `<div>` tag is easily styled by using the class or id attribute.
@@ -25,13 +25,13 @@ readingTime: 6–7 MIN READ
 - By default, browsers always place a line break before and after the `<div>` element.
 </section>
 <section>
-### HTML span Element
+### HTML `<span></span>` Element
 - The `<span>` tag is an inline container used to mark up a part of a text, or a part of a document.
 - The `<span>` tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
 - The `<span>` tag is much like the `<div>` element, but `<div>` is a block-level element and `<span>` is an inline element.
 </section>
 <section>
-### HTML div and span pairs
+### HTML `<div></div>` and `<span></span>` pairs
 ```HTML {17, 19, 31} showLineNumbers
 <head>
   <meta charset="utf-8" />
@@ -93,18 +93,16 @@ readingTime: 6–7 MIN READ
 <section>
 ### Common HTML Video formats
 <DataTable>
-
 |   Format   |   File Extension   |   Description                                                                                        |
 |------------|--------------------|------------------------------------------------------------------------------------------------------|
 | MPEG       | `.mpg`             | Developed by the Moving Pictures Expert Group. The first popular video format on the web.            |
-| OGG        | `.ogg`             | Theora Ogg. Developed by the Xiph.org Foundaion.                                                     |
+| OGG        | `.ogg`             | Theora Ogg. Developed by the Xiph.org Foundation.                                                    |
 | WEBM       | `.webm`            | Developed by Mozilla, Opera, Adobe, and Google.                                                      |
 | MP4        | `.mp4`             | Commonly used in video cameras and TV hardware. Supported by all browsers and recommended by YouTube.|
-
 </DataTable>
 </section>
 <section>
-### Autoplay attribute
+### `autoplay` attribute
 - The **autoplay** attribute is used to specify that the video should start playing when a web page is loaded.
 ```HTML {2} showLineNumbers
 <body>
@@ -116,7 +114,7 @@ readingTime: 6–7 MIN READ
 ```
 </section>
 <section>
-### Muted attribute
+### `muted` attribute
 - The **muted** attribute on a media element mutes the audio or video player. With the use of muted attributes, the video can be played, but without a sound.
 ```HTML {2} showLineNumbers
 <body>
@@ -128,9 +126,9 @@ readingTime: 6–7 MIN READ
 ```
 </section>
 <section>
-### Poster attribute
+### `poster` attribute
 - The **poster** attribute specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead.
-```HTML {2} showLineNUmbers
+```HTML {2} showLineNumbers
 <body>
   <video style="width: 340px; height: 240px;" controls poster="media/cocomelon.jpg">
     <source src="media/cocomelon.mp4" type="video/mp4">
@@ -143,8 +141,7 @@ readingTime: 6–7 MIN READ
 ### HTML Audio tag pairs
 - The HTML `<audio>` and `</audio>` elements are used to play audio on a web page.
 - The text between the `<audio>` and `</audio>` tags will only be displayed in browsers that do not support the `<audio>` element.
-
-```HTML {2, 5} showLineNUmbers
+```HTML {2, 5} showLineNumbers
 <body>
   <audio controls>
     <source src="pasilyo.mp3" type="audio/mp3">
@@ -152,10 +149,9 @@ readingTime: 6–7 MIN READ
   <audio>
 </body>
 ```
-
 </section>
 <section>
-### Loop attribute
+### `loop` attribute
 - The **loop** attribute will make the audio file play over and over again.
 ```HTML {2} showLineNumbers
 <body>
@@ -169,20 +165,17 @@ readingTime: 6–7 MIN READ
 <section>
 ### Common HTML Audio formats
 <DataTable>
-
 |   Format   |   File Extension   |   Description                                                                                                                                                    |
 |------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WAV        | `.wav`             | Developed by IBM and Microsoft. Plays well on Windows, Macintosh, and Linux operating systems.                                                                   |
 | OGG        | `.ogg`             | Developed by the Xiph.org Foundaion.                                                                                                                             |
 | MP3        | `.mp3`             | MP3 files are actually the sound part of MPEG files. MP3 is the most popular format for music players. Combines good compression (small files) with high quality.|
 | MP4        | `.mp4`             | MP4 is a video format, but can also be used for audio.                                                                                                           |
-
 </DataTable>
 </section>
 <section>
 ## Summary Table
 <SummaryTable>
-
 | Elements                          | Definition                                                                                 |
 |-----------------------------------|--------------------------------------------------------------------------------------------|
 | [`<div>`](#html-div-element)      | Defines a block-level division or section in an HTML document.                             |
@@ -190,12 +183,10 @@ readingTime: 6–7 MIN READ
 | [`<video>`](#html-video)          | element is used to show a video on a web page.                                             |
 | [`<source>`](#html-video)         | An element allows you to specify alternative video files from which the browser may choose.|
 | [`<audio>`](#html-audio-tag-pairs)| Use to play audio on a web page.                                                           |
-
 </SummaryTable>
 </section>
 <section>
 <SummaryTable>
-
 | Attributes                       | Definition                                                                          |
 |----------------------------------|-------------------------------------------------------------------------------------|
 | [`controls`](#html-video)        | Adds video controls like play, pause, and volume.                                   |
@@ -203,7 +194,6 @@ readingTime: 6–7 MIN READ
 | [`muted`](#muted-attribute)      | Mutes the audio or video by default.                                                |
 | [`poster`](#poster-attribute)    | Displays an image while the video is downloading or until the user hits play button.|
 | [`loop`](#loop-attribute)        | Will make the audio file play over and over again.                                  |
-
 </SummaryTable>
 </section>
 <section>

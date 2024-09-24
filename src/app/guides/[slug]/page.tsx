@@ -80,7 +80,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	return (
 		<>
 			<section>
-				<PageHeader>{guide.modTitle}</PageHeader>
+				<PageHeader>{guide.title}</PageHeader>
 				<p className="text-muted-foreground text-sm">{guide.readingTime}</p>
 			</section>
 			{MDXContent && (
@@ -90,8 +90,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 				/>
 			)}
 			<Pagination
-				previous={prev ? { title: prev.title, path: prev._raw.flattenedPath } : null}
-				next={next ? { title: next.title, path: next._raw.flattenedPath } : null}
+				previous={prev ? { title: prev.modTitle, path: prev._raw.flattenedPath } : null}
+				next={next ? { title: next.modTitle, path: next._raw.flattenedPath } : null}
 			/>
 		</>
 	)
