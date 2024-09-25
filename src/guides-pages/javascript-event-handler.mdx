@@ -1,7 +1,7 @@
 ---
 title: Event Handler Attributes
 modTitle: Event Handler
-description: HTML the event-handler attributes will allow you to specify JavaScript code that will execute when certain events occur and it is directly added to HTML elements. It is also linked to different event types such as clicks, mouse movements, key presses, and more.
+description: Learn how HTML event-handler attributes like onclick, onmouseover, and onkeyup trigger JavaScript actions based on user interactions such as clicks, key presses, and page loads.
 thumbnail: javascript-event-handler.jpg
 category: js
 readingTime: 2–3 MINS READ
@@ -11,21 +11,18 @@ readingTime: 2–3 MINS READ
 HTML the `event-handler` attributes will allow you to specify JavaScript code that will execute when certain events occur and it is directly added to HTML elements. It is also linked to different event types such as **clicks**, **mouse movements**, **key presses**, and more.
 <MDXSeparator />
 ### Common `event-handler` Attributes
-1. The `onclick`, events get activated when the element in **clicked**. This is often used to act, like submitting a form or opening up a dialog.
-<br />
-2. The `onmouseover`, it activates when the mouse pointer is **moved onto an element**. It is used to change the style of any element, like highlighting a button on mouse over.
-<br />
-3. The `onmouseout`, triggers when the mouse pointer is **moved away from an element**. This is for changing styles back or hiding elements that were displayed on a onmouseover.
-<br />
-4. It triggers the `onchange` when we **change value of any input element**. We often use this with an **input field** a **select menu** or **text area** to takes some action when the user changes content value.
-<br />
-5. The `onkeydown` - fires when a **key is pressed down**. This is a mechanism for **keyboard shortcuts** or **validating input** as the user types.
-<br />
-6. `Onkeyup` it activates when **key is released**. Usually used in conjunction with onkeydown, which occurs throughout pressing a key down.
-<br />
-7. The `onload` triggers once the element (usually an image or whole page) has **completed loading**. This commonly used for **initializing scripts** or the **execution of actions** that should only run after the entire content has been loaded (like a redirect).
-<br />
-8. `Onfocus`. You can use **onfocus** to do something special when **a control gains focus**. For example, when the user clicks within a text control, you could implement an onfocus event handler to make the text control’s change to blue.
+<SummaryTable>
+| Event         | Description                                                                                                                                                                                                                                           |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `onclick`     | Get activated when the element in **clicked**. This is often used to act, like submitting a form or opening up a dialog.                                                                                                                              |
+| `onmouseover` | It activates when the mouse pointer is **moved onto an element**. It is used to change the style of any element, like highlighting a button on mouse over.                                                                                            |
+| `onmouseout`  | Triggers when the mouse pointer is **moved away from an element**. This is for changing styles back or hiding elements that were displayed on a onmouseover.                                                                                          |
+| `onchange`    | It triggers when we **change value of any input element**. We often use this with an **input field** a **select menu** or **text area** to takes some action when the user changes content value.                                                     |
+| `onkeydown`   | Fires when a **key is pressed down**. This is a mechanism for **keyboard shortcuts** or **validating input** as the user types.                                                                                                                       |
+| `onkeyup`     | It activates when **key is released**. Usually used in conjunction with onkeydown, which occurs throughout pressing a key down.                                                                                                                       |
+| `onload`      | Triggers once the element (usually an image or whole page) has **completed loading**. This commonly used for **initializing scripts** or the **execution of actions** that should only run after the entire content has been loaded (like a redirect).|
+| `onfocus`     | You can use **onfocus** to do something special when **a control gains focus**. For example, when the user clicks within a text control, you could implement an onfocus event handler to make the text control’s change to blue.                      |
+</SummaryTable>
 </section>
 <section>
 ### Credits

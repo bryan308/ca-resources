@@ -1,0 +1,48 @@
+---
+title: External JavaScript File
+modTitle: External File
+description: Learn how to create and use external JavaScript files to enhance code reusability across multiple HTML pages. Example included for linking JavaScript and triggering an alert on button click.
+thumbnail: external-javascript-file.jpg
+category: js
+readingTime: 2 MINS READ
+---
+
+<section>
+## External JavaScript File
+
+We can create external JavaScript file and embed it in many html page. It provides code re-usability because single JavaScript file can be used in several html pages. An external JavaScript file must be saved by `.js` extension containing your JavaScript code and then link to it from your HTML file using the `<script>` tag with the src attribute.
+
+<MDXSeparator />
+
+Let's create an example of external JavaScript file that prints **Hello World** in an alert dialog box. Save it as `script.js`.
+
+```js
+function showMessage() {
+  alert("Hello, World!");
+}
+```
+
+In this file, we are defining a simple JavaScript function called **showMessage** that displays an alert with the message "**Hello, World!**".
+
+Now let's include the JavaScript file into HTML page. It calls the JavaScript function on button click.
+
+```HTML {11} showLineNumbers
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>External JavaScript File</title>
+  </head>
+  <body>
+    <h1>External JavaScript Example</h1>
+    <button type="button" onclick="showMessage()">Click Me</button>
+
+    <!-- Link to the external JavaScript file -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+```
+</section>
+<section>
+### Credits
+This webpage was created based on lessons provided by **Rose Anne G. Cochanco** as part of Web Development subject.
+</section>
