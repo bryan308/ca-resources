@@ -66,7 +66,7 @@ Let’s create a simple web page with a form that allows users to input their **
 
 <MDXSeparator />
 
-#### Source code for Email Address Generator web page
+### Source code for Email Address Generator web page
 
 ```HTML showLineNumbers
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ Let’s create a simple web page with a form that allows users to input their **
     <script type="text/javascript">
       function generateEmail(form) {
         // Generate the email address using form values
-        var email = form.elements["first"].value + " " + form.elements["last"].value + "@gmail.com";
+        var email = form.elements["first"].value + form.elements["last"].value + "@gmail.com";
 
         // Set the innerHTML of the <p> element with id "email"
         document.getElementById("email").innerHTML = email;
@@ -95,14 +95,24 @@ Let’s create a simple web page with a form that allows users to input their **
       Last Name:
       <input type="text" name="last" id="last" size="15" autofocus>
       <br />
-      <input type="button" value="Generate Email" onlcick="generateEmail(this.form);">
+      <input type="button" value="Generate Email" onclick="generateEmail(this.form);">
       <p id="email"></p>
     </form>
   </body>
 </html>
 ```
 
-As shown in the code above when you run the code, the user enters their **first** and **last** names and clicks the "**Generate Email**" button, the JavaScript function **generateEmail**, creates an email address using the provided names, displays it in the `<p>` element, and resets the form. The form’s first input field is automatically focused after the reset.
+As shown in the code above, when you run the code, the user enters their **first** and **last** names and clicks the "**Generate Email**" button, the JavaScript function **generateEmail**, creates an email address using the provided names, displays it in the `<p>` element, and resets the form. The form’s first input field is automatically focused after the reset.
+
+<MDXSeparator />
+
+### Example
+
+<EmailGenerator />
+
+> _This example utilizes **Tailwind CSS** for styling and **shadcn-ui** for the form elements._
+>
+> _**Note:** This component is for demonstration purposes only. You can replicate similar functionality using the code example provided on this page._
 
 </section>
 <section>

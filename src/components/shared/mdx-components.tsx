@@ -1,4 +1,5 @@
 import { Button } from "../ui/button"
+import { EmailGenerator } from "./gen-email"
 import {
 	BorderExample,
 	DataTable,
@@ -19,6 +20,7 @@ export const components = {
 	BorderExample,
 	DataTable,
 	DataTableExample,
+	EmailGenerator,
 	GuideImage,
 	LoginForm,
 	MDXLink,

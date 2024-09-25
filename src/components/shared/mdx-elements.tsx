@@ -158,7 +158,10 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startVal, position
 			) : listStyle === "position" ? (
 				<>
 					<h3 style={h3}>To create a web page:</h3>
-					<ol style={ol} start={startVal}>
+					<ol
+						style={ol}
+						start={startVal}
+					>
 						{orderedList.ol2.map((ol) => {
 							return (
 								<li
