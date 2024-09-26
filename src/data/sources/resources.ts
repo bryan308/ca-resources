@@ -14,7 +14,7 @@ interface IResourceCategory {
 
 export const resourcesData: Record<string, IResourceCategory> = {
 	webdev: {
-		thumbnail: "web-dev.jpg",
+		thumbnail: "webdev.jpg",
 		title: "Web Development",
 		subtitle: "Learn web edvelopment from the best resources available.",
 		resourcesList: [
@@ -346,7 +346,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	inspirations: {
-		thumbnail: "inspirations.png",
+		thumbnail: "inspirations.jpg",
 		title: "Inspirations",
 		subtitle:
 			"Explore a variety of inspiration sources to ignite your creativity and enhance your design work.",
@@ -408,7 +408,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	mockups: {
-		thumbnail: "mockups-tools.png",
+		thumbnail: "mockups-tools.jpg",
 		title: "Mockup Tools",
 		subtitle:
 			"Explore powerful mockup tools to bring your design ideas to life with realistic visuals and prototypes.",
@@ -469,7 +469,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	stockphotos: {
-		thumbnail: "stock-photos.png",
+		thumbnail: "stock-photos.jpg",
 		title: "Stock Photos",
 		subtitle: "High-Quality Stock Photos for enriching your projects and presentations.",
 		resourcesList: [
@@ -523,7 +523,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	typography: {
-		thumbnail: "typography.png",
+		thumbnail: "typography.jpg",
 		title: "Typography",
 		subtitle:
 			"Explore top resources and tools to enhance your text styles and make your web projects better.",
