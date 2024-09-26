@@ -287,7 +287,7 @@ ul {
 }
 
 li {
-	@apply text-foreground pl-2;
+	@apply text-foreground pl-2 mb-2;
 }
 
 li::marker {
@@ -295,7 +295,7 @@ li::marker {
 }
 
 ul li ul {
-	@apply pt-2 pl-6 lg:pl-8 list-["-"];
+	@apply pt-2 lg:pl-8 list-["-"];
 }
 
 code {
