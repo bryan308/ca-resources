@@ -1,5 +1,5 @@
 import "./globals.css"
-// import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react"
 
 import Header from "@/components/shared/header"
 import Aside from "@/components/shared/aside"
@@ -98,7 +98,7 @@ export default function RootLayout({
 							<ScrollToTopButton />
 						</div>
 					</main>
-					{/* <Analytics /> */}
+					<Analytics />
 				</Providers>
 			</body>
 		</html>
