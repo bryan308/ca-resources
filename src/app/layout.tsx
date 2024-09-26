@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		type: "website",
+		siteName: "CA Resources - Your Productivity Hub for Web Development and Education",
 		url: meta.url,
 		title: meta.title,
 		description: meta.description,
