@@ -12,7 +12,10 @@ interface Contributor {
 }
 
 const fetchContributors = async (): Promise<Contributor[]> => {
-	const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/contributors`, {
+	const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/contributors`
+	console.log("API URL:", apiUrl)
+
+	const response = await fetch(apiUrl, {
 		headers: {
 			Accept: "application/vnd.github+json",
 		},
