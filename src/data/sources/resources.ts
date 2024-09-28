@@ -9,6 +9,7 @@ interface IResourceCategory {
 	thumbnail: string
 	title: string
 	subtitle: string
+	lastUpdated?: string
 	resourcesList: IResourcesList[]
 }
 
@@ -17,10 +18,18 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		thumbnail: "webdev.jpg",
 		title: "Web Development",
 		subtitle: "Learn web edvelopment from the best resources available.",
+		lastUpdated: "2024-09-28",
 		resourcesList: [
 			{
-				title: "",
+				title: "General",
 				links: [
+					{
+						title: "Enki",
+						url: "https://www.enki.com/",
+						description:
+							"Enki is your AI-powered coach in coding and productivity tools. Python, SQL, Spreadsheets, PowerBI, Tableau, Looker. ",
+						iconPath: "/resources/learnwebdev/enki.png",
+					},
 					{
 						title: "W3Schools",
 						url: "https://www.w3schools.com/",
@@ -63,12 +72,55 @@ export const resourcesData: Record<string, IResourceCategory> = {
 					},
 				],
 			},
+			{
+				title: "CSS",
+				links: [
+					{
+						title: "CSS Grid",
+						url: "https://cssgrid.io/",
+						description: "Learn all about CSS Grid with Wes Bos in this free video series!",
+						iconPath: "/resources/learnwebdev/css-grid.png",
+					},
+					{
+						title: "Flexbox Cheatsheet",
+						url: "https://darekkay.com/flexbox-cheatsheet/",
+						description: "A visual overview of CSS Flexbox properties and values.",
+						iconPath: "/resources/learnwebdev/css-cheatsheet.ico",
+					},
+					{
+						title: "CSS Reference",
+						url: "https://cssreference.io/",
+						description:
+							"CSS Reference is a free visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples.",
+						iconPath: "/resources/learnwebdev/cssreference.png",
+					},
+					{
+						title: "Flexbox Froggy",
+						url: "https://flexboxfroggy.com/",
+						description: "A game for learning CSS flexbox",
+						iconPath: "/resources/learnwebdev/flexboxfroggy.svg",
+					},
+				],
+			},
+			{
+				title: "JavaScript",
+				links: [
+					{
+						title: "The Modern JavaScript Tutorial",
+						url: "https://javascript.info/",
+						description:
+							"How it's done now. From the basics to advanced topics with simple, but detailed explanations.",
+						iconPath: "/resources/learnwebdev/javascript-info.png",
+					},
+				],
+			},
 		],
 	},
 	icons: {
 		thumbnail: "icons.jpg",
 		title: "Icons",
 		subtitle: "Explore a variety of icons for your projects.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "General Icons",
@@ -243,6 +295,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		title: "Colors",
 		subtitle:
 			"Explore our recommended color scales and discover additional resources to enhance your color knowledge.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "Color Palettes",
@@ -350,6 +403,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		title: "Inspirations",
 		subtitle:
 			"Explore a variety of inspiration sources to ignite your creativity and enhance your design work.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "",
@@ -412,6 +466,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		title: "Mockup Tools",
 		subtitle:
 			"Explore powerful mockup tools to bring your design ideas to life with realistic visuals and prototypes.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "",
@@ -472,6 +527,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		thumbnail: "stock-photos.jpg",
 		title: "Stock Photos",
 		subtitle: "High-Quality Stock Photos for enriching your projects and presentations.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "",
@@ -527,6 +583,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		title: "Typography",
 		subtitle:
 			"Explore top resources and tools to enhance your text styles and make your web projects better.",
+		lastUpdated: "2024-09-01",
 		resourcesList: [
 			{
 				title: "",

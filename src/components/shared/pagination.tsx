@@ -2,11 +2,12 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 
 interface IPagination {
+	page: string
 	previous: { title: string; path: string } | null
 	next: { title: string; path: string } | null
 }
 
-function Pagination({ next, previous }: IPagination) {
+function Pagination({ page, next, previous }: IPagination) {
 	return (
 		<div className={`${(next || previous) && "p-6 xl:p-12"}`}>
 			<nav
@@ -18,9 +19,9 @@ function Pagination({ next, previous }: IPagination) {
 			>
 				{previous && (
 					<Link
-						aria-label={`Go to previous guide: ${previous.title}`}
+						aria-label={`Go to previous ${page}: ${previous.title}`}
 						className="p-2 rounded-md flex items-end group"
-						href={`/guides/${previous.path}`}
+						href={`/${page}/${previous.path}`}
 					>
 						<ChevronLeftIcon className="size-4 mb-1 text-muted-foreground group-hover:text-foreground" />
 						<div className="group">
@@ -33,9 +34,9 @@ function Pagination({ next, previous }: IPagination) {
 				)}
 				{next && (
 					<Link
-						aria-label={`Go to next guide: ${next.title}`}
+						aria-label={`Go to next ${page}: ${next.title}`}
 						className="p-2 rounded-md flex items-end group"
-						href={`/guides/${next.path}`}
+						href={`/${page}/${next.path}`}
 					>
 						<div className="group">
 							<span className="text-sm text-muted-foreground group-hover:text-foreground">

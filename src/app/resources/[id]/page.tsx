@@ -2,9 +2,11 @@ import { resourcesData, ResourceType } from "@/data/sources/resources"
 import { siteMetadata as meta } from "@/data/site-config"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { format, parseISO } from "date-fns"
 
 import Cards from "@/components/shared/cards"
 import PageHeader from "@/components/shared/page-header"
+import Pagination from "@/components/shared/pagination"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
 	const { id } = params
@@ -50,13 +52,27 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 		return notFound()
 	}
 
+	const resourceKeys = Object.keys(resourcesData).sort() // Sort keys alphabetically
+	const currentIndex = resourceKeys.indexOf(id) // Find current index
 	const resourceData = resourcesData[id as ResourceType]
+
+	// Determine previous and next resources based on sorted keys
+	const prevKey = currentIndex > 0 ? resourceKeys[currentIndex - 1] : null
+	const nextKey = currentIndex < resourceKeys.length - 1 ? resourceKeys[currentIndex + 1] : null
+
+	const prev = prevKey && resourcesData[prevKey]
+	const next = nextKey && resourcesData[nextKey]
 
 	return (
 		<>
 			<section>
 				<PageHeader>{resourceData.title}</PageHeader>
 				<p className="text-xl">{resourceData.subtitle}</p>
+				{resourceData.lastUpdated && (
+					<p className="text-sm text-muted-foreground">
+						Last updated: {format(parseISO(resourceData.lastUpdated), "MMMM d, yyyy")}
+					</p>
+				)}
 			</section>
 			{resourceData.resourcesList.map((rl) => (
 				<section key={rl.title}>
@@ -71,6 +87,11 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 					</div>
 				</section>
 			))}
+			<Pagination
+				page="resources"
+				previous={prev ? { title: prev.title, path: prevKey } : null} // Use the key for previous
+				next={next ? { title: next.title, path: nextKey } : null} // Use the key for next
+			/>
 		</>
 	)
 }
