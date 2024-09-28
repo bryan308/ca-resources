@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils"
-
 import Link from "next/link"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle } from "lucide-react"
