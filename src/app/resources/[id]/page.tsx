@@ -36,6 +36,19 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 				},
 			],
 		},
+		twitter: {
+			card: "summary_large_image",
+			site: meta.url,
+			creator: meta.socials.x.username,
+			description: resourceData.subtitle,
+			title: resourceData.title,
+			images: [
+				{
+					url: imageUrl,
+					alt: resourceData.title,
+				},
+			],
+		},
 	}
 }
 
@@ -52,11 +65,10 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 		return notFound()
 	}
 
-	const resourceKeys = Object.keys(resourcesData).sort() // Sort keys alphabetically
-	const currentIndex = resourceKeys.indexOf(id) // Find current index
+	const resourceKeys = Object.keys(resourcesData).sort() // * Sort keys alphabetically
+	const currentIndex = resourceKeys.indexOf(id) // * Find current index
 	const resourceData = resourcesData[id as ResourceType]
 
-	// Determine previous and next resources based on sorted keys
 	const prevKey = currentIndex > 0 ? resourceKeys[currentIndex - 1] : null
 	const nextKey = currentIndex < resourceKeys.length - 1 ? resourceKeys[currentIndex + 1] : null
 
@@ -69,19 +81,14 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 				<PageHeader>{resourceData.title}</PageHeader>
 				<p className="text-xl">{resourceData.subtitle}</p>
 				{resourceData.lastUpdated && (
-					<p className="text-sm text-muted-foreground">
-						Last updated: {format(parseISO(resourceData.lastUpdated), "MMMM d, yyyy")}
+					<p className="text-muted-foreground text-sm">
+						Last updated on {format(parseISO(resourceData.lastUpdated), "MMMM d, yyyy")}
 					</p>
 				)}
 			</section>
 			{resourceData.resourcesList.map((rl) => (
 				<section key={rl.title}>
-					{rl.title && (
-						<>
-							<h2>{rl.title}</h2>
-							{/* <p>{rl.subheader}</p> */}
-						</>
-					)}
+					{rl.title && <h2>{rl.title}</h2>}
 					<div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${rl.title && "mt-10"}`}>
 						<Cards data={rl.links} />
 					</div>
@@ -89,8 +96,8 @@ export default function ResourcePage({ params }: { params: { id: string } }) {
 			))}
 			<Pagination
 				page="resources"
-				previous={prev ? { title: prev.title, path: prevKey } : null} // Use the key for previous
-				next={next ? { title: next.title, path: nextKey } : null} // Use the key for next
+				previous={prev ? { title: prev.title, path: prevKey } : null}
+				next={next ? { title: next.title, path: nextKey } : null}
 			/>
 		</>
 	)

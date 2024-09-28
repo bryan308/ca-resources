@@ -31,8 +31,6 @@ export const metadata: Metadata = {
 	},
 	description: meta.description,
 	keywords: [
-		"Resources",
-		"HTML element Guides",
 		"Helpful websites",
 		"Colors",
 		"Icons",
@@ -41,6 +39,9 @@ export const metadata: Metadata = {
 		"Stock Photos",
 		"Typography",
 		"Web Development",
+		"Resources",
+		"HTML Guides",
+		"JavaScript Guides",
 	],
 	openGraph: {
 		type: "website",
