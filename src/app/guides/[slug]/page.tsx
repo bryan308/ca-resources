@@ -1,5 +1,7 @@
 import "./slug.css"
 
+import React from "react"
+
 import { allGuides } from "contentlayer/generated"
 import { useMDXComponent } from "next-contentlayer2/hooks"
 import { notFound } from "next/navigation"

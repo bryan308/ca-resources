@@ -1,3 +1,5 @@
+import React from "react"
+
 import { resourcesData, ResourceType } from "@/data/sources/resources"
 import { siteMetadata as meta } from "@/data/site-config"
 import { Metadata } from "next"
