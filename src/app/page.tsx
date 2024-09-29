@@ -1,3 +1,5 @@
+import React from "react"
+
 import Link from "next/link"
 import PageHeader from "@/components/shared/page-header"
 import Contributors from "@/components/shared/contributors"
