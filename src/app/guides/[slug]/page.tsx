@@ -90,6 +90,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 				/>
 			)}
 			<Pagination
+				page="guides"
 				previous={prev ? { title: prev.modTitle, path: prev._raw.flattenedPath } : null}
 				next={next ? { title: next.modTitle, path: next._raw.flattenedPath } : null}
 			/>
