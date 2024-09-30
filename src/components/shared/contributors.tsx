@@ -12,7 +12,11 @@ interface Contributor {
 }
 
 const fetchContributors = async (): Promise<Contributor[]> => {
-	const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/contributors`
+	// TODO api not working in vercel build time
+	const apiUrl = `${
+		// * Fix: Update API URL to fallback to production if not defined
+		process.env.NEXT_PUBLIC_API_URL || "https://ca-resources.vercel.app"
+	}/api/contributors`
 	console.log("API URL:", apiUrl)
 
 	const response = await fetch(apiUrl, {
