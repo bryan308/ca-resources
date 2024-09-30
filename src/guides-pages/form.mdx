@@ -21,12 +21,10 @@ readingTime: 15–19 MINS READ
 <section>
 ### What is HTML Form?
 HTML **forms** are a fundamental part of web development, enabling user interaction with web pages. They are used to collect user input and send it to a server for processing. **Forms** are essential for various web applications, such as login pages, registration forms, search boxes, and online surveys. The feedback of the user is mostly submitted to a server for review. **Form processing** is often called **client/server processing** because it requires both a client (a browser) and a remote server.
-</section>
-<section>
+<MDXSeparator />
 ### HTML Form Example
 <LoginForm />
-</section>
-<section>
+<MDXSeparator />
 ### HTML Form Element
 - The HTML `<form>` and `</form>` tag pairs define a form that can be used to collect user input.
 - An HTML form contains different form elements.
@@ -59,7 +57,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - The `<label></label>` element is useful for screenreader users.
 - The **for** attribute of the `<label>` tag should be equal to the **id** attribute of the `<input>` element to bind them together.
 <MDXSeparator />
-```HTML {2} showLineNumbers
+```HTML {2}
 <form>
   <label for="sname">Student Name</label>
   <input type="text" id="sname" name="sname">
@@ -67,17 +65,16 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ```
 </section>
 <section>
-### The `input` Element
+## The `input` Element
 - The `<input>` element is the most important form element.
 - The `<input>` element can be displayed in several ways, depending on the type attribute.
 - The **type** attribute specifies the type of input element to display.
 - The **name** attribute is use to reference elements in a JavaScript, or to reference for data after a form is submitted.
-</section>
-<section>
+<MDXSeparator />
 ### Input types `text` and `password`
 - `<input type="text">` defines a one-line text input field.
 - `<input type="password">` defines a password field. The characters in a password field are masked (shown as asterisks or circles).
-```HTML {3, 5} showLineNumbers
+```HTML {3, 5}
 <form>
   <label for="sname">Student Name</label> <br />
   <input type="text" id="sname" name="sname">
@@ -85,12 +82,11 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="password" id="pword" name="pword">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Input types `submit`, `reset` and `button`
-- `<input type="submit">` defines a button for submitting form data to a form handler
-- `<input type="reset">` defines a reset button that will reset all form values to their default values
-- `<input type="button">` defines a programmable button
+- `<input type="submit">` defines a button for submitting form data to a form handler.
+- `<input type="reset">` defines a reset button that will reset all form values to their default values.
+- `<input type="button">` defines a programmable button.
 ```HTML {6-8} showLineNumbers
 <form>
   <label for="sname">Student Name</label> <br />
@@ -102,8 +98,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="button" name="btnprint" value="Print">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Input types `radio` and `checkbox`
 - `<input type="radio">` defines a radio button. A radio button lets a user select only one of a limited number of choices.
 - `<input type="checkbox">` defines a checkbox. Checkboxes lets users select zero or more options of a limited number of choices.
@@ -119,8 +114,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="checkbox" id="subjects" name="subj4" value="IT-MS01">IT-MS01 <br />
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Input types `email`, `number` and `date`
 - `<input type="email">` is used for input fields that should contain an email address.
 - `<input type="date">` is used for input fields that should contain a date.
@@ -137,8 +131,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="reset" name="btnclear" value="Clear">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Input types `range` and `tel`
 - `<input type="range">` defines a control for entering a number whose exact value is not important (slider control). Default range is 0 to 100.
 - `<input type="tel">` is used for input fields that should contain a telephone number.
@@ -157,8 +150,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Input types `url`, `time` and `file`
 - `<input type="url">` is used for input fields that should contain a URL address.
 - `<input type="time">` allows the user to select a time.
@@ -182,7 +174,8 @@ The HTML `<form></form>` element can contain one or more of the following form e
 </section>
 <section>
 ## Input Attributes
-### `value`, `readonly` and `disabled`
+<br />
+### The `value`, `readonly` and `disabled`
 - The **value** attribute specifies the initial value for an input field.
 - The **readonly** attribute specifies that the input field is read only (cannot be changed)
 - The **disabled** attribute specifies that the input field is disabled. A disabled input field is unusable and unclickable, and its value will not be sent when submitting a form.
@@ -196,8 +189,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="reset" name="btnclear" value="Clear">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `size` and `maxlength`
 - The **size** attribute specifies the size (in characters) for the input field.
 - The **maxlength** attribute specifies the maximum allowed length for the input field. With a maxlength attribute, the input field will not accept more than the allowed number of characters.
@@ -213,8 +205,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="reset" name="btnclear" value="Clear">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `min`, `max` and `step`
 - The **min** and **max** attributes specify the minimum and maximum values for an `<input>` element.
 - The **step** attribute specifies the legal number of intervals for an `<input>` element.
@@ -226,8 +217,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="reset" name="btnclear" value="Clear">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `placeholder`, `required` and `autofocus`
 - The **placeholder** attribute specifies a hint describing an input field’s expected value. The hint is displayed in the field before the user enters a value.
 - The **required** attribute specifies that an input field must be filled out before submitting the form.
@@ -239,8 +229,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `pattern` and `title`
 - The **pattern** attribute specifies a regular expression that the input element’s value is checked against.
 - The **title** attribute is used to describe the pattern to the user.
@@ -258,6 +247,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - The `<select></select>` element defines a drop-down list.
 - The `<option></option>` element defines an option that can be selected.
 - Use the **selected** attribute to the `<option>` element to define a pre-selected option.
+<MDXSeparator />
 ```HTML {3-8} showLineNumbers
 <form>
   <label for="civilstat">Civil Status:</label>
@@ -275,6 +265,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - The `<datalist></datalist>` tag specifies a list of pre-defined options for an `<input>` element.
 - The `<datalist></datalist>` tag is used to provide an "autocomplete" feature for `<input>` elements. Users will see a drop-down list of pre-defined options as they input data.
 - The `<datalist>` element‘s **id** attribute must be equal to the `<input>` element‘s **list** attribute (this binds them together).
+<MDXSeparator />
 ```HTML {4,8} showLineNumbers
 <form>
   <label>Web Browsers:</label>
@@ -293,6 +284,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 - This element is often used in a form, to collect user inputs like comments or reviews.
 - The **rows** attribute specifies the visible number of lines in a text area.
 - The **cols** attribute specifies the visible width of a text area.
+<MDXSeparator />
 ```HTML {3} showLineNumbers
 <form>
   <label for="msg">Message:</label> <br />
@@ -304,6 +296,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ### The `fieldset` and `legend` element
 - The `<fieldset></fieldset>` element is used to group related data in a form.
 - The `<legend></legend>` elements defines a caption for `<fieldset>` element.
+<MDXSeparator />
 ```HTML {2-3, 9} showLineNumbers
 <form>
   <fieldset>
@@ -321,6 +314,7 @@ The HTML `<form></form>` element can contain one or more of the following form e
 ### The `button` element
 - The `<button></button>` element is used to create a clickable button.
 - The `<button></button>` element can be used to trigger custom JavaScript functions.
+<MDXSeparator />
 ```HTML showLineNumbers
 <button type="submit">Submit</button>
 <button type="reset">Clear</button>

@@ -10,11 +10,11 @@ readingTime: 5–6 MINS READ
 <section>
 ## Agenda
 1. HTML Hyperlinks
-1. HTML Link colors
-1. target attribute
-1. Link image
-1. Link Bookmarks
-1. Navigation Menu
+2. HTML Link colors
+3. target attribute
+4. Link image
+5. Link Bookmarks
+6. Navigation Menu
 </section>
 <section>
 ### HTML Hyperlinks
@@ -22,8 +22,7 @@ readingTime: 5–6 MINS READ
 - **Links** are found in nearly all web pages. **Links** allow users to click their way from page to page.
 - **Links** are defined with the `<a>` and `</a>` tags.
 - The **href** attribute is used specify the destination address of the link.
-</section>
-<section>
+<MDXSeparator />
 ### Relative Hyperlinks
 ```HTML showLineNumbers
 <body>
@@ -36,8 +35,7 @@ readingTime: 5–6 MINS READ
   </ul>
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### Absolute Hyperlinks
 ```HTML showLineNumbers
 <body>
@@ -49,15 +47,16 @@ readingTime: 5–6 MINS READ
 <section>
 ### HTML Link colors
 - By default, links will appear as follows in all browsers.
-  - An **unvisited link** is underlined and **blue**
-  - A **visited link** is underlined and **purple**
-  - An **active link** is underlined and **red**
+  - An **unvisited link** is underlined and **blue** <span style={{ backgroundColor: "#3b82f6", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
+  - A **visited link** is underlined and **purple** <span style={{ backgroundColor: "#a855f7", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
+  - An **active link** is underlined and **red** <span style={{ backgroundColor: "#ef4444", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
 </section>
 <section>
 ### `target` attribute
 - The **target** attribute specifies where to open the link document.
   - `_blank` - opens the link document in a raw window or tab.
   - `_self` - opens the link in the same window/tab as it was clicked (default).
+<MDXSeparator />
 ```HTML showLineNumbers
 <body>
   <ul>
@@ -72,14 +71,14 @@ readingTime: 5–6 MINS READ
 </section>
 <section>
 ## Link Image
+<br />
 ### Use Image as a Links
 - Images can also be used as links, just put the `<img />` element inside the `<a>` and `</a>` tags.
 - The **title** attribute specifies extra information about an element.
 - The information is most often shown as a **tooltip text** when the mouse moves over the element.
-</section>
-<section>
+<MDXSeparator />
 ### Image as a Links
-```HTML showLineNumbers
+```HTML {2-4}
 <body>
   <a href="https://www.google.com/">
     <img src="images/googlelogo.png" style="width: 50px; height: 50px;" />
@@ -89,6 +88,7 @@ readingTime: 5–6 MINS READ
 </section>
 <section>
 ## Link Bookmarks
+<br />
 ### Bookmark Hyperlinks
 - HTML **bookmarks** are used to allow readers to jump to specific parts of a web page.
 - Bookmarks can be useful if a web page is very long.
@@ -98,8 +98,7 @@ readingTime: 5–6 MINS READ
 ## Navigation Menu
 - Enhance the look and functionality of your website by styling your HTML lists into a sleek horizontal or navigation menu. With a few CSS declarations, your website can become more user-friendly and visually appealing.
 - The **padding** element is used to create space around an element’s content, inside of any defined borders.
-</section>
-<section>
+<MDXSeparator />
 ### `padding` property
 - The **padding** property is used to create space around an element’s content, inside of any defined borders.
 - The **padding** property is a shorthand property for the following individual padding properties:
@@ -114,8 +113,7 @@ readingTime: 5–6 MINS READ
   </h1>
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### `overflow` property
 - The **overflow** property specifies what should happen if content overflows an element’s box.
 - This property specifies whether to **clip** content or to add **scrollbars** when an element’s content is too big to fit in a specified area.
@@ -191,8 +189,7 @@ readingTime: 5–6 MINS READ
 | [`title`](#use-image-as-a-links)       | Specifies extra information about an element.                      |
 | [`id`](#bookmark-hyperlinks)           | Used to allow readers to jump to specific parts of a web page.     |
 </SummaryTable>
-</section>
-<section>
+<MDXSeparator />
 <SummaryTable>
 | Style Properties                       | Definition                                                                                                                |
 |----------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -200,7 +197,6 @@ readingTime: 5–6 MINS READ
 | [`overflow`](#overflow-property)       | Specifies what should happen if content overflows an element’s box.                                                       |
 </SummaryTable>
 </section>
-
 <section>
 ### Credits
 This webpage was created based on lessons provided by **Rose Anne G. Cochanco** as part of Web Development subject.

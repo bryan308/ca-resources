@@ -11,28 +11,28 @@ const resources = [
 		path: "/resources/colors",
 	},
 	{
-		text: "Typography",
-		path: "/resources/typography",
-	},
-	{
-		text: "Web Development",
-		path: "/resources/webdev",
+		text: "Icons",
+		path: "/resources/icons",
 	},
 	{
 		text: "Inspirations",
 		path: "/resources/inspirations",
 	},
 	{
-		text: "Icons",
-		path: "/resources/icons",
+		text: "Mockup Tools",
+		path: "/resources/mockups",
 	},
 	{
 		text: "Stock Photos",
 		path: "/resources/stockphotos",
 	},
 	{
-		text: "Mockup Tools",
-		path: "/resources/mockups",
+		text: "Typography",
+		path: "/resources/typography",
+	},
+	{
+		text: "Web Development",
+		path: "/resources/webdev",
 	},
 ]
 

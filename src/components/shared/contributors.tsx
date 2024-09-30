@@ -1,10 +1,8 @@
-"use client"
-
-import Link from "next/link"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { cn } from "@/lib/utils"
-import { useEffect, useState } from "react"
-import { Skeleton } from "../ui/skeleton"
+import Link from "next/link"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { AlertCircle } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface Contributor {
 	id: number
@@ -13,77 +11,67 @@ interface Contributor {
 	avatar_url: string
 }
 
-// ! async function fetchContributors(): Promise<Contributor[]> {
-// ! 	const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/contributors`, {
-// ! 		headers: {
-// ! 			Accept: "application/vnd.github+json",
-// ! 		},
-// ! 	})
-// ! 	if (!response.ok) {
-// ! 		throw new Error("Failed to fetch contributors")
-// ! 	}
-// ! 	return response.json()
-// ! }
+const fetchContributors = async (): Promise<Contributor[]> => {
+	// TODO api not working in vercel build time
+	const apiUrl = `${
+		// * Fix: Update API URL to fallback to production if not defined
+		process.env.NEXT_PUBLIC_API_URL || "https://ca-resources.vercel.app"
+	}/api/contributors`
+	console.log("API URL:", apiUrl)
 
-export default function Contributors({ className }: { className?: string }) {
-	// ! const contributors = await fetchContributors()
+	const response = await fetch(apiUrl, {
+		headers: {
+			Accept: "application/vnd.github+json",
+		},
+	})
 
-	const [contributors, setContributors] = useState<Contributor[]>([])
-	const [loading, setLoading] = useState(true)
+	if (!response.ok) {
+		throw new Error("Failed to fetch contributors")
+	}
 
-	useEffect(() => {
-		const fetchContributors = async () => {
-			try {
-				const response = await fetch("/api/contributors")
-				const data = await response.json()
-				setContributors(data)
-			} catch (error) {
-				console.error("Error fetching contributors:", error)
-			} finally {
-				setLoading(false)
-			}
-		}
+	return response.json()
+}
 
-		fetchContributors()
-	}, [])
+export default async function Contributors({ className }: { className: string }) {
+	let contributors: Contributor[] = []
+
+	try {
+		contributors = await fetchContributors()
+	} catch (error) {
+		console.error("Error fetching contributors:", error)
+	}
 
 	return (
 		<div className={cn(className, "flex flex-wrap gap-2")}>
-			{loading ? (
-				<>
-					{/* TODO: Dynamic skeleton count based on the total contributors */}
-					{Array(2)
-						.fill(null)
-						.map((_, index) => (
-							<Skeleton
-								key={index}
-								className="size-10 rounded-full"
-							/>
-						))}
-				</>
+			{contributors.length === 0 ? (
+				<Alert
+					variant="destructive"
+					className="max-w-80 text-red-600 border-2"
+				>
+					<AlertCircle className="h-4 w-4" />
+					<AlertTitle>Error</AlertTitle>
+					<AlertDescription>No contributors found.</AlertDescription>
+				</Alert>
 			) : (
-				<>
-					{contributors.length === 0 && <p>No contributors found.</p>}
-					{contributors.map((contributor: Contributor) => (
-						<div key={contributor.id}>
-							{contributor.login !== "bryan308" && (
-								<Avatar>
-									<Link
-										href={contributor.html_url}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<AvatarImage
-											src={contributor.avatar_url}
-											alt={contributor.login}
-										/>
-										<AvatarFallback className="text-xs">{contributor.login}</AvatarFallback>
-									</Link>
-								</Avatar>
-							)}
-						</div>
-					))}
-				</>
+				contributors.map(
+					(c: Contributor) =>
+						c.login !== "bryan308" &&
+						c.login !== "dependabot[bot]" && (
+							<Avatar key={c.id}>
+								<Link
+									href={c.html_url}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<AvatarImage
+										src={c.avatar_url}
+										alt={c.login}
+									/>
+									<AvatarFallback className="text-xs">{c.login}</AvatarFallback>
+								</Link>
+							</Avatar>
+						)
+				)
 			)}
 		</div>
 	)

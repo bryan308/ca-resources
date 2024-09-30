@@ -10,11 +10,11 @@ readingTime: 9–11 MINS READ
 <section>
 ## Agenda
 1. HTML Images
-1. Image Attributes
-1. Types of Web Page Image
-1. Absolute vs. Relative URL
-1. Image CSS Properties
-1. background Properties
+2. Image Attributes
+3. Types of Web Page Image
+4. Absolute vs. Relative URL
+5. Image CSS Properties
+6. background Properties
 </section>
 <section>
 ### HTML Images
@@ -81,6 +81,7 @@ readingTime: 9–11 MINS READ
 </section>
 <section>
 ## CSS Properties
+<br />
 ### The `width` and `height` property
 - We can use the **style** attribute to specify the **width** and **height** of an image.
 - Resizing is ideal for **large-sized images**.
@@ -103,8 +104,7 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `border` property
 - The CSS border shorthand property allows users to specify the **width**, **style** and **color** of an element’s border.
   - **border-width**
@@ -119,12 +119,11 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `broder-style` property
 - The **border-style** property specifies what kind of border to dispay.
 - The width can be set as a **dotted**, **dashed**, **solid**, **double**, **groove**, **ridge**, **inset**, **outset**, **none**, and **hidden**.
-<MDXSeparator />
+<br />
 <BorderExample borderStyle="dotted" text="A dotted border."/>
 <BorderExample borderStyle="dashed" text="A dashed border."/>
 <BorderExample borderStyle="solid" text="A solid border."/>
@@ -136,12 +135,10 @@ readingTime: 9–11 MINS READ
 <BorderExample borderStyle="none" text="No border."/>
 <BorderExample borderStyle="hidden" text="A hidden border."/>
 <div style={{margin: "8px 0", border: "3px hsl(var(--foreground))", borderStyle: "dotted dashed solid double" }}>A mixed border.</div>
-</section>
-<section>
+<MDXSeparator />
 ### The `border-width` property
 - The **border-width** property specifies the width of the four borders.
 - The width can be set as a specific size (in **px**, **pt**, **cm**, **em**) or by using one of the three pre-defined values: **thin**, **medium**, or **thick**.
-<MDXSeparator />
 ```HTML {5} showLineNumbers
 <body>
   <img 
@@ -151,7 +148,6 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-<MDXSeparator />
 ```HTML {5} showLineNumbers
 <body>
   <img 
@@ -161,8 +157,7 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `border-color` property
 - The **border-color** property is used to set the color of the four borders.
 - The **border-color** property can have from one to four values.
@@ -170,7 +165,6 @@ readingTime: 9–11 MINS READ
   2. **right border**
   3. **bottom border**
   4. **left border**
-<MDXSeparator />
 ```HTML {5} showLineNumbers
 <body>
   <img 
@@ -180,7 +174,6 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-<MDXSeparator />
 ```HTML {5} showLineNumbers
 <body>
   <img 
@@ -190,8 +183,7 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `border-radius` property
 - The **border-radius** property is used to add rounded borders to an element.
 ```HTML {5} showLineNumbers
@@ -203,8 +195,7 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `display` and `margin` property
 - The **display** property specifies if/how an element is displayed. Giving a value of **block** on the display property will let the element take the whole line on its own.
 - The **margin** property is used to create space around elements. Giving a value of **auto** to the margin property gives the element equal amounts of spaces on the left and right side making it appear in the center.
@@ -217,8 +208,7 @@ readingTime: 9–11 MINS READ
   />
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `float` property
 - The CSS **float** property specifies how an element should float.
 - The **float** property is used for positioning and formatting content e.g. let an image float left to the text in a container.
@@ -235,6 +225,7 @@ readingTime: 9–11 MINS READ
 </section>
 <section>
 ## CSS background properties
+<br />
 ### The `background-image` property
 - The **background-image** property specifies an image to use as the background of an element.
 - By default, the **image is repeated** so it covers the entire element.
@@ -243,8 +234,7 @@ readingTime: 9–11 MINS READ
   <!-- contents here -->
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `background-repeat` property
 - The **background-repeat** property repeats an image both horizontally and vertically.
 - The value can be horizontally repeated (repeat-x), vertically repeated (repeat-y), or no-repeat.
@@ -253,8 +243,7 @@ readingTime: 9–11 MINS READ
   <!-- contents here -->
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `background-attachment` property
 - The **background-attachment** property specifies whether the background image should **scroll** or be **fixed**.
 ```HTML {3} showLineNumbers
@@ -265,8 +254,7 @@ readingTime: 9–11 MINS READ
   <!-- contents here -->
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `background-position` property
 - The **background-position** property is used to specify the position of the background image.
 ```HTML {4} showLineNumbers
@@ -278,8 +266,7 @@ readingTime: 9–11 MINS READ
   <!-- contents here -->
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `background-size` property
 - The CSS **background-size** property allows you to specify the size of background images.
 - The size can be specified in **lengths**, **percentages**, or by using one of the two keywords: **contain** or **cover**.
@@ -293,8 +280,7 @@ readingTime: 9–11 MINS READ
   <!-- contents here -->
 </body>
 ```
-</section>
-<section>
+<MDXSeparator />
 ### The `background` property
 - The CSS **background** property sets all the background properties in one declaration.
 - When using the shorthand property the order of the property values is:
@@ -303,14 +289,12 @@ readingTime: 9–11 MINS READ
   - **background-repeat**
   - **background-attachment**
   - **background-position**
-<MDXSeparator />
-```HTML {1} showLineNumbers
+```HTML {1}
 <body style="background: #000000 url(images/mickey.png) no-repeat fixed top right;">
   <!-- contents here -->
 </body>
 ```
-<MDXSeparator />
-```HTML {1-2} showLineNumbers
+```HTML {1-2}
 <body style="background: #000000 url(images/mickey.png) no-repeat fixed top right; 
              background-size: 379px 391px;">
   <!-- contents here -->
@@ -323,16 +307,14 @@ readingTime: 9–11 MINS READ
 - To add a favicon to your website, use the `<link />` element within the head section of your HTML document.
 - The `<link />` tag defines the relationship between the current document and an external resource.
 - The `<link />` element is an empty element; it contains attributes to perform its function.
-</section>
-<section>
+<MDXSeparator />
 ### The link attributes used to create a Favicon
 - The **rel** is required attribute that specifies the relationship between the current document and the linked document. (**icon**)
 - The **type** attribute specifies the media type of the linked document. (**image/icon**)
 - The **href** attribute specifies the location of the linked document.
-</section>
-<section>
+<MDXSeparator />
 ### HTML Favicon
-```HTML {4} showLineNumbers
+```HTML {4}
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

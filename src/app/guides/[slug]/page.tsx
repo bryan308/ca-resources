@@ -1,5 +1,7 @@
 import "./slug.css"
 
+import React from "react"
+
 import { allGuides } from "contentlayer/generated"
 import { useMDXComponent } from "next-contentlayer2/hooks"
 import { notFound } from "next/navigation"
@@ -90,6 +92,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 				/>
 			)}
 			<Pagination
+				page="guides"
 				previous={prev ? { title: prev.modTitle, path: prev._raw.flattenedPath } : null}
 				next={next ? { title: next.modTitle, path: next._raw.flattenedPath } : null}
 			/>

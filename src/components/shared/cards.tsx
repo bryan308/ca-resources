@@ -1,5 +1,4 @@
 import { Resource } from "@/lib/types"
-
 import Link from "next/link"
 import React from "react"
 import ImageRender from "./image-render"
@@ -8,10 +7,16 @@ interface ICardsProps {
 	data: Resource[]
 }
 
+const shuffleArray = (array: Resource[]) => {
+	return array.sort(() => Math.random() - 0.5)
+}
+
 const Cards: React.FC<ICardsProps> = ({ data }) => {
+	const shuffledData = shuffleArray([...data])
+
 	return (
 		<>
-			{data.map((d) => (
+			{shuffledData.map((d) => (
 				<div
 					key={d.title}
 					className="bg-background-foreground flex items-center gap-4 py-4 px-6 rounded-md border border-border hover:ring-4 ring-ring/20"
@@ -35,9 +40,7 @@ const Cards: React.FC<ICardsProps> = ({ data }) => {
 						>
 							{d.title}
 						</Link>
-						<span className="text-muted-foreground text-sm truncate-text">
-							{d.description}
-						</span>
+						<span className="text-muted-foreground text-sm truncate-text">{d.description}</span>
 					</div>
 				</div>
 			))}

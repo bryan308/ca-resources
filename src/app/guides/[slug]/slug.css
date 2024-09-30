@@ -4,7 +4,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	@apply text-sm bg-neutral-950 border border-border text-white max-w-[51.85rem];
+	@apply text-sm bg-neutral-950 border border-border text-white max-w-[53.95rem];
 	font-family: var(--geist-mono);
 	letter-spacing: 0.2px;
 	white-space: pre;
@@ -303,7 +303,7 @@ code {
 }
 
 blockquote {
-	@apply p-3 border-l-4 border-border my-6;
+	@apply p-4 pb-10 border-l-4 border-blue-500 my-6 bg-card;
 }
 
 blockquote p {
