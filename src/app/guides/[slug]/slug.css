@@ -68,8 +68,6 @@ pre > code {
 	margin: 0 -1rem;
 	background-color: #62c07327;
 	border-left: 0.25rem solid #62c073;
-	/* background-color: #8e4ec627;
-	border-left: 0.25rem solid #8E4EC6; */
 }
 
 .line-number::before {

@@ -10,6 +10,10 @@
     "build:content": "contentlayer2 build"
   },
   "dependencies": {
+    "@content-collections/core": "^0.7.2",
+    "@content-collections/mdx": "^0.1.6",
+    "@content-collections/next": "^0.2.3",
+    "@fumadocs/content-collections": "^1.1.4",
     "@octokit/core": "^6.1.2",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.1",

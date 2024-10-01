@@ -1,7 +1,7 @@
-import { withContentlayer } from "next-contentlayer2"
+import { withContentCollections } from "@content-collections/next"
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
 	reactStrictMode: true,
 	swcMinify: true,
 	images: {
@@ -16,4 +16,12 @@ const nextConfig = {
 	},
 }
 
-export default withContentlayer(nextConfig)
+export default withContentCollections(config)
+
+// ! MIGRATING TO FUMADOCS / CONTENT-COLLECTIONS
+// import { withContentlayer } from "next-contentlayer2"
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+// 	reactStrictMode: true,
+// }
+// export default withContentlayer(nextConfig)

@@ -6,7 +6,7 @@ import Link from "next/link"
 import { SheetTrigger } from "../ui/sheet"
 import { ArrowRight, Minus } from "lucide-react"
 import { GuidePath, Path, SheetLinksProps } from "@/lib/types"
-import { allGuides } from "contentlayer/generated"
+import { allGuides } from "content-collections"
 
 const SheetLinks: React.FC<SheetLinksProps & { category?: string }> = ({
 	header,
@@ -15,10 +15,12 @@ const SheetLinks: React.FC<SheetLinksProps & { category?: string }> = ({
 	category, // New prop for filtering by category
 }) => {
 	// * Filter guides by category if the category prop is provided
-	const guides = category ? allGuides.filter((guide) => guide?.category?.trim() === category) : allGuides 
+	const guides = category
+		? allGuides.filter((guide) => guide?.category?.trim() === category)
+		: allGuides
 
 	const links = isGuide
-		? guides.map((guide) => ({ slug: guide._raw.flattenedPath, title: guide.modTitle }))
+		? guides.map((guide) => ({ slug: guide._meta.path, title: guide.modTitle }))
 		: paths
 
 	// * getHref: A function to get the href of the link.

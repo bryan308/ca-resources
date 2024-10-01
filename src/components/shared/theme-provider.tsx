@@ -1,19 +1,20 @@
-'use client';
+"use client"
 
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from "next-themes"
+import { RootProvider } from "fumadocs-ui/provider"
 
 export default function Providers({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: React.ReactNode
 }>) {
 	return (
 		<ThemeProvider
-			attribute='class'
-			defaultTheme='system'
+			attribute="class"
+			defaultTheme="system"
 			enableSystem
 		>
-			{children}
+			<RootProvider theme={{ enabled: false }}>{children}</RootProvider>
 		</ThemeProvider>
-	);
+	)
 }

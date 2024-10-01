@@ -1,3 +1,5 @@
+import { Pre, CodeBlock } from "fumadocs-ui/components/codeblock"
+import { Callout } from "fumadocs-ui/components/callout"
 import { Button } from "../ui/button"
 import { EmailGenerator } from "./gen-email"
 import {
@@ -17,6 +19,7 @@ import { LoginForm } from "@/components/shared/login-form"
 
 export const components = {
 	Button,
+	Callout,
 	BorderExample,
 	DataTable,
 	DataTableExample,
@@ -30,4 +33,12 @@ export const components = {
 	TableCellSpanning,
 	TableExample,
 	UnorderedList,
+	pre: (props: React.HTMLProps<HTMLPreElement>) => (
+		<CodeBlock
+			keepBackground
+			{...props}
+		>
+			<Pre>{props.children}</Pre>
+		</CodeBlock>
+	),
 }

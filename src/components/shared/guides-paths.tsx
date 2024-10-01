@@ -18,11 +18,11 @@ function GuidestPaths({ category }: { category: string }) {
 				.filter((g) => g?.category && g.category.trim() === category.trim())
 				// .sort((a, b) => a.modTitle.localeCompare(b.modTitle))
 				.map((p, i: number) => {
-					const isActive = pathname === `/guides/${p._raw.flattenedPath}`
+					const isActive = pathname === `/guides/${p._meta.path}`
 					return (
 						<div key={i}>
 							<Link
-								href={`/guides/${p._raw.flattenedPath}`}
+								href={`/guides/${p._meta.path}`}
 								className={cn(
 									"inline-block p-2 my-px text-sm w-full rounded-lg",
 									"hover:bg-muted/50 hover:text-foreground focus:bg-muted/50 focus:text-foreground",
