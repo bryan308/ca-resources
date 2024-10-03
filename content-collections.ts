@@ -5,14 +5,6 @@ import {
 	transformMDX,
 } from "@fumadocs/content-collections/configuration"
 
-import { compileMDX } from "@content-collections/mdx"
-import remarkGfm from "remark-gfm"
-import rehypePrismPlus from "rehype-prism-plus"
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import rehypeSlug from "rehype-slug"
-import rehypeKatex from "rehype-katex"
-import rehypePresetMinify from "rehype-preset-minify"
-
 const docs = defineCollection({
 	name: "docs",
 	directory: "content/docs",
@@ -29,45 +21,26 @@ const metas = defineCollection({
 	schema: createMetaSchema,
 })
 
+const resources = defineCollection({
+	name: "resources",
+	directory: "content/resources",
+	include: "**/*.mdx",
+	schema: createDocSchema,
+	transform: transformMDX,
+})
+
 const guides = defineCollection({
 	name: "guides",
-	directory: "src/guides-pages",
+	directory: "content/guides",
 	include: "**/*.mdx",
+	// schema: formatterSchema,
 	schema: (z) => ({
 		title: z.string(),
-		modTitle: z.string(),
-		description: z.string(),
-		thumbnail: z.string().optional(),
-		category: z.string(),
-		readingTime: z.string(),
+		description: z.string().optional(),
 	}),
-	transform: async (document, context) => {
-		const mdx = await compileMDX(context, document, {
-			remarkPlugins: [remarkGfm],
-			rehypePlugins: [
-				rehypeSlug,
-				[
-					rehypeAutolinkHeadings,
-					{
-						behavior: "wrap",
-						properties: {
-							className: ["anchor"],
-							title: "Permalink to this heading",
-						},
-					},
-				],
-				rehypePrismPlus,
-				rehypeKatex,
-				rehypePresetMinify,
-			],
-		})
-		return {
-			...document,
-			mdx,
-		}
-	},
+	transform: transformMDX,
 })
 
 export default defineConfig({
-	collections: [docs, metas, guides],
+	collections: [docs, metas, resources, guides],
 })
