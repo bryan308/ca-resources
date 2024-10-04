@@ -5,7 +5,7 @@ import type { ReactNode } from "react"
 import localFont from "next/font/local"
 import { cn } from "@/lib/utils"
 import { Metadata } from "next"
-import { baseOptions } from "./layout.config"
+// import { baseOptions } from "./layout.config"
 
 const mono = localFont({
 	src: "./fonts/GeistMonoVF.woff",
@@ -20,7 +20,8 @@ const sans = localFont({
 })
 
 export const metadata: Metadata = {
-	title: `%s | ${baseOptions.nav?.title}`,
+	title: "%s | CA Resources",
+	description: `A collection of resources for learning web development`,
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -1,0 +1,110 @@
+---
+title: Attributes
+description: The attributes of the input element.
+---
+
+### value
+
+The **value** attribute specifies the initial value for an input field.
+
+### readonly
+
+The **readonly** attribute specifies that the input field is read only (**cannot be changed**).
+
+### disabled
+
+The **disabled** attribute specifies that the input field is disabled. A disabled input field is unusable and unclickable, and its value will not be sent when submitting a form.
+
+```html
+<form>
+  <label for="subject">Subject:</label> <br />
+  <input type="text" id="subject" name="subject" value="IT-WST01" disabled> <br /> // [!code highlight]
+  <label for="section">Section:</label> <br />
+  <input type="text" id="section" name="section" value="BSIT 2" disabled> <br /> // [!code highlight]
+  <input type="submit" name="btnsubmit" value="Save">
+  <input type="reset" name="btnclear" value="Clear">
+</form>
+```
+
+-----
+
+### size
+
+The **size** attribute specifies the size (in characters) for the input field.
+
+### maxlength
+
+The **maxlength** attribute specifies the maximum allowed length for the input field. With a maxlength attribute, the input field will not accept more than the allowed number of characters.
+
+```html
+<form>
+  <label for="fname">First Name:</label>
+  <input type="text" id="fname" name="fname"> <br />
+  <label for="lname">Last Name:</label>
+  <input type="text" id="lname" name="lname" size="30"> <br /> // [!code highlight]
+  <label for="preadd">Present Address:</label> <br />
+  <input type="text" id="preadd" name="preadd" size="40" maxlength="30"> <br /> // [!code highlight]
+  <input type="submit" name="btnsubmit" value="Save">
+  <input type="reset" name="btnclear" value="Clear">
+</form>
+```
+
+-----
+
+### min and max
+
+The **min** and **max** attributes specify the minimum and maximum values for an `<input />` element.
+
+### step
+
+The **step** attribute specifies the legal number of intervals for an `<input />` element.
+
+```html
+<form>
+  <label for="quiz">Quiz Score:</label> <br />
+  <input type="number" id="quiz" name="quiz" min="0" max="50" step="5"> <br /> // [!code highlight]
+  <input type="submit" name="btnsubmit" value="Save">
+  <input type="reset" name="btnclear" value="Clear">
+</form>
+```
+
+-----
+
+### placeholder
+
+The **placeholder** attribute specifies a hint describing an input field’s expected value. The hint is displayed in the field before the user enters a value.
+
+### required
+
+The **required** attribute specifies that an input field must be filled out before submitting the form.
+
+### autofocus
+
+The **autofocus** attribute specifies that an input field should automatically get focus when the page loads.
+
+```html
+<form>
+  <input type="text" name="uname" placeholder="Enter username" required autofocus> <br /> // [!code highlight]
+  <input type="password" name="pword" placeholder="Enter password" required> <br /> // [!code highlight]
+  <input type="submit" name="btnsubmit" value="Submit">
+</form>
+```
+
+-----
+
+### pattern
+
+The **pattern** attribute specifies a regular expression that the input element’s value is checked against.
+
+### title
+
+The **title** attribute is used to describe the pattern to the user.
+
+```html
+<form>
+  <label for="zipcode">ZIP Code:</label> <br />
+  <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{4}" title="4 digit zipcode"> // [!code highlight]
+  <br />
+  <input type="submit" name="btnsubmit" value="Submit">
+</form>
+```

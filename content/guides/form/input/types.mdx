@@ -1,0 +1,177 @@
+---
+title: Types
+description: The input element is the most important form element.
+---
+
+### text
+
+`type="text"` defines a one-line text input field.
+
+```html
+<form>
+  <label for="sname">Student Name</label> <br />
+  // [!code word:text]
+  <input type="text" id="sname" name="sname">
+</form>
+```
+
+### password
+
+`type="password"` defines a password field. The characters in a password field are masked (shown as asterisks or circles).
+
+```html
+<form>
+  <label for="pword">Password</label> <br />
+  // [!code word:password]
+  <input type="password" id="pword" name="pword">
+</form>
+```
+
+-----
+
+### submit
+
+`type="submit"` defines a button for submitting form data to a form handler.
+
+### reset 
+
+`type="reset"` defines a reset button that will reset all form values to their default values.
+
+### button
+
+`type="button"` defines a programmable button.
+
+```html
+<form>
+  <label for="sname">Student Name</label> <br />
+  <input type="text" id="sname" name="sname">
+  <label for="pword">Password</label> <br />
+  <input type="password" id="pword" name="pword"> <br /><br />
+  // [!code word:submit:1]
+  <input type="submit" name="btnsubmit" value="Save">
+  // [!code word:reset]
+  <input type="reset" name="btnclear" value="Clear">
+  // [!code word:button]
+  <input type="button" name="btnprint" value="Print">
+</form>
+```
+
+-----
+
+### radio
+
+`type="radio"` defines a radio button. A radio button lets a user select only one of a limited number of choices.
+
+### checkbox
+
+`type="checkbox"` defines a checkbox. Checkboxes lets users select zero or more options of a limited number of choices.
+
+```html
+<form>
+  <label for="sex">Sex:</label> <br />
+  // [!code word:radio]
+  <input type="radio" id="sex" name="sex" value="male"> Male <br />
+  <input type="radio" id="sex" name="sex" value="female"> Female <br />
+  <label for="subjects">Subjects Enrolled:</label> <br />
+  // [!code word:checkbox]
+  <input type="checkbox" id="subjects" name="subj1" value="CC-103">CC-103 <br />
+  <input type="checkbox" id="subjects" name="subj2" value="IT-WST02">IT-WST02 <br />
+  <input type="checkbox" id="subjects" name="subj3" value="IT-PF01">IT-PF01 <br />
+  <input type="checkbox" id="subjects" name="subj4" value="IT-MS01">IT-MS01 <br />
+</form>
+```
+
+-----
+
+### email 
+
+`type="email"` is used for input fields that should contain an email address.
+
+### date
+
+`type="date"` is used for input fields that should contain a date.
+
+### number 
+
+`type="number"` defines a numeric input field.
+
+```html
+<form>
+  <label for="eadd">Email Address:</label> <br />
+  // [!code word:email]
+  <input type="email" id="eadd" name="eadd"> <br />
+  <label for="bday">Birthday:</label> <br />
+  // [!code word:date]
+  <input type="date" id="bday" name="bday"> <br />
+  <label for="age">Age:</label> <br />
+  // [!code word:number]
+  <input type="number" id="age" name="age"> <br />
+  <input type="submit" name="btnsubmit" value="Save">
+  <input type="reset" name="btnclear" value="Clear">
+</form>
+```
+
+-----
+
+### range
+
+`type="range"` defines a control for entering a number whose exact value is not important (slider control). Default range is 0 to 100.
+
+### tel
+
+`type="tel"` is used for input fields that should contain a telephone number.
+
+```html
+<form>
+  <label for="price">Price range:</label> <br />
+  // [!code word:range]
+  <input type="range" id="price" name="price"> <br />
+  <label for="cnum">Cellphone Number:</label> <br />
+  // [!code word:tel]
+  <input 
+    type="tel" 
+    id="cnum" 
+    name="cnum" 
+    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" 
+    placeholder="0910-123-4567"
+  > <br />
+  <input type="submit" name="btnsubmit" value="Submit">
+</form>
+```
+
+-----
+
+### url 
+
+`type="url"` is used for input fields that should contain a URL address.
+
+### time
+
+`type="time"` allows the user to select a time.
+
+### file
+
+`type="file"` allows the user to choose a file from their device or computer’s storage.
+
+<Callout>
+Adding the `multiple` attribute to `type="file"` allows users to select more than one file from their device or computer's storage. 
+
+**Example**: `<input type="file" multiple>`
+</Callout>
+
+```html
+<form>
+  <label for="weadd">Website Address:</label> <br />
+  // [!code word:url]
+  <input type="url" id="weadd" name="weadd"> <br />
+  <label for="tarrive">Arrival Time:</label> <br />
+  // [!code word:time]
+  <input type="time" id="tarrive" name="tarrive"> <br />
+  <label for="sfile">File Upload:</label> <br />
+  // [!code word:file:1]
+  <input type="file" id="sfile" name="sfile"> <br />
+  <input type="submit" name="btnsubmit" value="Submit">
+  <input type="submit" name="btnsubmit" value="Save">
+  <input type="reset" name="btnclear" value="Clear">
+</form>
+```

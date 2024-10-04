@@ -9,7 +9,7 @@ export function LoginForm() {
 	return (
 		<Card className="mx-auto xl:mx-0 max-w-sm mt-4 rounded-lg border-border">
 			<CardHeader>
-				<CardTitle className="text-2xl">Login</CardTitle>
+				<CardTitle className="text-2xl mt-0">Login</CardTitle>
 				<CardDescription>Enter your email below to login to your account</CardDescription>
 			</CardHeader>
 			<CardContent>

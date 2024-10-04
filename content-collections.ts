@@ -5,17 +5,17 @@ import {
 	transformMDX,
 } from "@fumadocs/content-collections/configuration"
 
-const docs = defineCollection({
-	name: "docs",
-	directory: "content/docs",
-	include: "**/*.mdx",
-	schema: createDocSchema,
-	transform: transformMDX,
+const guidesMeta = defineCollection({
+	name: "guidesMeta",
+	directory: "content/guides",
+	include: "**/meta.json",
+	parser: "json",
+	schema: createMetaSchema,
 })
 
-const metas = defineCollection({
-	name: "meta",
-	directory: "content/docs",
+const resourcesMeta = defineCollection({
+	name: "resourcesMeta",
+	directory: "content/resources",
 	include: "**/meta.json",
 	parser: "json",
 	schema: createMetaSchema,
@@ -33,7 +33,6 @@ const guides = defineCollection({
 	name: "guides",
 	directory: "content/guides",
 	include: "**/*.mdx",
-	// schema: formatterSchema,
 	schema: (z) => ({
 		title: z.string(),
 		description: z.string().optional(),
@@ -42,5 +41,5 @@ const guides = defineCollection({
 })
 
 export default defineConfig({
-	collections: [docs, metas, resources, guides],
+	collections: [resourcesMeta, guidesMeta, resources, guides],
 })

@@ -1,0 +1,28 @@
+---
+title: Select and Option
+description: The select and option elements are used to create a drop-down list.
+---
+
+### select
+
+The `<select></select>` element defines a drop-down list.
+
+### option
+
+The `<option></option>` element defines an option that can be selected.
+
+#### selected
+
+Use the **selected** attribute to the `<option>` element to define a pre-selected option.
+
+```html
+<form>
+  <label for="civilstat">Civil Status:</label>
+  <select id="civilstat" name="civilstat"> // [!code highlight]
+    <option value="single" selected>Single</option> // [!code highlight]
+    <option value="married">Married</option> // [!code highlight]
+    <option value="separated">Separated</option> // [!code highlight]
+    <option value="widowed">Widowed</option> // [!code highlight]
+  </select> // [!code highlight]
+</form>
+```

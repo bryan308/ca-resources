@@ -28,18 +28,9 @@ export const baseOptions: HomeLayoutProps = {
 		},
 		{
 			icon: <Book />,
-			type: "menu",
 			text: "Guides",
-			items: [
-				{
-					text: "HTML",
-					url: "/guides/HTML",
-				},
-				{
-					text: "JavaScript",
-					url: "/guides/Javascript",
-				},
-			],
+			url: "/guides",
+			active: "nested-url",
 		},
 	],
 }

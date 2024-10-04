@@ -1,3 +1,5 @@
+import "./style.css"
+
 import type { Metadata } from "next"
 
 import { guides } from "@/app/source"
@@ -5,24 +7,32 @@ import { guides } from "@/app/source"
 import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { notFound } from "next/navigation"
 import { MDXContent } from "@content-collections/mdx/react"
+import { components } from "@/components/shared/mdx-components"
 
-import defaultMdxComponents from "fumadocs-ui/mdx"
+import { TableOfContents } from "fumadocs-core/server" // ensure you have the correct import
 
 export default function Page({ params }: { params: { slug?: string[] } }) {
 	const page = guides.getPage(params.slug)
 	if (!page) notFound()
 
+	// * Transform `page.data.toc` to match `TableOfContents` type, including the `depth` property
+	const toc: TableOfContents = page.data.toc.map((item: any) => ({
+		title: item.title || item, // Adjust this based on your data structure
+		url: item.url || `/guides/${item.slug}`, // Adjust to the correct URL structure
+		depth: item.depth || 1, // You can dynamically set this or default it to `1`
+	}))
+
 	return (
 		<DocsPage
-			toc={page.data.toc}
-			full={page.data.full}
+			toc={toc} // Pass the transformed `toc`
+			// full={page.data.full}
 		>
 			<DocsTitle>{page.data.title}</DocsTitle>
 			<DocsDescription>{page.data.description}</DocsDescription>
 			<DocsBody>
 				<MDXContent
 					code={page.data.body}
-					components={{ ...defaultMdxComponents }}
+					components={components}
 				/>
 			</DocsBody>
 		</DocsPage>
