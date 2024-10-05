@@ -1,8 +1,307 @@
 ---
-title: JavaScript
-description: Learn how to use JavaScript in web development
+title: "Introduction to JavaScript"
+description: "Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments."
 ---
 
-<Cards>
-  <Card title="Introduction" description="Get an introduction to JavaScript, a powerful scripting language for web development." href="/guides/Javascript/introduction-to-javascript" />
-</Cards>
+## Agenda
+1. Introduction to JavaScript.
+2. What JavaScript can do?
+3. Where to insert JavaScript?
+4. General rules in writing JavaScript.
+5. Displaying output using JavaScript.
+6. JavaScript comments.
+
+### JavaScript
+- **JavaScript** is a scripting language that allows users to implement complex features on web pages.
+- JavaScript allows users to:
+  - Store useful values inside variables.
+  - Perform operations on pieces of text.
+  - Run codes in response to certain events occurring on a web page.
+- **JavaScript** and **Java** are completely different languages, both in concept and design.
+- JavaScript was invented by **Brendan Eich** in **1995** and became an **ECMA** (European Computer Manufacturers Association) standard in **1997**.
+- **ECMA-262** is the official name of the standard and **ECMAScript** is the official name of the language.
+
+### Why Study JavaScript
+- JavaScript is one of the 3 languages all web developers must learn:
+  - **HTML** to define the content of web pages.
+  - **CSS** to specify the layout of web pages.
+  - **JavaScript** to program the behavior of web pages.
+
+## What JavaScript do?
+### JavaScript can change the HTML content
+- One of many **JavaScript** HTML methods is `getElementById()`.
+- This example uses the method to "**find**" an HTML element (with `id="demo"`) and changes the element content (**innerHTML**) to "**Hello JavaScript**":
+```html title="index.html"
+<body>
+  <h1>What Can JavaScript Do?</h1>
+  <p id="demo">JavaScript can change the HTML content.</p>
+  <button 
+    type="button" 
+    onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+  >
+    Click Me!
+  </button>
+</body>
+```
+
+### JavaScript can change the HTML attribute values
+```html
+<body>
+  <p>JavaScript can change the HTML attribute values.</p>
+  <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+  <button 
+    type="button"
+    onclick="document.getElementById('bulb').src = 'media/bulb-on.png'"
+  >
+    Turn on
+  </button>
+  <img src="media/bulb-off.png" id="bulb" style="width: 100px;" />
+  <button 
+    type="button"
+    onclick="document.getElementById('bulb').src = 'media/bulb-off.png'"
+  >
+    Turn off
+  </button>
+</body>
+```
+
+### JavaScript can change HTML styles (CSS)
+```html
+<body>
+  <h1>What Can JavaScript Do?</h1>
+  <p>JavaScript can change the style of HTML element.</p>
+  <div id="divColor" style="border: 1px solid black; width: 50%; height: 100px;">
+    <p>This is a paragraph in Div.</p>
+    <span>This is a span in Div.</span>
+  </div>
+  <br />
+  <button type="button" onclick="changeStyle()">Click Me</button>
+  <script>
+    function changeStyle() {
+      var element = document.getElementById("divColor").element.style.backgroundColor = "#ff0000";
+    }
+  </script>
+</body>
+```
+
+## Where to insert JavaScript
+### JavaScript can be placed in the head and body section
+- We can place JavaScript both in the `<head>` and `<body>` sections of a page by using the `<script></script>` elements.
+
+### JavaScript in the head section
+```html {4-8} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed!";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo">A paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+  </body>
+</html>
+```
+
+### JavaScript in the body section
+```html {7-11} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo">A paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed!";
+      }
+    </script>
+  </body>
+</html>
+```
+
+### JavaScript can be external from the HTML file
+- JavaScript can also be placed in external files just like external CSS.
+- External scripts are practical when the same code is used in many different web pages.
+- JavaScript files have the file extension of `.js`.
+- To use an external script, put the name of the script file in the **src** (source) attribute of a `<script>` tag.
+- Users can place an external script reference in `<head>` or `<body>`. The script will behave as if it was located exactly where the `<script>` tag is located.
+
+<Callout>
+External JavaScript cannot contain `<script>` tags.
+
+The use of `<script>` tag will be inside the html file.
+</Callout>
+
+### Connecting to external JavaScript
+```js
+// js/myScript.js
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+```
+```html {9} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Demo External JavaScript</h2>
+    <p id="demo">A paragraph.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p>This exmaple links to "myScript.js"</p>
+    <p>(myFunction is stored in "myScript.js")</p>
+    <script src="js/myScript.js"></script>
+  </body>
+</html>
+```
+
+### Advantages of using external JavaScript
+- Placing scripts in external files offer some advantages like:
+  - It separates HTML tags and JavaScript code.
+  - It makes HTML and JavaScript easier to read and maintain.
+  - Cached JavaScript files can speed up page loads.
+
+### External References
+- An external references can be referenced in 3 different ways.
+  - With a full URL **website link**.
+  - With a file path `/js/javascript.js`
+  - With any path `javascript.js`
+
+## General Rules in Writing JavaScript
+- Semicolons (;) are used to separate JavaScript statement therefore, every statement should have a semicolon at the end. 
+  ```js
+  document.write("Hello everyone");
+  ```
+- Multiple statements can be allowed to be written in one line when separated by semicolons.
+  ```js
+  a = 5; b = 6; c = a + b;
+  ```
+- JavaScript ignores multiple spaces. Users can add white space to the script to make it more readable.
+  ```js
+  let person="Max";
+  
+  // is the same as
+  let person = "Max";
+  ```
+- A good practice is to put spaces around operators `(= + - * /)`.
+  ```js
+  let x = y + z;
+  ```
+- We can use the `+` symbol for concatenation.
+  ```js
+  window.alert("My age is " + 12);
+  ```
+- We can insert HTML codes in JavaScript outputs.
+  ```js
+  document.write("<h1>Hello</h1>");
+  ```
+- JavaScript code can be grouped together in blocks by placing them inside curly brackets.
+  ```js
+  function myFunction() {
+    document.getElementById("demo1").innerHTML = "Hello everyone!";
+    document.getElementById("demo2").innerHTML = "How are you?";
+  }
+  ```
+
+## Displaying output using JavaScript
+- JavaScript can display data using different ways. 
+  - Writing into an HTML element, using `innerHTML`.
+  - Writing into an HTML output, using `document.write()`.
+  - Writing into an alert box, using `window.alert()`.
+
+### Using innerHTML
+- To access an HTML element, JavaScript can use the `document.getElementById(id)` method.
+- The **id** attribute defines the HTML element where the method will be implemented.
+- The **innerHTML** property defines the HTML content that is visible within the page.
+- Changing the **innerHTML** property of an HTML element is the most common way to display data in HTML using JavaScript.
+
+```html {8} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML = "My Second Paragraph";
+    </script>
+  </body>
+</html>
+```
+
+### Using `document.write`
+- Another way to display output on the HTML page is to use the `document.write()` method.
+- Document.write is only recommended for testing purposes. When deployed for actual use, using the `document.write()` after an HTML document is loaded, will delete all existing HTML.
+```html {7} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <script>
+      document.write("My Second Paragraph");
+    </script>
+  </body>
+</html>
+```
+
+### Using `window.alert`
+- Using `window.alert()` activates an alert box that will display the user data on the web page.
+```html {7} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <script>
+      window.alert("This is an alert box!");
+    </script>
+  </body>
+</html>
+```
+
+## JavaScript comments
+- JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+- JavaScript comments can be used to prevent code execution, when testing alternative code.
+- We can use **single line** and **multi-line** comments in JavaScript.
+- **Single line** comments are the most often used method of placing comments, **multi-line** or **block** comments are used when documenting the project.
+
+#### Single Line Comment
+```html {7, 9} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+      // Change content of heading:
+      document.getElementById("myH") = "JavaScript Comments";
+      // Change content of paragraph:
+      document.getElementById("myP") = "My First Paragraph";
+    </script>
+  </body>
+</html>
+```
+
+#### Multi-line Comment
+```html {7-11} 
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+      /*
+        The code below will change 
+        the heading with id = "myH"
+        and the paragraph with id = "myP"
+      */
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      document.getElementById("myP").innerHTML = "My First Paragraph";
+    </script>
+  </body>
+</html>
+```
