@@ -22,6 +22,8 @@ import { Wrapper } from "./wrapper"
 import { Label } from "../ui/label"
 import { Input } from "../ui/input"
 import { Checkbox } from "../ui/checkbox"
+import { Slider } from "../ui/slider"
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 
 export const components = {
 	Button,
@@ -39,7 +41,10 @@ export const components = {
 	MDXSeparator,
 	Input,
 	Checkbox,
+	RadioGroup,
+	RadioGroupItem,
 	Label,
+	Slider,
 	Tab,
 	Tabs,
 	Wrapper,

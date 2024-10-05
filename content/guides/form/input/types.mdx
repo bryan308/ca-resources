@@ -5,7 +5,9 @@ description: Input supports various types such as text, password, email, and che
 
 <Callout>
 
-All examples below are using the **shadcn/ui** label and input for minimalist and modern design. See [shadcn](https://www.shadcn.com/).
+Some examples below are using the **shadcn/ui** components for minimalist and modern design.
+
+See [shadcn](https://www.shadcn.com/).
 
 </Callout>
 
@@ -27,7 +29,7 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 </Tab>
 <Tab value="Output">
 
-<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+<div className="grid w-full max-w-sm items-center gap-1.5">
   <Label htmlFor="sname">Student Name</Label>
   <Input type="text" id="sname" name="sname" />
 </div>
@@ -53,7 +55,7 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 </Tab>
 <Tab value="Output">
 
-<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+<div className="grid w-full max-w-sm items-center gap-1.5">
   <Label htmlFor="pword">Password</Label>
   <Input type="password" id="pword" name="pword" />
 </div>
@@ -97,15 +99,15 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 <Tab value="Output">
 
 <form>
-<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+<div className="grid w-full max-w-sm items-center gap-1.5">
   <Label htmlFor="sname">Student Name</Label>
   <Input type="text" id="sname" name="sname" />
 </div>
-<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+<div className="grid w-full max-w-sm items-center gap-1.5">
   <Label htmlFor="pword">Password</Label>
   <Input type="password" id="pword" name="pword" />
 </div>
-<div className="grid w-full max-w-sm items-center gap-1.5 mt-4 min-w-[300px]">
+<div className="grid w-full max-w-sm items-center gap-1.5 mt-4">
   <Button variant="secondary">Save</Button>
   <Button variant="destructive" type="reset">Clear</Button>
   <Button type="button">Print</Button>
@@ -145,7 +147,47 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 <Tab value="Output">
 
 <form>
-
+  <Label htmlFor="sex">Sex:</Label>
+  <RadioGroup>
+    <div className="flex items-center space-x-2">
+      <RadioGroupItem value="Male" id="r1" />
+      <Label htmlFor="r1">Male</Label>
+    </div>
+    <div className="flex items-center space-x-2">
+      <RadioGroupItem value="Female" id="r2" />
+      <Label htmlFor="r2">Female</Label>
+    </div>
+  </RadioGroup>
+  <br />
+  <Label htmlFor="subjects">Subjects Enrolled:</Label> <br />
+  <div className="flex items-center my-2">
+  <Checkbox id="subj1" name="subjects" value="CC-103" />
+  <label
+    htmlFor="subj1"
+    className="text-sm font-medium leading-none ml-2"
+  >CC-103</label>
+  </div>
+  <div className="flex items-center my-2">
+  <Checkbox id="subj2" name="subjects" value="IT-WST02" />
+  <label
+    htmlFor="subj2"
+    className="text-sm font-medium leading-none ml-2"
+  >IT-WST02</label>
+  </div>
+  <div className="flex items-center my-2">
+  <Checkbox id="subj3" name="subjects" value="IT-PF01" />
+  <label
+    htmlFor="subj3"
+    className="text-sm font-medium leading-none ml-2"
+  >IT-PF01</label>
+  </div>
+  <div className="flex items-center my-2">
+  <Checkbox id="subj4" name="subjects" value="IT-MS01" />
+  <label
+    htmlFor="subj4"
+    className="text-sm font-medium leading-none ml-2"
+  >IT-MS01</label>
+  </div>
 </form>
 
 </Tab>
@@ -165,6 +207,10 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 
 `type="number"` defines a numeric input field.
 
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
+
 ```html
 <form>
   <label for="eadd">Email Address:</label> <br />
@@ -181,6 +227,26 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 </form>
 ```
 
+</Tab>
+<Tab value="Output">
+
+<form>
+  <label htmlFor="eadd">Email Address:</label> <br />
+  <Input type="email" id="eadd" name="eadd" className="max-w-sm" /> <br />
+
+  <label htmlFor="bday">Birthday:</label> <br />
+  <Input type="date" id="bday" name="bday" className="max-w-sm" /> <br />
+
+  <label htmlFor="age">Age:</label> <br />
+  <Input type="number" id="age" name="age" className="max-w-sm" /> <br />
+
+  <Button>Save</Button>
+  <Button variant="destructive" type="reset">Clear</Button>
+</form>
+
+</Tab>
+</Tabs>
+
 -----
 
 ### range
@@ -191,6 +257,9 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
 
 `type="tel"` is used for input fields that should contain a telephone number.
 
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
 ```html
 <form>
   <label for="price">Price range:</label> <br />
@@ -208,6 +277,19 @@ All examples below are using the **shadcn/ui** label and input for minimalist an
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
 ```
+</Tab>
+<Tab value="Output">
+
+<form>
+  <label htmlFor="price">Price range:</label> <br />
+  <Slider id="price" name="price" className="max-w-sm" defaultValue={[50]} max={100} step={1} /> <br />
+  <label htmlFor="cnum">Cellphone Number:</label> <br />
+  <Input type="tel" id="cnum" name="cnum" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"  placeholder="0910-123-4567" className="max-w-sm" /> <br />
+  <Button>Submit</Button>
+</form>
+
+</Tab>
+</Tabs>
 
 -----
 
@@ -229,6 +311,9 @@ Adding the `multiple` attribute to `type="file"` allows users to select more tha
 **Example**: `<input type="file" multiple>`
 </Callout>
 
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
+
 ```html
 <form>
   <label for="weadd">Website Address:</label> <br />
@@ -245,3 +330,25 @@ Adding the `multiple` attribute to `type="file"` allows users to select more tha
   <input type="reset" name="btnclear" value="Clear">
 </form>
 ```
+
+</Tab>
+<Tab value="Output">
+
+<form>
+  <label htmlFor="weadd">Website Address:</label> <br />
+  <Input type="url" id="weadd" name="weadd" className="max-w-sm" /> <br />
+
+  <label htmlFor="tarrive">Arrival Time:</label> <br />
+  <Input type="time" id="tarrive" name="tarrive" className="max-w-sm" /> <br />
+
+  <label htmlFor="sfile">File Upload:</label> <br />
+  <Input type="file" id="sfile" name="sfile" className="max-w-sm" /> <br />
+  <div className="grid w-full max-w-sm items-center gap-1.5 mt-4">
+    <Button variant="secondary">Save</Button>
+    <Button variant="destructive" type="reset">Clear</Button>
+    <Button type="button">Print</Button>
+  </div>
+</form>
+
+</Tab>
+</Tabs>
