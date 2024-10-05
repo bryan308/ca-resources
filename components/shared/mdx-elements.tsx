@@ -29,7 +29,7 @@ const BorderExample: React.FC<BorderProps> = ({
 		border: `${borderWidth} ${borderStyle} ${borderColor}`,
 	}
 
-	return <div style={style}>{text}</div>
+	return <div style={style} className="text-center text-foreground p-2">{text}</div>
 }
 BorderExample.displayName = "BorderExample"
 

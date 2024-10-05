@@ -1,6 +1,6 @@
 ---
 title: Input
-description: The input element is the most important form element.
+description: The input element is used to create interactive form controls for user data input.
 ---
 
 The `<input />` element can be displayed in several ways, depending on the type attribute.
@@ -8,3 +8,18 @@ The `<input />` element can be displayed in several ways, depending on the type 
 The **type** attribute specifies the type of input element to display.
 
 The **name** attribute is use to reference elements in a JavaScript, or to reference for data after a form is submitted.
+
+### Input Example
+
+<Wrapper className="w-fit">
+
+<Callout type="none">
+
+<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+  <Label htmlFor="email">Email</Label>
+  <Input type="email" id="email" placeholder="Email" />
+</div>
+
+</Callout>
+
+</Wrapper>

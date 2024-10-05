@@ -1,9 +1,3 @@
-import { ImageZoom } from "fumadocs-ui/components/image-zoom"
-import { Step, Steps } from "fumadocs-ui/components/steps"
-import { LoginForm } from "@/components/shared/login-form"
-import defaultMdxComponents from "fumadocs-ui/mdx"
-import { Button } from "../ui/button"
-import { EmailGenerator } from "./gen-email"
 import {
 	BorderExample,
 	DataTable,
@@ -17,8 +11,17 @@ import {
 	UnorderedList,
 	MDXSeparator,
 } from "./mdx-elements"
-import { Wrapper } from "./wrapper"
+import defaultMdxComponents from "fumadocs-ui/mdx"
+import { ImageZoom } from "fumadocs-ui/components/image-zoom"
+import { Step, Steps } from "fumadocs-ui/components/steps"
+import { LoginForm } from "@/components/shared/login-form"
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs'
+import { EmailGenerator } from "./gen-email"
+import { Button } from "../ui/button"
+import { Wrapper } from "./wrapper"
+import { Label } from "../ui/label"
+import { Input } from "../ui/input"
+import { Checkbox } from "../ui/checkbox"
 
 export const components = {
 	Button,
@@ -34,6 +37,9 @@ export const components = {
 	TableExample,
 	UnorderedList,
 	MDXSeparator,
+	Input,
+	Checkbox,
+	Label,
 	Tab,
 	Tabs,
 	Wrapper,

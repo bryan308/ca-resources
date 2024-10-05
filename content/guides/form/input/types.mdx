@@ -1,11 +1,20 @@
 ---
 title: Types
-description: The input element is the most important form element.
+description: Input supports various types such as text, password, email, and checkbox to specify the data format.
 ---
+
+<Callout>
+
+All examples below are using the **shadcn/ui** label and input for minimalist and modern design. See [shadcn](https://www.shadcn.com/).
+
+</Callout>
 
 ### text
 
 `type="text"` defines a one-line text input field.
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
 
 ```html
 <form>
@@ -15,9 +24,23 @@ description: The input element is the most important form element.
 </form>
 ```
 
+</Tab>
+<Tab value="Output">
+
+<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+  <Label htmlFor="sname">Student Name</Label>
+  <Input type="text" id="sname" name="sname" />
+</div>
+
+</Tab>
+</Tabs>
+
 ### password
 
 `type="password"` defines a password field. The characters in a password field are masked (shown as asterisks or circles).
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
 
 ```html
 <form>
@@ -26,6 +49,17 @@ description: The input element is the most important form element.
   <input type="password" id="pword" name="pword">
 </form>
 ```
+
+</Tab>
+<Tab value="Output">
+
+<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+  <Label htmlFor="pword">Password</Label>
+  <Input type="password" id="pword" name="pword" />
+</div>
+
+</Tab>
+</Tabs>
 
 -----
 
@@ -40,6 +74,9 @@ description: The input element is the most important form element.
 ### button
 
 `type="button"` defines a programmable button.
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
 
 ```html
 <form>
@@ -56,6 +93,28 @@ description: The input element is the most important form element.
 </form>
 ```
 
+</Tab>
+<Tab value="Output">
+
+<form>
+<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+  <Label htmlFor="sname">Student Name</Label>
+  <Input type="text" id="sname" name="sname" />
+</div>
+<div className="grid w-full max-w-sm items-center gap-1.5 min-w-[300px]">
+  <Label htmlFor="pword">Password</Label>
+  <Input type="password" id="pword" name="pword" />
+</div>
+<div className="grid w-full max-w-sm items-center gap-1.5 mt-4 min-w-[300px]">
+  <Button variant="secondary">Save</Button>
+  <Button variant="destructive" type="reset">Clear</Button>
+  <Button type="button">Print</Button>
+</div>
+</form>
+
+</Tab>
+</Tabs>
+
 -----
 
 ### radio
@@ -66,6 +125,8 @@ description: The input element is the most important form element.
 
 `type="checkbox"` defines a checkbox. Checkboxes lets users select zero or more options of a limited number of choices.
 
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
 ```html
 <form>
   <label for="sex">Sex:</label> <br />
@@ -80,6 +141,15 @@ description: The input element is the most important form element.
   <input type="checkbox" id="subjects" name="subj4" value="IT-MS01">IT-MS01 <br />
 </form>
 ```
+</Tab>
+<Tab value="Output">
+
+<form>
+
+</form>
+
+</Tab>
+</Tabs>
 
 -----
 
