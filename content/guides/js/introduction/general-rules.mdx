@@ -1,0 +1,47 @@
+---
+title: General Rules
+description: Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments.
+---
+
+## General Rules in Writing JavaScript
+
+Semicolons (;) are used to separate JavaScript statement therefore, every statement should have a semicolon at the end. 
+```js
+document.write("Hello everyone");
+```
+
+Multiple statements can be allowed to be written in one line when separated by semicolons.
+```js
+a = 5; b = 6; c = a + b;
+```
+
+JavaScript ignores multiple spaces. Users can add white space to the script to make it more readable.
+```js
+let person="Max";
+
+// is the same as
+let person = "Max";
+```
+
+A good practice is to put spaces around operators `(= + - * /)`.
+```js
+let x = y + z;
+```
+
+We can use the `+` symbol for concatenation.
+```js
+window.alert("My age is " + 12);
+```
+
+We can insert HTML codes in JavaScript outputs.
+```js
+document.write("<h1>Hello</h1>");
+```
+
+JavaScript code can be grouped together in blocks by placing them inside curly brackets.
+```js
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello everyone!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+```

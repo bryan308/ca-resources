@@ -1,0 +1,68 @@
+---
+title: Displaying output
+description: Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments.
+---
+
+JavaScript can display data using different ways. 
+  - Writing into an HTML element, using `innerHTML`.
+  - Writing into an HTML output, using `document.write()`.
+  - Writing into an alert box, using `window.alert()`.
+
+### Using innerHTML
+
+To access an HTML element, JavaScript can use the `document.getElementById(id)` method.
+
+The **id** attribute defines the HTML element where the method will be implemented.
+
+The **innerHTML** property defines the HTML content that is visible within the page.
+
+Changing the **innerHTML** property of an HTML element is the most common way to display data in HTML using JavaScript.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML = "My Second Paragraph";
+    </script>
+  </body>
+</html>
+```
+
+### Using `document.write`
+
+Another way to display output on the HTML page is to use the `document.write()` method.
+
+Document.write is only recommended for testing purposes. When deployed for actual use, using the `document.write()` after an HTML document is loaded, will delete all existing HTML.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <script>
+      document.write("My Second Paragraph");
+    </script>
+  </body>
+</html>
+```
+
+### Using `window.alert`
+
+Using `window.alert()` activates an alert box that will display the user data on the web page.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Using innerHTML</h2>
+    <p>My First Paragraph.</p>
+    <script>
+      window.alert("This is an alert box!");
+    </script>
+  </body>
+</html>
+```
