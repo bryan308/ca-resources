@@ -24,7 +24,17 @@ export default function Page({ params }: { params: { slug?: string[] } }) {
 
 	return (
 		<DocsPage
-			toc={toc} // Pass the transformed `toc`
+			tableOfContent={{
+				style: "clerk",
+				single: false,
+			}}
+			editOnGithub={{
+				repo: "ca-resources",
+				owner: "bryan308",
+				sha: "v2/stable",
+				path: `content/guides/${page.file.flattenedPath}.mdx`,
+			}}
+			toc={toc}
 			// full={page.data.full}
 		>
 			<DocsTitle>{page.data.title}</DocsTitle>

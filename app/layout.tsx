@@ -20,8 +20,11 @@ const sans = localFont({
 })
 
 export const metadata: Metadata = {
-	title: "%s | CA Resources",
-	description: `A collection of resources for learning web development`,
+	title: {
+		template: "%s | CA Resources",
+		default: "CA Resources",
+	},
+	description: `Boost your productivity with valuable web development resources and educational guides.`,
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

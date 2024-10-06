@@ -12,6 +12,11 @@
     "form", 
     "audio-and-video",
     "---JavaScript---", 
-    "js"
+    "introduction",
+    "history",
+    "functions",
+    "js-form",
+    "event-handlers",
+    "dom"
   ]
 }

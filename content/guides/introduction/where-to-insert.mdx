@@ -1,27 +1,25 @@
 ---
-title: Where to insert JavaScript
+title: Where to Insert
 description: Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments.
 ---
-
-## Where to insert JavaScript
 
 ### JavaScript can be placed in the head and body section
 
 We can place JavaScript both in the `<head>` and `<body>` sections of a page by using the `<script></script>` elements.
 
-<Tabs items={["head", "body"]}>
-<Tab value="head">
+<Tabs items={["inside head", "inside body"]}>
+<Tab value="inside head">
 
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> // [!code highlight]
     <script>
       function myFunction() {
         document.getElementById("demo").innerHTML = "Paragraph changed!";
       }
-    </script>
-  </head>
+    </script> 
+  </head> // [!code highlight]
   <body>
     <h2>Demo JavaScript in Head</h2>
     <p id="demo">A paragraph</p>
@@ -30,11 +28,11 @@ We can place JavaScript both in the `<head>` and `<body>` sections of a page by 
 </html>
 ```
 </Tab>
-<Tab value="body">
+<Tab value="inside body">
 ```html
 <!DOCTYPE html>
 <html>
-  <body>
+  <body> // [!code highlight]
     <h2>Demo JavaScript in Body</h2>
     <p id="demo">A paragraph</p>
     <button type="button" onclick="myFunction()">Try it</button>
@@ -43,7 +41,7 @@ We can place JavaScript both in the `<head>` and `<body>` sections of a page by 
         document.getElementById("demo").innerHTML = "Paragraph changed!";
       }
     </script>
-  </body>
+  </body> // [!code highlight]
 </html>
 ```
 </Tab>
@@ -51,23 +49,30 @@ We can place JavaScript both in the `<head>` and `<body>` sections of a page by 
 
 ### JavaScript can be external from the HTML file
 
-JavaScript can also be placed in external files just like external CSS.
+JavaScript can also be placed in external files just like external CSS. External scripts are practical when the same code is used in many different web pages.
 
-External scripts are practical when the same code is used in many different web pages.
+To use an external script, put the name of the script file in the **src** (source) attribute of a `<script>` tag. Users can place an external script reference in `<head>` or `<body>`. The script will behave as if it was located exactly where the `<script>` tag is located.
 
 JavaScript files have the file extension of `.js`.
 
-To use an external script, put the name of the script file in the **src** (source) attribute of a `<script>` tag.
+<Files>
+<File name="myScript.js" />
+</Files>
 
-Users can place an external script reference in `<head>` or `<body>`. The script will behave as if it was located exactly where the `<script>` tag is located.
-
-<Callout>
+<Callout type="warn">
 External JavaScript cannot contain `<script>` tags.
 
 The use of `<script>` tag will be inside the html file.
 </Callout>
 
 ### Connecting to external JavaScript
+
+<Files>
+  <File name="index.html" />
+  <Folder name="js" defaultOpen>
+    <File name="myScript.js" />
+  </Folder>
+</Files>
 
 ```js title="js/myScript.js"
 function myFunction() {
@@ -83,6 +88,7 @@ function myFunction() {
     <p id="demo">A paragraph.</p>
     <button type="button" onclick="myFunction()">Try it</button>
     <p>This exmaple links to "myScript.js"</p>
+    // [!code word:js/myScript.js]
     <p>(myFunction is stored in "myScript.js")</p>
     <script src="js/myScript.js"></script>
   </body>

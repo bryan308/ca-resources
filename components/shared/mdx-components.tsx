@@ -15,7 +15,8 @@ import defaultMdxComponents from "fumadocs-ui/mdx"
 import { ImageZoom } from "fumadocs-ui/components/image-zoom"
 import { Step, Steps } from "fumadocs-ui/components/steps"
 import { LoginForm } from "@/components/shared/login-form"
-import { Tab, Tabs } from 'fumadocs-ui/components/tabs'
+import { Tab, Tabs } from "fumadocs-ui/components/tabs"
+import { File, Folder, Files } from "fumadocs-ui/components/files"
 import { EmailGenerator } from "./gen-email"
 import { Button } from "../ui/button"
 import { Wrapper } from "./wrapper"
@@ -45,6 +46,9 @@ export const components = {
 	RadioGroupItem,
 	Label,
 	Slider,
+	File,
+	Folder,
+	Files,
 	Tab,
 	Tabs,
 	Wrapper,

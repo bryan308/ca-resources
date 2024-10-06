@@ -1,5 +1,5 @@
 ---
-title: Introduction to JavaScript
+title: Introduction
 description: Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments.
 ---
 
@@ -26,7 +26,7 @@ JavaScript was invented by **Brendan Eich** in **1995** and became an **ECMA** (
 
 **ECMA-262** is the official name of the standard and **ECMAScript** is the official name of the language.
 
-<Callout>
+<Callout type="none">
 
 #### Why Study JavaScript
 
@@ -39,7 +39,7 @@ JavaScript is one of the 3 languages all web developers must learn:
 
 ## What JavaScript do?
 
-### JavaScript can change the HTML content
+### Change the HTML content
 
 One of many **JavaScript** HTML methods is `getElementById()`.
 
@@ -56,7 +56,7 @@ This example uses the method to "**find**" an HTML element (with `id="demo"`) an
 </body>
 ```
 
-### JavaScript can change the HTML attribute values
+### Change the HTML attribute values
 
 ```html
 <body>
@@ -79,7 +79,7 @@ This example uses the method to "**find**" an HTML element (with `id="demo"`) an
 </body>
 ```
 
-### JavaScript can change HTML styles (CSS)
+### Can change HTML styles (CSS)
 
 ```html
 <body>
@@ -91,6 +91,7 @@ This example uses the method to "**find**" an HTML element (with `id="demo"`) an
   </div>
   <br />
   <button type="button" onclick="changeStyle()">Click Me</button>
+  // [!code word:element.style.backgroundColor]
   <script>
     function changeStyle() {
       var element = document.getElementById("divColor").element.style.backgroundColor = "#ff0000";
