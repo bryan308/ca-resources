@@ -1,0 +1,54 @@
+---
+title: Comments
+description: Get an introduction to JavaScript, a powerful scripting language for web development. Learn how to use JavaScript for changing HTML content, styles, and attributes, writing outputs, and adding comments.
+---
+
+JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+
+JavaScript comments can be used to prevent code execution, when testing alternative code.
+
+We can use **single line** and **multi-line** comments in JavaScript.
+
+
+#### Single Line Comment
+
+**Single line** comments are the most often used method of placing comments.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+      // Change content of heading:
+      document.getElementById("myH") = "JavaScript Comments";
+      // Change content of paragraph:
+      document.getElementById("myP") = "My First Paragraph";
+    </script>
+  </body>
+</html>
+```
+
+#### Multi-line Comment
+
+**Multi-line** or **block** comments are used when documenting the project.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+      /*
+        The code below will change 
+        the heading with id = "myH"
+        and the paragraph with id = "myP"
+      */
+      document.getElementById("myH").innerHTML = "JavaScript Comments";
+      document.getElementById("myP").innerHTML = "My First Paragraph";
+    </script>
+  </body>
+</html>
+```
