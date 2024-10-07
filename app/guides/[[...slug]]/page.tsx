@@ -15,11 +15,10 @@ export default function Page({ params }: { params: { slug?: string[] } }) {
 	const page = guides.getPage(params.slug)
 	if (!page) notFound()
 
-	// * Transform `page.data.toc` to match `TableOfContents` type, including the `depth` property
 	const toc: TableOfContents = page.data.toc.map((item: any) => ({
-		title: item.title || item, // Adjust this based on your data structure
-		url: item.url || `/guides/${item.slug}`, // Adjust to the correct URL structure
-		depth: item.depth || 1, // You can dynamically set this or default it to `1`
+		title: item.title || item,
+		url: item.url || `/guides/${item.slug}`,
+		depth: item.depth || 1,
 	}))
 
 	return (

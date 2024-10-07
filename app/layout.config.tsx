@@ -1,6 +1,6 @@
 import React from "react"
 import { type HomeLayoutProps } from "fumadocs-ui/home-layout"
-import { Book, Box, Check, Minus } from "lucide-react"
+import { Book, Box, Check } from "lucide-react"
 
 /**
  * Shared layout configurations

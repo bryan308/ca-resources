@@ -200,7 +200,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 				links: [
 					{
 						title: "Haekei",
-						url: "https://app.haekei.app/",
+						url: "https://app.haikei.app/",
 						description:
 							"A web-based design tool to generate unique SVG design assets for websites, social media, blog posts, desktop and mobile wallpapers, posters, and more! Our generators let you discover, customize, randomize, and export generative SVG design assets ready to use with your favorite design tools.",
 						iconPath: "/resources/icons/haekei.png",
