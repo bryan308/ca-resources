@@ -9,7 +9,7 @@ import { notFound } from "next/navigation"
 import { MDXContent } from "@content-collections/mdx/react"
 import { components } from "@/components/shared/mdx-components"
 
-import { TableOfContents } from "fumadocs-core/server" // ensure you have the correct import
+import { TableOfContents } from "fumadocs-core/server"
 
 export default function Page({ params }: { params: { slug?: string[] } }) {
 	const page = guides.getPage(params.slug)
