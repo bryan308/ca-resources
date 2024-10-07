@@ -25,6 +25,7 @@ import { Input } from "../ui/input"
 import { Checkbox } from "../ui/checkbox"
 import { Slider } from "../ui/slider"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
+import { ResourcesCards } from "./resources/cards"
 
 export const components = {
 	Button,
@@ -45,6 +46,7 @@ export const components = {
 	RadioGroup,
 	RadioGroupItem,
 	Label,
+	ResourcesCards,
 	Slider,
 	File,
 	Folder,
