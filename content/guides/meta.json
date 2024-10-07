@@ -1,22 +1,22 @@
 {
 	"title": "Overview",
   "icon": "Box",
+  "defaultOpen": true,
 	"pages": [
     "index", 
     "---HTML---", 
-    "images",
-    "lists",
-    "links",
-    "hyperlinks",
-    "table",
-    "form", 
-    "audio-and-video",
+    "/(html)/images",
+    "/(html)/lists",
+    "/(html)/hyperlinks",
+    "/(html)/table",
+    "/(html)/form", 
+    "/(html)/audio-and-video",
     "---JavaScript---", 
-    "introduction",
-    "history",
-    "functions",
-    "js-form",
-    "event-handlers",
-    "dom"
+    "/(javascript)/introduction",
+    "/(javascript)/history",
+    "/(javascript)/functions",
+    "/(javascript)/js-form",
+    "/(javascript)/event-handlers",
+    "/(javascript)/dom"
   ]
 }

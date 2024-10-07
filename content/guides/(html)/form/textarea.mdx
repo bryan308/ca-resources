@@ -14,10 +14,26 @@ This element is often used in a form, to collect user inputs like **comments** o
 | `rows`    | Specifies the visible number of lines in a text area. |
 | `cols`    | Specifies the visible width of a text area.           |
 
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
+
 ```html
 <form>
   <label for="msg">Message:</label> <br />
   // [!code word:textarea]
+  // [!code word:rows]
+  // [!code word:cols]
   <textarea name="msg" id="msg" rows="10" cols="20"></textarea> // [!code highlight]
 </form>
 ```
+
+</Tab>
+<Tab value="Output">
+
+<form>
+  <label htmlFor="msg">Message:</label> <br />
+  <textarea name="msg" id="msg" rows="10" cols="20"></textarea>
+</form>
+
+</Tab>
+</Tabs>

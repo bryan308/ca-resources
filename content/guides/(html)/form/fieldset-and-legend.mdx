@@ -7,6 +7,9 @@ The `<fieldset></fieldset>` element is used to group related data in a form.
 
 The `<legend></legend>` elements defines a caption for `<fieldset>` element.
 
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
+
 ```html
 <form>
   <fieldset> // [!code highlight]
@@ -19,3 +22,20 @@ The `<legend></legend>` elements defines a caption for `<fieldset>` element.
   </fieldset> // [!code highlight]
 </form>
 ```
+
+</Tab>
+<Tab value="Output">
+
+<form>
+  <fieldset className="border border-foreground">
+    <legend>Personal Information</legend>
+    <label htmlFor="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" /> <br />
+    <label htmlFor="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" /> <br />
+    <input type="submit" name="btnsave" value="Save" />
+  </fieldset>
+</form>
+
+</Tab>
+</Tabs>
