@@ -12,7 +12,6 @@ import { Book, Box, Check } from "lucide-react"
 export const baseOptions: HomeLayoutProps = {
 	githubUrl: "https://github.com/bryan308/ca-resources",
 	nav: {
-		transparentMode: "top",
 		title: (
 			<>
 				<Box />

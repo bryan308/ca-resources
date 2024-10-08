@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 						cy={1}
 						cr={1}
 						className={cn(
-							"fixed [mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] opacity-70"
+							"fixed top-0 [mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] opacity-70 -z-10"
 						)}
 					/>
 					{children}
