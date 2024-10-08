@@ -1,6 +1,6 @@
 /**
  * Email Generator
- * 
+ *
  * * This component is intended for demonstration purposes only. You can achieve similar functionality by utilizing the code example provided on this page.
  */
 
@@ -36,30 +36,26 @@ export const EmailGenerator = () => {
 	}
 
 	return (
-		<Card className="border p-4 bg-background-foreground mx-auto xl:mx-0 max-w-sm mt-4 rounded-lg border-border">
+		<Card className="border p-4 pb-0 bg-card mx-auto xl:mx-0 max-w-sm mt-4 rounded-lg border-border">
 			<CardContent className="p-0">
 				<form>
-					<Label htmlFor="first">
-						First Name
-						<Input
-							id="first"
-							type="text"
-							ref={firstRef}
-							size={15}
-							maxLength={15}
-							autoFocus={hasInteracted}
-						/>
-					</Label>
-					<Label htmlFor="last">
-						Last Name
-						<Input
-							id="last"
-							type="text"
-							ref={lastRef}
-							maxLength={15}
-							size={15}
-						/>
-					</Label>
+					<Label htmlFor="first">First Name:</Label>
+					<Input
+						id="first"
+						type="text"
+						ref={firstRef}
+						size={15}
+						maxLength={15}
+						autoFocus={hasInteracted}
+					/>
+					<Label htmlFor="last">Last Name:</Label>
+					<Input
+						id="last"
+						type="text"
+						ref={lastRef}
+						maxLength={15}
+						size={15}
+					/>
 					<Button
 						className="mt-4"
 						type="button"

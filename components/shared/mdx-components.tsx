@@ -26,9 +26,11 @@ import { Checkbox } from "../ui/checkbox"
 import { Slider } from "../ui/slider"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { ResourcesCards } from "./resources/cards"
+import { Textarea } from "@/components/ui/textarea"
 
 export const components = {
 	Button,
+	Textarea,
 	BorderExample,
 	DataTable,
 	DataTableExample,
