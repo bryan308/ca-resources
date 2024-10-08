@@ -38,7 +38,7 @@ export default function HomePage() {
 						</div>
 					</div>
 					<div className="absolute w-full h-full overflow-hidden">
-						{/* <AnimatedGridPattern
+						<AnimatedGridPattern
 						numSquares={50}
 						maxOpacity={0.1}
 						duration={2}
@@ -47,7 +47,7 @@ export default function HomePage() {
 							"[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
 							"inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
 						)}
-					/> */}
+					/>
 					</div>
 				</Section>
 				<Section className="p-10">
