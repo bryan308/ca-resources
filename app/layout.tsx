@@ -5,7 +5,6 @@ import type { ReactNode } from "react"
 import localFont from "next/font/local"
 import { cn } from "@/lib/utils"
 import { Metadata } from "next"
-import DotPattern from "@/components/ui/dot-pattern"
 
 const mono = localFont({
 	src: "./fonts/GeistMonoVF.woff",
@@ -52,16 +51,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 				// 	},
 				// }}
 				>
-					<DotPattern
-						width={20}
-						height={20}
-						cx={1}
-						cy={1}
-						cr={1}
-						className={cn(
-							"fixed top-0 [mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] opacity-70 -z-10"
-						)}
-					/>
 					{children}
 				</RootProvider>
 			</body>
