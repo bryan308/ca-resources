@@ -7,7 +7,3 @@ It is a website designed to improve productivity, especially for web development
 ## Inspired by
 
 The conceptualization of **CA Resources** is influenced by the [Vercel Geist Design System](https://vercel.com/geist/introduction).
-
-## Contribute
-
-Interested in Contributing? Checkout our [contribution guide](https://github.com/bryan308/ca-resources/tree/main/.github/CONTRIBUTION.md).

@@ -1,0 +1,101 @@
+---
+title: Introduction
+description: Explore the fundamentals of JavaScript, a versatile scripting language for web development.
+---
+
+## Agenda
+1. Introduction to JavaScript.
+2. What JavaScript can do?
+3. Where to insert JavaScript?
+4. General rules in writing JavaScript.
+5. Displaying output using JavaScript.
+6. JavaScript comments.
+
+### JavaScript
+
+**JavaScript** is a scripting language that allows users to implement complex features on web pages.
+
+JavaScript allows users to:
+  - Store useful values inside variables.
+  - Perform operations on pieces of text.
+  - Run codes in response to certain events occurring on a web page.
+
+**JavaScript** and **Java** are completely different languages, both in concept and design.
+
+JavaScript was invented by **Brendan Eich** in **1995** and became an **ECMA** (European Computer Manufacturers Association) standard in **1997**.
+
+**ECMA-262** is the official name of the standard and **ECMAScript** is the official name of the language.
+
+<Callout type="none">
+
+#### Why Study JavaScript
+
+JavaScript is one of the 3 languages all web developers must learn:
+  - **HTML** to define the content of web pages.
+  - **CSS** to specify the layout of web pages.
+  - **JavaScript** to program the behavior of web pages.
+
+</Callout>
+
+## What JavaScript do?
+
+### Change the HTML content
+
+One of many **JavaScript** HTML methods is `getElementById()`.
+
+This example uses the method to "**find**" an HTML element (with `id="demo"`) and changes the element content (**innerHTML**) to "**Hello JavaScript**":
+
+```html
+<body>
+  <h1>What Can JavaScript Do?</h1>
+  <p id="demo">JavaScript can change the HTML content.</p>
+  // [!code word:getElementById]
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>
+    Click Me!
+  </button>
+</body>
+```
+
+### Change the HTML attribute values
+
+```html
+<body>
+  <p>JavaScript can change the HTML attribute values.</p>
+  <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+  // [!code word:src]
+  <button 
+    type="button"
+    onclick="document.getElementById('bulb').src = 'media/bulb-on.png'"
+  >
+    Turn on
+  </button>
+  <img src="media/bulb-off.png" id="bulb" style="width: 100px;" />
+  <button 
+    type="button"
+    onclick="document.getElementById('bulb').src = 'media/bulb-off.png'"
+  >
+    Turn off
+  </button>
+</body>
+```
+
+### Can change HTML styles (CSS)
+
+```html
+<body>
+  <h1>What Can JavaScript Do?</h1>
+  <p>JavaScript can change the style of HTML element.</p>
+  <div id="divColor" style="border: 1px solid black; width: 50%; height: 100px;">
+    <p>This is a paragraph in Div.</p>
+    <span>This is a span in Div.</span>
+  </div>
+  <br />
+  <button type="button" onclick="changeStyle()">Click Me</button>
+  // [!code word:element.style.backgroundColor]
+  <script>
+    function changeStyle() {
+      var element = document.getElementById("divColor").element.style.backgroundColor = "#ff0000";
+    }
+  </script>
+</body>
+```

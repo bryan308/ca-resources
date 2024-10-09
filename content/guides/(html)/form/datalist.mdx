@@ -1,0 +1,22 @@
+---
+title: Datalist
+description: The datalist element provides an autocomplete feature by offering a list of predefined options for input.
+---
+
+The `<datalist></datalist>` tag specifies a list of pre-defined options for an `<input />` element.
+
+The `<datalist></datalist>` tag is used to provide an "autocomplete" feature for `<input />` elements. Users will see a drop-down list of pre-defined options as they input data.
+
+The `<datalist>` element‘s **id** attribute must be equal to the `<input />` element‘s **list** attribute (**this binds them together**).
+
+```html
+<form>
+  <label>Web Browsers:</label>
+  <input list="browsers" name="browser">
+  <datalist id="browsers"> // [!code highlight]
+    <option value="edge">Edge</option>
+    <option value="internet explorer">Internet Explorer</option>
+    <option value="chrome">Chrome</option>
+  </datalist><br /> // [!code highlight]
+</form>
+```

@@ -27,8 +27,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-
-# env file
 .env
 
 # vercel
@@ -38,5 +36,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ContentLayer2
+# content collections
+.content-collections
+.source
+
+# Contentlayer
 .contentlayer

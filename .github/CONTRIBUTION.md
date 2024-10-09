@@ -12,7 +12,6 @@
     - [3. **Get the URL**](#3-get-the-url)
     - [4. **Get the Description**](#4-get-the-description)
     - [5. **Find the Icon**](#5-find-the-icon)
-    - [6. **Update `lastUpdated`**](#6-update-lastupdated)
   - [Notes on Icon Submission](#notes-on-icon-submission)
   - [Improving Existing Resources](#improving-existing-resources)
     - [Example Submission](#example-submission)
@@ -66,9 +65,6 @@ The resources are stored in the `resources.ts` file located at:
   ```typescript
     page: {
       title: "", // Title of the resource
-      thumbnail: "", // Relative path to the thumbnail image
-      subtitle: "", // Subtitle of the resource
-      lastUpdated: "", // Last updated date of the resource
       resourcesList: [
         {
           title: "", // Title of the resources category
@@ -107,10 +103,6 @@ Avoid using the `favicon.ico`. Instead, search for high-resolution icons. If the
   ├─ stock-photos/
   └─ typography/
 ```
-
-### 6. **Update `lastUpdated`**
-
-Update the `lastUpdated` field in the resource's `page` object to the current date you add the resource.
 
 ---
 
