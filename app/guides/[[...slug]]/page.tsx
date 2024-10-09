@@ -31,11 +31,10 @@ export default function Page({ params }: { params: { slug?: string[] } }) {
 			editOnGithub={{
 				repo: "ca-resources",
 				owner: "bryan308",
-				sha: "v2/stable",
+				sha: "main",
 				path: `content/guides/${page.file.flattenedPath}.mdx`,
 			}}
 			toc={toc}
-			// full={page.data.full}
 		>
 			<DocsTitle>{page.data.title}</DocsTitle>
 			<DocsDescription>{page.data.description}</DocsDescription>
