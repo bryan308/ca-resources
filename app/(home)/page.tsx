@@ -11,7 +11,7 @@ import { Plus } from "lucide-react"
 export default function HomePage() {
 	return (
 		<>
-			<div className="mx-4 md:mdx-0">
+			<div className="m-4 mb-0 md:m-0">
 				<div className="mt-4 md:mt-10" />
 				<Section className="relative flex h-[500px] items-center justify-center">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
@@ -39,22 +39,20 @@ export default function HomePage() {
 					</div>
 					<div className="absolute w-full h-full overflow-hidden">
 						<AnimatedGridPattern
-						numSquares={50}
-						maxOpacity={0.1}
-						duration={2}
-						repeatDelay={1}
-						className={cn(
-							"[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-							"inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-						)}
-					/>
+							numSquares={50}
+							maxOpacity={0.1}
+							duration={2}
+							repeatDelay={1}
+							className={cn(
+								"[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+								"inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+							)}
+						/>
 					</div>
 				</Section>
 				<Section className="p-10">
 					<Plus className="absolute -top-3 -left-3 size-6 text-muted-foreground stroke-1" />
-					<h2 className="text-center text-2xl font-semibold sm:text-3xl">
-						Explore Featured Resources
-					</h2>
+					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Featured Resources</h2>
 				</Section>
 				<Section className="md:py-20">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />

@@ -27,13 +27,13 @@ export const baseOptions: HomeLayoutProps = {
 				{
 					icon: <Check />,
 					text: "v1.5.0",
-					url: "https://v2-ca-resources.vercel.app/",
+					url: "https://ca-resources.vercel.app/",
 					external: false,
 				},
 				{
 					icon: <div className="size-4" />,
 					text: "v1.2.6",
-					url: "https://ca-resources.vercel.app/",
+					url: "https://v1-ca-resources.vercel.app/",
 					external: false,
 				},
 			],

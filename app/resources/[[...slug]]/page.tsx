@@ -8,6 +8,7 @@ import { MDXContent } from "@content-collections/mdx/react"
 import { components } from "@/components/shared/mdx-components"
 
 import { TableOfContents } from "fumadocs-core/server"
+import { getImageMeta } from "fumadocs-ui/og"
 
 export default function Page({ params }: { params: { slug?: string[] } }) {
 	const page = resources.getPage(params.slug)
@@ -53,8 +54,23 @@ export function generateMetadata({ params }: { params: { slug?: string[] } }) {
 	const page = resources.getPage(params.slug)
 	if (!page) notFound()
 
+	const image = getImageMeta("og", page.slugs)
+
 	return {
 		title: page.data.title,
 		description: page.data.description,
+		openGraph: {
+			title: page.data.title,
+			url: "https://ca-resources.vercel.app/resources",
+			description: page.data.description,
+			images: image,
+			siteName: "CA Resources | Resources",
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: page.data.title,
+			description: page.data.description,
+			images: image,
+		},
 	} satisfies Metadata
 }

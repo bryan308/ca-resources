@@ -24,6 +24,30 @@ export const metadata: Metadata = {
 		default: "CA Resources",
 	},
 	description: `Boost your productivity with valuable web development resources and educational guides.`,
+	openGraph: {
+		title: "CA Resources",
+		description:
+			"Boost your productivity with valuable web development resources and educational guides.",
+		url: "https://ca-resources.vercel.app",
+		siteName: "CA Resources",
+		images: [
+			{
+				url: "https://ca-resources.vercel.app/banner.png",
+				width: 1920,
+				height: 1080,
+				alt: "CA Resources",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "CA Resources",
+		description:
+			"Boost your productivity with valuable web development resources and educational guides.",
+		images: ["https://ca-resources.vercel.app/banner.png"],
+	},
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
