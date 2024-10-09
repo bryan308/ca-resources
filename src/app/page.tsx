@@ -4,6 +4,7 @@ import Link from "next/link"
 import PageHeader from "@/components/shared/page-header"
 import Contributors from "@/components/shared/contributors"
 import { Separator } from "@/components/ui/separator"
+import { DropdownMenuVersions } from "@/components/shared/dropdown-versions"
 
 export default function Introduction() {
 	return (
@@ -11,10 +12,11 @@ export default function Introduction() {
 			<section>
 				<PageHeader>Introduction</PageHeader>
 				<h4>Welcome to CA Resources!</h4>
-				<p>
+				<p className="mb-4">
 					It is a website designed to improve productivity, especially for web development, among
 					other fields in education. It provides the most valuable resources and guides.
 				</p>
+				<DropdownMenuVersions />
 				<Separator className="my-12" />
 				<h3 className="text-2xl text-foreground font-bold mb-2">Inspired by</h3>
 				<p>
