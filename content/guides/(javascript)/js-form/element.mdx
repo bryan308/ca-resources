@@ -116,9 +116,6 @@ This function will combine the first and last name entered by the user and appen
       function generateEmail(form) {
         // Generate the email address using form values
         var email = form.elements["first"].value + form.elements["last"].value + "@gmail.com";
-
-        // Set the innerHTML of the <p> element with id "email"
-        document.getElementById("email").innerHTML = email;
       }
     </script>
   </head>
@@ -144,7 +141,26 @@ This function will combine the first and last name entered by the user and appen
 
 After the email is generated, display it on the page inside the `<p>` element with the `id="email"`.
 
+<Tabs items={['html', 'js']}>
+<Tab value="html">
+```html
+<p id="email"></p>
+```
+</Tab>
+<Tab value="js">
+
+```js title="generateEmail"
+document.getElementById("email").innerHTML = email;
+```
+</Tab>
+</Tabs>
+
 Ensure the form is reset after submission and the focus is brought back to the **first name** input field for better user experience.
+
+```js title="generateEmail"
+form.reset();
+form.elements["first"].focus();
+```
 
 </Step>
 <Step>
