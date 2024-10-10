@@ -14,7 +14,7 @@ import { FeaturedGuides } from "@/components/shared/home/guides-card"
 export default function HomePage() {
 	return (
 		<>
-			<div className="m-4 mb-0 md:m-0">
+			<div className="m-4">
 				<div className="mt-4 md:mt-10" />
 				<Section className="relative flex h-[500px] items-center justify-center">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
@@ -91,15 +91,13 @@ export default function HomePage() {
 	)
 }
 
-const Section = ({ children, className }: { children: ReactNode; className?: string }) => {
-	return (
-		<div
-			className={cn(
-				"relative max-w-6xl mx-auto border border-b-0 bg-background/80 p-6 md:p-10",
-				className
-			)}
-		>
-			{children}
-		</div>
-	)
-}
+const Section = ({ children, className }: { children: ReactNode; className?: string }) => (
+	<div
+		className={cn(
+			"relative max-w-6xl mx-auto border border-b-0 bg-background/80 p-6 md:p-10",
+			className
+		)}
+	>
+		{children}
+	</div>
+)

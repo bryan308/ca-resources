@@ -10,7 +10,7 @@ export default {
 		"./mdx-components.{ts,tsx}",
 		"./node_modules/fumadocs-ui/dist/**/*.js",
 	],
-	presets: [createPreset({ preset: "default" })],
+	presets: [createPreset({ addGlobalColors: false, preset: "default" })],
 	theme: {
 		extend: {
 			animation: {
