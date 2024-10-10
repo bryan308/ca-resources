@@ -33,7 +33,7 @@ const Cards: React.FC<ICardsProps> = ({ data }) => {
 					</div>
 					<div>
 						<Link
-							href={`${d.url}?rel=ca-resources.vercel.app`}
+							href={`${d.url}?ref=ca-resources.vercel.app`}
 							className="link"
 							target="_blank"
 							rel="noopener noreferrer"
