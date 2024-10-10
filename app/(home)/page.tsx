@@ -1,12 +1,15 @@
 import { cn } from "@/lib/utils"
 import React, { ReactNode } from "react"
 
-import { Footer } from "@/components/shared/footer"
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { MarqueeDemo } from "@/components/shared/home/resources-marquee"
+import Image from "next/image"
+
+import { Footer } from "@/components/shared/footer"
+import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
+import { MarqueeDemo } from "@/components/shared/home/resources-marquee"
+import { FeaturedGuides } from "@/components/shared/home/guides-card"
 
 export default function HomePage() {
 	return (
@@ -29,10 +32,17 @@ export default function HomePage() {
 							</div>
 							<div className="relative z-10 mt-8 gap-3 flex justify-center">
 								<Button
-									size={"lg"}
+									size="lg"
 									asChild
 								>
-									<Link href="/resources">Getting started</Link>
+									<Link href="/resources">Explore</Link>
+								</Button>
+								<Button
+									variant="secondary"
+									size="lg"
+									asChild
+								>
+									<Link href="/guides">Learn</Link>
 								</Button>
 							</div>
 						</div>
@@ -52,15 +62,29 @@ export default function HomePage() {
 				</Section>
 				<Section className="p-10">
 					<Plus className="absolute -top-3 -left-3 size-6 text-muted-foreground stroke-1" />
-					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Featured Resources</h2>
+					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Explore Top Resources</h2>
 				</Section>
 				<Section className="md:py-20">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
 					<MarqueeDemo />
 				</Section>
-				{/* <Section>
-					// Featured Guides Here
-				</Section> */}
+				<Section>
+					<Plus className="absolute -top-3 -left-3 size-6 text-muted-foreground stroke-1" />
+					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Learn the Basics</h2>
+				</Section>
+				<Section className="p-0 md:p-0 border-r-0">
+					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
+					<div className="absolute w-full h-full overflow-hidden">
+						<Image
+							src="/gradient.png"
+							alt="grad"
+							width={1256}
+							height={671}
+							className="opacity-50 absolute -bottom-[42rem] left-1/2 saturate-0 transform -translate-x-1/2 rotate-90 pointer-events-none"
+						/>
+					</div>
+					<FeaturedGuides />
+				</Section>
 			</div>
 			<Footer />
 		</>
