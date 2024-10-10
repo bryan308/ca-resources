@@ -67,7 +67,7 @@ const ReviewCard = ({
 	return (
 		<Link
 			className="w-64 not-prose block rounded-lg border bg-fd-card p-4 text-sm text-fd-card-foreground shadow-md transition-colors hover:bg-fd-accent/80"
-			href={`${href}?rel=ca-resources.vercel.app`}
+			href={`${href}?ref=ca-resources.vercel.app`}
 			title={title}
 			target="_blank"
 			rel="noopener noreferrer"
