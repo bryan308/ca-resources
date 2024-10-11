@@ -5,6 +5,8 @@
 	"pages": [
     "index", 
     "---HTML---", 
+    "/(html)/overview",
+    "/(html)/first-web-page",
     "/(html)/images",
     "/(html)/lists",
     "/(html)/hyperlinks",
