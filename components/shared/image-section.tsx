@@ -11,7 +11,7 @@ interface Props {
 
 export default function ImageSection({ width, height, className, alt, src, subtitle }: Props) {
 	return (
-		<div className="mx-auto w-fit mb-4 flex max-w-2xl flex-col justify-center rounded-lg border border-neutral-200 bg-neutral-100 p-2 dark:border-neutral-800 dark:bg-neutral-900 [&>span]:w-fit [&_img]:m-0">
+		<div className="mx-auto w-fit mb-4 flex max-w-2xl flex-col items-center justify-center rounded-lg border border-neutral-200 bg-neutral-100 p-2 dark:border-neutral-800 dark:bg-neutral-900 [&>span]:w-fit [&_img]:m-0">
 			<ImageZoom
 				width={width}
 				height={height}
