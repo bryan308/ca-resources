@@ -1,12 +1,19 @@
 import { cn } from "@/lib/utils"
 import type { HTMLAttributes } from "react"
 
-export function Wrapper(props: HTMLAttributes<HTMLDivElement>): React.ReactElement {
+interface WrapperProps extends HTMLAttributes<HTMLDivElement> {
+	variant?: "default" | "gradient"
+}
+
+export function Wrapper({ variant = "default", ...props }: WrapperProps): React.ReactElement {
 	return (
 		<div
 			{...props}
 			className={cn(
-				"rounded-xl bg-gradient-to-br from-pink-500 to-blue-500 p-4 prose-no-margin",
+				"rounded-xl p-2 lg:p-4 prose-no-margin",
+				variant === "gradient"
+					? "bg-gradient-to-br from-fuchsia-500 to-cyan-500"
+					: "bg-fd-card border",
 				props.className
 			)}
 		>
