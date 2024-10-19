@@ -1,5 +1,7 @@
 # Introduction
 
+> **Note:** This branch (`v1/stable`) is abandoned and not maintained. Please refer to the main branch for the latest updates.
+
 Welcome to **CA Resources**!
 
 It is a website designed to improve productivity, especially for web development, among other fields in education. It provides the most valuable resources and guides.
