@@ -13,53 +13,107 @@ interface IResourceCategory {
 }
 
 export const resourcesData: Record<string, IResourceCategory> = {
-	webdev: {
-		thumbnail: "web-dev.jpg",
-		title: "Web Development",
-		subtitle: "Learn web edvelopment from the best resources available.",
+	colors: {
+		thumbnail: "colors.jpg",
+		title: "Colors",
+		subtitle:
+			"Explore our recommended color scales and discover additional resources to enhance your color knowledge.",
 		resourcesList: [
 			{
-				title: "",
+				title: "Color Palettes",
 				links: [
 					{
-						title: "W3Schools",
-						url: "https://www.w3schools.com/",
+						title: "Huemint",
+						url: "https://huemint.com/",
+						description: "Generate a unique 3-accent palette for your website.",
+						iconPath: "/resources/colors/huemint.svg",
+					},
+					{
+						title: "AI Colors",
+						url: "https://aicolors.co/",
 						description:
-							"HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Exercises, Courses, Lessons, References, Examples, Learn to code, Source code, Demos, Tips, Website",
-						iconPath: "/resources/learnwebdev/w3schools.png",
+							"Create cool and unique color palettes with our AI-powered color palette generator. Browse, edit, and visualize your palettes to find the perfect combination for your project.",
+						iconPath: "",
 					},
 					{
-						title: "The Odin Project",
-						url: "https://theodinproject.com/",
+						title: "Happy Hues",
+						url: "https://www.happyhues.co/",
 						description:
-							"The Odin Project empowers aspiring web developers to learn together for free",
-						iconPath: "/resources/learnwebdev/top.png",
+							"See color palette inspiration on a real example website. As you click on different palettes every color on this site updates to give you context of how that color could be used for your design or illustration projects.",
+						iconPath: "/resources/colors/happy-hues.png",
 					},
 					{
-						title: "MDN Web Docs",
-						url: "https://developer.mozilla.org/en-US/",
+						title: "Colorsinspo",
+						url: "https://colorsinspo.com",
 						description:
-							"The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
-						iconPath: "/resources/learnwebdev/mdn.png",
+							"Colorsinspo is all in one resource to find everything about colors with extreme ease. Also, you will get Freebies, Inspirations, Color Tools, Gradients and thousands of trendy hand-picked color palettes.",
+						iconPath: "/resources/colors/colorsinspo.png",
 					},
 					{
-						title: "freeCodeCamp",
-						url: "https://www.freecodecamp.org/",
-						description: "Learn to Code — For Free",
-						iconPath: "/resources/learnwebdev/freecodecamp.png",
-					},
-					{
-						title: "codecademy",
-						url: "https://www.codecademy.com/",
+						title: "Pigment",
+						url: "https://pigment.shapefactory.co/",
 						description:
-							"Learn the technical skills to get the job you want. Join over 50 million people choosing Codecademy to start a new career (or advance in their current one).",
-						iconPath: "/resources/learnwebdev/codecademy.png",
+							"A unique way to generate fresh and vibrant colors based on lighting and pigment, instead of math. Find a beautiful, free color palette in seconds to kick off your next project.",
+						iconPath: "",
 					},
 					{
-						title: "SoloLearn",
-						url: "https://www.sololearn.com/en/",
-						description: "Join Now to learn the basics or advance your existing skills",
-						iconPath: "/resources/learnwebdev/sololearn.png",
+						title: "Coolors",
+						url: "https://coolors.co",
+						description: "Generate or browse beautiful color combinations for your designs.",
+						iconPath: "/resources/colors/coolors.png",
+					},
+					{
+						title: "Color Hunt",
+						url: "https://colorhunt.co/",
+						description:
+							"Discover the newest hand-picked color palettes of Color Hunt. Get color inspiration for your design and art projects.",
+						iconPath: "/resources/colors/color-hunt.png",
+					},
+				],
+			},
+			{
+				title: "Color Systems",
+				links: [
+					{
+						title: "UI Color",
+						url: "https://uicolors.app",
+						description:
+							"Generate, edit, save and share Tailwind CSS color shades based on a given hexcode or HSL color.",
+						iconPath: "/resources/colors/uicolor.png",
+					},
+					{
+						title: "Geist",
+						url: "https://vercel.com/geist/colors",
+						description:
+							"Vercel’s design system called Geist. Made for building consistent and delightful web experiences.",
+						iconPath: "/resources/colors/vercel-icon-dark.png",
+					},
+					{
+						title: "Tailwindcss",
+						url: "https://tailwindcss.com/docs/customizing-colors",
+						description: "Customizing the default color palette for your project.",
+						iconPath: "/resources/colors/tailwindcss.svg",
+					},
+					{
+						title: "Altassian",
+						url: "https://atlassian.design/foundations/color-new",
+						description:
+							"Start designing and developing beautiful product experiences with Atlassian Design System UI foundations, components, and standards.",
+						iconPath: "/resources/colors/atlassian.svg",
+					},
+					{
+						title: "Material UI",
+						url: "https://mui.com/material-ui/customization/color/#color-palette",
+						description:
+							"Convey meaning through color. Out of the box you get access to all colors in the Material Design guidelines.",
+						iconPath: "/resources/colors/materialui.svg",
+					},
+					{
+						title: "Bootstrap",
+						url: "https://getbootstrap.com/docs/5.3/customize/color/#all-colors",
+						description:
+							"Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.",
+						iconPath: "/resources/colors/bootstrap.png",
 					},
 				],
 			},
@@ -73,6 +127,12 @@ export const resourcesData: Record<string, IResourceCategory> = {
 			{
 				title: "General Icons",
 				links: [
+					{
+						title: "SVGmix",
+						url: "https://svgmix.com",
+						description: "Download thousands of free SVG icons, vector collections & brand logos.",
+						iconPath: "/resources/icons/svgmix.svg",
+					},
 					{
 						title: "SVGmix",
 						url: "https://svgmix.com",
@@ -212,6 +272,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						iconPath: "/resources/icons/creatica.svg",
 					},
 					{
+						title: "Creatica",
+						url: "https://creatica.app/",
+						description:
+							"Create stunning backgrounds with Creatica, your go-to design tool for unique and dynamic designs. Perfect for web designers, graphic artists, and creative minds.",
+						iconPath: "/resources/icons/creatica.svg",
+					},
+					{
 						title: "Haekei",
 						url: "https://app.haikei.app/",
 						description:
@@ -237,6 +304,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						url: "https://svgwave.in/",
 						description:
 							"SVG Wave is a minimal svg wave generator with lot of customization. It lets you abiltiy to generate and export pngs and svgs of beautiful waves. SVG wave also lets you layer multiple waves. Create SVGs for your website designs.",
+						iconPath: "/resources/icons/meshy.webp",
 						iconPath: "/resources/icons/meshy.webp",
 					},
 					{
@@ -603,6 +671,58 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description:
 							"Typescale - Create stunning typography, generate CSS, and find inspiration.",
 						iconPath: "/resources/typography/typescale.svg",
+					},
+				],
+			},
+		],
+	},
+	webdev: {
+		thumbnail: "web-dev.jpg",
+		title: "Web Development",
+		subtitle: "Learn web edvelopment from the best resources available.",
+		resourcesList: [
+			{
+				title: "",
+				links: [
+					{
+						title: "W3Schools",
+						url: "https://www.w3schools.com/",
+						description:
+							"HTML, Python, CSS, SQL, JavaScript, How to, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, W3.CSS, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Exercises, Courses, Lessons, References, Examples, Learn to code, Source code, Demos, Tips, Website",
+						iconPath: "/resources/learnwebdev/w3schools.png",
+					},
+					{
+						title: "The Odin Project",
+						url: "https://theodinproject.com/",
+						description:
+							"The Odin Project empowers aspiring web developers to learn together for free",
+						iconPath: "/resources/learnwebdev/top.png",
+					},
+					{
+						title: "MDN Web Docs",
+						url: "https://developer.mozilla.org/en-US/",
+						description:
+							"The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
+						iconPath: "/resources/learnwebdev/mdn.png",
+					},
+					{
+						title: "freeCodeCamp",
+						url: "https://www.freecodecamp.org/",
+						description: "Learn to Code — For Free",
+						iconPath: "/resources/learnwebdev/freecodecamp.png",
+					},
+					{
+						title: "codecademy",
+						url: "https://www.codecademy.com/",
+						description:
+							"Learn the technical skills to get the job you want. Join over 50 million people choosing Codecademy to start a new career (or advance in their current one).",
+						iconPath: "/resources/learnwebdev/codecademy.png",
+					},
+					{
+						title: "SoloLearn",
+						url: "https://www.sololearn.com/en/",
+						description: "Join Now to learn the basics or advance your existing skills",
+						iconPath: "/resources/learnwebdev/sololearn.png",
 					},
 				],
 			},
