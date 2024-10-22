@@ -305,7 +305,6 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description:
 							"SVG Wave is a minimal svg wave generator with lot of customization. It lets you abiltiy to generate and export pngs and svgs of beautiful waves. SVG wave also lets you layer multiple waves. Create SVGs for your website designs.",
 						iconPath: "/resources/icons/meshy.webp",
-						iconPath: "/resources/icons/meshy.webp",
 					},
 					{
 						title: "Tabbied",
@@ -313,112 +312,6 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description:
 							"Tabbied lets you easily create timeless and beautifully generated patterns or artwork to use for wall art, websites, print materials and more.",
 						iconPath: "/resources/icons/tabbied.svg",
-					},
-				],
-			},
-		],
-	},
-	colors: {
-		thumbnail: "colors.jpg",
-		title: "Colors",
-		subtitle:
-			"Explore our recommended color scales and discover additional resources to enhance your color knowledge.",
-		resourcesList: [
-			{
-				title: "Color Palettes",
-				links: [
-					{
-						title: "Huemint",
-						url: "https://huemint.com/",
-						description: "Generate a unique 3-accent palette for your website.",
-						iconPath: "/resources/colors/huemint.svg",
-					},
-					{
-						title: "AI Colors",
-						url: "https://aicolors.co/",
-						description:
-							"Create cool and unique color palettes with our AI-powered color palette generator. Browse, edit, and visualize your palettes to find the perfect combination for your project.",
-						iconPath: "",
-					},
-					{
-						title: "Happy Hues",
-						url: "https://www.happyhues.co/",
-						description:
-							"See color palette inspiration on a real example website. As you click on different palettes every color on this site updates to give you context of how that color could be used for your design or illustration projects.",
-						iconPath: "/resources/colors/happy-hues.png",
-					},
-					{
-						title: "Colorsinspo",
-						url: "https://colorsinspo.com",
-						description:
-							"Colorsinspo is all in one resource to find everything about colors with extreme ease. Also, you will get Freebies, Inspirations, Color Tools, Gradients and thousands of trendy hand-picked color palettes.",
-						iconPath: "/resources/colors/colorsinspo.png",
-					},
-					{
-						title: "Pigment",
-						url: "https://pigment.shapefactory.co/",
-						description:
-							"A unique way to generate fresh and vibrant colors based on lighting and pigment, instead of math. Find a beautiful, free color palette in seconds to kick off your next project.",
-						iconPath: "",
-					},
-					{
-						title: "Coolors",
-						url: "https://coolors.co",
-						description: "Generate or browse beautiful color combinations for your designs.",
-						iconPath: "/resources/colors/coolors.png",
-					},
-					{
-						title: "Color Hunt",
-						url: "https://colorhunt.co/",
-						description:
-							"Discover the newest hand-picked color palettes of Color Hunt. Get color inspiration for your design and art projects.",
-						iconPath: "/resources/colors/color-hunt.png",
-					},
-				],
-			},
-			{
-				title: "Color Systems",
-				links: [
-					{
-						title: "UI Color",
-						url: "https://uicolors.app",
-						description:
-							"Generate, edit, save and share Tailwind CSS color shades based on a given hexcode or HSL color.",
-						iconPath: "/resources/colors/uicolor.png",
-					},
-					{
-						title: "Geist",
-						url: "https://vercel.com/geist/colors",
-						description:
-							"Vercel’s design system called Geist. Made for building consistent and delightful web experiences.",
-						iconPath: "/resources/colors/vercel-icon-dark.png",
-					},
-					{
-						title: "Tailwindcss",
-						url: "https://tailwindcss.com/docs/customizing-colors",
-						description: "Customizing the default color palette for your project.",
-						iconPath: "/resources/colors/tailwindcss.svg",
-					},
-					{
-						title: "Altassian",
-						url: "https://atlassian.design/foundations/color-new",
-						description:
-							"Start designing and developing beautiful product experiences with Atlassian Design System UI foundations, components, and standards.",
-						iconPath: "/resources/colors/atlassian.svg",
-					},
-					{
-						title: "Material UI",
-						url: "https://mui.com/material-ui/customization/color/#color-palette",
-						description:
-							"Convey meaning through color. Out of the box you get access to all colors in the Material Design guidelines.",
-						iconPath: "/resources/colors/materialui.svg",
-					},
-					{
-						title: "Bootstrap",
-						url: "https://getbootstrap.com/docs/5.3/customize/color/#all-colors",
-						description:
-							"Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.",
-						iconPath: "/resources/colors/bootstrap.png",
 					},
 				],
 			},
