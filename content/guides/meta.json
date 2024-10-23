@@ -19,6 +19,7 @@
     "/(javascript)/functions",
     "/(javascript)/js-form",
     "/(javascript)/event-handlers",
-    "/(javascript)/dom"
+    "/(javascript)/dom",
+    "/(javascript)/variables-and-operators"
   ]
 }

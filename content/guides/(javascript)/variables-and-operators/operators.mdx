@@ -1,0 +1,179 @@
+---
+title: Operators
+description: Overview of JavaScript operators, including types and examples of arithmetic operations.
+---
+
+JavaScript includes operators same as other languages. An operator performs some operation on single or multiple operands (data value) and produces a result. For example, in 1 + 2, the + sign is an operator and 1 is left side operand and 2 is right side operand. The + operator performs the addition of two numeric values and returns a result.
+
+## Types of JavaScript Operators
+
+There are different types of JavaScript operators
+
+### Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical operations between numeric operands.
+
+| Operator | Description                                         |
+|----------|-----------------------------------------------------|
+| +        | Adds two numeric operands.                          |
+| -        | Subtract right operand from left operand.           |
+| *        | Multiply two numeric operands.                      |
+| /        | Divide left operand by right operand.               |
+| %        | Modulus operator, Returns remainder of two operands.|
+| ++       | Increment operator. Increase operand value by one.  |
+| --       | Decrement operator. Decrease value by one.          |
+
+The following example demonstrates how arithmetic operators perform different tasks on operands.
+
+```js
+let x = 5, y = 10;
+
+let z = x + y; // performs addition and returns 15
+
+z = x - y;    // performs subtraction and returns -5
+
+z = x * y;    // performs multiplication and returns 50
+
+z = x / y;    // performs division and returns 0.5
+
+z = x % 2;    // performs division remainder 1
+```
+
+### Operator Precedence
+
+- Operator precedence describes the order in which operations are performed in arithmetic expressions
+- Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-). (**MDAS** Rule)
+- We can change the precedence by using parentheses ()
+
+**Example**:
+  - (100 + 50) * 3;
+  - The program will compute for the sum of 100 and 5 first before multiplying it by 3.
+
+### Assignment Operator
+
+JavaScript provides the assignment operators to assign values to variables with less keystrokes.
+
+| Assignment Operator | Description                                                                                             |
+|---------------------|---------------------------------------------------------------------------------------------------------|
+| =                   | Assigns right operand value to the left operand.                                                        |
+| +=                  | Sums up left and right operand values and assigns the result to the left operand.                        |
+| -=                  | Subtract right operand value from the left operand value and assign the result to the left operand.     |
+| *=                  | Multiply left and right operand values and assigns the result to the left operand.                      |
+| /=                  | Divide left operand value by right operand value and assigns the result to the left operand.            |
+| %=                  | Get the modulus of left operand divide by right operand and assign resulted modulus to the left operand.|
+
+```js
+let x = 5, y = 10, z = 15;
+
+x = y; // x would be 10
+
+x += 1; // x would be 6
+
+x -= 1; // x would be 4
+
+x *= 5; // x would be 25
+
+x /= 5; // x would be 1
+
+x &= 2; // x would be 1
+```
+
+The addition assignment operator (**+=**) adds a value to a variable.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Arithmetic</h1>
+    <h2>The += Operator</h2>
+    <p id="demo"></p>
+    <script>
+      var x = 10;
+      x += 5;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
+```
+
+The addition assignment operator (**+=**) can also be used to add (concatenate) strings.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Combining Strings</h1>
+    <h2>The += Operator</h2>
+    <p id="demo"></p>
+    <script>
+      let message = "It is ";
+      message += "a beautiful day!";
+      document.getElementById("demo").innerHTML = message;
+    </script>
+  </body>
+</html>
+```
+
+### Comparison Operators
+
+JavaScript provides comparison operators that compare two operands and return a boolean value true or false.
+
+| Operators | Description                                                                                                                     |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------|
+| ==        | Compares the equality of two operands without considering type.                                                                 |
+| ===       | Compares equality of two operands with type.                                                                                    |
+| !=        | Compares of inequality of two operands.                                                                                         |
+| &gt;      | Returns a boolean value true if the left-side value is greater than right-side value; otherwise, returns false.                 |
+| &lt;      | Returns a boolean value true if the left-side value is less than right-side value; otherwise, returns false.                    |
+| >=        | Returns a boolean value true if the left-side value is greater than or equal to the right-side value; otherwise, returns false. |
+| &lt;=     | Returns a boolean value true if the left-side value is less than or equal to the right-side value; otherwise, returns false.    |
+
+The following example demonstrates the comparison operators.
+
+```js
+let a = 5, b = 10, c = "5";
+let x = a;
+
+a == c; // returns true
+
+a === c; // returns false
+
+a == x; // returns true
+
+a != b; // returns true 
+
+a > b; // returns false
+
+a < b; // returns true
+
+a >= b; // returns false
+
+a <= b; // returns true
+
+```
+
+### Logical Operators
+
+In JavaScript, the logical operators are used to combine two or more conditions. JavaScript provides the following logical operators.
+
+| Operator | Description                                                                                                                                                                                                          |
+|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| &&       | && is known as AND operator. It checks whether two operands are non-zero or not (0, false, undefined, null or "" are considered as zero). It returns 1 if they are non-zero; otherwise, returns 0.                   |
+| &#124;&#124; | &#124;&#124; is known as OR operator. It checks whether any one of the operands is non-zero or not (0, false, undefined, null or "" are considered as zero). It returns 1 if any one of them is non-zero; otherwise, returns 0.|
+| !        | ! is known as NOT operator. It reverses the boolean result of the operand (or condition). `!false` returns `true`, and `!true` returns `false`.                                                                      |
+
+The following example demonstrates the logical operators.
+
+```js
+let a = 5, b = 10;
+
+(a != b) && (a < b);  // returns true
+
+(a > b) || (a == b);  // returns false
+
+(a < b) || (a == b);  // returns true
+
+!(a < b);             // returns false
+
+!(a > b);             // returns true
+```

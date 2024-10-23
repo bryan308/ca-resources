@@ -134,6 +134,12 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						iconPath: "/resources/icons/svgmix.svg",
 					},
 					{
+						title: "SVGmix",
+						url: "https://svgmix.com",
+						description: "Download thousands of free SVG icons, vector collections & brand logos.",
+						iconPath: "/resources/icons/svgmix.svg",
+					},
+					{
 						title: "Font Awesome",
 						url: "https://fontawesome.com",
 						description:
@@ -258,6 +264,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 			{
 				title: "SVG Generators",
 				links: [
+					{
+						title: "Creatica",
+						url: "https://creatica.app/",
+						description:
+							"Create stunning backgrounds with Creatica, your go-to design tool for unique and dynamic designs. Perfect for web designers, graphic artists, and creative minds.",
+						iconPath: "/resources/icons/creatica.svg",
+					},
 					{
 						title: "Creatica",
 						url: "https://creatica.app/",
