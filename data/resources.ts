@@ -18,6 +18,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 				title: "Color Palettes",
 				links: [
 					{
+						title: "Colorsss",
+						url: "https://colorsss.com/",
+						description:
+							"Colors inpirations for graphic designers, UI/UX designers, artists. We curates awesome color palettes, gradients and tool to help you find great colors.",
+						iconPath: "/resources/colors/colorsss.png",
+					},
+					{
 						title: "Huemint",
 						url: "https://huemint.com/",
 						description: "Generate a unique 3-accent palette for your website.",
@@ -254,60 +261,6 @@ export const resourcesData: Record<string, IResourceCategory> = {
 					},
 				],
 			},
-			{
-				title: "SVG Generators",
-				links: [
-					{
-						title: "Creatica",
-						url: "https://creatica.app/",
-						description:
-							"Create stunning backgrounds with Creatica, your go-to design tool for unique and dynamic designs. Perfect for web designers, graphic artists, and creative minds.",
-						iconPath: "/resources/icons/creatica.svg",
-					},
-					{
-						title: "Creatica",
-						url: "https://creatica.app/",
-						description:
-							"Create stunning backgrounds with Creatica, your go-to design tool for unique and dynamic designs. Perfect for web designers, graphic artists, and creative minds.",
-						iconPath: "/resources/icons/creatica.svg",
-					},
-					{
-						title: "Haekei",
-						url: "https://app.haikei.app/",
-						description:
-							"A web-based design tool to generate unique SVG design assets for websites, social media, blog posts, desktop and mobile wallpapers, posters, and more! Our generators let you discover, customize, randomize, and export generative SVG design assets ready to use with your favorite design tools.",
-						iconPath: "/resources/icons/haekei.png",
-					},
-					{
-						title: "SVGator",
-						url: "https://www.svgator.com/",
-						description:
-							"It‘s SVG animation made easy - Create impressive SVG animations online, without any coding skills. Add them easily to your website. Get started for free!",
-						iconPath: "/resources/icons/svgator.png",
-					},
-					{
-						title: "Cool Backgrounds",
-						url: "https://svgwave.in/",
-						description:
-							"Explore a beautifully curated selection of cool backgrounds that you can add to blogs, websites, or as desktop and phone wallpapers.",
-						iconPath: "/resources/icons/coolbg.png",
-					},
-					{
-						title: "SVG Wave",
-						url: "https://svgwave.in/",
-						description:
-							"SVG Wave is a minimal svg wave generator with lot of customization. It lets you abiltiy to generate and export pngs and svgs of beautiful waves. SVG wave also lets you layer multiple waves. Create SVGs for your website designs.",
-						iconPath: "/resources/icons/meshy.webp",
-					},
-					{
-						title: "Tabbied",
-						url: "https://tabbied.com/",
-						description:
-							"Tabbied lets you easily create timeless and beautifully generated patterns or artwork to use for wall art, websites, print materials and more.",
-						iconPath: "/resources/icons/tabbied.svg",
-					},
-				],
-			},
 		],
 	},
 	inspirations: {
@@ -474,6 +427,65 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description:
 							"Download Free Stock Video Footage, Stock Music & Premiere Pro Templates for your next video editing project. All assets can be downloaded for free!",
 						iconPath: "/resources/stock-photos/mixkit.png",
+					},
+				],
+			},
+		],
+	},
+	svggenerators: {
+		title: "SVG Generators",
+		resourcesList: [
+			{
+				title: "",
+				links: [
+					{
+						title: "MagicPattern",
+						url: "https://www.magicpattern.design/",
+						description:
+							"Create Pro Visuals with MagicPattern. Generate SVG/CSS patterns, gradients and organic shapes to brand your product and social media posts.",
+						iconPath: "/resources/svg-generators/magicpattern.png",
+					},
+					{
+						title: "Creatica",
+						url: "https://creatica.app/",
+						description:
+							"Create stunning backgrounds with Creatica, your go-to design tool for unique and dynamic designs. Perfect for web designers, graphic artists, and creative minds.",
+						iconPath: "/resources/svg-generators/creatica.svg",
+					},
+					{
+						title: "Haekei",
+						url: "https://app.haikei.app/",
+						description:
+							"A web-based design tool to generate unique SVG design assets for websites, social media, blog posts, desktop and mobile wallpapers, posters, and more! Our generators let you discover, customize, randomize, and export generative SVG design assets ready to use with your favorite design tools.",
+						iconPath: "/resources/svg-generators/haekei.png",
+					},
+					{
+						title: "SVGator",
+						url: "https://www.svgator.com/",
+						description:
+							"It‘s SVG animation made easy - Create impressive SVG animations online, without any coding skills. Add them easily to your website. Get started for free!",
+						iconPath: "/resources/svg-generators/svgator.png",
+					},
+					{
+						title: "Cool Backgrounds",
+						url: "https://svgwave.in/",
+						description:
+							"Explore a beautifully curated selection of cool backgrounds that you can add to blogs, websites, or as desktop and phone wallpapers.",
+						iconPath: "/resources/svg-generators/coolbg.png",
+					},
+					{
+						title: "SVG Wave",
+						url: "https://svgwave.in/",
+						description:
+							"SVG Wave is a minimal svg wave generator with lot of customization. It lets you abiltiy to generate and export pngs and svgs of beautiful waves. SVG wave also lets you layer multiple waves. Create SVGs for your website designs.",
+						iconPath: "/resources/svg-generators/meshy.webp",
+					},
+					{
+						title: "Tabbied",
+						url: "https://tabbied.com/",
+						description:
+							"Tabbied lets you easily create timeless and beautifully generated patterns or artwork to use for wall art, websites, print materials and more.",
+						iconPath: "/resources/svg-generators/tabbied.svg",
 					},
 				],
 			},
