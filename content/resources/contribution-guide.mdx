@@ -56,11 +56,17 @@ git checkout -b v2/add-resource
 The resources are stored in the `resources.ts` file located at:
 
 <Files>
+
+<Folder name="root-folder" defaultOpen>
+
 <Folder name="data" defaultOpen>
 
 <File name="resources.ts" />
 
 </Folder>
+
+</Folder>
+
 </Files>
 
 ```typescript title="resources.ts"
@@ -103,13 +109,21 @@ It is recommended to use a desktop or laptop for ease of gathering information b
 
 Using developer tools, inspect the website’s `<title>` element inside the `<head>` tag and copy the text to use as the resource title.
 
+<ImageSection 
+  src="/contribution-images/gather-title.png"
+  alt="gather title"
+  width={580}
+  height={333} 
+  subtitle="gather title"
+/>
+
 </Step>
 
 <Step>
 
 ### Get the URL
 
-Copy the main website URL; if the webpage is a subpage, it's okay to use it as long as it directs users to the main webpage.
+Copy the main website URL. If the webpage is a subpage, it's acceptable to use it as long as it directs users to the main webpage where the resource is located.
 
 </Step>
 
@@ -118,6 +132,14 @@ Copy the main website URL; if the webpage is a subpage, it's okay to use it as l
 ### Get the Description
 
 Look for the `<meta name="description" content="...">` tag in the `<head>` section. Copy the `content` attribute's value as the description.
+
+<ImageSection 
+  src="/contribution-images/gather-description.png"
+  alt="gather description"
+  width={576}
+  height={334}
+  subtitle="gather description"
+/>
 
 If it's not available, you can use AI to describe the website.
 
@@ -182,6 +204,98 @@ If you have suggestions for improving resource descriptions or other details, pl
 
 Your contributions help keep our resource list accurate and useful for everyone!
 
+If you prefer, you can also create an issue to suggest improvements or report problems.
+
+-----
+
+## Adding a New Resource Page
+
+If you want to add a new resource page, follow these steps:
+
+<Steps>
+
+<Step>
+
+### Create a New Folder
+
+Create a new folder inside `/public/resources/` with the name of the resource category. For example, if you are adding a new resource for "File Converters", create a folder named `file-converters` to insert the icons.
+
+<Files>
+<Folder name="public" defaultOpen>
+
+<Folder name="resources" defaultOpen>
+
+<Folder name="file-converters">
+  <File name="convertio.png" />
+</Folder>
+
+</Folder>
+
+</Folder>
+</Files>
+
+</Step>
+
+<Step>
+
+### Update `resources.ts`
+
+Create a new object inside `resourcesData` with the title of the resource category and an array of links to individual resources.
+
+```typescript title="resources.ts"
+// For example I want to add a new resource page for 'file converters'
+fileconverters: {
+  title: "File Converters",
+  resourcesList: [
+    {
+      title: "Online File Converter", // optional, include only if there is another category within the resource page
+      links: [
+        {
+          title: "Convertio",
+          url: "https://convertio.co/",
+          description: "An easy tool to convert files online.",
+          iconPath: "/resources/file-converters/convertio.png"
+        },
+      ],
+    },
+  ],
+},
+```
+
+</Step>
+
+<Step>
+
+### Create a New Content File
+
+Create a new file in the `contents` folder to ensure the added resource is displayed on the page. Name the file appropriately to reflect the resource category or specific resource you are adding.
+
+<Files>
+<Folder name="contents" defaultOpen>
+
+<Folder name="resources" defaultOpen>
+
+<File name="file-converters.mdx" />
+
+</Folder>
+
+</Folder>
+</Files>
+
+```mdx title="file-converters.mdx"
+---
+title: File Converters
+description: Discover online tools to convert files easily and efficiently.
+---
+
+<ResourcesCards type="fileconverters" />
+```
+
+And you are good to go! 🎉
+
+</Step>
+
+</Steps>
 -----
 
 ## Submitting Your Contribution

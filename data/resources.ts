@@ -6,18 +6,13 @@ interface IResourcesList {
 }
 
 interface IResourceCategory {
-	thumbnail: string
 	title: string
-	subtitle: string
 	resourcesList: IResourcesList[]
 }
 
 export const resourcesData: Record<string, IResourceCategory> = {
 	colors: {
-		thumbnail: "colors.jpg",
 		title: "Colors",
-		subtitle:
-			"Explore our recommended color scales and discover additional resources to enhance your color knowledge.",
 		resourcesList: [
 			{
 				title: "Color Palettes",
@@ -120,9 +115,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	icons: {
-		thumbnail: "icons.jpg",
 		title: "Icons",
-		subtitle: "Explore a variety of icons for your projects.",
 		resourcesList: [
 			{
 				title: "General Icons",
@@ -318,10 +311,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	inspirations: {
-		thumbnail: "inspirations.png",
 		title: "Inspirations",
-		subtitle:
-			"Explore a variety of inspiration sources to ignite your creativity and enhance your design work.",
 		resourcesList: [
 			{
 				title: "",
@@ -380,10 +370,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	mockups: {
-		thumbnail: "mockups-tools.png",
 		title: "Mockup Tools",
-		subtitle:
-			"Explore powerful mockup tools to bring your design ideas to life with realistic visuals and prototypes.",
 		resourcesList: [
 			{
 				title: "",
@@ -441,9 +428,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	stockphotos: {
-		thumbnail: "stock-photos.png",
 		title: "Stock Photos",
-		subtitle: "High-Quality Stock Photos for enriching your projects and presentations.",
 		resourcesList: [
 			{
 				title: "",
@@ -495,10 +480,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	typography: {
-		thumbnail: "typography.png",
 		title: "Typography",
-		subtitle:
-			"Explore top resources and tools to enhance your text styles and make your web projects better.",
 		resourcesList: [
 			{
 				title: "",
@@ -570,9 +552,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 		],
 	},
 	webdev: {
-		thumbnail: "web-dev.jpg",
 		title: "Web Development",
-		subtitle: "Learn web edvelopment from the best resources available.",
 		resourcesList: [
 			{
 				title: "",
