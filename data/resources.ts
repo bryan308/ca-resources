@@ -329,6 +329,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 				title: "",
 				links: [
 					{
+						title: "Shots",
+						url: "https://shots.so/",
+						description:
+							"Craft beautiful presentation for your social media, website and more!",
+						iconPath: "/resources/mockups/shots.png",
+					},
+					{
 						title: "shotsnapp",
 						url: "https://app.shotsnapp.com/",
 						description:
@@ -386,6 +393,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 			{
 				title: "",
 				links: [
+					{
+						title: "Texturelabs",
+						url: "https://texturelabs.org/",
+						description:
+							"Texturelabs is an online resource for free, original textures and tutorials for art and design.",
+						iconPath: "",
+					},
 					{
 						title: "Freepik",
 						url: "https://www.freepik.com/",
