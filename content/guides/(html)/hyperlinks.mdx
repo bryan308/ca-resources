@@ -1,0 +1,219 @@
+---
+title: Hyperlinks
+modTitle: Hyperlinks
+description: HTML Hyperlink is a word, phrase or image that a user can click on to jump to a new document or a new section within the current document.
+thumbnail: hyperlinks.jpg
+category: html
+readingTime: 5–6 MINS READ
+---
+
+## Agenda
+1. HTML Hyperlinks
+2. HTML Link colors
+3. target attribute
+4. Link image
+5. Link Bookmarks
+6. Navigation Menu
+
+### HTML Hyperlinks
+
+A **hyperlink** or **link** is a word, phrase or image that a user can click on to jump to a new document or a new section within the current document.
+
+**Links** are found in nearly all web pages. **Links** allow users to click their way from page to page.
+
+**Links** are defined with the `<a>` and `</a>` tags.
+
+The **href** attribute is used specify the destination address of the link.
+
+<Tabs items={['Relative', 'Absolute']}>
+<Tab value="Relative">
+
+```html
+<body>
+  <ul>
+    <li><a href="lesson1.html">Lesson 1</a></li>
+    <li><a href="lesson2.html">Lesson 2</a></li>
+    <li><a href="lesson3.html">Lesson 3</a></li>
+    <li><a href="lesson4.html">Lesson 4</a></li>
+    <li><a href="lesson5.html">Lesson 5</a></li>
+  </ul>
+</body>
+```
+
+</Tab>
+<Tab value="Absolute">
+
+```html
+<body>
+  <a href="https://www.google.com/">Go to Google</a>
+  <a href="https://www.facebook.com/">Go to Facebook</a>
+</body>
+```
+
+</Tab>
+</Tabs>
+
+### Colors
+By default, links will appear as follows in all browsers.
+  - An **unvisited link** is underlined and **blue** <span style={{ backgroundColor: "#3b82f6", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
+  - A **visited link** is underlined and **purple** <span style={{ backgroundColor: "#a855f7", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
+  - An **active link** is underlined and **red** <span style={{ backgroundColor: "#ef4444", height: ".75rem", width: ".75rem" }} className="inline-block rounded-full mx-2" />
+
+### `target` attribute
+The **target** attribute specifies where to open the link document.
+  - `_blank` - opens the link document in a raw window or tab.
+  - `_self` - opens the link in the same window/tab as it was clicked (**default**).
+
+<Callout>
+Learn more about target attributes in the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target).
+</Callout>
+
+```html
+<body>
+  <ul>
+    <!-- [!code word:_blank] -->
+    <li><a href="lesson1.html" target="_blank">Lesson 1</a></li>
+    <li><a href="lesson2.html" target="_blank">Lesson 2</a></li>
+    <li><a href="lesson3.html" target="_blank">Lesson 3</a></li>
+    <li><a href="lesson4.html" target="_blank">Lesson 4</a></li>
+    <li><a href="lesson5.html" target="_blank">Lesson 5</a></li>
+  </ul>
+</body>
+```
+
+-----
+
+## Link Image
+
+### Use Image as a Links
+
+Images can also be used as links, just put the `<img />` element inside the `<a>` and `</a>` tags.
+
+The **title** attribute specifies extra information about an element.
+
+The information is most often shown as a **tooltip text** when the mouse moves over the element.
+
+### Image as a Links
+
+```html
+<body>
+  <a href="https://www.google.com/">
+    <img src="images/googlelogo.png" style="width: 50px; height: 50px;" /> <!-- [!code ++] -->
+  </a>
+</body>
+```
+
+-----
+
+## Link Bookmarks
+
+### Bookmark Hyperlinks
+
+HTML **bookmarks** are used to allow readers to jump to specific parts of a web page.
+
+Bookmarks can be useful if a web page is very long.
+
+Bookmarks are created using the **id** attribute. IDs are called by adding the **pound (#)** symbol to the ID name.
+
+-----
+
+## Navigation Menu
+
+Enhance the look and functionality of your website by styling your HTML lists into a sleek horizontal or navigation menu. With a few CSS declarations, your website can become more user-friendly and visually appealing.
+
+The **padding** element is used to create space around an element’s content, inside of any defined borders.
+
+### padding property
+
+The **padding** property is used to create space around an element’s content, inside of any defined borders.
+
+<Callout>
+The **padding** property is a shorthand property for the following individual padding properties:
+  - **padding-top**
+  - **padding-right**
+  - **padding-bottom**
+  - **padding-left**
+</Callout>
+
+```html
+<body>
+  <!-- [!code word:padding:1] -->
+  <h1 style="background-color: hotpink; padding: 25px;">
+    Example of Heading with 25 pixels padding
+  </h1>
+</body>
+```
+
+### overflow property
+
+The **overflow** property specifies what should happen if content overflows an element’s box.
+
+This property specifies whether to **clip** content or to add **scrollbars** when an element’s content is too big to fit in a specified area.
+
+The value for overflow property can be **visible**, **scroll**, **auto**, **hidden**, **clip**.
+
+<Callout type="warn">
+The `overflow` property only works for block elements with a specified height.
+</Callout>
+
+```html
+<head>
+  <!-- [!code word:overflow] -->
+  <style type="text/css">
+    ul {
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    li {
+      display: block; 
+      color: white; 
+      text-align: center; 
+      padding: 16px; 
+      text-decoration: none; 
+      float: left;
+    }
+
+    a {
+      color: white; 
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#home">Home</a>
+    </li>
+    <li>
+      <a href="#news">News</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+    <li>
+      <a href="#about">About</a>
+    </li>
+  </ul>
+</body>
+```
+
+#### Output
+{/* ! tinamad gawan ng component */}
+<ul style={{listStyleType: "none", margin: "1rem 0 0 0", padding: 0, overflow: "hidden", backgroundColor: "#333333"}}>
+  <li style={{display: "block", color: "white", textAlign: "center", padding: "16px", margin: 0, textDecoration: "none", float: "left"}}>
+    <a href="#home" style={{color: "white", textDecoration: "none"}}>Home</a>
+  </li>
+  <li style={{display: "block", color: "white", textAlign: "center", padding: "16px", margin: 0, textDecoration: "none", float: "left"}}>
+    <a href="#news" style={{color: "white", textDecoration: "none"}}>News</a>
+  </li>
+  <li style={{display: "block", color: "white", textAlign: "center", padding: "16px", margin: 0, textDecoration: "none", float: "left"}}>
+    <a href="#contact" style={{color: "white", textDecoration: "none"}}>Contact</a>
+  </li>
+  <li style={{display: "block", color: "white", textAlign: "center", padding: "16px", margin: 0, textDecoration: "none", float: "left"}}>
+    <a href="#about" style={{color: "white", textDecoration: "none"}}>About</a>
+  </li>
+</ul>

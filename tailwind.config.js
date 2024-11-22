@@ -1,17 +1,18 @@
-import { createPreset } from 'fumadocs-ui/tailwind-plugin';
+import { createPreset } from "fumadocs-ui/tailwind-plugin"
 import tailwindcssAnimate from "tailwindcss-animate"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ["class"],
 	content: [
+		"./node_modules/fumadocs-ui/dist/**/*.js",
+
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./content/**/*.{md,mdx}",
-		"./mdx-components.{ts,tsx}",
-		"./node_modules/fumadocs-ui/dist/**/*.js",
+		"./content/**/*.mdx",
+		"./mdx-components.tsx",
 	],
-	presets: [createPreset({ addGlobalColors: false, preset: "black" })],
+	presets: [createPreset({ preset: "black" })],
 	theme: {
 		extend: {
 			animation: {

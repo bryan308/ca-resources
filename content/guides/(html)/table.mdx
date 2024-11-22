@@ -1,0 +1,321 @@
+---
+title: Table
+description: HTML tables allow web developers to arrange data into rows and columns.
+---
+
+## Learning Objectives
+
+1. Differentiate the data table from the layout table.
+2. Use the `<table>` and `</table>` elements in a web page.
+3. Create a borderless table for a horizontal navigation bar with text links.
+4. Design tables using partition elements like `<thead></thead>` and `<tbody></tbody>`.
+5. Create tables in a web page that span cells using rowspan and colspan attributes.
+6. Improve the appearance of table using additional CSS properties.
+
+### Data Tables vs Layout Tables
+
+#### Data tables
+
+Very often holds numbers, but they can hold text and other types of content as well.
+
+#### Layout tables
+
+Are not limited to holding data - they are allowed to hold any type of content. Their purpose is to position that content with a row-column layout scheme.
+
+### Example of Data Table
+
+<DataTableExample />
+
+### Example of Layout Tables
+
+<Wrapper variant="gradient">
+
+<Image src="/guides/table/layout_table1.jpg" alt="Layout Table example" width={800} height={209} className="mt-0" />
+<Image src="/guides/table/layout_table2.jpg" alt="Layout Table example" width={750} height={100} className="mb-0" />
+
+</Wrapper>
+
+-----
+
+## Table Elements
+
+- An HTML table is defined with the `<table>` and `</table>` tags.
+- Each table row is defined with the `<tr>` and `</tr>` tags.
+- A table header is defined with the `<th>` and `</th>` tags.
+- By default, table headers are **bold** and **centered**.
+- A table data or cell is defined with the `<td>` and `</td>` tags.
+
+<Wrapper>
+
+### Students List Web page
+
+<TableExample example_id={2} />
+
+</Wrapper>
+
+### Formatting a Data Table
+
+| Properties        | Definition                                                            |
+|-------------------|-----------------------------------------------------------------------|
+| `border-style`    | use to specify a table border.                                        |
+| `border-width`    | use to specify the border’s width.                                    |
+| `border`          | a shorthand property that handles a set of border-related properties. |
+| `padding`         | use to specify the space between the cell content and its border.     |
+| `border-collapse` | use to collapse borders into just one border.                         |
+
+### Students List Web Page With `border` Property
+
+<Tabs items={['css', 'output']}>
+<Tab value="css">
+
+```css
+table, td, tr {
+  border: thin solid;
+}
+```
+
+</Tab>
+<Tab value="output">
+
+<TableExample example_id={3} />
+
+</Tab>
+</Tabs>
+
+### Students List Web Page With `border-collapse` Property
+
+<Tabs items={['css', 'output']}>
+<Tab value="css">
+
+```css
+table, td, tr {
+  border-collapse: collapse;
+}
+```
+
+</Tab>
+<Tab value="output">
+
+<TableExample example_id={4} />
+
+</Tab>
+</Tabs>
+
+-----
+
+## Table head and Table body
+
+### thead 
+
+`thead` is used to group **header** content in an HTML table
+
+### tbody
+
+`tbody` is used to group the **body** content in an HTML table.
+
+-----
+
+### Students List Web Page With `thead` and `tbody` Elements
+
+<Tabs items={['css', 'html', 'output']}>
+<Tab value="css">
+
+```css 
+thead {
+  background-color: midnightblue;
+}
+
+tbody {
+  background-color: lightblue;
+}
+```
+
+</Tab>
+<Tab value="html">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style type="text/css">
+      table {
+        margin: 1.5rem 0;
+        border-collapse: collapse;
+      }
+      
+      tr th {
+        padding: 0.5rem 1rem;
+      }
+
+      th, td {
+        padding: 0.5rem;
+        border: 1px solid black;
+      }
+
+      thead {
+        background-color: midnightblue;
+        color: #ededed;
+      }
+
+      tbody {
+        background-color: lightblue;
+      }
+
+      td:nth-child(3) {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Student Number</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juan Dela Cruz</td>
+          <td>2021-21067</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Pedro Cruise</td>
+          <td>2021-21114</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Simon Ibarra</td>
+          <td>2021-21584</td>
+          <td>18</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+```
+
+</Tab>
+<Tab value="output">
+
+<TableExample example_id={5} />
+
+</Tab>
+</Tabs>
+
+-----
+
+### Cell Spanning
+
+| Attributes | Description                                             |
+|------------|---------------------------------------------------------|
+| `colspan`  | Defines the number of columns a table cell should span. |
+| `rowspan`  | Specifies the number of rows a cell should span.        |
+
+### Students List Web Page With `border-collapse` Property
+
+<Tabs items={['Table Row Header', 'html', 'output']}>
+<Tab value="Table Row Header">
+
+```html
+<tr>
+  <th colspan="3">Assignments</th>
+  <th colspan="2">Laboratory</th>
+  <th rowspan="2">Ability to Stay Awake</th>
+</tr>
+```
+
+</Tab>
+<Tab value="html">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style type="text/css">
+      table {
+        border: 1px solid black;
+        border-collapse: separate;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 0 0.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Assignments</th>
+          <th colspan="2">Laboratory</th>
+          <th rowspan="2">Ability to Stay Awake</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>1</th>
+          <th>2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10%</td>
+          <td>10%</td>
+          <td>10%</td>
+          <td>30%</td>
+          <td>36%</td>
+          <td>4%</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+```
+
+</Tab>
+<Tab value="output">
+
+<TableCellSpanning />
+
+</Tab>
+</Tabs>
+
+-----
+
+### Table Size
+
+The size of the table is define using `width` and `height` properties.
+
+### Table Alignment
+
+The `text-align` property is used to set the **horizontal** alignment of the content in `<th>` and `<td>` elements.
+
+The `vertical-align` property sets the **vertical** alignment of the content in `<th>` and `<td>`.
+
+The value for `vertical-align` property can be **top**, **bottom**, or **middle**.
+
+### Horizontal Dividers
+
+Use the `border-bottom` property to `<th>` and `<td>` for horizontal dividers.
+
+### Hoverable Table
+
+Use the `:hover` selector on `<tr>` to highlight table rows on mouse over.
+
+#### Example
+```css
+tbody tr:hover {
+  background-color: lightblue;
+}
+```

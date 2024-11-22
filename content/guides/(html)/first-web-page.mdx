@@ -1,0 +1,299 @@
+---
+title: First Web Page
+description: Here's a quick guide for creating your first web page.
+---
+
+## Agenda
+- Basic Web Page Structure
+- Basic HTML Tags
+- Saving Organizing HTML Files
+- Writing and Saving an HTML File
+- Using a Browser to View a Web Page
+- Deprecated Tags
+
+## Web Page Structure
+
+<ImageSection 
+  src="/guides/overview/html-structure.png" 
+  alt="HTML Structure" 
+  width={563} 
+  height={500}
+  subtitle="html structure by Online Design Teacher"
+  className="mx-auto"
+/>
+
+## HTML Tags
+
+HTML tags are keywords (tag names) surrounded by angle brackets like `<html>`. HTML tags normally come in pairs like `<body>` and `</body>`. The first tag in a pair is the **start tag**, the second tag is the **end tag**. The end tag is written like the start tag, with a **slash (/)** before the tag name.
+
+Start and end tags are also called opening and closing tags. The element content is everything inserted between the start and end tags.
+
+Some HTML tags have empty content (ex. `<br />` or `<hr />` Empty tags are closed in the start tag (ex. `<br />`)
+
+## Basic HTML Tags
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Page Title</title>
+  </head>
+  <body>
+    Web Page Content
+  </body>
+</html>
+```
+
+The `<!DOCTYPE>` declaration specifies the version of HTML used. All HTML documents must start with a `<!DOCTYPE>` declaration.
+
+### Common Doctype Declaration
+
+<Tabs items={['HTML5', 'HTML 4.01', 'XHTML 1.1']}>
+<Tab value="HTML5">
+
+```html
+<!DOCTYPE html>
+```
+
+</Tab>
+<Tab value="HTML 4.01">
+
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
+
+</Tab>
+<Tab value="XHTML 1.1">
+
+```html
+<!DOCTYPE html PUBLIC "-//W3//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+```
+
+</Tab>
+</Tabs>
+
+### html
+
+The `<html>` and `</html>` elements are the root elements of an HTML page. They indicate the start and the end of the HTML document. These tags are written after the `<!DOCTYPE>` declaration.
+
+### head
+
+The `<head>` and `</head>` elements contain all information about the html document. They are written inside the `<html>` and `</html>` tags.
+
+```html
+<head>
+  <meta charset=""utf-8 />
+  <meta name="viewport" content="width=device-width, inital-scale=1" />
+  <style type="text/css"></style>
+  <link rel="stylesheet" type="text/css" href="">
+  <title>Web Page Title</title>
+</head>
+```
+
+### title
+
+The `<title>` and `</title>` elements specify the title of the document. They are written inside the `<head>` and the `</head>` tags.
+
+### body
+
+The `<body>` and `</body>` elements contain all the visible content within the web page. They are written after the `<head>` and `</head>` tags inside the `<html>` and `</html>` tags.
+
+```html
+<body>
+  Web Page Content
+  <p>Some HTML Tags</p>
+</body>
+```
+
+## Build Our First Web Page
+
+### Writing and Saving HTML File
+
+<Steps>
+
+<Step>
+
+Open a Text Editor (Notepad) or Source Code Editor (Sublime Text) program.
+
+</Step>
+<Step>
+
+Save the file as `.html` (File – save as – select HTML)
+
+</Step>
+<Step>
+
+Write your HTML codes.
+
+</Step>
+<Step>
+
+Double click on the saved file, and it will be opened in your **default browser**.
+
+</Step>
+</Steps>
+
+### Sample Text Editor
+
+<ImageSection 
+  src="/guides/overview/notepad.jpg" 
+  alt="Notepad" 
+  width={819} 
+  height={567}
+  subtitle="Notepad"
+/>
+
+<ImageSection 
+  src="/guides/overview/notepad++.png" 
+  alt="Notepad++" 
+  width={3354} 
+  height={1230}
+  subtitle="Notepad++"
+/>
+
+<ImageSection 
+  src="/guides/overview/sublime-text.png" 
+  alt="Sublime Text" 
+  width={2621} 
+  height={1434}
+  subtitle="Sublime Text"
+/>
+
+----
+
+## Additional HTML Tags
+
+### Break Line Tag
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    Hello! This is the first line.
+    Hello! This is the second line.
+    Hello! This is the third line.
+  </body>
+</html>
+```
+
+To direct the browser to move the content to the start of a new line, we must use the `<br />` or the **line-break** tag.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    Hello! This is the first line. <br /> <!-- [!code ++] -->
+    Hello! This is the second line. <br /> <!-- [!code ++] -->
+    Hello! This is the third line.
+  </body>
+</html>
+``` 
+
+### Paragraph Tag
+
+The `<p>` and `</p>` or paragraph tags define a paragraph in HTML. By using the paragraph tag pair, the browser places the start of each paragraph on a new line and separates each paragraph with a space.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <p>This is the first paragraph.</p> <!-- [!code ++] -->
+    <p>This is the second paragraph.</p> <!-- [!code ++] -->
+  </body>
+</html>
+```
+
+### Heading Tag
+
+The heading tag defines a heading for a specific section in a web page.
+
+The size of the heading can be adjusted by using the different heading tags, `<h1></h1>` to `<h6></h6>`. `<h1>` will provide the largest heading size and `<h6>` will provide the smallest heading size.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Chapter Title</h1> <!-- [!code ++] -->
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+  </body>
+</html>
+```
+
+### Bold Tag
+
+The `<b>` and `</b>` or bold tags are used to display specific text using a bold font.
+
+When the browser encounters a `<b>` tag, the browser will start its use of a bold font to display the page text. When the browser later encounters the `</b>` tag, it will turn off bolding.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Chapter Title</h1>
+
+    <p>This is <b>bold text</b>.</p> <!-- [!code ++] -->
+    <p>This is sentence is written in italics.</p>
+  </body>
+</html>
+```
+
+### Italic Tag
+
+The `<i>` and `</i>` or **italic tags** are used to display specific text using an italic font.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Chapter Title</h1>
+
+    <p>This is <b>bold text</b>.</p>
+    <p><i>This is sentence is written in italics.</i></p> <!-- [!code ++] -->
+  </body>
+</html>
+```
+
+### Horizontal Rule
+
+The `<hr />` or the horizontal rule tag is used to insert a horizontal line in the web page.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <p>We all need people who will give us feedback. That's how we improve.</p>
+
+    <hr /> <!-- [!code ++] -->
+    <b><i>Bill Gates</i></b>
+  </body>
+</html>
+```
+
+## Deprecated Tags
+
+Deprecated elements are those elements that are allowed, but not recommended and are being replaced by newer ones. Deprecated tags are no longer supported by HTML.
+
+Some HTML tags that are no longer supported are `<center></center>`, `<u></u>`, `<font></font>`, `<marquee></marquee>` tag pairs.

@@ -1,0 +1,112 @@
+---
+title: "Form"
+description: "An HTML form is used to collect user input. The user input is most often sent to a server for processing."
+---
+
+## Learning Objectives
+1. Describe the importance of HTML forms in a web page.
+2. Construct a web page using `<form>` and `</form>` elements that integrates with backend services for data processing.
+3. Develop an HTML form that incorporates multiple input types, each chosen to optimize data entry for specific user tasks.
+4. Create an HTML form that uses a wide range of input attributes to provide advanced features.
+5. Create and customize dropdown menus using the select and option elements to enhance user interactivity on web forms.
+6. Implement and configure the textarea element and its attributes to enable multi-line text input in web forms.
+7. Group and label related form controls using the fieldset and legend elements to improve form accessibility and organization.
+8. Create and style various types of buttons using the button element, and understand their functions in form submission and user interaction.
+
+### What is HTML Form?
+HTML **forms** are a fundamental part of web development, enabling user interaction with web pages. They are used to collect user input and send it to a server for processing. **Forms** are essential for various web applications, such as login pages, registration forms, search boxes, and online surveys. The feedback of the user is mostly submitted to a server for review. **Form processing** is often called **client/server processing** because it requires both a client (a browser) and a remote server.
+
+### HTML Form Example
+
+<Wrapper className="w-fit" variant="gradient">
+
+<LoginForm />
+
+</Wrapper>
+
+### Form Element
+
+The HTML `<form>` and `</form>` tag pairs define a form that can be used to collect user input.
+
+An HTML form contains different form elements.
+
+Form elements are different types of input elements like text fields, checkboxes, radio buttons, submit buttons and more.
+
+### Form attributes
+
+The **action** attribute defines the action to be performed when the form is submitted.
+
+```html
+// [!code word:action]
+<form action=""></form>
+```
+
+The **method** attribute specifies the HTTP method to be used when submitting the form data.
+
+<Tabs items={['post', 'get']}>
+<Tab value="post">
+```html
+// [!code word:post]
+<form method="post"></form>
+```
+</Tab>
+<Tab value="get">
+```html
+// [!code word:get]
+<form method="get"></form>
+```
+</Tab>
+</Tabs>
+
+<Callout>
+The **form-data** can be sent as URL variables (with `method="get"`) or as HTTP POST transaction (with `method="post"`).
+
+See [w3schools](https://www.w3schools.com/tags/att_form_method.asp) for more information about **post** and **get** method.
+</Callout>
+
+### Form Elements
+
+The HTML `<form></form>` element can contain one or more of the following form elements.
+
+<Cards>
+  <Card 
+    title="Label" 
+    description="The label element defines a label for several form elements." 
+    href="/guides/form/label" 
+  />
+  <Card 
+    title="Input" 
+    description="The input element is the most important form element." 
+    href="/guides/form/input" 
+  />
+  <Card 
+    title="Select and Option" 
+    description="The select and option elements are used to create a drop-down list." 
+    href="/guides/form/select-and-option" 
+  />
+  <Card 
+    title="Datalist" 
+    description="The datalist element specifies a list of pre-defined options for an input element." 
+    href="/guides/form/datalist" 
+  />
+  <Card 
+    title="Textarea" 
+    description="The textarea element defines a multi-line text input field." 
+    href="/guides/form/textarea" 
+  />
+  <Card 
+    title="Fieldset and Legend" 
+    description="The fieldset and legend elements are used to group related data in a form." 
+    href="/guides/form/fieldset-and-legend" 
+  />
+  <Card 
+    title="Button" 
+    description="The button element is used to create a clickable button." 
+    href="/guides/form/button" 
+  />
+  <Card 
+    title="Output" 
+    description="The output element is used to display a message after a form is submitted." 
+    href="https://www.w3schools.com/tags/tag_output.asp" 
+  />
+</Cards>

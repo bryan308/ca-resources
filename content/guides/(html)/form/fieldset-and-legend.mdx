@@ -1,0 +1,41 @@
+---
+title: Fieldset and Legend
+description: The fieldset groups related form elements, while the legend provides a caption for the group.
+---
+
+The `<fieldset></fieldset>` element is used to group related data in a form.
+
+The `<legend></legend>` elements defines a caption for `<fieldset>` element.
+
+<Tabs items={['Code', 'Output']}>
+<Tab value="Code">
+
+```html
+<form>
+  <fieldset> <!-- [!code highlight] -->
+    <legend>Personal Information</legend> <!-- [!code highlight] -->
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname"> <br />
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname"> <br />
+    <input type="submit" name="btnsave" value="Save">
+  </fieldset> <!-- [!code highlight] -->
+</form>
+```
+
+</Tab>
+<Tab value="Output">
+
+<form>
+  <fieldset className="border border-foreground p-2">
+    <legend>Personal Information</legend>
+    <Label htmlFor="fname">First Name:</Label>
+    <Input type="text" name="fname" id="fname" /> <br />
+    <Label htmlFor="lname">Last Name:</Label>
+    <Input type="text" name="lname" id="lname" /> <br />
+    <Button>Save</Button>
+  </fieldset>
+</form>
+
+</Tab>
+</Tabs>

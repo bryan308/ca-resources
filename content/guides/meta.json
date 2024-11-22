@@ -1,0 +1,25 @@
+{
+	"title": "Overview",
+  "icon": "Box",
+  "defaultOpen": true,
+	"pages": [
+    "index", 
+    "---HTML---", 
+    "/(html)/overview",
+    "/(html)/first-web-page",
+    "/(html)/images",
+    "/(html)/lists",
+    "/(html)/hyperlinks",
+    "/(html)/table",
+    "/(html)/form", 
+    "/(html)/audio-and-video",
+    "---JavaScript---", 
+    "/(javascript)/introduction",
+    "/(javascript)/history",
+    "/(javascript)/functions",
+    "/(javascript)/js-form",
+    "/(javascript)/event-handlers",
+    "/(javascript)/dom",
+    "/(javascript)/variables-and-operators"
+  ]
+}

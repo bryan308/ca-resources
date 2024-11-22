@@ -1,0 +1,33 @@
+---
+title: Favicon
+description: Favicons are small images displayed next to the page title in the browser tab.
+---
+
+## HTML Favicon
+
+A **favicon** is a small image displayed next to the page title in the browser tab.
+
+To add a favicon to your website, use the `<link />` element within the head section of your HTML document.
+
+The `<link />` tag defines the relationship between the current document and an external resource.
+
+The `<link />` element is an empty element; it contains attributes to perform its function.
+
+### The link attributes used to create a Favicon
+
+|   Attribute   |   Description                                                                               |
+|---------------|---------------------------------------------------------------------------------------------|
+| `rel`         | Specifies the relationship between the current document and the linked document. (**icon**) |
+| `type`        | Specifies the media type of the linked document. (**image/icon**)                           |
+| `href`        | Specifies the location of the linked document.                                              |
+
+### Usage
+
+```html
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/icon" href="images/mickey.png" /> <!-- [!code highlight] -->
+  <title>Inserting Images</title>
+</head>
+```
