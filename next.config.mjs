@@ -1,18 +1,8 @@
-import { withContentCollections } from "@content-collections/next"
+import { withContentCollections } from '@content-collections/next';
 
 /** @type {import('next').NextConfig} */
 const config = {
-	reactStrictMode: true,
-	images: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "avatars.githubusercontent.com",
-				port: "",
-				pathname: "/**",
-			},
-		],
-	},
-}
+  reactStrictMode: true,
+};
 
-export default withContentCollections(config)
+export default withContentCollections(config);

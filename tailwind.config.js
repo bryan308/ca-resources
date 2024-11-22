@@ -1,7 +1,8 @@
-import { createPreset } from "fumadocs-ui/tailwind-plugin"
+import { createPreset } from 'fumadocs-ui/tailwind-plugin';
+import tailwindcssAnimate from "tailwindcss-animate"
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
 	darkMode: ["class"],
 	content: [
 		"./components/**/*.{ts,tsx}",
@@ -10,31 +11,16 @@ export default {
 		"./mdx-components.{ts,tsx}",
 		"./node_modules/fumadocs-ui/dist/**/*.js",
 	],
-	presets: [createPreset({ addGlobalColors: false, preset: "default" })],
+	presets: [createPreset({ addGlobalColors: false, preset: "vitepress" })],
 	theme: {
 		extend: {
-			animation: {
-				marquee: "marquee var(--duration) infinite linear",
-				"marquee-vertical": "marquee-vertical var(--duration) linear infinite",
-			},
-			keyframes: {
-				marquee: {
-					from: { transform: "translateX(0)" },
-					to: { transform: "translateX(calc(-100% - var(--gap)))" },
-				},
-				"marquee-vertical": {
-					from: { transform: "translateY(0)" },
-					to: { transform: "translateY(calc(-100% - var(--gap)))" },
-				},
-			},
-			fontFamily: {
-				times: ['"Times New Roman"', "serif"],
+			borderRadius: {
+				lg: "var(--radius)",
+				md: "calc(var(--radius) - 2px)",
+				sm: "calc(var(--radius) - 4px)",
 			},
 			colors: {
-				background: {
-					DEFAULT: "hsl(var(--background))",
-					foreground: "hsl(var(--background-foreground))",
-				},
+				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				card: {
 					DEFAULT: "hsl(var(--card))",
@@ -75,12 +61,7 @@ export default {
 					5: "hsl(var(--chart-5))",
 				},
 			},
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
-			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 }
