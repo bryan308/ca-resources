@@ -1,4 +1,4 @@
-import { source } from '@/lib/source';
+import { guides } from '@/lib/source';
 import type { Metadata } from 'next';
 import {
   DocsPage,
@@ -14,7 +14,7 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = guides.getPage(params.slug);
   if (!page) notFound();
 
   return (
@@ -32,14 +32,14 @@ export default async function Page(props: {
 }
 
 export function generateStaticParams() {
-  return source.generateParams();
+  return guides.generateParams();
 }
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = guides.getPage(params.slug);
   if (!page) notFound();
 
   return {

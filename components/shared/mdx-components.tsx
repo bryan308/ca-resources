@@ -55,6 +55,6 @@ export const components = {
 	Tab,
 	Tabs,
 	Wrapper,
-	Image: (props: any) => <ImageZoom {...(props as any)} />,
+	Image: (props: React.ComponentProps<typeof ImageZoom>) => <ImageZoom {...props} />,
 	...defaultMdxComponents,
 }
