@@ -10,7 +10,7 @@ export const Footer = () => {
 					<p className="text-xs">
 						Built with 💖 by{" "}
 						<Link
-							href="https://cdrcangulo.vercel.app"
+							href="https://cedricc.vercel.app"
 							rel="noreferrer noopener"
 							target="_blank"
 							className="font-medium underline"

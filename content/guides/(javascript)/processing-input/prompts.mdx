@@ -1,0 +1,26 @@
+---
+title: Using Prompts
+description: Learn how to prompt users for input in JavaScript.
+---
+
+## Window Prompt
+
+We can get user input using the JavaScript `prompt()` method. The `prompt()` method displays a dialog box that prompts the user for input. The `prompt()` method returns the input value if the user clicks "OK", otherwise it returns null.
+
+## Getting User Input Using Prompt
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      let name = prompt("What is your name?");
+      let address = prompt("Where are you from?");
+
+      documnet.getElementById("demo").innerHTML = "Hello " + name + " from " + address;
+    </script>
+  </body>
+</html>
+```

@@ -1,0 +1,28 @@
+---
+title: Using Fields
+description: Learn how to process user input using fields in JavaScript.
+---
+
+## Getting User Input Using Fields
+
+We can get user input through fields by using functions and events.
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    First name: <input type="text" id="fname"> <br>
+    Last name: <input type="text" id="lname"> <br>
+    <input type="submit" onclick="myFunction()">
+    <h1 id="demo"></h1>
+
+    <script type="text/javascript">
+      function myFunction() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        document.getElementById("demo").innerHTML = "Hello " + fname + " " + lname;
+      }
+    </script>
+  </body>
+</html>
+```

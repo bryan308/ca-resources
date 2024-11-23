@@ -1,0 +1,135 @@
+---
+title: Event
+description: Learn how event handlers trigger JavaScript actions on user interactions.
+---
+
+HTML events are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can "react" on these events. An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+  - When a user clicks the mouse
+  - When a webpage has loaded
+  - When an image has been loaded
+  - When the mouse moves over an element
+  - When an input field is changed
+  - When an HTML form is submitted
+  - When a user strokes a key
+
+JavaScript lets users execute code when events are detected.
+
+## Common HTML Event
+
+| Event         | Description                                                                                                                                                                                                                                           |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `onchange`    | It triggers when we **change value of any input element**. We often use this with an **input field** a **select menu** or **text area** to takes some action when the user changes content value.                                                     |
+| `onclick`     | Get activated when the element in **clicked**. This is often used to act, like submitting a form or opening up a dialog.                                                                                                                              |
+| `onmouseover` | It activates when the mouse pointer is **moved onto an element**. It is used to change the style of any element, like highlighting a button on mouse over.                                                                                            |
+| `onmouseout`  | Triggers when the mouse pointer is **moved away from an element**. This is for changing styles back or hiding elements that were displayed on a onmouseover.                                                                                          |
+| `onkeydown`   | Fires when a **key is pressed down**. This is a mechanism for **keyboard shortcuts** or **validating input** as the user types.                                                                                                                       |
+| `onload`      | Triggers once the element (usually an image or whole page) has **completed loading**. This commonly used for **initializing scripts** or the **execution of actions** that should only run after the entire content has been loaded (like a redirect).|
+
+---
+
+#### `onchange`
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript HTML Events</h2>
+    Enter your name: <input type="text" id="fname" onchange="upperCase()"> <!-- [!code highlight]  -->
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+    <script>
+      function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </body>
+</html>
+```
+
+#### `onclick`
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript HTML Events</h2>
+    <p>Click the button to display the date.</p>
+
+    <button onclick="displayDate()">The time is?</button> <!-- [!code highlight]  -->
+
+    <script>
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+    </script>
+
+    <p id="demo"></p>
+  </body>
+</html>
+```
+
+#### `onmouseover` and `onmouseout`
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38; width:120px; height:20px; padding:40px;"> <!-- [!code highlight]  -->
+      Mouse Over Me
+    </div>
+    <script>
+      function mOver(obj) {
+        obj.innerHTML = "Thank You";
+      }
+
+      function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me";
+      }
+    </script>
+  </body>
+</html>
+```
+
+#### `onkeydown`
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>HTML DOM Events</h1>
+    <h2>The onkeydown event</h2>
+
+    <p>Press a key in the input field:</p>
+
+    <input type="text" onkeydown="myFunction()"> <!-- [!code highlight]  -->
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You pressed a key inside the input field.";
+      }
+    </script>
+  </body>
+</html>
+```
+
+#### `onload`
+
+```html
+<!DOCTYPE html>
+<html>
+  <body onload="myFunction()"> <!-- [!code highlight]  -->
+    <h1>HTML DOM Events</h1>
+    <h2>The onload event</h2>
+
+    <script>
+      function myFunction() {
+        alert("Page is loaded");
+      };
+    </script>
+  </body>
+</html>
+```

@@ -18,8 +18,9 @@
     "/(javascript)/history",
     "/(javascript)/functions",
     "/(javascript)/js-form",
-    "/(javascript)/event-handlers",
     "/(javascript)/dom",
-    "/(javascript)/variables-and-operators"
+    "/(javascript)/variables-and-operators",
+    "/(javascript)/event",
+    "/(javascript)/processing-input"
   ]
 }
