@@ -188,8 +188,10 @@ To direct the browser to move the content to the start of a new line, we must us
     <title>My First Web Page</title>
   </head>
   <body>
-    Hello! This is the first line. <br />
-    Hello! This is the second line. <br />
+    Hello! This is the first line. <!-- [!code --] -->
+    Hello! This is the second line. <!-- [!code --] -->
+    Hello! This is the first line. <br /> <!-- [!code ++] -->
+    Hello! This is the second line. <br /> <!-- [!code ++] -->
     Hello! This is the third line.
   </body>
 </html>
@@ -206,8 +208,8 @@ The `<p>` and `</p>` or paragraph tags define a paragraph in HTML. By using the 
     <title>My First Web Page</title>
   </head>
   <body>
-    <p>This is the first paragraph.</p>
-    <p>This is the second paragraph.</p>
+    <p>This is the first paragraph.</p> <!-- [!code ++] -->
+    <p>This is the second paragraph.</p> <!-- [!code ++] -->
   </body>
 </html>
 ```
@@ -225,7 +227,7 @@ The size of the heading can be adjusted by using the different heading tags, `<h
     <title>My First Web Page</title>
   </head>
   <body>
-    <h1>Chapter Title</h1>
+    <h1>Chapter Title</h1> <!-- [!code ++] -->
 
     <p>This is the first paragraph.</p>
     <p>This is the second paragraph.</p>
@@ -248,7 +250,7 @@ When the browser encounters a `<b>` tag, the browser will start its use of a bol
   <body>
     <h1>Chapter Title</h1>
 
-    <p>This is <b>bold text</b>.</p>
+    <p>This is <b>bold text</b>.</p> <!-- [!code ++] -->
     <p>This is sentence is written in italics.</p>
   </body>
 </html>
@@ -268,7 +270,7 @@ The `<i>` and `</i>` or **italic tags** are used to display specific text using 
     <h1>Chapter Title</h1>
 
     <p>This is <b>bold text</b>.</p>
-    <p><i>This is sentence is written in italics.</i></p>
+    <p><i>This is sentence is written in italics.</i></p> <!-- [!code ++] -->
   </body>
 </html>
 ```
@@ -286,7 +288,7 @@ The `<hr />` or the horizontal rule tag is used to insert a horizontal line in t
   <body>
     <p>We all need people who will give us feedback. That's how we improve.</p>
 
-    <hr />
+    <hr /> <!-- [!code ++] -->
     <b><i>Bill Gates</i></b>
   </body>
 </html>

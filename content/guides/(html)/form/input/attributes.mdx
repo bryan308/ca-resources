@@ -18,9 +18,9 @@ The **disabled** attribute specifies that the input field is disabled. A disable
 ```html
 <form>
   <label for="subject">Subject:</label> <br />
-  <input type="text" id="subject" name="subject" value="IT-WST01" disabled> <br /> // [!code highlight]
+  <input type="text" id="subject" name="subject" value="IT-WST01" disabled> <br /> <!-- [!code highlight] -->
   <label for="section">Section:</label> <br />
-  <input type="text" id="section" name="section" value="BSIT 2" disabled> <br /> // [!code highlight]
+  <input type="text" id="section" name="section" value="BSIT 2" disabled> <br /> <!-- [!code highlight] -->
   <input type="submit" name="btnsubmit" value="Save">
   <input type="reset" name="btnclear" value="Clear">
 </form>
@@ -41,9 +41,9 @@ The **maxlength** attribute specifies the maximum allowed length for the input f
   <label for="fname">First Name:</label>
   <input type="text" id="fname" name="fname"> <br />
   <label for="lname">Last Name:</label>
-  <input type="text" id="lname" name="lname" size="30"> <br /> // [!code highlight]
+  <input type="text" id="lname" name="lname" size="30"> <br /> <!-- [!code highlight] -->
   <label for="preadd">Present Address:</label> <br />
-  <input type="text" id="preadd" name="preadd" size="40" maxlength="30"> <br /> // [!code highlight]
+  <input type="text" id="preadd" name="preadd" size="40" maxlength="30"> <br /> <!-- [!code highlight] -->
   <input type="submit" name="btnsubmit" value="Save">
   <input type="reset" name="btnclear" value="Clear">
 </form>
@@ -62,7 +62,7 @@ The **step** attribute specifies the legal number of intervals for an `<input />
 ```html
 <form>
   <label for="quiz">Quiz Score:</label> <br />
-  <input type="number" id="quiz" name="quiz" min="0" max="50" step="5"> <br /> // [!code highlight]
+  <input type="number" id="quiz" name="quiz" min="0" max="50" step="5"> <br /> <!-- [!code highlight] -->
   <input type="submit" name="btnsubmit" value="Save">
   <input type="reset" name="btnclear" value="Clear">
 </form>
@@ -84,8 +84,8 @@ The **autofocus** attribute specifies that an input field should automatically g
 
 ```html
 <form>
-  <input type="text" name="uname" placeholder="Enter username" required autofocus> <br /> // [!code highlight]
-  <input type="password" name="pword" placeholder="Enter password" required> <br /> // [!code highlight]
+  <input type="text" name="uname" placeholder="Enter username" required autofocus> <br /> <!-- [!code highlight] -->
+  <input type="password" name="pword" placeholder="Enter password" required> <br /> <!-- [!code highlight] -->
   <input type="submit" name="btnsubmit" value="Submit">
 </form>
 ```
@@ -103,7 +103,7 @@ The **title** attribute is used to describe the pattern to the user.
 ```html
 <form>
   <label for="zipcode">ZIP Code:</label> <br />
-  <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{4}" title="4 digit zipcode"> // [!code highlight]
+  <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{4}" title="4 digit zipcode"> <!-- [!code highlight] -->
   <br />
   <input type="submit" name="btnsubmit" value="Submit">
 </form>

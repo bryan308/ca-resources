@@ -1,6 +1,6 @@
 import React from "react"
-import { type HomeLayoutProps } from "fumadocs-ui/home-layout"
-import { Book, Box, Check } from "lucide-react"
+import { Book, Box} from "lucide-react"
+import { HomeLayoutProps } from "fumadocs-ui/layouts/home"
 
 /**
  * Shared layout configurations
@@ -20,24 +20,24 @@ export const baseOptions: HomeLayoutProps = {
 		),
 	},
 	links: [
-		{
-			type: "menu",
-			text: "v1.5.0",
-			items: [
-				{
-					icon: <Check />,
-					text: "v1.5.0",
-					url: "https://ca-resources.vercel.app/",
-					external: false,
-				},
-				{
-					icon: <div className="size-4" />,
-					text: "v1.2.6",
-					url: "https://v1-ca-resources.vercel.app/",
-					external: false,
-				},
-			],
-		},
+		// {
+		// 	type: "menu",
+		// 	text: "v1.6.0",
+		// 	items: [
+		// 		{
+		// 			icon: <Check />,
+		// 			text: "v1.6.0",
+		// 			url: "https://ca-resources.vercel.app/",
+		// 			external: false,
+		// 		},
+		// 		{
+		// 			icon: <div className="size-4" />,
+		// 			text: "v1.2.6",
+		// 			url: "https://v1-ca-resources.vercel.app/",
+		// 			external: false,
+		// 		},
+		// 	],
+		// },
 		{
 			icon: <Box />,
 			text: "Resources",

@@ -80,15 +80,15 @@ Add a button labeled "Generate Email" to trigger the email generation process.
     <title>Email Address Generator</title>
   </head>
   <body>
-    <form>
-      First Name:
-      <input type="text" name="first" id="first" size="15" autofocus>
-      <br />
-      Last Name:
-      <input type="text" name="last" id="last" size="15" autofocus>
-      <br />
-      <input type="button" value="Generate Email">
-    </form>
+    <form> <!-- [!code ++] -->
+      First Name: <!-- [!code ++] -->
+      <input type="text" name="first" id="first" size="15" autofocus> <!-- [!code ++] -->
+      <br /> <!-- [!code ++] -->
+      Last Name: <!-- [!code ++] -->
+      <input type="text" name="last" id="last" size="15" autofocus> <!-- [!code ++] -->
+      <br /> <!-- [!code ++] -->
+      <input type="button" value="Generate Email"> <!-- [!code ++] -->
+    </form> <!-- [!code ++] -->
   </body>
 </html>
 ```
@@ -108,12 +108,12 @@ This function will combine the first and last name entered by the user and appen
 <html>
   <head>
     <title>Email Address Generator</title>
-    <script type="text/javascript">
-      function generateEmail(form) {
+    <script type="text/javascript"> // [!code ++] 
+      function generateEmail(form) { // [!code ++]
         // Generate the email address using form values
-        var email = form.elements["first"].value + form.elements["last"].value + "@gmail.com";
-      }
-    </script>
+        var email = form.elements["first"].value + form.elements["last"].value + "@gmail.com"; // [!code ++]
+      } // [!code ++]
+    </script> <!-- [!code ++] -->
   </head>
   <body>
     <form>
@@ -174,11 +174,11 @@ form.elements["first"].focus();
         var email = form.elements["first"].value + form.elements["last"].value + "@gmail.com";
 
         // Set the innerHTML of the <p> element with id "email"
-        document.getElementById("email").innerHTML = email;
+        document.getElementById("email").innerHTML = email; // [!code ++]
 
         // Reset the form and focus on the first input
-        form.reset();
-        form.elements["first"].focus();
+        form.reset(); // [!code ++]
+        form.elements["first"].focus(); // [!code ++]
       }
     </script>
   </head>
@@ -191,7 +191,7 @@ form.elements["first"].focus();
       <input type="text" name="last" id="last" size="15" autofocus>
       <br />
       <input type="button" value="Generate Email" onclick="generateEmail(this.form);">
-      <p id="email"></p>
+      <p id="email"></p> <!-- [!code ++] -->
     </form>
   </body>
 </html>

@@ -3,81 +3,77 @@ title: Functions
 description: Understand how to create and use functions in JavaScript.
 ---
 
-JavaScript functions are defined with the function keyword. You can use a function declaration or a function expression. A function in JavaScript is similar to a **mathematical function**. A **mathematical function** takes in **arguments**, **executes computation**, and **produces results**. 
+## Introduction
 
-For example, the `sin(x)` mathematical function receives the `x` argument, calculates the `sin` of the given `x` angle, and returns the calculated `sin of x`. Likewise, a JavaScript function might **receive arguments**, that will perform a calculation, and might return an answer. 
+A JavaScript function is a block of code designed to perform a particular task.
 
-Here’s the syntax for calling a function:
+There are two kinds of functions in JavaScript: **built-in** and **developer created**.
 
-```plaintext
-function function-name(zero-or-more-parameters-separated-by-commas)
-```
+Some examples of built-in JavaScript functions include: `concat()`, `date()`, `length()` etc.
 
-As shown in the code below, we have a source code for Hello web page button that has `onclick` attribute with a value of `displayHello();`. That's JavaScript function call, and its syntax matches the preceding syntax. Note the parenthesis are empty because there's no need to pass any argument values to the `displayHello` function. If there were arguments, they would need to be separated by commas, and proper style suggests that you insert a space after each comma.
+A JavaScript function is executed when "something" invokes or calls it.
 
-### Source code for Hello World web page
+## Calling a Function
 
-```html title="index.html"
+The code inside a function will execute when something invokes or calls the function.
+  - When an event occurs (ex. when a user clicks a button)
+  - When it is called from JavaScript code
+
+## Function Example
+
+```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello World!</title>
-    <script type="text/javascript">
-      function displayHello() {
-        var msg;
-        msg = document.getElementById('message');
-        msg.outerHTML = "<h1>Hello World!</h1>";
+  <body>
+    <button onclick="myFunction()">Call Function</button>
+    <script>
+      function myFunction() {
+        window.alert("Hello World!");
       }
     </script>
-  </head>
-  <body>
-    <h3 id="message">
-      To see the traditional first program greeting, click below.
-    </h3>
-    <input type="button" value="Click Me!" onclick="displayHello();">
   </body>
 </html>
 ```
 
-When you save the code above in an HTML file (e.g., `index.html`) and open it in a web browser. When you click the **button**, in the text "To see the traditional first program greeting, click below." It will be replaced with "**Hello world!**" in an `<h1>` element.
+## Function Syntax
 
-### Display Function code
+- A JavaScript function is defined with the function **keyword**, followed by a **name**, then followed by **parentheses ()**.
 
-<Tabs items={['syntax', 'displayHello.js']}>
-<Tab value="syntax">
-Here’s the syntax for a function definition:
+- Function names can contain letters, digits, underscores, and dollar signs.
 
-```plaintext
-function function-name(zero-or-more-parameters-separated-by-commas) {
-  statement 1;
-  statement 2;
-  last-statement;
-}
-```
-</Tab>
-<Tab value="displayHello.js">
+- The parentheses may include parameter names separated by commas.
+  - (parameter1, parameter2, ....)
+
+- The code to be executed, by the function, is placed inside curly brackets {}.
 
 ```js
-function displayHello() {
-  var msg;
-  msg = document.getElementById('message');
-  msg.outerHTML = "<h1>Hello World!</h1>";
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
 }
 ```
 
-</Tab>
-</Tabs>
+- Function parameters are listed inside the **parentheses ()** in the function definition.
 
-The `displayHello` function is defined to find the element with the **ID message** and change its `outerHTML` to display an `<h1>` element with the text "**Hello world!**". While the button is the `<input>` element creates a button on the web page with the value "**Click Me!**" and an `onclick` attribute that calls the `displayHello` function when the button is clicked.
+- Function **arguments** are the **values received** by the function when it is called.
 
-It is seen as the `displayHello` function definition that follows the prior syntax. The parentheses in the function heading are empty because the function call’s parentheses are empty (the function call was `displayHello();`). If there are arguments in the function call, then you’ll normally have the same number of parameters in the function heading—one parameter to receive each argument’s value.
+- Inside the function, the **arguments** (parameters) behave as local variables.
 
-Note how we’re using the term **argument** for the values in a function call’s parentheses and the term **parameter** for the associated words in a function definition heading’s parenthesis. Some people use the term argument for both, but to make it easier to distinguish between the **function call** and the **function definition**, we’ll stick with the separate formal names—argument and parameter.
+- Outputs of the operations done using parameters are sent back to the program using the return statement.
 
-Normally, function definitions should be placed (**1**) in a `script` container in the web page’s head container or (**2**) in an external JavaScript file. Go back to the Hello web page code above and verify that the `displayHello` function definition is in a script container. You’ll want to use an external JavaScript file if you have lots of JavaScript code. We’ll show a web page that uses an external JavaScript file later in the book.
+### Function With Paramter and Return
 
-The line `msg = document.getElementById('message');` is used to find and assign a reference to an HTML element with the specified ID (message) to the variable msg. A document is a global object representing the HTML document currently displayed in the browser. Another is `getElementById('message')`, a document object method. It searches the document for an element with the ID attribute value '**message**' and then returns that kind of element.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+    <script text="text/javascript">
+      function product(num1, num2) {
+        return num1 * num2;
+      }
+      document.getElementById("demo").innerHTML = "The return value for function is " + product(12, 3);
+    </script>
+  </body>
+</html>
+```
 
-Looking back to the previous code, you can see three lines in the function’s body. Each line is a JavaScript statement, where a statement performs a task. As you can see in the code above, we have three statements that end with a semicolon. Semicolons are required at the end of a JavaScript statement only if the JavaScript statement is followed by another JavaScript statement, so it would have been legal to omit the semicolon after the last statement.
-
-However, coding conventions dictate that you terminate every statement with a semicolon, even the last one. Why? Suppose there’s no semicolon at the end of the last statement and someone later adds a new statement after the last statement. That creates a bug if they forget to insert a semicolon between the two statements. Another reason to insert a semicolon after the last statement is that if you don’t do it, the JavaScript engine does it for you behind the scenes, and that slows things down slightly.

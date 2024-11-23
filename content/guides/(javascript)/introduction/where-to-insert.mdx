@@ -13,13 +13,13 @@ We can place JavaScript both in the `<head>` and `<body>` sections of a page by 
 ```html
 <!DOCTYPE html>
 <html>
-  <head> // [!code highlight]
-    <script>
-      function myFunction() {
-        document.getElementById("demo").innerHTML = "Paragraph changed!";
-      }
-    </script> 
-  </head> // [!code highlight]
+  <head>
+    <script> // [!code ++]
+      function myFunction() { // [!code ++]
+        document.getElementById("demo").innerHTML = "Paragraph changed!"; // [!code ++]
+      } // [!code ++]
+    </script> <!-- [!code ++] -->
+  </head>
   <body>
     <h2>Demo JavaScript in Head</h2>
     <p id="demo">A paragraph</p>
@@ -32,16 +32,16 @@ We can place JavaScript both in the `<head>` and `<body>` sections of a page by 
 ```html
 <!DOCTYPE html>
 <html>
-  <body> // [!code highlight]
+  <body>
     <h2>Demo JavaScript in Body</h2>
     <p id="demo">A paragraph</p>
     <button type="button" onclick="myFunction()">Try it</button>
-    <script>
-      function myFunction() {
-        document.getElementById("demo").innerHTML = "Paragraph changed!";
-      }
-    </script>
-  </body> // [!code highlight]
+    <script> // [!code ++]
+      function myFunction() { // [!code ++]
+        document.getElementById("demo").innerHTML = "Paragraph changed!"; // [!code ++]
+      } // [!code ++]
+    </script> <!-- [!code ++] -->
+  </body>
 </html>
 ```
 </Tab>
@@ -88,9 +88,8 @@ function myFunction() {
     <p id="demo">A paragraph.</p>
     <button type="button" onclick="myFunction()">Try it</button>
     <p>This exmaple links to "myScript.js"</p>
-    // [!code word:js/myScript.js]
     <p>(myFunction is stored in "myScript.js")</p>
-    <script src="js/myScript.js"></script>
+    <script src="js/myScript.js"></script> <!-- [!code ++] -->
   </body>
 </html>
 ```

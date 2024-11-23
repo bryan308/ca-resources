@@ -1,16 +1,18 @@
 import { createPreset } from "fumadocs-ui/tailwind-plugin"
+import tailwindcssAnimate from "tailwindcss-animate"
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
 	darkMode: ["class"],
 	content: [
+		"./node_modules/fumadocs-ui/dist/**/*.js",
+
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./content/**/*.{md,mdx}",
-		"./mdx-components.{ts,tsx}",
-		"./node_modules/fumadocs-ui/dist/**/*.js",
+		"./content/**/*.mdx",
+		"./mdx-components.tsx",
 	],
-	presets: [createPreset({ addGlobalColors: false, preset: "default" })],
+	presets: [createPreset({ preset: "black" })],
 	theme: {
 		extend: {
 			animation: {
@@ -27,14 +29,13 @@ export default {
 					to: { transform: "translateY(calc(-100% - var(--gap)))" },
 				},
 			},
-			fontFamily: {
-				times: ['"Times New Roman"', "serif"],
+			borderRadius: {
+				lg: "var(--radius)",
+				md: "calc(var(--radius) - 2px)",
+				sm: "calc(var(--radius) - 4px)",
 			},
 			colors: {
-				background: {
-					DEFAULT: "hsl(var(--background))",
-					foreground: "hsl(var(--background-foreground))",
-				},
+				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				card: {
 					DEFAULT: "hsl(var(--card))",
@@ -75,12 +76,7 @@ export default {
 					5: "hsl(var(--chart-5))",
 				},
 			},
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
-			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 }

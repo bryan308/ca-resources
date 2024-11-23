@@ -1,10 +1,10 @@
-import { FunctionSquare, Image, Layers3, List, MousePointerClick, Table } from "lucide-react"
+import { FunctionSquare, ImageIcon, Layers3, List, MousePointerClick, Table } from "lucide-react"
 import React from "react"
 
 const guidesHighlights = [
 	{
 		title: "Creating Images",
-		icon: <Image />,
+		icon: <ImageIcon />,
 		description: "Images can improve the design and the appearance of a web page.",
 	},
 	{

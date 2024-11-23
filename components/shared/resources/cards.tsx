@@ -18,7 +18,10 @@ interface ResourcesCardsProps {
 }
 
 export const ResourcesCards: React.FC<ResourcesCardsProps> = ({ type }) => {
-	let resourcesList: { title?: string; links: any[] }[] = []
+	let resourcesList: {
+		title?: string
+		links: { title: string; description: string; url: string; iconPath?: string }[]
+	}[] = []
 
 	// If a type is provided, check if it exists in resourcesData
 	if (type && resourcesData[type]) {
