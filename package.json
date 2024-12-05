@@ -13,6 +13,7 @@
     "@content-collections/mdx": "^0.2.0",
     "@content-collections/next": "^0.2.3",
     "@fumadocs/content-collections": "1.1.5",
+    "@parcel/watcher-win32-x64": "^2.5.0",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.1",
