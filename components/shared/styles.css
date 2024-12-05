@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* disable fumadocs table styles */
+.prose table {
+	border-radius: 0 !important;
+}
+
+.data-table table,
+.table table {
+	@apply w-full border-separate border-spacing-0;
+}
+
+.data-table table thead,
+.table table thead {
+	@apply border-t border-b border-border;
+}
+
+.data-table table th,
+.table table th {
+	@apply first:rounded-tl-md first:rounded-bl-md first:border-l 
+	last:rounded-tr-md last:rounded-br-md last:border-r 
+	border-t border-b border-border bg-muted/60 align-top;
+}
+
+.data-table table thead th,
+.table table thead th {
+	@apply text-left text-wrap lg:text-nowrap text-foreground 
+	text-base font-normal tracking-tight p-3;
+}
+
+.data-table table tbody td,
+.table table tbody td {
+	@apply text-foreground text-sm p-3 border-b border-border;
+}
+
+/* .data-table table tr,
+.table table tr {
+	@apply even:bg-background-foreground hover:bg-background-foreground;
+} */
+
+.table table tbody td:nth-child(1) {
+	width: 16ch;
+}
+
+/* TABLE1 */
+.table1 {
+	@apply bg-card mt-6 border border-collapse border-border;
+}
+
+.table1 tr {
+	@apply even:bg-muted;
+}
+
+.table1 thead tr th {
+	@apply px-4 border border-collapse border-border;
+}
+
+.table1 tbody tr td {
+	@apply border border-collapse px-1 py-px border-border;
+}
+
+.table1 tbody tr td:nth-child(3) {
+	@apply text-right;
+}
+
+/* TABLE 2 */
+.table2 {
+	font-family: "Times New Roman", Times, serif;
+	@apply mt-4 border border-separate border-border bg-none;
+}
+
+.table2 thead tr th,
+.table2 tbody tr td {
+	@apply px-4 border border-border;
+}
+
+.table2 thead tr th {
+	@apply text-primary;
+}
+
+.table2 tbody tr {
+	@apply border border-border;
+}
+
+.table2 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 3 */
+.table3 {
+	font-family: "Times New Roman", Times, serif;
+	border: thin solid;
+	@apply mt-4 border-separate border-border bg-none;
+}
+
+.table3 thead tr th,
+.table3 tbody tr td {
+	border: thin solid;
+	@apply border-border;
+}
+
+.table3 tbody tr {
+	@apply border border-border;
+}
+
+.table3 thead tr th {
+	@apply px-4 text-primary;
+}
+
+.table3 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 4 */
+.table4 {
+	font-family: "Times New Roman", Times, serif;
+	@apply border mt-4 border-collapse border-border bg-none;
+}
+
+.table4 thead tr th,
+.table4 tbody tr td {
+	@apply border border-collapse border-border;
+}
+
+.table4 thead tr th {
+	@apply px-4 text-primary;
+}
+
+.table4 tbody tr {
+	@apply border border-border;
+}
+
+.table4 tbody tr td {
+	@apply px-1 py-px;
+}
+
+/* TABLE 5 */
+.table5 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-collapse: collapse;
+}
+
+.table5,
+.table5 thead th,
+.table5 tbody td {
+	@apply border border-solid border-neutral-950;
+}
+
+.table5 thead {
+	background-color: #191970;
+	color: #ededed !important;
+}
+
+.table5 thead th {
+	padding: 0.5rem 1rem;
+}
+
+.table5 tbody {
+	background-color: #add8e6;
+}
+
+.table5 tbody td {
+	padding: 0.25rem;
+	color: #111;
+}
+
+.table5 tbody td:nth-child(3) {
+	text-align: right;
+}
+
+/* TABLE 6 */
+.table6 {
+	@apply font-serif border border-border border-separate mt-4 bg-none;
+}
+
+.table6 thead tr th,
+.table6 tbody tr td {
+	@apply border border-border;
+}
+
+.table6 thead tr th {
+	@apply md:px-2 text-center align-middle;
+}
+
+.table6 tbody tr td {
+	@apply text-center;
+}
