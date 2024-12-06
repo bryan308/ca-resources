@@ -383,6 +383,12 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description: "Device mockup generator for your website and app screenshots!",
 						iconPath: "/resources/mockups/dimmy.png",
 					},
+					{
+						title: "Ray.so",
+						url: "https://ray.so",
+						description: "Create beautiful screenshots of your code with customizable themes, padding, and export options.",
+						iconPath: "/resources/mockups/rayso.png",
+					},
 				],
 			},
 		],
