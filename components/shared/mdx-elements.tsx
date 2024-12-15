@@ -1,3 +1,5 @@
+import "./styles.css"
+
 import React from "react"
 import ImageRender from "./image-render"
 import Link from "next/link"
@@ -288,15 +290,15 @@ const TableCellSpanning: React.FC = () => (
 				})}
 			</tr>
 			<tr>
-				{tblCellSpan.th.th2.map((th) => {
-					return <th key={th}>{th}</th>
+				{tblCellSpan.th.th2.map((th, idx) => {
+					return <th key={idx}>{th}</th>
 				})}
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				{tblCellSpan.td.map((td) => {
-					return <td key={td}>{td}</td>
+				{tblCellSpan.td.map((td, idx) => {
+					return <td key={idx}>{td}</td>
 				})}
 			</tr>
 		</tbody>

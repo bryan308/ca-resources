@@ -18,6 +18,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 				title: "Color Palettes",
 				links: [
 					{
+						title: "HyperColor",
+						url: "https://hypercolor.dev/",
+						description:
+							"A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.",
+						iconPath: "/resources/colors/hyper-color.png",
+					},
+					{
 						title: "Colorsss",
 						url: "https://colorsss.com/",
 						description:
@@ -331,8 +338,7 @@ export const resourcesData: Record<string, IResourceCategory> = {
 					{
 						title: "Shots",
 						url: "https://shots.so/",
-						description:
-							"Craft beautiful presentation for your social media, website and more!",
+						description: "Craft beautiful presentation for your social media, website and more!",
 						iconPath: "/resources/mockups/shots.png",
 					},
 					{
@@ -383,6 +389,13 @@ export const resourcesData: Record<string, IResourceCategory> = {
 						description: "Device mockup generator for your website and app screenshots!",
 						iconPath: "/resources/mockups/dimmy.png",
 					},
+					{
+						title: "Ray.so",
+						url: "https://ray.so",
+						description:
+							"Create beautiful screenshots of your code with customizable themes, padding, and export options.",
+						iconPath: "/resources/mockups/rayso.png",
+					},
 				],
 			},
 		],
@@ -393,6 +406,27 @@ export const resourcesData: Record<string, IResourceCategory> = {
 			{
 				title: "",
 				links: [
+					{
+						title: "Lummi",
+						url: "https://focastock.com/",
+						description:
+							"Discover our selection of the best Midjourney --sref codes, created by the most talented digital artists. From editorial, to cinematographic, illustrations, and more.",
+						iconPath: "/resources/stock-photos/lummi.png",
+					},
+					{
+						title: "FOCA",
+						url: "https://focastock.com/",
+						description:
+							"Use them in your website, themes, templates, projects, print materials, social posts, and more. CC0 license.",
+						iconPath: "/resources/stock-photos/foca.png",
+					},
+					{
+						title: "Barnimages",
+						url: "https://barnimages.com/",
+						description:
+							"Discover unique, high-res, free stock images. Perfect for personal or commercial use—no attribution needed. Exclusively at Barnimages.",
+						iconPath: "/resources/stock-photos/barnimages.png",
+					},
 					{
 						title: "Texturelabs",
 						url: "https://texturelabs.org/",

@@ -1,7 +1,6 @@
 import "./global.css"
 import { RootProvider } from "fumadocs-ui/provider"
 import type { ReactNode } from "react"
-import { Monitoring } from 'react-scan/dist/core/monitor/params/next'
 
 import localFont from "next/font/local"
 import { cn } from "@/lib/utils"
@@ -57,7 +56,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 			lang="en"
 			suppressHydrationWarning
 		>
-			<Monitoring apiKey="ghGw-E3yKh1NoDZTbCHZa58NvITDqxIa" url="https://monitoring.react-scan.com/api/v1/ingest" />
 			<body className={cn(sans.variable, sans.className, mono.variable, "relative")}>
 				<RootProvider
 				// TODO include resources in search
