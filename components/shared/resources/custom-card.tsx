@@ -20,22 +20,24 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description }) => {
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<div className="not-prose mb-2 w-fit rounded-md border bg-fd-muted p-1.5 text-fd-muted-foreground [&_svg]:size-4">
-				{typeof icon === "string" ? (
-					<Image
-						src={icon}
-						alt={title}
-						width={16}
-						height={16}
-						className="min-w-4 size-4"
-					/>
-				) : icon ? (
-					icon
-				) : (
-					<Box className="min-w-4 size-4" />
-				)}
+			<div className="flex items-center mb-2">
+				<div className="not-prose mr-2 w-fit rounded-md border bg-fd-muted p-1.5 text-fd-muted-foreground [&_svg]:size-4">
+					{typeof icon === "string" ? (
+						<Image
+							src={icon}
+							alt={title}
+							width={16}
+							height={16}
+							className="min-w-4 size-4"
+						/>
+					) : icon ? (
+						icon
+					) : (
+						<Box className="min-w-4 size-4" />
+					)}
+				</div>
+				<h4 className="font-medium text-base">{title}</h4>
 			</div>
-			<h4 className="font-medium text-base mb-2">{title}</h4>
 			<p className="text-fd-muted-foreground truncate-text line-clamp-2">{description}</p>
 		</Link>
 	)
