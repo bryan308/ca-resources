@@ -25,8 +25,10 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { ResourcesCards } from "./resources/cards"
 import { Textarea } from "@/components/ui/textarea"
 import ImageSection from "./image-section"
+import CustomCard from "./resources/custom-card"
 
 export const components = {
+	CustomCard,
 	BorderExample,
 	DataTable,
 	DataTableExample,
