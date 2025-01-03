@@ -36,7 +36,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description }) => {
 				)}
 			</div>
 			<h4 className="font-medium text-base mb-2">{title}</h4>
-			<p className="text-fd-muted-foreground truncate-text line-clamp-3">{description}</p>
+			<p className="text-fd-muted-foreground truncate-text line-clamp-2">{description}</p>
 		</Link>
 	)
 }
