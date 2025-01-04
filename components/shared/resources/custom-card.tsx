@@ -5,7 +5,7 @@ import React, { FC, ReactNode } from "react"
 
 interface ICustomCard {
 	title: string
-	icon: ReactNode | string
+	icon?: ReactNode | string
 	// children?: ReactNode
 	description: string
 	href?: string

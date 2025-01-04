@@ -22,7 +22,6 @@ import { Input } from "../ui/input"
 import { Checkbox } from "../ui/checkbox"
 import { Slider } from "../ui/slider"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
-import { ResourcesCards } from "./resources/cards"
 import { Textarea } from "@/components/ui/textarea"
 import ImageSection from "./image-section"
 import CustomCard from "./resources/custom-card"
@@ -49,7 +48,6 @@ export const components = {
 	Label,
 	RadioGroup,
 	RadioGroupItem,
-	ResourcesCards,
 	Slider,
 	Steps,
 	Step,
