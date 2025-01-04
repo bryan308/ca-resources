@@ -1,5 +1,5 @@
 import React from "react"
-import { Book, Box} from "lucide-react"
+import { Book, Box } from "lucide-react"
 import { HomeLayoutProps } from "fumadocs-ui/layouts/home"
 
 /**
@@ -41,7 +41,7 @@ export const baseOptions: HomeLayoutProps = {
 		{
 			icon: <Box />,
 			text: "Resources",
-			url: "/resources",
+			url: "/resources/colors",
 			active: "none",
 		},
 		{
