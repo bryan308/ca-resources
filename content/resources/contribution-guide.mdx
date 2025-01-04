@@ -42,7 +42,7 @@ Make sure to replace `your-username` with your actual GitHub username.
 Before making any changes, create a new branch with a descriptive name that reflects the nature of your contribution. This helps keep your work organized and makes it easier for others to review.
 
 ```bash
-git checkout -b v2/add-resource
+git checkout -b add-resource
 ```
 
 </Step>
@@ -51,57 +51,9 @@ git checkout -b v2/add-resource
 
 -----
 
-## File Path Where the Resources are Stored
-
-The resources are stored in the `resources.ts` file located at:
-
-<Files>
-
-<Folder name="root-folder" defaultOpen>
-
-<Folder name="data" defaultOpen>
-
-<File name="resources.ts" />
-
-</Folder>
-
-</Folder>
-
-</Files>
-
-```typescript title="resources.ts"
-page: { // object key as the resource path
-  title: "",
-  // ...
-  resourcesList: [
-    {
-      title: "", // Title of the resources category (optional)
-      links: [
-        {
-          title: "", // Title of the specific link
-          url: "",
-          description: "",
-          iconPath: "",
-        }
-      ]
-    }
-  ]
-}
-```
-
------
-
 ## Steps to Gather Resource Information
 
 <Steps>
-
-<Step>
-
-### Use Desktop/Laptop
-
-It is recommended to use a desktop or laptop for ease of gathering information by inspecting website elements. Open the website you want to add.
-
-</Step>
 
 <Step>
 
@@ -149,7 +101,9 @@ If it's not available, you can use AI to describe the website.
 
 ### Find the Icon
 
-Use `favicon.ico` if there are no icons available, but try to find a high-resolution icons first. If multiple icons are available, choose one that is similar to the favicon used. Some websites may not have an icon; you can leave it blank. Store icons in the relevant folder inside `/public/resources/`.
+Use `favicon.ico` if there are no icons available, but try to find a high-resolution icons first. If multiple icons are available, choose one that is similar to the favicon used. 
+
+Some websites may not have an icon; if that’s the case, don’t use the icon attribute. Store icons in the relevant folder inside `/public/resources/`.
 
 <Files>
 <Folder name="public" defaultOpen>
@@ -179,13 +133,28 @@ Use `favicon.ico` if there are no icons available, but try to find a high-resolu
 
 ### Example Submission
 
-```typescript
-{
-  title: "MDN Web Docs",
-  url: "https://developer.mozilla.org/en-US/",
-  description: "Provides information about Open Web technologies including HTML, CSS, and APIs.",
-  iconPath: "/resources/learnwebdev/mdn.png"
-}
+```mdx
+<Cards>
+  <CustomCard
+    title="Altassian"
+    icon="/resources/colors/atlassian.svg"
+    description="Start designing and developing beautiful product experiences with Atlassian Design System UI foundations, components, and standards."
+    href="https://atlassian.design/foundations/color-new"
+  />
+  {/* ... */}
+</Cards>
+```
+
+### Without icon
+```mdx
+<Cards>
+  <CustomCard
+    title="Altassian"
+    description="Start designing and developing beautiful product experiences with Atlassian Design System UI foundations, components, and standards."
+    href="https://atlassian.design/foundations/color-new"
+  />
+  {/* ... */}
+</Cards>
 ```
 
 ---
@@ -196,7 +165,7 @@ If you notice any outdated or incorrect information in existing resources, or if
 
 ### Update Existing Entries  
 
-Edit `resources.ts` to correct or enhance existing resources with better information or improved descriptions.
+Use the `edit on github` button, you can spot it below in every page.
 
 ### Provide Feedback
 
@@ -216,56 +185,6 @@ If you want to add a new resource page, follow these steps:
 
 <Step>
 
-### Create a New Folder
-
-Create a new folder inside `/public/resources/` with the name of the resource category. For example, if you are adding a new resource for "File Converters", create a folder named `file-converters` to insert the icons.
-
-<Files>
-<Folder name="public" defaultOpen>
-
-<Folder name="resources" defaultOpen>
-
-<Folder name="file-converters">
-  <File name="convertio.png" />
-</Folder>
-
-</Folder>
-
-</Folder>
-</Files>
-
-</Step>
-
-<Step>
-
-### Update `resources.ts`
-
-Create a new object inside `resourcesData` with the title of the resource category and an array of links to individual resources.
-
-```typescript title="resources.ts"
-// For example I want to add a new resource page for 'file converters'
-fileconverters: {
-  title: "File Converters",
-  resourcesList: [
-    {
-      title: "Online File Converter", // optional, include only if there is another category within the resource page
-      links: [
-        {
-          title: "Convertio",
-          url: "https://convertio.co/",
-          description: "An easy tool to convert files online.",
-          iconPath: "/resources/file-converters/convertio.png"
-        },
-      ],
-    },
-  ],
-},
-```
-
-</Step>
-
-<Step>
-
 ### Create a New Content File
 
 Create a new file in the `contents` folder to ensure the added resource is displayed on the page. Name the file appropriately to reflect the resource category or specific resource you are adding.
@@ -282,13 +201,21 @@ Create a new file in the `contents` folder to ensure the added resource is displ
 </Folder>
 </Files>
 
+
+</Step>
+
+<Step>
+
 ```mdx title="file-converters.mdx"
 ---
 title: File Converters
 description: Discover online tools to convert files easily and efficiently.
 ---
 
-<ResourcesCards type="fileconverters" />
+<Cards>
+  {/* CustomCard here */}
+</Cards>
+
 ```
 
 And you are good to go! 🎉
@@ -322,7 +249,7 @@ git commit -m "add: [website name]"
 Push changes to your forked repository:
 
 ```bash
-git push --set-upstream origin v2/add-resource
+git push --set-upstream origin add-resource
 git push
 ```
 
