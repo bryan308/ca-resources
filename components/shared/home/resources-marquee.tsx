@@ -12,7 +12,7 @@ const reviews = [
 	{
 		title: "Font Awesome",
 		description:
-			"The internet‘s icon library + toolkit. Used by millions of designers, devs, & content creators. Open-source. Always free. Always awesome.",
+			"The internet’s icon library + toolkit. Used by millions of designers, devs, & content creators. Open-source. Always free. Always awesome.",
 		icon: "/resources/icons/fontawesome.svg",
 		href: "https://fontawesome.com/",
 	},

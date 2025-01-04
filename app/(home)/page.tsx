@@ -35,7 +35,7 @@ export default function HomePage() {
 									size="lg"
 									asChild
 								>
-									<Link href="/resources">Explore</Link>
+									<Link href="/resources/colors">Explore</Link>
 								</Button>
 								<Button
 									variant="secondary"
