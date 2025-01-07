@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* disable fumadocs table styles */
-.prose table {
-	border-radius: 0 !important;
-}
-
 .data-table table,
 .table table {
 	@apply w-full border-separate border-spacing-0;
@@ -46,7 +41,7 @@
 
 /* TABLE1 */
 .table1 {
-	@apply bg-card mt-6 border border-collapse border-border;
+	@apply bg-card mt-6 border border-collapse border-border rounded-none;
 }
 
 .table1 tr {
@@ -68,7 +63,7 @@
 /* TABLE 2 */
 .table2 {
 	font-family: "Times New Roman", Times, serif;
-	@apply mt-4 border border-separate border-border bg-none;
+	@apply mt-4 border border-separate border-border bg-none rounded-none;
 }
 
 .table2 thead tr th,
@@ -92,7 +87,7 @@
 .table3 {
 	font-family: "Times New Roman", Times, serif;
 	border: thin solid;
-	@apply mt-4 border-separate border-border bg-none;
+	@apply mt-4 border-separate border-border bg-none rounded-none;
 }
 
 .table3 thead tr th,
@@ -116,7 +111,7 @@
 /* TABLE 4 */
 .table4 {
 	font-family: "Times New Roman", Times, serif;
-	@apply border mt-4 border-collapse border-border bg-none;
+	@apply border mt-4 border-collapse border-border bg-none rounded-none;
 }
 
 .table4 thead tr th,
@@ -138,9 +133,7 @@
 
 /* TABLE 5 */
 .table5 {
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-	border-collapse: collapse;
+	@apply mt-6 mb-6 border-collapse rounded-none;
 }
 
 .table5,
@@ -149,8 +142,8 @@
 	@apply border border-solid border-neutral-950;
 }
 
-.table5 thead {
-	background-color: #191970;
+.table5 thead tr th {
+	background-color: #191970 !important;
 	color: #ededed !important;
 }
 
@@ -173,7 +166,7 @@
 
 /* TABLE 6 */
 .table6 {
-	@apply font-serif border border-border border-separate mt-4 bg-none;
+	@apply font-serif border border-border border-separate mt-4 bg-none rounded-none;
 }
 
 .table6 thead tr th,
