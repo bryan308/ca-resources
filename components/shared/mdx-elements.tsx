@@ -20,7 +20,7 @@ import {
 const BorderExample: React.FC<BorderProps> = ({
 	borderWidth = "3px",
 	borderStyle = "solid",
-	borderColor = "hsl(var(--foreground))",
+	borderColor = "hsl(var(--fd-foreground))",
 	text,
 }) => {
 	const style: React.CSSProperties = {
@@ -131,7 +131,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startVal, position
 	}
 	const li: React.CSSProperties = {
 		fontFamily: font,
-		color: "hsl(var(--foreground))",
+		color: "hsl(var(--fd-foreground))",
 		marginBottom: 0,
 		padding: 0,
 	}
@@ -208,7 +208,7 @@ const UnorderedList: React.FC<IListProps> = ({ type }) => {
 	const ul: React.CSSProperties = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
 	const li: React.CSSProperties = {
 		fontFamily: "Times New Roman, serif",
-		color: "hsl(var(--foreground))",
+		color: "hsl(var(--fd-foreground))",
 		marginBottom: 0,
 	}
 
