@@ -4,14 +4,23 @@ import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page
 import { notFound } from "next/navigation"
 import { MDXContent } from "@content-collections/mdx/react"
 import { components } from "@/components/shared/mdx-components"
+import { getGithubLastEdit } from "fumadocs-core/server"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
 	const params = await props.params
 	const page = resources.getPage(params.slug)
 	if (!page) notFound()
 
+	const time = await getGithubLastEdit({
+		owner: "bryan308",
+		repo: "ca-resources",
+		sha: "main",
+		path: `content/resources/${page.file.flattenedPath}.mdx`,
+	})
+
 	return (
 		<DocsPage
+			lastUpdate={time ? new Date(time) : new Date()}
 			tableOfContent={{
 				style: "clerk",
 				single: false,
