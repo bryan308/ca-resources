@@ -14,6 +14,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 	const time = await getGithubLastEdit({
 		owner: "bryan308",
 		repo: "ca-resources",
+		token: `Bearer ${process.env.GITHUB_TOKEN}`,
 		sha: "main",
 		path: `content/resources/${page.file.flattenedPath}.mdx`,
 	})
