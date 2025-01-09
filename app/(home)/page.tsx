@@ -2,49 +2,30 @@ import { cn } from "@/lib/utils"
 import React, { ReactNode } from "react"
 
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"
-import Link from "next/link"
 import Image from "next/image"
 
 import { Footer } from "@/components/shared/footer"
-import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
 import { MarqueeDemo } from "@/components/shared/home/resources-marquee"
 import { FeaturedGuides } from "@/components/shared/home/guides-card"
+import WordReveal from "@/components/ui/word-reveal"
+import { ActionButton, HeroParagraph, SectionTitle } from "@/components/shared/home/hero"
 
 export default function HomePage() {
 	return (
 		<>
 			<div className="m-4">
 				<div className="mt-4 md:mt-10" />
-				<Section className="relative flex h-[500px] items-center justify-center">
+				<Section className="relative flex h-[calc(100vh-10rem)] items-center justify-center">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
 					<div className="container py-10 lg:py-16">
-						<div className="max-w-2xl text-center mx-auto">
-							<h1 className="mb-6 text-4xl font-semibold md:text-5xl">Enhance Your Productivity</h1>
-							<div className="mt-5 max-w-3xl">
-								<p className="mx-auto mb-6 h-fit p-2 text-fd-muted-foreground md:max-w-[80%] md:text-xl">
-									CA Resources is your essential platform for enhancing productivity in web
-									development and education, offering{" "}
-									<span className="font-semibold text-foreground">tools</span> and{" "}
-									<span className="font-semibold text-foreground">guides</span> designed for
-									flexibility and speed.
-								</p>
-							</div>
-							<div className="relative z-10 mt-8 gap-3 flex justify-center">
-								<Button
-									size="lg"
-									asChild
-								>
-									<Link href="/resources/colors">Explore</Link>
-								</Button>
-								<Button
-									variant="secondary"
-									size="lg"
-									asChild
-								>
-									<Link href="/guides">Learn</Link>
-								</Button>
-							</div>
+						<div className="max-w-5xl text-center mx-auto">
+							<WordReveal
+								text="Enhance Your Productivity"
+								className="mb-6 text-4xl text-fd-foreground font-semibold md:text-7xl"
+							/>
+							<HeroParagraph />
+							<ActionButton />
 						</div>
 					</div>
 					<div className="absolute w-full h-full overflow-hidden">
@@ -62,7 +43,7 @@ export default function HomePage() {
 				</Section>
 				<Section className="p-10">
 					<Plus className="absolute -top-3 -left-3 size-6 text-muted-foreground stroke-1" />
-					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Explore Top Resources</h2>
+					<SectionTitle>Explore Top Resources</SectionTitle>
 				</Section>
 				<Section className="md:py-20">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
@@ -70,7 +51,7 @@ export default function HomePage() {
 				</Section>
 				<Section>
 					<Plus className="absolute -top-3 -left-3 size-6 text-muted-foreground stroke-1" />
-					<h2 className="text-center text-2xl font-semibold sm:text-3xl">Learn the Basics</h2>
+					<SectionTitle>Learn the Basics</SectionTitle>
 				</Section>
 				<Section className="p-0 md:p-0 border-r-0">
 					<Plus className="absolute -top-3 -right-3 size-6 text-muted-foreground stroke-1" />
