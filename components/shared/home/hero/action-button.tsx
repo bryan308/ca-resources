@@ -2,10 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import React from "react"
+import React, { FC } from "react"
 import { motion } from "motion/react"
 
-const ActionButton = () => {
+const ActionButton: FC = () => {
 	return (
 		<div className="relative z-10 mt-8 gap-3 flex justify-center">
 			<motion.div
@@ -18,7 +18,12 @@ const ActionButton = () => {
 					size="lg"
 					asChild
 				>
-					<Link href="/resources/colors">Explore</Link>
+					<Link
+						href="/resources/colors"
+						aria-label="Explore resources"
+					>
+						Explore
+					</Link>
 				</Button>
 			</motion.div>
 			<motion.div
@@ -28,15 +33,21 @@ const ActionButton = () => {
 				exit={{ opacity: 0, y: 20 }}
 			>
 				<Button
-					variant="secondary"
+					variant="outline"
 					size="lg"
 					asChild
 				>
-					<Link href="/guides">Learn</Link>
+					<Link
+						href="/guides"
+						aria-label="Learn guides"
+					>
+						Learn
+					</Link>
 				</Button>
 			</motion.div>
 		</div>
 	)
 }
+ActionButton.displayName = "ActionButton"
 
 export default ActionButton
