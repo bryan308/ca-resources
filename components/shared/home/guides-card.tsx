@@ -1,5 +1,8 @@
+"use client"
+
+import React, { FC } from "react"
 import { FunctionSquare, ImageIcon, Layers3, List, MousePointerClick, Table } from "lucide-react"
-import React from "react"
+import { motion } from "motion/react"
 
 const guidesHighlights = [
 	{
@@ -34,25 +37,40 @@ const guidesHighlights = [
 	},
 ]
 
-export const FeaturedGuides = () => {
+const FeaturedGuides: FC = () => {
 	return (
-		<>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 z-10">
-				{guidesHighlights.map((g) => {
-					return (
-						<div
-							key={g.title}
-							className="px-6 py-12 border-r border-b"
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 z-10">
+			{guidesHighlights.map((g, index) => {
+				return (
+					<motion.div
+						key={g.title}
+						className="px-6 py-12 border-r border-b"
+						aria-label={`Guide: ${g.title}`}
+					>
+						<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							viewport={{ once: true, amount: 0.5 }}
+							transition={{
+								delay: 0.05 * index,
+								duration: 0.5,
+								type: "spring",
+								damping: 15,
+								stiffness: 100,
+							}}
 						>
 							<div className="mb-4 flex flex-row items-center gap-2 text-fd-muted-foreground">
 								{g.icon}
 								<h2 className="text-sm font-medium">{g.title}</h2>
 							</div>
 							<span className="font-medium">{g.description}</span>
-						</div>
-					)
-				})}
-			</div>
-		</>
+						</motion.div>
+					</motion.div>
+				)
+			})}
+		</div>
 	)
 }
+FeaturedGuides.displayName = "FeaturedGuides"
+
+export default FeaturedGuides
