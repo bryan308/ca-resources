@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import React, { ReactNode } from "react"
 
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"
+// import AnimatedGridPattern from "@/components/ui/animated-grid-pattern"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -48,7 +48,7 @@ export default function HomePage() {
 						</div>
 					</div>
 					<div className="absolute w-full h-full overflow-hidden">
-						<AnimatedGridPattern
+						{/* <AnimatedGridPattern
 							numSquares={50}
 							maxOpacity={0.1}
 							duration={2}
@@ -57,7 +57,7 @@ export default function HomePage() {
 								"[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
 								"inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
 							)}
-						/>
+						/> */}
 					</div>
 				</Section>
 				<Section className="p-10">
