@@ -13,8 +13,8 @@ const HeroParagraph: FC = () => {
 			className="my-6 max-w-[50ch] mx-auto h-fit p-2 text-fd-muted-foreground md:text-xl"
 		>
 			CA Resources is your essential platform for enhancing productivity in web development and
-			education, offering <span className="font-semibold text-foreground">resources</span> and{" "}
-			<span className="font-semibold text-foreground">guides</span> designed for flexibility and
+			education, offering <span className="font-semibold text-fd-foreground">resources</span> and{" "}
+			<span className="font-semibold text-fd-foreground">guides</span> designed for flexibility and
 			speed.
 		</motion.p>
 	)

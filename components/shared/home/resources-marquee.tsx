@@ -63,7 +63,7 @@ const ResourcesMarquee: FC = () => {
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true, amount: 0.5 }}
 			transition={{ delay: 0.25, duration: 0.5, type: "spring", damping: 15, stiffness: 100 }}
-			className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background/80"
+			className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-card"
 		>
 			<Marquee
 				pauseOnHover
@@ -92,8 +92,8 @@ const ResourcesMarquee: FC = () => {
 					/>
 				))}
 			</Marquee>
-			<div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-fd-background"></div>
-			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-fd-background"></div>
+			<div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-fd-card"></div>
+			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-fd-card"></div>
 		</motion.div>
 	)
 }

@@ -31,7 +31,7 @@ const BorderExample: React.FC<BorderProps> = ({
 		border: `${borderWidth} ${borderStyle} ${borderColor}`,
 	}
 
-	return <div style={style} className="text-center text-foreground p-2">{text}</div>
+	return <div style={style} className="text-center text-fd-foreground p-2">{text}</div>
 }
 BorderExample.displayName = "BorderExample"
 
@@ -137,7 +137,7 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startVal, position
 	}
 
 	return (
-		<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
+		<div className="border border-border p-4 mt-4 rounded-lg bg-fd-background-foreground">
 			{listStyle === "type" ? (
 				<>
 					<h1 style={h1}>Phases of WDLC</h1>
@@ -214,7 +214,7 @@ const UnorderedList: React.FC<IListProps> = ({ type }) => {
 
 	return (
 		<>
-			<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
+			<div className="border border-border p-4 mt-4 rounded-lg bg-fd-background-foreground">
 				<h1 style={h1}>Most Popular Web Browsers</h1>
 				<ul style={ul}>
 					{orderedList.ol3.map((ol) => {
