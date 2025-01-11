@@ -17,7 +17,7 @@ import {
 export default function HomePage() {
 	return (
 		<>
-			<div className="m-4 md:m-0">
+			<div className="m-4">
 				<div className="mt-4 md:mt-10" />
 				<Section className="relative flex h-[calc(100vh-7rem)] items-center justify-center p-0">
 					<div className="container py-10 lg:py-16 z-20">
