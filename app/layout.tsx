@@ -56,7 +56,9 @@ export default function Layout({ children }: { children: ReactNode }) {
 			lang="en"
 			suppressHydrationWarning
 		>
-			<body className={cn(sans.variable, sans.className, mono.variable, "relative")}>
+			<body
+				className={cn(sans.variable, sans.className, mono.variable, "relative overflow-x-hidden")}
+			>
 				<RootProvider
 				// TODO include resources in search
 				// search={{
@@ -64,15 +66,19 @@ export default function Layout({ children }: { children: ReactNode }) {
 				// 		defaultTag: "all",
 				// 		tags: [
 				// 			{
-				// 				name: "Guides",
-				// 				value: "guides",
-				// 			},
-				// 			{
 				// 				name: "Resources",
 				// 				value: "resources",
 				// 			},
+				// 			{
+				// 				name: "Guides",
+				// 				value: "guides",
+				// 			},
 				// 		],
 				// 	},
+				// 	links: [
+				// 		["Resources", "/resources/colors"],
+				// 		["Guides", "/guides"],
+				// 	],
 				// }}
 				>
 					{children}
