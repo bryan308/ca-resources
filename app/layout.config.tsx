@@ -12,6 +12,7 @@ import { HomeLayoutProps } from "fumadocs-ui/layouts/home"
 export const baseOptions: HomeLayoutProps = {
 	githubUrl: "https://github.com/bryan308/ca-resources",
 	nav: {
+		transparentMode: 'top',
 		title: (
 			<>
 				<Box />

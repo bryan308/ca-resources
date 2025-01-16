@@ -21,18 +21,18 @@
 
 .data-table table thead th,
 .table table thead th {
-	@apply text-left text-wrap lg:text-nowrap text-foreground 
+	@apply text-left text-wrap lg:text-nowrap text-fd-foreground 
 	text-base font-normal tracking-tight p-3;
 }
 
 .data-table table tbody td,
 .table table tbody td {
-	@apply text-foreground text-sm p-3 border-b border-border;
+	@apply text-fd-foreground text-sm p-3 border-b border-border;
 }
 
 /* .data-table table tr,
 .table table tr {
-	@apply even:bg-background-foreground hover:bg-background-foreground;
+	@apply even:bg-fd-background-foreground hover:bg-fd-background-foreground;
 } */
 
 .table table tbody td:nth-child(1) {
