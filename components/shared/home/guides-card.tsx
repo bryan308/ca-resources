@@ -17,31 +17,37 @@ const guidesHighlights = [
 		title: "Creating Images",
 		icon: <ImageIcon />,
 		description: "Images can improve the design and the appearance of a web page.",
+		href: "/guides/images",
 	},
 	{
 		title: "Lists",
 		icon: <List />,
 		description: "Lists are used to group items in a list of items.",
+		href: "/guides/lists",
 	},
 	{
 		title: "Table",
 		icon: <Table />,
 		description: "HTML tables allow web developers to arrange data into rows and columns.",
+		href: "/guides/table",
 	},
 	{
 		title: "Functions",
 		icon: <FunctionSquare />,
 		description: "Understand how to create and use functions in JavaScript.",
+		href: "/guides/functions",
 	},
 	{
 		title: "Event Handler",
 		icon: <MousePointerClick />,
 		description: "Learn how event handlers trigger JavaScript actions on user interactions.",
+		href: "/guides/event",
 	},
 	{
 		title: "Document Object Model",
 		icon: <Layers3 />,
 		description: "Understand how to manipulate the Document Object Model (DOM) in JavaScript.",
+		href: "/guides/dom",
 	},
 ]
 
@@ -80,8 +86,9 @@ const FeaturedGuides: FC = () => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 z-10">
 			{guidesHighlights.map((g, index) => (
-				<motion.div
+				<motion.a
 					key={g.title}
+					href={g.href}
 					className="relative px-6 py-12 border-r border-b"
 					aria-label={`Guide: ${g.title}`}
 				>
@@ -104,7 +111,7 @@ const FeaturedGuides: FC = () => {
 						</div>
 						<span className="font-medium">{g.description}</span>
 					</motion.div>
-				</motion.div>
+				</motion.a>
 			))}
 		</div>
 	)
