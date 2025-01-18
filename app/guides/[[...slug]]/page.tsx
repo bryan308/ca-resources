@@ -11,29 +11,33 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 	const page = guides.getPage(params.slug)
 	if (!page) notFound()
 
-	const time = await getGithubLastEdit({
-		owner: "bryan308",
-		repo: "ca-resources",
-		token: `Bearer ${process.env.GITHUB_TOKEN}`,
-		sha: "main",
-		path: `content/resources/${page.file.flattenedPath}.mdx`,
-	})
+	const path = `content/guides/${page.file.flattenedPath}.mdx`
+
+	const time =
+		process.env.NODE_ENV === "development"
+			? null
+			: await getGithubLastEdit({
+					owner: "bryan308",
+					repo: "ca-resources",
+					token: `Bearer ${process.env.GITHUB_TOKEN}`,
+					sha: "main",
+					path: path,
+			  })
 
 	return (
 		<DocsPage
-			lastUpdate={time ? new Date(time) : new Date()}
+			lastUpdate={time || undefined}
 			tableOfContent={{
 				style: "clerk",
 				single: false,
 			}}
 			editOnGithub={{
-				repo: "ca-resources",
 				owner: "bryan308",
+				repo: "ca-resources",
 				sha: "main",
-				path: `content/guides/${page.file.flattenedPath}.mdx`,
+				path: path,
 			}}
 			toc={page.data.toc}
-			// full={page.data.full}
 		>
 			<DocsTitle>{page.data.title}</DocsTitle>
 			<DocsDescription>{page.data.description}</DocsDescription>
