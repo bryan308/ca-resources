@@ -60,26 +60,20 @@ export default function Layout({ children }: { children: ReactNode }) {
 				className={cn(sans.variable, sans.className, mono.variable, "relative overflow-x-hidden")}
 			>
 				<RootProvider
-				// TODO include resources in search
-				// search={{
-				// 	options: {
-				// 		defaultTag: "all",
-				// 		tags: [
-				// 			{
-				// 				name: "Resources",
-				// 				value: "resources",
-				// 			},
-				// 			{
-				// 				name: "Guides",
-				// 				value: "guides",
-				// 			},
-				// 		],
-				// 	},
-				// 	links: [
-				// 		["Resources", "/resources/colors"],
-				// 		["Guides", "/guides"],
-				// 	],
-				// }}
+					search={{
+						options: {
+							tags: [
+								{
+									name: "Resources",
+									value: "resources",
+								},
+								{
+									name: "Guides",
+									value: "guides",
+								},
+							],
+						},
+					}}
 				>
 					{children}
 				</RootProvider>
