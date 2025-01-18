@@ -1,6 +1,9 @@
+"use client"
+
 import { Marquee } from "@/components/ui/marquee"
-import Link from "next/link"
-import Image from "next/image"
+import { motion } from "motion/react"
+import CustomCard from "../resources/custom-card"
+import { FC } from "react"
 
 const reviews = [
 	{
@@ -53,49 +56,23 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2)
 const secondRow = reviews.slice(reviews.length / 2)
 
-const ReviewCard = ({
-	icon,
-	title,
-	description,
-	href,
-}: {
-	icon: string
-	title: string
-	description: string
-	href: string
-}) => {
+const ResourcesMarquee: FC = () => {
 	return (
-		<Link
-			className="w-64 not-prose block rounded-lg border bg-fd-card p-4 text-sm text-fd-card-foreground shadow-md transition-colors hover:bg-fd-accent/80"
-			href={`${href}?ref=ca-resources.vercel.app`}
-			title={title}
-			target="_blank"
-			rel="noopener noreferrer"
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true, amount: 0.5 }}
+			transition={{ delay: 0.25, duration: 0.5, type: "spring", damping: 15, stiffness: 100 }}
+			className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-card"
 		>
-			<div className="flex items-center gap-2 mb-2">
-				<Image
-					src={icon}
-					alt={title}
-					width={24}
-					height={24}
-					className="min-w-6 size-6"
-				/>
-				<h3 className="font-medium text-lg">{title}</h3>
-			</div>
-			<p className="text-fd-muted-foreground truncate-text">{description}</p>
-		</Link>
-	)
-}
-
-export function MarqueeDemo() {
-	return (
-		<div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background/80">
 			<Marquee
 				pauseOnHover
 				className="[--duration:20s]"
+				aria-label="First row of resource reviews"
 			>
 				{firstRow.map((review) => (
-					<ReviewCard
+					<CustomCard
+						className="max-w-52 md:max-w-sm"
 						key={review.title}
 						{...review}
 					/>
@@ -105,16 +82,21 @@ export function MarqueeDemo() {
 				reverse
 				pauseOnHover
 				className="[--duration:20s]"
+				aria-label="Second row of resource reviews"
 			>
 				{secondRow.map((review) => (
-					<ReviewCard
+					<CustomCard
+						className="max-w-52 md:max-w-sm"
 						key={review.title}
 						{...review}
 					/>
 				))}
 			</Marquee>
-			<div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-fd-background"></div>
-			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-fd-background"></div>
-		</div>
+			<div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-fd-card"></div>
+			<div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-fd-card"></div>
+		</motion.div>
 	)
 }
+ResourcesMarquee.displayName = "ResourcesMarquee"
+
+export default ResourcesMarquee

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 		siteName: "CA Resources",
 		images: [
 			{
-				url: "https://ca-resources.vercel.app/banner.png",
+				url: "/banner.png",
 				width: 1920,
 				height: 1080,
 				alt: "CA Resources",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 		title: "CA Resources",
 		description:
 			"Boost your productivity with valuable web development resources and educational guides.",
-		images: ["https://ca-resources.vercel.app/banner.png"],
+		images: ["/banner.png"],
 	},
 }
 
@@ -56,24 +56,24 @@ export default function Layout({ children }: { children: ReactNode }) {
 			lang="en"
 			suppressHydrationWarning
 		>
-			<body className={cn(sans.variable, sans.className, mono.variable, "relative")}>
+			<body
+				className={cn(sans.variable, sans.className, mono.variable, "relative overflow-x-hidden")}
+			>
 				<RootProvider
-				// TODO include resources in search
-				// search={{
-				// 	options: {
-				// 		defaultTag: "all",
-				// 		tags: [
-				// 			{
-				// 				name: "Guides",
-				// 				value: "guides",
-				// 			},
-				// 			{
-				// 				name: "Resources",
-				// 				value: "resources",
-				// 			},
-				// 		],
-				// 	},
-				// }}
+					search={{
+						options: {
+							tags: [
+								{
+									name: "Resources",
+									value: "resources",
+								},
+								{
+									name: "Guides",
+									value: "guides",
+								},
+							],
+						},
+					}}
 				>
 					{children}
 				</RootProvider>

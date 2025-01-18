@@ -33,10 +33,7 @@ const guides = defineCollection({
 	name: "guides",
 	directory: "content/guides",
 	include: "**/*.mdx",
-	schema: (z) => ({
-		title: z.string(),
-		description: z.string().optional(),
-	}),
+	schema: createDocSchema,
 	transform: transformMDX,
 })
 
