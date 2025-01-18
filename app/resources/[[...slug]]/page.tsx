@@ -1,10 +1,11 @@
 import { resources } from "@/lib/source"
-import type { Metadata } from "next"
+// import type { Metadata } from "next"
 import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { notFound } from "next/navigation"
 import { MDXContent } from "@content-collections/mdx/react"
 import { components } from "@/components/shared/mdx-components"
 import { getGithubLastEdit } from "fumadocs-core/server"
+import { resourcesMetadataImage } from "@/lib/metadata"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
 	const params = await props.params
@@ -56,8 +57,8 @@ export async function generateMetadata(props: { params: Promise<{ slug?: string[
 	const page = resources.getPage(params.slug)
 	if (!page) notFound()
 
-	return {
+	return resourcesMetadataImage.withImage(page.slugs, {
 		title: page.data.title,
 		description: page.data.description,
-	} satisfies Metadata
+	})
 }
