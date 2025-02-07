@@ -42,7 +42,7 @@ export const baseOptions: HomeLayoutProps = {
 		{
 			icon: <Box />,
 			text: "Resources",
-			url: "/resources/colors",
+			url: "/resources/chrome-extensions",
 			active: "none",
 		},
 		{
