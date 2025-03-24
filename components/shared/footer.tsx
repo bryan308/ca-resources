@@ -3,7 +3,7 @@ import React from "react"
 
 export const Footer = () => {
 	return (
-		<footer className="mt-10 border-t bg-fd-card py-12 text-fd-secondary-foreground">
+		<footer className="mt-10 border-t bg-card py-12 text-secondary-foreground">
 			<div className="px-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 				<div>
 					<p className="mb-1 text-sm font-semibold">CA Resources</p>

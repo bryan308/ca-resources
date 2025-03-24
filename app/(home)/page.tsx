@@ -26,7 +26,7 @@ export default function HomePage() {
 						<GitHubButton />
 						<WordReveal
 							text="Enhance Your Productivity"
-							className="mb-6 text-5xl text-fd-foreground font-semibold md:text-7xl"
+							className="mb-6 text-5xl text-foreground font-semibold md:text-7xl"
 						/>
 						<HeroParagraph />
 						<ActionButton />

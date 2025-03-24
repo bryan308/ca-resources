@@ -17,7 +17,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 	return (
 		<Link
 			className={cn(
-				"not-prose block rounded-lg border bg-fd-card p-4 text-sm text-fd-card-foreground shadow-md transition-colors hover:bg-fd-accent/80",
+				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-md transition-colors hover:bg-accent/80",
 				className
 			)}
 			href={`${href}?ref=ca-resources.vercel.app`}
@@ -28,7 +28,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 		>
 			<div className="flex items-center mb-2">
 				<div
-					className="not-prose mr-2 w-fit rounded-md border bg-fd-muted p-1.5 text-fd-muted-foreground [&_svg]:size-4"
+					className="not-prose mr-2 w-fit rounded-md border bg-muted p-1.5 text-muted-foreground [&_svg]:size-4"
 					role="img"
 				>
 					{typeof icon === "string" ? (
@@ -47,7 +47,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 				</div>
 				<h4 className="font-medium text-base">{title}</h4>
 			</div>
-			<p className="text-fd-muted-foreground line-clamp-2">{description}</p>
+			<p className="text-muted-foreground line-clamp-2">{description}</p>
 		</Link>
 	)
 }

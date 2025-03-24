@@ -1,5 +1,3 @@
-import "./styles.css"
-
 import React from "react"
 import ImageRender from "./image-render"
 import Link from "next/link"
@@ -20,7 +18,7 @@ import {
 const BorderExample: React.FC<BorderProps> = ({
 	borderWidth = "3px",
 	borderStyle = "solid",
-	borderColor = "hsl(var(--fd-foreground))",
+	borderColor = "hsl(var(--foreground))",
 	text,
 }) => {
 	const style: React.CSSProperties = {
@@ -31,7 +29,7 @@ const BorderExample: React.FC<BorderProps> = ({
 		border: `${borderWidth} ${borderStyle} ${borderColor}`,
 	}
 
-	return <div style={style} className="text-center text-fd-foreground p-2">{text}</div>
+	return <div style={style} className="text-center text-foreground p-2">{text}</div>
 }
 BorderExample.displayName = "BorderExample"
 
@@ -131,13 +129,13 @@ const OrderedList: React.FC<IListProps> = ({ listStyle, type, startVal, position
 	}
 	const li: React.CSSProperties = {
 		fontFamily: font,
-		color: "hsl(var(--fd-foreground))",
+		color: "hsl(var(--foreground))",
 		marginBottom: 0,
 		padding: 0,
 	}
 
 	return (
-		<div className="border border-border p-4 mt-4 rounded-lg bg-fd-background-foreground">
+		<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
 			{listStyle === "type" ? (
 				<>
 					<h1 style={h1}>Phases of WDLC</h1>
@@ -208,13 +206,13 @@ const UnorderedList: React.FC<IListProps> = ({ type }) => {
 	const ul: React.CSSProperties = { listStyleType: type, margin: "1rem 0", paddingLeft: "2.5rem" }
 	const li: React.CSSProperties = {
 		fontFamily: "Times New Roman, serif",
-		color: "hsl(var(--fd-foreground))",
+		color: "hsl(var(--foreground))",
 		marginBottom: 0,
 	}
 
 	return (
 		<>
-			<div className="border border-border p-4 mt-4 rounded-lg bg-fd-background-foreground">
+			<div className="border border-border p-4 mt-4 rounded-lg bg-background-foreground">
 				<h1 style={h1}>Most Popular Web Browsers</h1>
 				<ul style={ul}>
 					{orderedList.ol3.map((ol) => {

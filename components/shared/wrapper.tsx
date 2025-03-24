@@ -13,7 +13,7 @@ export function Wrapper({ variant = "default", ...props }: WrapperProps): React.
 				"rounded-xl p-2 lg:p-4 prose-no-margin",
 				variant === "gradient"
 					? "bg-gradient-to-br from-fuchsia-500 to-cyan-500"
-					: "bg-fd-card border",
+					: "bg-card border",
 				props.className
 			)}
 		>

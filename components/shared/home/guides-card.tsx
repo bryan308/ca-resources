@@ -105,7 +105,7 @@ const FeaturedGuides: FC = () => {
 							stiffness: 100,
 						}}
 					>
-						<div className="mb-4 flex flex-row items-center gap-2 text-fd-muted-foreground">
+						<div className="mb-4 flex flex-row items-center gap-2 text-muted-foreground">
 							{g.icon}
 							<h2 className="text-sm font-medium">{g.title}</h2>
 						</div>
