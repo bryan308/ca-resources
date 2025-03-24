@@ -30,6 +30,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "lib/metadata.ts"  ],
   "exclude": ["node_modules"]
 }
