@@ -19,7 +19,7 @@ const ActionButton: FC = () => {
 					asChild
 				>
 					<Link
-						href="/resources/colors"
+						href="/resources/chrome-extensions"
 						aria-label="Explore resources"
 					>
 						Explore
