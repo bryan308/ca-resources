@@ -17,7 +17,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 	return (
 		<Link
 			className={cn(
-				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-md transition-colors hover:bg-accent/80",
+				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-sm transition-colors hover:bg-accent/80",
 				className
 			)}
 			href={`${href}?ref=ca-resources.vercel.app`}
