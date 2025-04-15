@@ -7,13 +7,13 @@ import WordReveal from "@/components/ui/word-reveal"
 import {
 	ActionButton,
 	FeaturedGuides,
-	GitHubButton,
 	HeroImage,
 	HeroParagraph,
 	ResourcesMarquee,
 	Section,
 	SectionTitle,
 } from "@/components/shared/home"
+import { GitHubStarsButton } from "@/components/animate-ui/github-stars-button"
 
 export default function HomePage() {
 	return (
@@ -23,7 +23,11 @@ export default function HomePage() {
 				{/* <Section className="relative flex h-[calc(100vh-7rem)] justify-center p-0"> */}
 				<Section className="relative flex h-[calc(100vh-6rem)] md:h-[120vh] justify-center p-0">
 					<div className="max-w-5xl text-center mx-auto pt-24 z-20">
-						<GitHubButton />
+						<GitHubStarsButton
+							username="bryan308"
+							repo="ca-resources"
+							className="w-fit mb-6 mx-auto"
+						/>
 						<WordReveal
 							text="Enhance Your Productivity"
 							className="mb-6 text-5xl text-foreground font-semibold md:text-7xl"
