@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /private/
+
+Sitemap: https://ca-resources.vercel.app/sitemap.xml
