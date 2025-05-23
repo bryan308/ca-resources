@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils"
 import { Box } from "lucide-react"
 import Image from "next/image"
@@ -17,7 +18,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 	return (
 		<Link
 			className={cn(
-				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-sm transition-colors hover:bg-accent/80",
+				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-xs hover:shadow transition-colors hover:bg-accent/80",
 				className
 			)}
 			href={`${href}?ref=ca-resources.vercel.app`}
@@ -45,7 +46,7 @@ const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className
 						<Box className="min-w-4 size-4" />
 					)}
 				</div>
-				<h4 className="font-medium text-base">{title}</h4>
+				<h4 className="text-base font-medium">{title}</h4>
 			</div>
 			<p className="text-muted-foreground line-clamp-2">{description}</p>
 		</Link>
