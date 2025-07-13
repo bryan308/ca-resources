@@ -5,7 +5,6 @@ import type { ReactNode } from "react"
 import localFont from "next/font/local"
 import { cn } from "@/lib/utils"
 import { Metadata } from "next"
-import { ReactScan } from "@/components/shared/react-scan"
 
 const mono = localFont({
 	src: "./fonts/GeistMonoVF.woff",
@@ -58,7 +57,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 			lang="en"
 			suppressHydrationWarning
 		>
-			<ReactScan />
 			<body
 				className={cn(sans.variable, sans.className, mono.variable, "relative overflow-x-hidden")}
 			>
