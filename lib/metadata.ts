@@ -1,12 +1,12 @@
 import { createMetadataImage } from "fumadocs-core/server"
-import { guides, resources } from "@/lib/source"
+import { guidesSource, resourcesSource } from "@/lib/source"
 
 export const guidesMetadataImage = createMetadataImage({
 	imageRoute: "/guides-og",
-	source: guides,
+	source: guidesSource,
 })
 
 export const resourcesMetadataImage = createMetadataImage({
 	imageRoute: "/resources-og",
-	source: resources,
+	source: resourcesSource,
 })

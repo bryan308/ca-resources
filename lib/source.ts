@@ -1,13 +1,13 @@
-import { allResources, allGuides, allGuidesMetas, allResourcesMetas } from "content-collections"
-import { loader } from "fumadocs-core/source"
-import { createMDXSource } from "@fumadocs/content-collections"
+import { guides, guidesMeta, resources, resourcesMeta } from '@/.source';
+import { loader } from 'fumadocs-core/source';
+import { createMDXSource } from 'fumadocs-mdx';
 
-export const resources = loader({
-	baseUrl: "/resources",
-	source: createMDXSource(allResources, allResourcesMetas),
-})
+export const guidesSource = loader({
+  baseUrl: '/guides',
+  source: createMDXSource(guides, guidesMeta),
+});
 
-export const guides = loader({
-	baseUrl: "/guides",
-	source: createMDXSource(allGuides, allGuidesMetas),
-})
+export const resourcesSource = loader({
+  baseUrl: '/resources',
+  source: createMDXSource(resources, resourcesMeta),
+});

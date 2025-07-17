@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next'
-import { resources } from "@/lib/source"
+import { resourcesSource } from "@/lib/source"
 import { getGithubLastEdit } from "fumadocs-core/server"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const resourcePages = resources.getPages()
+  const resourcePages = resourcesSource.getPages()
   const sitemapEntries = await Promise.all(
     resourcePages.map(async (page) => {
       const lastEdit = await getGithubLastEdit({

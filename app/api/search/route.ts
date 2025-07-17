@@ -1,23 +1,23 @@
-import { resources, guides } from "@/lib/source"
+import { resourcesSource, guidesSource } from "@/lib/source"
 import { createSearchAPI } from "fumadocs-core/search/server"
 
 export const { GET } = createSearchAPI("advanced", {
 	indexes: [
-		...resources.getPages().map((page) => ({
+		...resourcesSource.getPages().map((page) => ({
 			title: page.data.title,
 			description: page.data.description,
 			url: page.url,
 			id: page.url,
 			structuredData: page.data.structuredData,
-			tag: "resources",
+			tag: "Resources",
 		})),
-		...guides.getPages().map((page) => ({
+		...guidesSource.getPages().map((page) => ({
 			title: page.data.title,
 			description: page.data.description,
 			url: page.url,
 			id: page.url,
 			structuredData: page.data.structuredData,
-			tag: "guides",
+			tag: "Guides",
 		})),
 	],
 })

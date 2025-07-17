@@ -1,14 +1,13 @@
-import { resources } from "@/lib/source"
+import { resourcesSource } from "@/lib/source"
 import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { notFound } from "next/navigation"
-import { MDXContent } from "@content-collections/mdx/react"
 import { components } from "@/components/shared/mdx-components"
 import { getGithubLastEdit } from "fumadocs-core/server"
 import { resourcesMetadataImage } from "@/lib/metadata"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
 	const params = await props.params
-	const page = resources.getPage(params.slug)
+	const page = resourcesSource.getPage(params.slug)
 	if (!page) notFound()
 
 	const path = `content/resources/${page.file.flattenedPath}.mdx`
@@ -23,6 +22,8 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 					sha: "main",
 					path: path,
 			  })
+
+	const MDXContent = page.data.body;
 
 	return (
 		<DocsPage
@@ -52,12 +53,12 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 }
 
 export function generateStaticParams() {
-	return resources.generateParams()
+	return resourcesSource.generateParams()
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug?: string[] }> }) {
 	const params = await props.params
-	const page = resources.getPage(params.slug)
+	const page = resourcesSource.getPage(params.slug)
 	if (!page) notFound()
 
 	return resourcesMetadataImage.withImage(page.slugs, {
