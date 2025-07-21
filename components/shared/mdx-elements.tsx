@@ -311,7 +311,7 @@ const TableCellSpanning: React.FC = () => (
       <tr>
         {tblCellSpan.th.th1.map((th) => {
           return (
-            <>
+            <React.Fragment key={th.text}>
               {th.span === "col" ? (
                 <th
                   key={th.text}
@@ -327,7 +327,7 @@ const TableCellSpanning: React.FC = () => (
                   {th.text}
                 </th>
               )}
-            </>
+            </React.Fragment>
           )
         })}
       </tr>

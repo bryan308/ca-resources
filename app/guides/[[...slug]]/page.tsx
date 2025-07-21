@@ -65,15 +65,25 @@ export function generateStaticParams() {
   return guidesSource.generateParams()
 }
 
-export async function generateMetadata(props: {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug?: string[] }>
 }) {
-  const params = await props.params
-  const page = guidesSource.getPage(params.slug)
+  const { slug = [] } = await params
+  const page = guidesSource.getPage(slug)
   if (!page) notFound()
 
-  return guidesMetadataImage.withImage(page.slugs, {
+  const image = ["/guides-og", ...slug, "image.png"].join("/")
+  return {
     title: page.data.title,
     description: page.data.description,
-  })
+    openGraph: {
+      images: image,
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: image,
+    },
+  }
 }
