@@ -1,6 +1,7 @@
-import type { MetadataRoute } from 'next'
-import { resourcesSource } from "@/lib/source"
 import { getGithubLastEdit } from "fumadocs-core/server"
+import type { MetadataRoute } from "next"
+
+import { resourcesSource } from "@/lib/source"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const resourcePages = resourcesSource.getPages()
@@ -16,23 +17,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       return {
         url: `https://ca-resources.vercel.app/resources/${page.slugs}`,
         lastModified: lastEdit || new Date(),
-        changeFrequency: 'weekly' as const,
+        changeFrequency: "weekly" as const,
         priority: 0.8,
       }
-    })
+    }),
   )
 
   return [
     {
-      url: 'https://ca-resources.vercel.app',
+      url: "https://ca-resources.vercel.app",
       lastModified: "2025-04-15T22:33:00Z",
-      changeFrequency: 'monthly' as const,
+      changeFrequency: "monthly" as const,
       priority: 1.0,
     },
     {
-      url: 'https://ca-resources.vercel.app/guides',
+      url: "https://ca-resources.vercel.app/guides",
       lastModified: "2025-01-18",
-      changeFrequency: 'monthly' as const,
+      changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     ...sitemapEntries,

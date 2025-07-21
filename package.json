@@ -7,6 +7,7 @@
 		"dev": "next dev --turbopack",
 		"start": "next start",
 		"lint": "next lint",
+		"format": "prettier --write '**/*.ts{,x}'",
 		"clean": "rimraf .next .source",
 		"postinstall": "fumadocs-mdx"
 	},
@@ -23,9 +24,9 @@
 		"@types/mdx": "^2.0.13",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"fumadocs-core": "^15.6.3",
+		"fumadocs-core": "^15.6.4",
 		"fumadocs-mdx": "^11.6.11",
-		"fumadocs-ui": "^15.6.3",
+		"fumadocs-ui": "^15.6.4",
 		"lucide-react": "^0.525.0",
 		"motion": "^12.23.3",
 		"next": "^15.3.5",
@@ -38,6 +39,7 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.11",
+		"@trivago/prettier-plugin-sort-imports": "^5.2.2",
 		"@types/ms": "^2.1.0",
 		"@types/node": "^24.0.13",
 		"@types/react": "^19.1.8",
@@ -45,6 +47,9 @@
 		"eslint": "^9.27.0",
 		"eslint-config-next": "^15.3.5",
 		"postcss": "^8.5.6",
+		"prettier": "^3.6.2",
+		"prettier-plugin-organize-attributes": "^1.0.0",
+		"prettier-plugin-tailwindcss": "^0.6.14",
 		"rimraf": "^6.0.1",
 		"tailwindcss": "^4.1.11",
 		"typescript": "^5.8.3"
