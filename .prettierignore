@@ -1,0 +1,82 @@
+# Ignore artifacts:
+node_modules/
+.next/
+coverage/
+
+*-lock.json
+*-lock.yaml
+*.lock
+
+.env
+.env.*
+.env-*
+
+.source
+.vercel
+
+build
+coverage
+
+# Additional recommended ignores:
+# Generated files and build outputs
+dist/
+out/
+*.tsbuildinfo
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+
+# Generated documentation
+docs/
+storybook-static/
+
+# Package manager cache
+.npm/
+.yarn/
+.pnp.*
+
+# Testing
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+
+# Generated types (if using tools like GraphQL codegen)
+generated/
+__generated__/
+
+# Configuration files that might be auto-generated
+next-sitemap.xml
+robots.txt
+sitemap.xml

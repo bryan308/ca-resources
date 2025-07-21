@@ -1,56 +1,62 @@
-
-import { cn } from "@/lib/utils"
 import { Box } from "lucide-react"
+
+import { ReactNode } from "react"
+
 import Image from "next/image"
 import Link from "next/link"
-import React, { FC, ReactNode } from "react"
+
+import { cn } from "@/lib/utils"
 
 interface ICustomCard {
-	title: string
-	icon?: ReactNode | string
-	// children?: ReactNode
-	description: string
-	href?: string
-	className?: string
+  title: string
+  icon?: ReactNode | string
+  description: string
+  href?: string
+  className?: string
 }
 
-const CustomCard: FC<ICustomCard> = ({ title, href, icon, description, className }) => {
-	return (
-		<Link
-			className={cn(
-				"not-prose block rounded-lg border bg-card p-4 text-sm text-card-foreground shadow-xs hover:shadow transition-colors hover:bg-accent/80",
-				className
-			)}
-			href={`${href}?ref=ca-resources.vercel.app`}
-			title={title}
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label={title}
-		>
-			<div className="flex items-center mb-2">
-				<div
-					className="not-prose mr-2 w-fit rounded-md border bg-muted p-1.5 text-muted-foreground [&_svg]:size-4"
-					role="img"
-				>
-					{typeof icon === "string" ? (
-						<Image
-							src={icon}
-							alt={title}
-							width={16}
-							height={16}
-							className="min-w-4 size-4"
-						/>
-					) : icon ? (
-						icon
-					) : (
-						<Box className="min-w-4 size-4" />
-					)}
-				</div>
-				<h4 className="text-base font-medium">{title}</h4>
-			</div>
-			<p className="text-muted-foreground line-clamp-2">{description}</p>
-		</Link>
-	)
+export default function CustomCard({
+  title,
+  href,
+  icon,
+  description,
+  className,
+}: ICustomCard) {
+  return (
+    <Link
+      className={cn(
+        "not-prose bg-card text-card-foreground hover:bg-accent/80 block rounded-lg border p-4 text-sm shadow-xs transition-colors hover:shadow",
+        className,
+      )}
+      href={`${href}?ref=ca-resources.vercel.app`}
+      title={title}
+      target="_blank"
+      rel="noopener noreferrer"
+      prefetch={false}
+      aria-label={title}
+    >
+      <div className="mb-2 flex items-center">
+        <div
+          className="not-prose bg-muted text-muted-foreground mr-2 w-fit rounded-sm border p-1.5 [&_svg]:size-4"
+          role="img"
+        >
+          {typeof icon === "string" ? (
+            <Image
+              src={icon}
+              alt={title}
+              width={16}
+              height={16}
+              className="size-4 min-w-4"
+            />
+          ) : icon ? (
+            icon
+          ) : (
+            <Box className="size-4 min-w-4" />
+          )}
+        </div>
+        <h4 className="text-base font-medium">{title}</h4>
+      </div>
+      <p className="text-muted-foreground line-clamp-2">{description}</p>
+    </Link>
+  )
 }
-
-export default CustomCard
